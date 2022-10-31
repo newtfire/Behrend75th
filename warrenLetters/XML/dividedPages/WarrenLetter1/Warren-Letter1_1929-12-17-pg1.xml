@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="letters_schema.rnc" type="application/relax-ng-compact-syntax"?>
+<xml>
+    <meta>
+        <title titleId= "WtoP-1929-12-17-Letter1-pg1">Letter from Warren Behrend to Mary and Ernst Behrend, <date>1929-12-17</date></title>
+        <sourceDesc location="John M. Lilley Library, Penn State Behrend Archives"/>
+        <paperOrigin>Deerfield Academy Deerfield, Massachutsetts</paperOrigin>
+        <transDesc>
+            <editor>GD</editor>
+            <editor>SB</editor>
+        </transDesc>
+    </meta>
+    <figure>
+        <graphic src="../Letter_Images/Warren-Letter1_1929-12-17/1929-12-17_Warrenp1.jpeg" alt="p1"/>
+        
+    </figure>
+    <body>
+        <pb n="1"/>
+        <header>
+            <ln n="1"/><date>1929-12-17</date>
+            <ln n="2"/><greeting>Dear Father &amp; Mother,</greeting>
+        </header>
+        <p n="1">
+            <ln n="1"/>It is <weather>raining</weather> hard and freezing on <!-- seb: added weather element -->
+            <ln n="2"/>the trees; very beautiful indeed, but not
+            <ln n="3"/>so practical for people who would drive
+            <ln n="4"/>their cars on a night like this. I <!-- seb: fixed spelling of "their" -->
+            <ln n="5"/>hope you had nice weather so
+            <ln n="6"/>that you could enjoy driving South
+            <ln n="7"/>in the <car>Duesenburg</car><!--ged: might want to make a car element--> <!-- seb:added car element -->
+        </p>
+        <p n="2">
+            <ln n="1"/><person personId="NR">Ned Richardson</person> and I have
+            <ln n="2"/>both promised each other to drive care-
+            <ln n="3"/>fully. and are<unclear reason="not sure what this says">nothing</unclear> our parents
+            <ln n="4"/>such a promise. You already have
+            <ln n="5"/> mine anyway <unclear reason="1st letter looks like a n, we think it is a the word but.">but</unclear>here it is again. 
+            <ln n="6"/><underline>Don't worry</underline>.
+        </p>
+    </body>
+</xml>

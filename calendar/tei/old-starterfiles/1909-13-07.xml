@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Calendar Entries</title>
+            <editor>Rachel Gerzevske</editor>
+         </titleStmt>
+         <extent>
+            Seven total calendar entries that Mary Behrend wrote and/or drew on. 
+         </extent>
+         <publicationStmt>
+            <p>COPYRIGHT 1908, BY FRIENDSHIP CALENDAR CO. NEW BRITAIN, CONN.</p>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><repository>Penn State Erie, The Behrend College Library</repository></msIdentifier>
+               <physDesc>
+                  <handDesc>
+                     <handNote xml:id="redPen" medium="red inkpen">Likely Mary Behrend writing in a red pen.</handNote>
+                     <handNote xml:id="blackPen" medium="black inkpen">Likely Mary behrend writing in a black pen.</handNote>
+                     <handNote xml:id="calendarPub" medium="print">Text printed onto the page from the calendar manufacturing company.</handNote>
+                     
+                     <handNote xml:id="pencil" medium="graphite pencil">Text that doesn't look like pen, but is not printed onto the page.</handNote>
+                     <handNote xml:id="cutout" medium="printed image">Because the Behrend family is associated with the Hammermill Paper Company, it makes sense that at least one image would be printed from there.</handNote>
+                     <handNote xml:id="watercolor" medium="watercolor">A lot of Mary's calendar illustrations appear to be made with watercolor, usually in conjunction with pencils. </handNote>
+                  </handDesc>
+               </physDesc>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="calendarEntries_1">
+            <figure>
+               <graphic url="https://arrowarchive.github.io/behrendcalendar/photos/july/1909-07-13.jpg"></graphic>
+               <fw place="top-center" hand="#calendarPub">COPYRIGHT 1908, BY FRIENDSHIP CALENDAR CO. NEW BRITAIN, CONN.</fw>
+               
+               <ab hand="#calendarPub"><date>July 13, 1909. Tuesday</date></ab>
+               <figDesc>An infant is seen from behind. looking closely, the drawing was made with a different type of paper. It was likely printed, cut out, and glued onto the page.</figDesc>
+               <ab hand="#blackPen">That little spot in the back of his neck is the sweetest spot to kiss I know so I kiss him there and <emph style="underline">hold him close</emph> just because I love him so.</ab>
+               
+               <note>It's clear that Mary is talking about her son Warren here. From the way she talks about him, he is a few months old (or less) and she absolutely adores him. If Warren is her first born child, then her joy from being around him makes a lot more sense. </note>
+            </figure>
+         </div>
+      </body>
+   </text>
+</TEI>

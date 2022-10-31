@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="letters_schema.rnc" type="application/relax-ng-compact-syntax"?>
+
+<xml>
+    <meta>
+        <title titleId= "WtoP-1929-12-17-Letter2-pg1">Letter from Warren Behrend to Mary and Ernst Behrend, <date>1929-12-19</date></title>
+        <sourceDesc location="John M. Lilley Library, Penn State Behrend Archives"/>
+        <paperOrigin>Deerfield Academy Deerfield, Massachutsetts</paperOrigin>
+        <transDesc>
+            <editor>JG</editor>
+            <editor>TH</editor>
+        </transDesc>
+    </meta>
+    <figure>
+        <graphic src="../Letter_Images/Warren-Letter2_1929-12-19/1929-12-19_Warrenp1.jpeg" alt="p1"/>
+    </figure>
+    <body>
+        <pb n="1"/>
+        <header>
+            <ln n="1"/><date>1929-12-19</date>
+            <ln n="2"/><greeting>Dear Mother and Father,</greeting>
+        </header>
+        <p n="1">
+            <ln n="1"/>It won't be very long now
+            <ln n="2"/>before we will all be together 
+            <ln n="3"/>again on the <boat>Amida</boat>. I am be-
+            <ln n="4"/>ginning to feel more like I was
+            <ln n="5"/>going home when we all live
+            <ln n="6"/>on board her than when in the <!-- jbg:removed the unclear element on board. -->
+            <ln n="7"/>house in <place placeId="ERIE">Erie</place>.
+        </p>
+        <p n="2">
+            <ln n="1"/> Please <unclear reason="unclear">dust</unclear> me a line some
+            <ln n="2"/> time and tell me what arrange-
+        </p>
+    </body>
+</xml>

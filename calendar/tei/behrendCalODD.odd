@@ -1,0 +1,185 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Mary Behrend Calendar Project ODD Customization</title>
+        <author>Rachel Gerzevske</author>
+        <author>Elisa Beshero-Bondar</author>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>TEI Consortium</publisher>
+        <availability status="free">
+          <p>TEI material can be licensed differently depending on the use you intend to make of it.
+            Hence it is made available under both the CC+BY and BSD-2 licences. The CC+BY licence is
+            generally appropriate for usages which treat TEI content as data or documentation. The
+            BSD-2 licence is generally appropriate for usage of TEI content in a software
+            environment. For further information or clarification, please contact the TEI Consortium
+            (info@tei-c.org).</p>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Written from scratch.</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <head>TEI Complete</head>
+      <p>This TEI customization was created using the Roma Beta tool, and 
+        contains a customized selection of TEI modules for the Mary Behrend 1909 Calendar project.</p> 
+      <p>The <att>n</att> attribute of each <gi>moduleRef</gi> below reflects the chapter number of
+        the TEI <title>Guidelines</title> in which the module being referenced is defined. Note that
+        the modules are generally referred to in the order defined, with the exception that the
+        module for <title level="a">Simple Analytic Mechanisms</title> is referred to before the
+        module for <title level="a">Dictionaries</title>. This is because the class <name
+          type="class">att.lexicographic.normalized</name> (which is defined in <name type="module"
+          >analysis</name>) needs to be specified before the class <name type="class"
+          >att.lexicographic</name> (which is defined in <name type="module"
+        >dictionaries</name>).</p>
+      <p>The first four modules are often called the <soCalled>required</soCalled> modules. However,
+        these modules are not themselves technically required to create a TEI conformant markup
+        language (let alone a useful non-TEI conformant markup language). Rather, they each contain
+        one or more <emph>elements</emph> which are required for TEI conformance.</p>
+      <schemaSpec ident="tei_all" start="TEI teiCorpus" prefix="tei_" targetLang="en" docLang="en">
+        <moduleRef n="01" key="tei"/>
+        <moduleRef n="02" key="header"
+          except="abstract appInfo application authority availability biblFull cRefPattern calendar calendarDesc catDesc catRef category change citeData citeStructure classCode classDecl conversion correction correspAction correspContext correspDesc creation distributor funder geoDecl hyphenation idno interpretation keywords langUsage language licence listChange listPrefixDef namespace normalization notesStmt prefixDef principal profileDesc projectDesc punctuation quotation refState refsDecl rendition revisionDesc samplingDecl schemaRef scriptNote segmentation seriesStmt sponsor stdVals styleDefDecl tagUsage tagsDecl taxonomy textClass unitDecl unitDef xenoData"/>
+        <moduleRef n="03" key="core"
+          except="abbr addrLine address analytic biblStruct binaryObject cb choice cit citedRange corr del desc distinct divGen ellipsis email expan foreign gb gloss headItem headLabel hi imprint index item l label lg list listBibl measure measureGrp media meeting mentioned milestone monogr noteGrp num orig pb postBox postCode ptr pubPlace publisher q rb ref reg relatedItem resp respStmt rs rt ruby series sic sp speaker stage street teiCorpus term textLang unit"/>
+        <moduleRef n="04" key="textstructure"
+          except="titlePart trailer argument back byline closer dateline div3 div4 div5 div6 div7 docAuthor docDate docEdition docImprint docTitle epigraph floatingText front group imprimatur opener postscript salute signed titlePage"/>
+
+        <moduleRef n="10" key="msdescription"
+          except="accMat acquisition additional additions adminInfo altIdentifier binding bindingDesc catchwords collation collection colophon condition custEvent custodialHist decoDesc decoNote depth dim dimensions explicit filiation finalRubric foliation height heraldry incipit institution layout layoutDesc locus locusGrp material msContents msFrag msItem msItemStruct msName msPart musicNotation objectDesc objectType origDate origPlace recordHist rubric scriptDesc seal sealDesc secFol signatures source stamp summary support supportDesc surrogates typeDesc typeNote watermark width"/>
+        <moduleRef n="11" key="transcr"
+          except="addSpan am damage damageSpan delSpan ex facsimile handShift line listTranspose metamark mod path redo restore retrace secl sourceDoc space subst substJoin supplied surface surfaceGrp surplus transpose undo zone"/>
+
+        <moduleRef n="13" key="namesdates"
+          except="addName affiliation age birth bloc climate country death district education event faith floruit forename genName geo geogFeat geogName langKnowledge langKnown listEvent listNym listObject listOrg listPerson listPlace listRelation location nameLink nationality nym object objectIdentifier objectName occupation offset persPronouns personGrp persona population region relation residence roleName settlement sex socecStatus state surname terrain trait"/>
+        <moduleRef n="14" key="figures"/>
+
+        <moduleRef n="16" key="linking"
+          except="alt altGrp anchor annotation join joinGrp link linkGrp listAnnotation seg standOff timeline when"/>
+
+
+
+
+        <elementSpec ident="editor" mode="change">
+          <attList>
+            <attDef ident="xml:id" mode="change" usage="req">
+              <valList type="closed" mode="change">
+                <valItem mode="add" ident="rgerzevske">
+                  <desc versionDate="2021-11-11" xml:lang="en">Rachel Gerzevske</desc>
+                </valItem>
+                <valItem mode="add" ident="zmurphy">
+                  <desc versionDate="2021-11-11" xml:lang="en">Zak Murphy</desc>
+                </valItem>
+                <valItem mode="add" ident="acolereeves">
+                  <desc versionDate="2021-11-11" xml:lang="en">Amory Coleman-Reeves</desc>
+                </valItem>
+                <valItem mode="add" ident="lhering">
+                  <desc versionDate="2021-11-11" xml:lang="en">Logan Hering</desc>
+                </valItem>
+                <valItem mode="add" ident="ebeshero">
+                  <desc versionDate="2021-11-11" xml:lang="en">Elisa Beshero-Bondar</desc>
+                </valItem>
+              </valList>
+            </attDef>
+          </attList>
+        </elementSpec>
+        <elementSpec ident="figDesc" mode="change">
+            <attList>
+              <attDef ident="resp" mode="change" usage="req">
+                <desc versionDate="2021-11-11" xml:lang="en">indicates the agency responsible for the
+                  intervention or interpretation, for example an editor or transcriber. Points to the
+                  xml:id of an editor or contributor defined in the teiHeader.</desc>
+              </attDef>
+            </attList>
+        </elementSpec>
+        <elementSpec ident="div2" mode="change">
+          <attList>
+            <attDef ident="xml:id" mode="change" usage="req">
+              <desc versionDate="2021-11-11" xml:lang="en"/>
+             <!-- <valList type="semi" mode="change">
+                <valItem mode="add" ident="e1909.03.12">
+                  <desc versionDate="2021-11-11" xml:lang="en">for calendar entry March 12,
+                    1909.</desc>
+                </valItem>
+                <valItem mode="add" ident="e1909.07.13">
+                  <desc versionDate="2021-11-11" xml:lang="en">for calendar entry July 13,
+                    1909.</desc>
+                </valItem>
+              </valList>-->
+            </attDef>
+          </attList>
+        </elementSpec>
+        <elementSpec ident="note" mode="change">
+          <attList>
+            <attDef ident="resp" mode="change" usage="req">
+              <desc versionDate="2021-11-11" xml:lang="en">indicates the agency responsible for the
+                intervention or interpretation, for example an editor or transcriber. Points to the
+                xml:id of an editor or contributor defined in the teiHeader.</desc>
+            </attDef>
+          </attList>
+        </elementSpec>
+        <elementSpec ident="figure" mode="change">
+          <attList>
+            <attDef ident="rend" mode="change" usage="req">
+              <valList type="semi" mode="change">
+                <valItem mode="add" ident="pencil">
+                  <desc versionDate="2021-11-14" xml:lang="en">for a picture drawn in pencil</desc>
+                </valItem>
+                <valItem mode="add" ident="cutout">
+                  <desc versionDate="2021-11-14" xml:lang="en">for an image cut out from another source and attached to the sheet</desc>
+                </valItem>
+                <valItem mode="add" ident="color">
+                  <desc versionDate="2021-11-14" xml:lang="en">for a picture drawn in color</desc>
+                </valItem>
+              </valList>
+            </attDef>
+          </attList>
+        </elementSpec>
+        <elementSpec ident="ab" mode="change">
+          <attList>
+            <attDef ident="rend" mode="change" usage="req">
+              <valList type="closed" mode="change">
+                <valItem mode="add" ident="cursive">
+                  <desc versionDate="2021-11-14" xml:lang="en">to describe cursive handwriting</desc>
+                </valItem>
+                <valItem mode="add" ident="smallcaps">
+                  <desc versionDate="2021-11-14" xml:lang="en">for lettering in capital letters, with a combination of larger and smaller letters</desc>
+                </valItem>
+                <valItem mode="add" ident="blockcaps">
+                  <desc versionDate="2021-11-14" xml:lang="en">for lettering in capital letters, all letters the same size</desc>
+                </valItem>
+                <valItem mode="add" ident="print">
+                  <desc versionDate="2021-11-14" xml:lang="en">for printed lettering</desc>
+                </valItem>
+              </valList>
+            </attDef>
+          </attList>
+        </elementSpec>
+        <elementSpec ident="add" mode="change">
+          <attList>
+            <attDef ident="rend" mode="change" usage="req">
+              <valList type="closed" mode="change">
+                <valItem mode="add" ident="cursive">
+                  <desc versionDate="2021-11-14" xml:lang="en">to describe cursive handwriting</desc>
+                </valItem>
+                <valItem mode="add" ident="smallcaps">
+                  <desc versionDate="2021-11-14" xml:lang="en">for lettering in capital letters, with a combination of larger and smaller letters</desc>
+                </valItem>
+                <valItem mode="add" ident="blockcaps">
+                  <desc versionDate="2021-11-14" xml:lang="en">for lettering in capital letters, all letters the same size</desc>
+                </valItem>
+                <valItem mode="add" ident="print">
+                  <desc versionDate="2021-11-14" xml:lang="en">for printed lettering</desc>
+                </valItem>
+              </valList>
+            </attDef>
+          </attList>
+        </elementSpec>
+      </schemaSpec>
+    </body>
+  </text>
+</TEI>

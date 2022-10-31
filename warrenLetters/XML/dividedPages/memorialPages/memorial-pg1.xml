@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="letters_schema.rnc" type="application/relax-ng-compact-syntax"?>
+<xml>
+    
+    <meta>
+        <title titleId="memService-1929-12-19-pg1">Speech prepared by P. J. Long for a memorial service for Warren Behrend, after <date>1930</date></title>
+        <sourceDesc location="John M. Lilley Library, Penn State Behrend Archives"/>
+        <paperOrigin>Correct copy P. J. Long COPY Hammermill Paper Company</paperOrigin>
+        <transDesc>
+            <editor>NV</editor>
+            <editor>GD</editor>
+            <editor>JG</editor>
+        </transDesc>
+        
+    </meta>
+    <figure>
+        <graphic src="../Letter_Images/Warren-Memorial-Letter/WarrenMemoiralFront.jpeg" alt="front, p1"/>
+    </figure>
+    <body> 
+        <pb n="1"/>
+        <header>
+            <ln n="1"/> <date>1929-12-19</date>
+            <greeting><!-- no greeting was provided --></greeting>
+        </header>
+        <p n="1">
+            <ln n="1"/>On December 19th, 1929 <person personId="WAR">Warren Behrend</person> on his way to join his family 
+            <ln n="2"/>for the Christmas holiday met a school bus at this place. The bus Made a left
+            <ln n="3"/>turn in front of his car without giving the proper signal. Instantly this 
+            <ln n="4"/>man decided to run his car off the road bed, though it was slippery, to save these
+            <ln n="5"/>children. his car overturned in this effort, killing him instantly 
+        </p>
+        <p n="2">
+            <ln n="6"/>in my experience, I have never known a finer example of self forget-
+            <ln n="7"/>fulness, esteeming the safety of others before oneself. Had he hesitated but
+            <ln n="8"/>an instant the tragedy of that fatal day would have been written in deeper lines
+            <ln n="9"/>some who are here today in possession of youthful health would almost certainly
+            <ln n="10"/>have suffered with him.
+        </p>
+        <p n="3">
+            <ln n="11"/>it is appropriate to this occasion that young people of this
+            <ln n="12"/>community pause today to consider his wonderful example of heroic <emotion>sacrifice</emotion>.
+            <ln n="13"/><person personIdRef="WAR">Warren's</person> deed is a compelling challenge to every one present, most definitely to 
+            <ln n="14"/>every boy and girl in this community to dedicate ourselves to the call of duty 
+            <ln n="15"/>and of unselfish service. This deed should, and I confidently trust, will be 
+            <ln n="16"/>an inspiration to succeeding generations to respond instantly to the call to
+            <ln n="17"/>duty even though it may mean to <emotion>sacrifice</emotion>.
+        </p>
+        <p n="4">
+            <ln n="18"/>As you young people look out into the world today the call to 
+            <ln n="19"/>unselfish service was never so compelling. Many of the finer things of life are 
+            <ln n="20"/>in peril. It is confused, almost hysterical. There is no remedy on earth for 
+            <ln n="21"/>these disorders so effectual as deeds not words of kindess, of self forgetfulness,
+            <ln n="22"/>and unselfish <emotion>sacrifice</emotion>. May we not treasure <person personIdRef="WAR">Warren's</person> heroic deed enacted in our
+            <ln n="23"/>midst as a reminder to all future generations that the highest duty is always to 
+            <ln n="24"/>others rather than to ourselves.
+        </p>
+        <p n="5">
+            <ln n="25"/>This community, the two schools in this immediate neighborhood and 
+            <ln n="26"/>more particularly the children whose lives were saved by <person personIdRef="WAR">Warren Behrend's</person> heroism,
+            <ln n="27"/>with their parents and friends come today to pay respectful tribute to his wonderful
+        </p>
+    </body>
+</xml>

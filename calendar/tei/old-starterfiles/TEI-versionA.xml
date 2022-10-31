@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Mary Behrend's Calendar Sheets</title>
+            <author>Mary Behrend</author>
+            <editor>Zak Murphy</editor>
+         </titleStmt>
+         
+         <publicationStmt>
+            <p>Mary Behrend never published these</p>
+         </publicationStmt>
+         <sourceDesc>
+            
+            <msDesc>
+               <msIdentifier><repository>Penn State Erie, The Behrend College Library</repository></msIdentifier>
+               <physDesc>
+                  <handDesc>
+                     <handNote xml:id="calendarPub" medium="print">New Friendship Calendar Company printing the calendar sheets.</handNote>
+                     <handNote xml:id="redPen" medium="red inkpen">Mary Behrend writing in a red pen, stating her love to Ernst behrend.
+                     </handNote>
+                     <handNote xml:id="pencil" medium="pencil">Mary Behrend writing in a pencil.
+                        this is usually easy to read and clear.                       
+                     </handNote>
+                     <handNote xml:id="blackpen" medium="black inkpen"> This is usually large and very clear to read compared to red and pencil</handNote>
+                     <handNote xml:id="greenpen" medium="green inkpen"> This is for saint Patrick's day its a special event in the calender</handNote>
+                  </handDesc>
+                  
+               </physDesc>
+               <history>
+                  <origin>Calendar sheets written and illustrated by Mary Behrend found in an old baby book,
+                     inside of an envelope.</origin>
+               </history>
+               
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div1 type="calendarSheets">
+            <opener>
+               <fw type="header" place="top" rend="bold">COPYRIGHT 1908, BY FRIENSHIP CALENDER CO.
+                  NEW BRITAIN CONN.</fw>
+            </opener>
+            
+            <div2 n="1">
+               <fw>
+                  <lb/><date when="1909-03-12">March 12, 1909 <lb/>Friday</date>
+               </fw>
+               <figure>
+                  <graphic
+                   url="https://newtfire.org/courses/tutorials/TEI-images/mary-behrend-calendar-1909/IMG_2050.jpg"></graphic>
+                  <figDesc>Drawing of a women in snowshoes named molly pointing ahead of her. This is along the lefts hand side of the page.</figDesc>
+               </figure>
+               <ab hand="#pencil">
+                  <lb/>Molly on 
+                  <lb/>snowshoes 
+                  <lb/>that Mr. Weir 
+                  <lb/>got. 
+                  <lb/>Pretty picture
+                  <lb/>is it not?!</ab>
+            </div2>            
+            
+            <div2 n="2">
+               <opener>
+                  <fw type="header" place="top" rend="bold">COPYRIGHT 1908, BY FRIENSHIP CALENDER CO.
+                     NEW BRITAIN CONN.</fw>
+               </opener>
+               <head hand="#calendarPub">
+                  <lb/>March 17, 1909 
+                  <lb/>Wednsday
+                  <lb/>Saint Patrick's Day
+               </head>
+               <figure>
+                  <graphic
+                     url="https://newtfire.org/courses/tutorials/TEI-images/mary-behrend-calendar-1909/IMG_2052.jpg"/>
+                  <figDesc rend="#blackpen">Drawing of two, 3 leaf clovers. Top right,below saint patricks green ink on left</figDesc>
+               </figure>             
+               <ab hand="#blackPen">
+                  <lb/>St. Patricks was a useful saint 
+                  <lb/>He fightened all the snakes away- 
+                  <lb/>I wish he'd try his art on <emph style="underline">smoke</emph>
+                  <figure>
+                     <figDesc rend="#blackpen">One 3 leaf clover below <emph style="underline">smoke</emph> </figDesc>
+                  </figure>
+                  <lb/>Around the Hammermill some day!
+                  <figure>
+                     <figDesc rend="#blackpen">Bottom left is one 3 leaf clover along the right side on the bottom is the hammermille building</figDesc>
+                  </figure>
+               </ab>
+               <closer hand="#redPen" n="2"> Hammerville Valley
+                  <unclear>Dreams</unclear><unclear>Love</unclear>
+                  <unclear>Me!</unclear>
+               </closer>
+                </div2>            
+            <closer n="1"  hand="#redPen">Love From <persName>Mary</persName></closer>
+         </div1>
+         
+      </body>
+   </text>
+</TEI>

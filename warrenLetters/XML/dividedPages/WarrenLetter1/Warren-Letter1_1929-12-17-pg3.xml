@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="letters_schema.rnc" type="application/relax-ng-compact-syntax"?>
+<xml>
+    <meta>
+        <title titleId= "WtoP-1929-12-17-Letter1-pg3">Letter from Warren Behrend to Mary and Ernst Behrend, <date>1929-12-17</date></title>
+        <sourceDesc location="John M. Lilley Library, Penn State Behrend Archives"/>
+        <paperOrigin>Deerfield Academy Deerfield, Massachutsetts</paperOrigin>
+        <transDesc>
+            <editor>GD</editor>
+            <editor>SB</editor>
+        </transDesc>
+    </meta>
+    <figure>
+        <graphic src="../Letter_Images/Warren-Letter1_1929-12-17/1929-12-17_Warrenp3.jpeg" alt="p3"/>
+        
+    </figure>
+<body>    
+    <pb n="3"/>
+    <!-- ged: The unclear element is not allowed in a person element. Once we figure out the unclear element. This error will be resolved. -->
+    <p n ="5"> <!-- ged: This is the same paragraph from page 2 -->
+    <ln  n="7"/>is leaving at eleven o'clock for
+    <ln  n="8"/><place placeId="SPRING">Springfield</place> in his car. He is going
+    <ln  n="9"/>to take us <crossOut>unknown</crossOut> along and so that
+    <ln  n="10"/>gives us plenty of time to get the one
+    <ln  n="11"/>o'clock out of <place placeIdRef="SPRING">Springfield</place>. That
+    <ln  n="12"/>gives <person personIdRef="NR">Ned</person> a chance to stay off in
+    <ln  n="13"/><place placeId="NH">New Haven</place> and gives me a chance <!-- seb: added place placeId element -->
+    <ln  n="14"/>to see <person personIdRef="HAR">Harriet</person>.
+    </p>
+    <p n="6">
+        <ln  n="1"/>I'm looking forward to seeing you
+        <ln  n="2"/>in <place placeId="CHAR">Charleston</place> soon and it will
+        <ln  n="3"/>be mighty nice to have the whole family
+        <ln  n="4"/>together again. I'm telephoning <person personId="BB">Betty</person>
+        <ln  n="5"/><person personIdRef="BB">Bratton</person>tonight find out whether
+        <ln  n="6"/>she can come and if so when. If she
+    </p>
+</body>
+</xml>

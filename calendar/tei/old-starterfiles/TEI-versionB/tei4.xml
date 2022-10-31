@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="out/tei4.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="out/tei4.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Calendar Entries</title>
+            <author>Mary Behrend</author>
+            <editor>Rachel Gerzevske</editor>
+         </titleStmt>
+         <extent>
+             Nine total calendar entries that Mary Behrend wrote and/or drew on. 
+         </extent>
+         <publicationStmt>
+            <p>COPYRIGHT 1908, BY FRIENDSHIP CALENDAR CO. NEW BRITAIN, CONN.</p>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><repository>Penn State Erie, The Behrend College Library</repository></msIdentifier>
+               <physDesc>
+                  <handDesc>
+                     <handNote xml:id="redPen" medium="red inkpen">Likely Mary Behrend writing in a red pen.</handNote>
+                     <handNote xml:id="blackPen" medium="black inkpen">Likely Mary behrend writing in a black pen.</handNote>
+                     <handNote xml:id="calendarPub" medium="print">Text printed onto the page from the calendar manufacturing company.</handNote>
+                     
+                     <handNote xml:id="pencil" medium="graphite pencil">Text that doesn't look like pen, but is not printed onto the page.</handNote>
+                  </handDesc>
+               </physDesc>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="calendarEntries_1">
+            <figure>
+               <graphic url="https://newtfire.org/courses/tutorials/TEI-images/mary-behrend-calendar-1909/IMG_2077.jpg"></graphic>
+               <fw place="top-center" hand="#calendarPub">COPYRIGHT 1908, BY FRIENDSHIP CALENDAR CO. NEW BRITAIN, CONN.</fw>
+               
+               <ab hand="#calendarPub"><date>May 6, 1909. Thursday</date></ab>
+               <figDesc>There is a brown house covered with foliage, the roof appears to be made of a hay-like substance, and smoke is coming from the chimney. It covers most of the 1909 and the last three letters of Thursday, and there is red pen to the right of the house. Everything on this page is written in red pen.</figDesc>
+               <ab hand="#redPen"><quote>Some love the glow of outward shore. Some love more <gap atLeast="1" atMost="7" unit="char"/> &amp; and try to <gap atLeast="1" atMost="4" unit="char"/> it; The house to me may lowly be if I get like the people in it</quote><name><unclear reason="eccentric_ductus">Las .Seeraeie</unclear></name></ab>
+               <ab hand="#redPen">Very true willed.</ab>
+            </figure>
+         </div>
+         <div type="calendarEntries_2">
+            <figure>
+               <graphic url="https://newtfire.org/courses/tutorials/TEI-images/mary-behrend-calendar-1909/IMG_2101.jpg"></graphic>
+               <fw place="top-center" hand="#calendarPub">COPYRIGHT 1908, BY FRIENDSHIP CALENDAR CO. NEW BRITAIN, CONN.</fw>
+               
+               <ab hand="#calendarPub"><date>August 14, 1909. Saturday</date></ab>
+               <figDesc>There is no drawing; only one quote, and everything is in red pen. </figDesc>
+               <ab hand="#redPen"><quote>To live in hearts or leave behind, is not to die.</quote><name>Campbell</name></ab>
+            </figure>
+         </div>
+         <div type="calendarEntries_3">
+            <figure>
+               <graphic url="https://newtfire.org/courses/tutorials/TEI-images/mary-behrend-calendar-1909/IMG_2041.jpg"></graphic>
+               <fw place="top-center" hand="#calendarPub">COPYRIGHT 1908, BY FRIENDSHIP CALENDAR CO. NEW BRITAIN, CONN.</fw>
+               
+               <ab hand="#calendarPub"><date>January 30th, 1909. Saturday</date></ab>
+               <figDesc>A man lay in his bed and stares begrudgingly at his alarm clock, the light from the window bright enough to illuminate the room. The clock reads <time>3:30</time>, but the man appears to have just woken up. Interestingly, there is no red text here. </figDesc>
+               <ab hand="#pencil"><name type="signature">E.R.B.</name> That damned old clock gives me a <unclear reason="eccentric_ductus">slecle.</unclear> Each <gap atLeast="1" atMost="2" unit="words"/>. where it's dark. <emph style="underline">It likes</emph> it's fun,but I've become to tire of thee dark!</ab>
+            </figure>
+         </div>
+         <div type="calendarEntries_4">
+            <figure>
+               <graphic url="https://newtfire.org/courses/tutorials/TEI-images/mary-behrend-calendar-1909/IMG_2042.jpg"></graphic>
+               <head place="top-center" hand="#calendarPub">COPYRIGHT 1908, BY FRIENDSHIP CALENDAR CO. NEW BRITAIN, CONN.</head>
+               
+               <ab hand="#calendarPub"><date>February 16, 1909. Tuesday</date></ab>
+               <figDesc>A sketch of a man outside holding a bug near a tree. Watercolor appears to have been used for this page, and there is red text at the bottom. </figDesc>
+               <ab hand="#blackPen"><name type="person">Mr. Behrend</name> feeds a <unclear reason="eccentric_ductus">loud</unclear> bug!</ab>
+               <ab hand="#redPen">I wonder if you have found your way lately!</ab>
+            </figure>
+         </div>
+         <div type="calendarEntries_5">
+            <figure>
+               <graphic url="https://newtfire.org/courses/tutorials/TEI-images/mary-behrend-calendar-1909/IMG_2046.jpg"></graphic>
+               <fw place="top-center" hand="#calendarPub">COPYRIGHT 1908, BY FRIENDSHIP CALENDAR CO. NEW BRITAIN, CONN.</fw>
+               
+               <ab hand="#calendarPub"><date>February 17, 1909. Wednesday</date></ab>
+               <figDesc>There is no drawing here, this page consists entirely of text. There is a sentence on the bottom written in red ink, however.</figDesc>
+               <ab hand="#pencil">Each morning very early where all is dark &amp; still, <gap atLeast="1" atMost="4" unit="words"/> early blackness to leave at <placeName>Hammermill</placeName>.</ab> 
+               <ab hand="#pencil">I really think he's very good to get up when it's dark. For this he says he doesn't mind it could be <unclear reason="eccentric_ductus">leecle a lark!</unclear> </ab>
+               <ab hand="#redPen"><gap atLeast="1" atMost="2" unit="words"/>! is it still dark where you arise?</ab>
+            </figure>
+         </div>
+         <div type="calendarEntries_6">
+            <figure>
+               <graphic url="https://newtfire.org/courses/tutorials/TEI-images/mary-behrend-calendar-1909/IMG_2048.jpg"></graphic>
+               <fw place="top-center" hand="#calendarPub">COPYRIGHT 1908, BY FRIENDSHIP CALENDAR CO. NEW BRITAIN, CONN.</fw>
+               
+               <ab hand="#calendarPub"><date>March 8, 1909. Monday</date></ab>
+               <figDesc>A red question mark covers up the entire page. A small amount of text is on the bottom right of the page, written in red ink.</figDesc>
+               <ab hand="#redPen">Parliafs this is <gap atLeast="1" atMost="3" unit="words"/> it will or later. Love, <gap atMost="1" unit="words"/></ab>
+            </figure>
+         </div>
+         <div type="calendarEntries_7">
+            <figure>
+               <graphic url="https://newtfire.org/courses/tutorials/TEI-images/mary-behrend-calendar-1909/IMG_2049.jpg"></graphic>
+               <fw place="top-center" hand="#calendarPub">COPYRIGHT 1908, BY FRIENDSHIP CALENDAR CO. NEW BRITAIN, CONN.</fw>
+               
+               <ab hand="#calendarPub"><date>March 11, 1909. Thursday</date></ab>
+               <figDesc>Four women are wearing fancy dresses and feathered hats. The first woman in purple has red hair while the rest are blond. The other three women are wearing red, blue, and green respectively, with the red and green women yelling at the woman in blue. The red woman's hat covers up the U, R, and some of the S in Thursday and there is red writing on the left side. </figDesc>
+               <ab hand="#blackPen">Everybody dressed in their best for <emph style="underline">this</emph> is an <emph style="underline">Erie tea.</emph> They <emph style="underline">eat</emph> too much, <emph style="underline">talk</emph> too much- you can bet they won't rope in me.</ab>
+               <ab hand="#redPen">I suppose she is very <emph style="underline">gay</emph> in Erie?</ab>
+            </figure>
+         </div>
+         <div type="calendarEntries_8">
+            <figure>
+               <graphic url="https://newtfire.org/courses/tutorials/TEI-images/mary-behrend-calendar-1909/IMG_2050.jpg"></graphic>
+               <fw place="top-center" hand="#calendarPub">COPYRIGHT 1908, BY FRIENDSHIP CALENDAR CO. NEW BRITAIN, CONN.</fw>
+               
+               <ab hand="#calendarPub"><date>March 12, 1909. Friday</date></ab>
+               <figDesc>A woman is wearing a pair of large snowshoes and is trying to walk in them. There is red writing in the bottom right corner. </figDesc>
+               <ab hand="#blackPen"><name type="person">Molly</name> on snowshoes that <name type="person">Mr. Weir</name> got. Pretty picture is it not?!</ab>
+               <ab hand="#redPen"><unclear reason="eccentric_ductus">Just fine really.</unclear></ab>
+            </figure>
+         </div>
+         <div type="calendarEntries_9">
+            <figure>
+               <graphic url="https://newtfire.org/courses/tutorials/TEI-images/mary-behrend-calendar-1909/IMG_2052.jpg"></graphic>
+               <fw place="top-center" hand="#calendarPub">COPYRIGHT 1908, BY FRIENDSHIP CALENDAR CO. NEW BRITAIN, CONN.</fw>
+               
+               <ab hand="#calendarPub"><date>March 17, 1909. Wednesday St. Patrick's Day</date></ab>
+               <figDesc>There are doodles of snakes around the date, one directly below "Saint Patrick's Day" and one on the top right of the calendar. Four clovers are scattered across the page and a picture of Hammermill Paper Company is drawn at the bottom and red text below it.</figDesc>
+               <ab hand="blackPen"><name type="person">St. Patrick</name> was a useful saint. He frightened all the snakes away- I wish he'd try his art on <emph style="underline">smoke</emph> around <placeName>the Hammermill</placeName> some day!</ab>
+               <ab hand="#redPen">The Hammermill really <gap atLeast="1" atMost="2" unit="words"/> !</ab>
+            </figure>
+         </div>
+         <div type="archive">
+            <figure>
+               <graphic url="https://newtfire.org/courses/tutorials/TEI-images/mary-behrend-calendar-1909/IMG_2040.jpg"></graphic>
+               <figDesc>This photo has an an envelope with Mary Behrend's calendar pages on top of it. The top page is the first calendar entry. To the right, there is a frayed book decorated with white and blue flowers with <quote>Baby Days</quote> embroidered on the cover and some loose pages underneath it.</figDesc>
+            </figure>
+         </div>
+      </body>
+   </text>
+</TEI>

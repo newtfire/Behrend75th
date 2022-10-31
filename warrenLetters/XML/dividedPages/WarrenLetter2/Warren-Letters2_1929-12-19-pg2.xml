@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="letters_schema.rnc" type="application/relax-ng-compact-syntax"?>
+
+<xml>
+    <meta>
+        <title titleId= "WtoP-1929-12-17-Letter2-pg2">Letter from Warren Behrend to Mary and Ernst Behrend, <date>1929-12-19</date></title>
+        <sourceDesc location="John M. Lilley Library, Penn State Behrend Archives"/>
+        <paperOrigin>Deerfield Academy Deerfield, Massachutsetts</paperOrigin>
+        <transDesc>
+            <editor>JG</editor>
+            <editor>TH</editor>
+        </transDesc>
+    </meta>
+    <figure>
+        <graphic src="../Letter_Images/Warren-Letter2_1929-12-19/1929-12-19_Warrenp2.jpeg" alt="p2"/>    
+    </figure>
+    <body>
+        <pb n="2"/>
+       <p n="2"> 
+        <ln n="3"/> ments you made about
+        <ln n="4"/> <unclear reason="hard to read">daring</unclear> the La Salle meet
+        <ln n="5"/> me in <place placeId="WASH">Washington</place>. If
+        <ln n="6"/> you haven't done this just say so
+        <ln n="7"/> and I'll write <person personId="MF">Miss <unclear reason="unclear name">Fraters</unclear></person>. I
+        <ln n="8"/> shall probably write to her anyway as
+        <ln n="9"/> I want to be sure the boot for
+        <ln n="10"/> the toy is in the car and have
+        <ln n="11"/> the wings put <crossOut/> back on again.
+       </p>
+        <p n="3">
+            <ln n="1"/> I haven't been able to get in
+            <ln n="2"/> touch with <person personId="BB">Betty Bratton</person> yet 
+            <ln n="3"/> but I shall probably phone her
+            <ln n="4"/> tonight if I can find out where
+            <ln n="5"/> she lives. There is small informal
+        </p>
+    </body>
+</xml>

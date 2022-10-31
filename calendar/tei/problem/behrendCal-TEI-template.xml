@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="out/behrendCalODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="out/behrendCalODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Mary Behrend's Calendar Sheets</title>
+            <author>Mary Behrend</author>
+            <editor xml:id="rgerzevske">Rachel Gerzevske</editor>
+            <editor xml:id="acolereeves">Amory Coleman-Reeves</editor>
+            <editor xml:id="zmurphy">Zak Murphy</editor>
+            <editor xml:id="lhering">Logan Hering</editor>
+         </titleStmt>
+         <editionStmt>
+            <edition>First digital edition, launched <date>October 2021</date> by students in the DIGIT 110 Text Encoding class 
+            taught by <name xml:id="ebeshero">Elisa Beshero-Bondar</name> at Penn State Erie, The Behrend College.</edition>
+         </editionStmt>
+         <publicationStmt>
+            <p>As far as we know, Mary Behrend never published these.</p>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <repository>Penn State Erie, The Behrend College Library</repository>
+               </msIdentifier>
+               <physDesc>
+                  <handDesc>
+                     <handNote xml:id="calendarPub" medium="print">New Friendship Calendar Company
+                        printing the calendar sheets.</handNote>
+                     <handNote xml:id="redPen" medium="red inkpen">Mary Behrend writing in a red
+                        pen.</handNote>
+                     <handNote xml:id="pencil" medium="pencil">Mary Behrend writing in a
+                        pencil.</handNote>
+                     <handNote xml:id="blackpen" medium="black inkpen"> This is usually large and
+                        very clear to read compared to red and pencil</handNote>
+                     <handNote xml:id="greenpen" medium="green inkpen"> This was used in saint Patrick's
+                        day its a special event in the calendar</handNote>
+                     <handNote xml:id="multicolor" medium="multiple colors and media">This
+                        designates the inks or markings Mary Behrend made for artwork.</handNote>
+                     <!--ebb: I'm adding this last one to help simplify how we describe the sketches. You'll be writing a description of the sketches, too.  -->
+                  </handDesc>
+
+               </physDesc>
+               <history>
+                  <origin>Printed calendar sheets from <date>1909</date> with handwriting and illustrations added by Mary Behrend, found inside an
+                     envelope in a family baby album.</origin>
+               </history>
+
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div1 type="calendarCollection">
+            <!--div1 just wraps the whole collection. -->
+
+            <div2 xml:id="e-1909-03-12"
+               facs="https://arrowarchive.github.io/behrendcalendar/photos/march/1909-03-12.jpg">
+               <!--div2 is for each calendar entry. 
+                 1. We can construct an xml:id (to hold a distinct identifier) for this entry:
+              it is just the letter "e" followed by the yyyy-mm-dd for the entry, with each piece separated by a hyphen.
+                 2. the @facs attribute points to the web URL where we're hosting the calendar images.
+              -->
+               <fw place="top-center" hand="#calendarPub">COPYRIGHT 1908, BY FRIENDSHIP CALENDAR CO.
+                  NEW BRITAIN, CONN.</fw>
+               <ab hand="#calendarPub">
+                  <lb/><date when="1909-03-12">March 12, 1909. <lb/>Friday</date>
+               </ab>
+               <figure hand="#multicolor">
+                  <figDesc resp="#zmurphy">Drawing of a woman in snowshoes named Molly pointing
+                     ahead of her. This is along the left-hand side of the page.</figDesc>
+               </figure>
+               <ab hand="#pencil">
+                  <lb/>Molly on <lb/>snowshoes <lb/>that <persName>Mr. Weir</persName> <lb/>got. <lb/>Pretty picture
+                  <lb/>is it not?!</ab>
+               <ab><add hand="#redPen" place="bottom-right">Love from Molly</add></ab>
+            </div2>
+
+            <div2 xml:id="e-1909-07-13"
+               facs="https://arrowarchive.github.io/behrendcalendar/photos/july/1909-07-13.jpg">
+               <fw place="top-center" hand="#calendarPub">COPYRIGHT 1908, BY FRIENDSHIP CALENDAR CO.
+                  NEW BRITAIN, CONN.</fw>
+               <ab hand="#calendarPub">
+                  <lb/><date when="1909-07-13">July 13, 1909. <lb/>Tuesday</date>
+               </ab>
+               <figure rend="cutout">
+                  <figDesc resp="#rgerzevske #ebeshero"><!--ebb: As I zoom in on the image, it's clear this is printed, probably cut out from a magazine. -->
+                     An infant is seen from behind. Looking closely, the
+                     image was made with a different type of paper. It was likely first printed in a magazine, cut
+                     out, and glued onto the page.</figDesc>
+               </figure>
+               <ab hand="#blackPen" rend="smallcaps">
+                  <!--ODD addition: customize @rend to "smallcaps" or "cursive" -->
+                  <lb/>That little spot in the 
+                  <lb/>back of his neck 
+                  <lb/>is the sweetest spot to
+                  <lb/>kiss I know 
+                  <lb/>so I kiss him there 
+                  <lb/>and <emph style="underline">hold him close</emph>
+                  <lb/>just because I love him so.</ab>
+
+               <note resp="#rgerzevske">It's clear that Mary is talking about her son Warren here. From the way she
+                  talks about him, he is a few months old (or less) and she absolutely adores him.
+                  If Warren is her first born child, then her joy from being around him makes a lot
+                  more sense. </note>
+            </div2>
+
+         </div1>
+      </body>
+   </text>
+</TEI>

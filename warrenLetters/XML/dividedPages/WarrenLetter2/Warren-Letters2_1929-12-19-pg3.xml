@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="letters_schema.rnc" type="application/relax-ng-compact-syntax"?>
+
+<xml>
+    <meta>
+        <title titleId= "WtoP-1929-12-17-Letter2-pg3">Letter from Warren Behrend to Mary and Ernst Behrend, <date>1929-12-19</date></title>
+        <sourceDesc location="John M. Lilley Library, Penn State Behrend Archives"/>
+        <paperOrigin>Deerfield Academy Deerfield, Massachutsetts</paperOrigin>
+        <transDesc>
+            <editor>JG</editor>
+            <editor>TH</editor>
+        </transDesc>
+    </meta>
+    <figure>
+        <graphic src="../Letter_Images/Warren-Letter2_1929-12-19/1929-12-19_Warrenp3.jpeg" alt="p3"/>
+    </figure>
+    <body>
+        <pb n="3"/>
+        <p n="3">
+        <ln n="6"/> dance here next Saturday and
+        <ln n="7"/> if she has no definite <unclear reason="hard to read">*</unclear> for
+        <ln n="8"/> next <crossOut>december</crossOut> Christmas and might
+        <ln n="9"/> be able to go I'll ask her <unclear reason="hard to read">if for</unclear>
+        <ln n="10"/> that no that we can talk over that <!-- "no" might have meant "know" -->
+        <ln n="11"/> matter. I think <person personId="Harriet">Harriet</person> would like
+        <ln n="12"/> it better if I could get someone to
+        <ln n="13"/> * &amp; keep her company. I'll write
+        <ln n="14"/> you to New York the * * the
+        <ln n="15"/> phone call.
+        </p>
+        <p n="4">
+            <ln n="1"/> I'm not at all sure I'll have
+            <ln n="2"/> I'll have time to make the enlargements you
+            <ln n="3"/> want, but if I do I'll be glad to 
+            <ln n="4"/> make them. Enlargements take a lot
+        </p>
+    </body>
+</xml>

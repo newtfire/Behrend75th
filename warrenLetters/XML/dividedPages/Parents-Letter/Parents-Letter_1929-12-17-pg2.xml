@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="letters_schema.rnc" type="application/relax-ng-compact-syntax"?>
+<xml>
+    <meta>
+        <title titleId= "PtoW-1929-12-17-pg2">Letter from Mary and Ernst Behrend to Warren Behrend, <date>1929-12-17</date></title>
+        <sourceDesc location="John M. Lilley Library, Penn State Behrend Archives"/>
+        <paperOrigin>The Monticello Tidewater's Leading Hotel. Norfolk,VA.</paperOrigin>
+        <transDesc>
+            <editor>AM</editor>
+            <editor>GD</editor>
+            <editor>JG</editor>
+        </transDesc>
+    </meta>
+    <figure>
+        <graphic src="../Letter_Images/Parents-LetterToWarren_1929-12-17/1929-12-17_ParentsLetterBack.jpeg" alt="Parents Letter to Warren 1929-12-17 page 2"/>
+    </figure>
+<body>
+
+<pb n="2"/>
+<p n="1"> <!-- ged: this is stll part of the 1st parpagraph from page 1-->
+<ln n="15"/><unclear reason="no idea">found</unclear> with due <unclear reason="no idea">caution</unclear>
+<ln n="16"/>Lot of wild drivers on 
+<ln n="17"/>the road 
+<closer> 
+    <ln n="18" />M. Warren.
+</closer>
+</p>
+<p n="2"> <!-- am: Fathers letter on the back of the page-->
+    <ln n="1"/><car>Duesenberg</car> ran beautifully -so far!
+    <ln n="2"/>First day <weather>nice weather</weather>;<underline>very</underline> cold
+    <ln n="3"/>yesterday. You may need your coon
+    <ln n="4"/>coat, heavy hat or fur cap!!
+    <ln n="5"/>Look forward to our Wiedersehen. <!-- ged: This is a German word that means "meet again" --> 
+</p>    
+<closer>
+    <ln n="1"/>Faithfully
+    <ln n="2"/>Father.
+</closer>
+</body>
+</xml>

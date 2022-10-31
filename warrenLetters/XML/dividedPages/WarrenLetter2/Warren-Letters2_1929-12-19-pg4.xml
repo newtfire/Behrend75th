@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../letters_schema.rnc" type="application/relax-ng-compact-syntax"?>
+
+<xml>
+    <meta>
+        <title titleId= "WtoP-1929-12-17-Letter2-pg4">Letter from Warren Behrend to Mary and Ernst Behrend, <date>1929-12-19</date></title>
+        <sourceDesc location="John M. Lilley Library, Penn State Behrend Archives"/>
+        <paperOrigin>Deerfield Academy Deerfield, Massachutsetts</paperOrigin>
+        <transDesc>
+            <editor>JG</editor>
+            <editor>TH</editor>
+        </transDesc>
+    </meta>
+    <figure>
+        <graphic src="../Letter_Images/Warren-Letter2_1929-12-19/1929-12-19_Warrenp4.jpeg" alt="p4"/>
+    </figure>
+    <body>
+        <pb n="4"/>
+        <p n="4">
+        <ln n="5"/> of time and messing around.
+        </p>
+        <p n="5">
+            <ln n="1"/> There is not as much snow
+            <ln n="2"/> here as there was in <place placeId="Erie">Erie</place>, but
+            <ln n="3"/> it <weather>very cold</weather>. The water question
+            <ln n="4"/> is getting quite serious here now
+            <ln n="5"/> and they are planning to drill a
+            <ln n="6"/> number of wells next week. The
+            <ln n="7"/> spring at the <place placeId="EAGLE">Eaglehook</place> dried out
+            <ln n="8"/> yesterday and so that <crossOut>is the jist</crossOut>
+            <ln n="9"/> throws all the more drain on the
+            <ln n="10"/> town system.
+        </p>
+        <p n="6">
+            <ln n="1"/> Hope you have a nice trip
+            <ln n="2"/> south.
+        </p>
+        <closer>
+            <ln n="1"/>Much love,
+            <ln n="2"/>Warren
+        </closer>
+    </body>
+</xml>

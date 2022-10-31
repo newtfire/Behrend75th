@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="letters_schema.rnc" type="application/relax-ng-compact-syntax"?>
+<xml>
+    <meta>
+        <title titleId= "WtoP-1929-12-17-Letter1-pg2">Letter from Warren Behrend to Mary and Ernst Behrend, <date>1929-12-17</date></title>
+        <sourceDesc location="John M. Lilley Library, Penn State Behrend Archives"/>
+        <paperOrigin>Deerfield Academy Deerfield, Massachutsetts</paperOrigin>
+        <transDesc>
+            <editor>GD</editor>
+            <editor>SB</editor>
+        </transDesc>
+    </meta>
+    <figure>
+        <graphic src="../Letter_Images/Warren-Letter1_1929-12-17/1929-12-17_Warrenp2.jpeg" alt="p2"/>
+    </figure>
+<body><pb n="2"/>
+<p n="3"> 
+    <ln n="1"/>I am going to drop in and see
+    <ln n="2"/><person personId="HAR">Harriet</person>tomorrow night.<person personId="MBS">Miss Black</person>- <!-- seb: should I make two person elements for Miss Black, and one for -stone? or do a self closing line element? -->
+    <ln n="3"/><person personIdRef="MBS">stone</person> said that <unclear reason="looks like it could be mother or brother">brother</unclear>might get
+    <ln n="4"/>through the portals to see their <unclear reason="not entirely sure what this says">sisters.</unclear>
+</p>
+<p n="4">
+    <ln  n="1"/>I have a "blind date" for to-
+    <ln  n="2"/>morrow night in <place placeId="NY">New York</place>. If
+    <ln  n="3"/>you know what a blind date is
+    <ln  n="4"/>you will realize that I awaite it
+    <ln  n="5"/>with fear trembling. The only thing 
+    <ln  n="6"/>the girl who made the date knows
+    <ln  n="7"/>about me is that I am 5'8" tall.
+</p> 
+<p n="5">
+    <ln  n="1"/>Tomorrow we have 20 minute<!-- seb: should we add a time element -->
+    <ln  n="2"/>periods and are all through at
+    <ln  n="3"/>11.30. As I have no classes the 
+    <ln  n="4"/>sixth and seventh periods I shall
+    <ln  n="5"/>be all through at 10.50. This works
+    <ln  n="6"/>out very well, because <person personId= "OAK">Mr.Oatley</person>
+</p></body>
+</xml>    

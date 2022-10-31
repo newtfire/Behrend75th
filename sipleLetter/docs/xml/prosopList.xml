@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+   <meta>
+      <title>Project Prosopography File</title>
+      <context>Markup data extracted on <date>2021-12-01T12:32:36.027-05:00</date>
+      </context>
+   </meta>
+   <listPerson>
+      <person>
+         <persName>Admiral Byrd</persName>
+         <note resp="">Admiral Boyd was an American naval officer, and he was also an explorer. Boyd
+            also recives the Medal of Honor. He was also an organizer of polar logistics and a polar
+            explorer.</note>
+      </person>
+      <person>
+         <persName>Alton Wade, Geologist,</persName>
+         <note resp="">Alton Wade was an American geoligist and most of his scientific interest was
+            Antartica's geology. He traveled there numerous times, and he did so twice with Admiral
+            Byrd.</note>
+      </person>
+      <person>
+         <persName>Corey</persName>
+         <note resp="">We think this is Stevenson Corey.</note>
+      </person>
+      <person>
+         <persName>Olin Stan-cliff</persName>
+<<<<<<< HEAD
+         <note resp="hjl"
+            ><!--Your comments about this person: do we know anything about them? Or what do you learn from the letters?
+                      You can use your initials as the value of @resp to indicate who wrote this note.--></note>
+=======
+         <note resp="hjl">Olin was also an explorer of the Byrd Atlantic Expedition.</note>
+>>>>>>> a2cc139b8dd63189fbce09daf4ab26dd0f7356c8
+      </person>
+      <person>
+         <persName>PAUL A. SPILE</persName>
+         <note resp="hjl">Spile was an American georgrapher who explorered Antartica from the Erie
+            area. Paul took part in six expeditiions in Antarica, which included the two Byrd
+            expeditions that happened in 1928-1930 and 1933-1935.</note>
+      </person>
+      <person>
+         <persName>Stevenson Corey</persName>
+         <note resp="hjl">Stevenson Corey was also an explorerin the Antartica Expedition. He says
+            that he wanted to do the expedition because it was a challenge that he seemed up to
+            doing and that it would probably be a good fit for him. "Well, it was the nature of a
+            challenge to me, at my age, a young fellow, casting around and at that time, the
+            Depression, I thought it might be adventuresome and I thought I'd see if I could be
+            accepted as a member of the party. I didn't want to just go down to the ice on the ship,
+            I wanted to be member of the ice party and stay for the year."</note>
+      </person>
+   </listPerson>
+   <listPlace>
+      <place>
+         <placeName>Antarctic contintent</placeName>
+         <geo>
+            <lat>82.8628° S</lat>
+            <long>135.0000° E</long>
+         </geo>
+         <note resp="">Antartica is a continent that is located on the very most southern pole on
+            Earth. The contiment is extremely unpopulated, and it is a continent that is mostly
+            covered in ice. Antartica is known for it's Lemaire Channel and Paradise Harbor.</note>
+      </place>
+      <place>
+         <placeName>Mt. Raymound Foadick in the Marie Byrd Land,</placeName>
+         <geo>
+            <lat>Not Able to Be Found</lat>
+            <long>Not Able to Be Found</long>
+         </geo>
+<<<<<<< HEAD
+         <note resp=""
+            ><!--Your comments about this place: Why was it important in your collection? Or what do you learn from the letters?
+                      You can use your initials as the value of @resp to indicate who wrote this note.--></note>
+=======
+         <note resp="">Not Able to Be Found</note>
+>>>>>>> a2cc139b8dd63189fbce09daf4ab26dd0f7356c8
+      </place>
+   </listPlace>
+</xml>

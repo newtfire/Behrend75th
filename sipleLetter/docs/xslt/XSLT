@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><xml>
+    <header>
+        <paperManufacture>
+            <Owner>PAUL A. SPILE</Owner>
+            <address>1158 WEST FITH STREET</address>
+            <city location="City-STATE">ERIRE, PENNA.</city>
+        </paperManufacture>
+        <date>December 9, 1935</date>
+    </header>
+    <letter>
+        <greeting>Dear Mr. Behrend</greeting>
+        <p n="1"> 
+            It is with great pleasure that I present this little token of friendship.
+            This rock was picked up on the "ash dump" - a unique moraine running out from the base
+            of an extinct valcano, Mt. Raymound Foadick in the Marie Byrd Land, Antartica.
+        </p>
+        <p n="2">
+            The land was first discovered from the air by Admiral Byrd in 1929, but it
+            was first visited by our party travel-ing by dog team during October - December, was
+            composed of four men - Alton Wade, Geologist, Stevenson Corey and Olin Stan-cliff,
+            drivers and assistants, and myself as leader and Biologist 
+        </p>
+        <p n="3"> 
+            The valcano was at the extreme trun-ing point of our travels, about three
+            hun-dred miles from little america. Corey and I spent Thanksgiving Day near the point
+            that blew almost continuosly for three miles an hour, and often of hurrican velocity
+            completely flattening our tent. 
+        </p>
+        <p n="4">
+            The sextant you so kindly loaned us helped to guideus through the hundreds
+            of weary, uncharted miles, and I returned it to you with deepest appreciation and with
+            it a place of Antarctic contintent it-self.
+        </p>
+        <closing>
+            With kindest regards,
+            Sincerely yours,
+        </closing>
+        <signature>Signature</signature>
+        <image>Penguins one standing one laying on its belly</image>
+    </letter>
+</xml>
