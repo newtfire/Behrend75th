@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="letters_schema.rnc" type="application/relax-ng-compact-syntax"?>
 
+<?xml-model href="../letters_schema.rnc" type="application/relax-ng-compact-syntax"?>
 <xml>
     <meta>
         <title titleId= "WtoP-1929-12-17-Letter2">Letter from Warren Behrend to Mary and Ernst Behrend, <date>1929-12-19</date></title>
