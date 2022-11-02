@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="letters_schema.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../letters_schema.rnc" type="application/relax-ng-compact-syntax"?>
 <xml>
     <meta>
         <title titleId= "WtoP-1929-12-17-Letter1-pg2">Letter from Warren Behrend to Mary and Ernst Behrend, <date>1929-12-17</date></title>
@@ -8,6 +8,7 @@
         <transDesc>
             <editor>GD</editor>
             <editor>SB</editor>
+            <editor>EM</editor>
         </transDesc>
     </meta>
     <figure>
@@ -17,8 +18,8 @@
 <p n="3"> 
     <ln n="1"/>I am going to drop in and see
     <ln n="2"/><person personId="HAR">Harriet</person>tomorrow night.<person personId="MBS">Miss Black</person>- <!-- seb: should I make two person elements for Miss Black, and one for -stone? or do a self closing line element? -->
-    <ln n="3"/><person personIdRef="MBS">stone</person> said that <unclear reason="looks like it could be mother or brother">brother</unclear>might get
-    <ln n="4"/>through the portals to see their <unclear reason="not entirely sure what this says">sisters.</unclear>
+    <ln n="3"/><person personIdRef="MBS">stone</person> said that brothers might get
+    <ln n="4"/>through the portals to see their sisters.
 </p>
 <p n="4">
     <ln  n="1"/>I have a "blind date" for to-

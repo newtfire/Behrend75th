@@ -11,7 +11,7 @@ sourceDesc = element sourceDesc { location }
 location = attribute location { "John M. Lilley Library, Penn State Behrend Archives" }
 paperOrigin = element paperOrigin { text }
 transDesc = element transDesc { editor+}
-editor = element editor { "GD" | "JG" | "AM" | "TH" | "SB" | "NV" }
+editor = element editor { "GD" | "JG" | "AM" | "TH" | "SB" | "NV" | "EM" | "JP" | "GT" }
 
 figure = element figure {graphic+}
 graphic = element graphic {src, alt}
@@ -29,7 +29,7 @@ p = element p {n, ln, mixed{(ln | pb| person | place | weather | unclear | cross
 emotion =  element emotion {"sacrifice" | "sacrificing"}
 n = attribute n { xsd:integer }
 ln = element ln {n, empty}
-person = element person { (personId | personIdRef),unclear?, text }
+person = element person { mixed{(personId | personIdRef)},unclear? }
 personId = attribute personId { xsd:ID }
 personIdRef = attribute personIdRef {xsd:IDREF}
 place = element place { (placeId | placeIdRef), text }

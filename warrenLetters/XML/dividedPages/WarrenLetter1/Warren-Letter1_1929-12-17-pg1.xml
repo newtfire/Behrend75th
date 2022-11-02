@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="letters_schema.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../letters_schema.rnc" type="application/relax-ng-compact-syntax"?>
 <xml>
     <meta>
         <title titleId= "WtoP-1929-12-17-Letter1-pg1">Letter from Warren Behrend to Mary and Ernst Behrend, <date>1929-12-17</date></title>
@@ -8,6 +8,7 @@
         <transDesc>
             <editor>GD</editor>
             <editor>SB</editor>
+            <editor>EM</editor>
         </transDesc>
     </meta>
     <figure>
@@ -34,7 +35,7 @@
             <ln n="2"/>both promised each other to drive care-
             <ln n="3"/>fully. and are<unclear reason="not sure what this says">nothing</unclear> our parents
             <ln n="4"/>such a promise. You already have
-            <ln n="5"/> mine anyway <unclear reason="1st letter looks like a n, we think it is a the word but.">but</unclear>here it is again. 
+            <ln n="5"/> mine anyway but here it is again. 
             <ln n="6"/><underline>Don't worry</underline>.
         </p>
     </body>

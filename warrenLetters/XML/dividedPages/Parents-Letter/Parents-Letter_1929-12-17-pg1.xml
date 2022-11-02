@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="letters_schema.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../letters_schema.rnc" type="application/relax-ng-compact-syntax"?>
 <xml>
     <meta>
         <title titleId= "PtoW-1929-12-17-pg1">Letter from Mary and Ernst Behrend to Warren Behrend, <date>1929-12-17</date></title>
@@ -9,6 +9,7 @@
             <editor>AM</editor>
             <editor>GD</editor>
             <editor>JG</editor>
+            <editor>EM</editor>
         </transDesc>
     </meta>
     <figure>
@@ -26,7 +27,7 @@
             <ln n="2"/><place placeId="NorthCarolina">Southern Pines</place>. Next day 
             <ln n="3"/>Charleston &amp; the <boat>Amida</boat> 
             <ln n="4"/>hill ? wonderful to see
-            <ln n="5"/><unclear reason="not sure">for it.</unclear> <unclear reason="not sure">O all </unclear>
+            <ln n="5"/>you &amp; H. &amp; all to 
             <ln n="6"/>&amp; gather for Christmas.
             <ln n="7"/>We telephoned Betty &amp;
             <ln n="8"/><underline>offically</underline> invite her -and

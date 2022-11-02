@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="letters_schema.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../letters_schema.rnc" type="application/relax-ng-compact-syntax"?>
 <xml>
     <meta>
         <title titleId= "PtoW-1929-12-17-pg2">Letter from Mary and Ernst Behrend to Warren Behrend, <date>1929-12-17</date></title>
@@ -9,6 +9,7 @@
             <editor>AM</editor>
             <editor>GD</editor>
             <editor>JG</editor>
+            <editor>EM</editor>
         </transDesc>
     </meta>
     <figure>

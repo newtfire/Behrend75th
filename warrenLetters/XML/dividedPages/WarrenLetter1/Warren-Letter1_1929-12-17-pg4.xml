@@ -8,6 +8,7 @@
         <transDesc>
             <editor>GD</editor>
             <editor>SB</editor>
+            <editor>EM</editor>
         </transDesc>
     </meta>
     <figure>
@@ -18,14 +19,16 @@
         <p n="7">
             <ln n="1"/>can come you will have received
             <ln n="2"/>a telegram from me before you get
-            <ln n="3"/>this better. I think she is <unclear reason ="bringing???">bring</unclear> another <!-- seb:added a missing word "she" -->
+            <ln n="3"/>this letter. I think she is bring another <!-- seb:added a missing word "she" -->
             <ln n="4"/>boy and another girl with her. Do 
             <ln n="5"/>you think we can find room for all?
         </p>
         <p n="8">
             <ln n="1"/>I received the map and tickets <!-- seb:fixed typo in received -->
-            <ln n="2"/>O.K. Someone <unclear reason="not sure what that word is">may</unclear> thoughtfully mark- <!-- seb: i think "may" might be "very" -->
+            <ln n="2"/>O.K. Someone very thoughtfully mark- <!-- seb: i think "may" might be "very" -->
+<!--em: resolved the previous comment-->
             <ln n="3"/>ed the rest <unclear reason="write???">wrote</unclear> in red pencil. Wish <!-- seb: i think "rest" could be "best" -->
+            <!--em: resolved the previous comment-->
             <ln n="4"/>I knew who it was so that I could thank
             <ln n="5"/>them.
         </p>
