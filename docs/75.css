@@ -1,0 +1,25 @@
+body {
+font-family: arial, helvetica, sans-serif;
+background-color: #01DC3F;
+color: black;
+}
+
+h1 {
+    font-size: 48px;
+    color: white;    
+}
+
+h2 {
+    font-size: 36px;
+    color: white;
+}
+
+h3 {
+    font-size: 24px;
+    color: white;
+}
+
+p {
+    font-size: 14px;
+    color: white;
+}
