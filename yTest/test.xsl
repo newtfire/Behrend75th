@@ -29,6 +29,7 @@
             <th>.class</th>
             <th><xsl:text>count</xsl:text></th>
           </tr> 
+          
           <xsl:for-each select="$elements">
             <xsl:sort select="count($Coll//*[./@class=current()])" order="descending"/>
             <tr>
@@ -63,7 +64,7 @@
       </head>
       <body>
         <h1>The number of different classes in each site</h1>
-        <div class="center"><xsl:sequence select="yxj:tableMaker()"/></div>
+        <xsl:sequence select="yxj:tableMaker()"/>
       </body>
     </html>
     </xsl:template>
