@@ -10,7 +10,7 @@
       </intro>
      
       <figure>
-          <graphic url="Manoir.jpg"/>
+          <graphic url="images/Manoir.jpg"/>
           <caption>A description of a Manoir de Becheron</caption>
       </figure>
       <note resp="jep">We think this letter must be written before they leave, but after the others we have encoded. We speculate the date must be before <date when="1955-07-29">July 29, 1955</date>.</note>
