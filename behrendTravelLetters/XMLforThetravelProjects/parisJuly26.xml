@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="RelaxNGforThetravelProjects/Schema.rnc" type="application/relax-ng-compact-syntax"?>
 <xml>
+    <!--Goes in Belgium not France-->
     <letter>
         <figure>
             <graphic url="images/July26.jpg"/>
@@ -29,7 +30,7 @@
                 but did see it, so that is that.</p>
             <p n="2">The next morning we were up at the crack of dawn and off to Tours. The man and
                 his wife who ran the <placeName>Manior Berheron</placeName>, where we stayed as a
-                    m<misspelling word="member"/>m<eSpace>-</eSpace>ber of the family were terribly nice. We
+                    m<misspelling word="member"/>m<eSpace i="extra space"/>ber of the family were terribly nice. We
                 arravied in time for lunch and then got in a little car and went
                 through some beautiful country to see some of the chateaux. We enjoyed it
                 traemndously. You can see where the old French painters get all their inspirations.
@@ -39,7 +40,7 @@
                 which told the history of the building. We will never forget it.</p>
             <p n="3">Thursday, the Davidsons, our hosts and their little boy and and
                 ourselves went on another chateaux trip which was just a grand as the day before. We
-                had a picnic on the way and <x rw="tea">day</x> on the way home. Great
+                had a picnic on the way and <x><corr ori="day"><hand>tea</hand></corr></x> on the way home. Great
                 fun. The only thing that marred the trip was another guest who arrived who knew all
                 about everything and told it in the loudest of voices. I got in a ter- rible row
                 with him about sports. Everyone was on my side but you couldn't get a word in edge
