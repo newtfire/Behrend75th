@@ -10,6 +10,7 @@
             <editor>NV</editor>
             <editor>GD</editor>
             <editor>JG</editor>
+            <editor>EM</editor>
         </transDesc>
         
     </meta>
@@ -26,7 +27,7 @@
 <p n="6">
     <ln n="31"/>If inspired by the <emotion>sacrifice</emotion> of this splendid young man, you
     <ln n="32"/>boys and girls will dedicate your lives to the great tasks of life, not
-    <ln n="33"/>sparing yourselves but giving youselves instantly and cheerfully when duty 
+    <ln n="33"/>sparing yourselves but giving youselves instantly and <emotion>cheerfully</emotion> when duty 
     <ln n="34"/>calls, then the beautiful example of this splendid young man will not have 
     <ln n="35"/>been in vein.
 </p>

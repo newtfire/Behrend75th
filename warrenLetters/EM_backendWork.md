@@ -12,6 +12,8 @@ Reread:
 
 I also read the XML and compared it to the photos to check the accuracy. (I did find some differences, but I also may have missed a few things, so if you want to do a quick review, that wouldn't hurt.)
 
+I did NOT edit the fullTest folder...I did not think it was necessary because it is not being pulled from. 
+
 (´•ᴥ•`)
 
 TLDR: 
