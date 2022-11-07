@@ -86,7 +86,7 @@ h1.index {
     margin-top: 20px;
     margin-bottom: 20px;
 }
-
+/*
 p.index {
     text-align: justify;
     font-size: 16px;
@@ -98,6 +98,10 @@ p.index {
 p.index2 {
     text-align: center;
     margin-top: 280px;
+}*/
+
+p{
+    padding: 5px;
 }
 
 div.boxes{
@@ -222,16 +226,18 @@ section[class="document"] {
  border: thin solid maroon;
  display:grid;
  grid-auto-flow:column; 
- grid-template-columns:800px 400px; 
- grid-column-gap:20px;
+/* grid-template-columns:800px 400px; */
+ grid-template-columns: 55% 45%; 
+/* grid-column-gap:20px;*/
 }
 
 section[class="document"] div.docImage {
 background-color:rgba(255, 255, 255, 0.4);
 display:grid;
 grid-auto-flow:column;
-grid-template-columns: 400px 400px /*minmax(auto, 400px)*/; 
+/*grid-template-columns: 400px 400px /\*minmax(auto, 400px)*\/; */
 /*  ebb: need to look up how minmax works.  */
+ grid-template-columns: 55% 45%; 
 grid-column-gap:20px;
 }
 
@@ -245,7 +251,7 @@ section#fulltext {
 
 div.docImage > figure > img {
  object-fit:contain;
- width:200%;
+ width:150%;
  margin-left: 50px;
  margin-top: 20px;
    
@@ -257,12 +263,21 @@ div.docImage > figure > figcaption {
  font-size: 16px;
 }
 
+.transcript>a>h2{
+    padding:10px;
+}
+
 span.person {
    font-weight: bold; 
 }
 
 span.place {
     font-style: italic;
+}
+
+span.spelling{
+    border: red 1px solid;
+    color:red;
 }
 
 /*  ol {
