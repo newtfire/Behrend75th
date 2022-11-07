@@ -11,7 +11,7 @@
 
     <xsl:variable name="travelColl" as="document-node()+"
         select="collection('XMLforThetravelProjects/?select=*.xml')"/>
-    
+
     <xsl:template match="/">
         <html>
             <head>
@@ -30,18 +30,40 @@
                 </section>
 
                 <section id="fulltext">
-                    <xsl:for-each select="$travelColl">
+                    <xsl:for-each select="$travelColl//letter">
                         <xsl:sort select="(descendant::date/@when)[1]"/>
-                        <section class="document">
-                            <div class="docImage">
-                                <xsl:apply-templates select="descendant::figure"/>
-                            </div>
-                            <div class="transcript">
-                                <xsl:apply-templates select="xml"/>
-                                    
-                                
-                            </div>
-                        </section>
+
+                        <xsl:choose>
+                            <xsl:when test="current()/front ! name() = 'front'">
+                                <section class="document">
+                                    <div class="docImage">
+                                        <xsl:apply-templates select="descendant::figure[1]"/>
+                                    </div>
+                                    <div class="transcript">
+                                        <xsl:apply-templates select="current()/front"/>
+                                    </div>
+                                </section>
+                                <section class="document">
+                                    <div class="docImage">
+                                        <xsl:apply-templates select="descendant::figure[2]"/>
+                                    </div>
+                                    <div class="transcript">
+                                        <xsl:apply-templates select="current()/back"/>
+                                    </div>
+                                </section>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <section class="document">
+                                    <div class="docImage">
+                                        <xsl:apply-templates select="descendant::figure"/>
+                                    </div>
+                                    <div class="transcript">
+                                        <xsl:apply-templates select="current()"/>
+                                    </div>
+                                </section>
+                            </xsl:otherwise>
+                        </xsl:choose>
+
                     </xsl:for-each>
                 </section>
                 <!--            <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.-->
@@ -60,7 +82,7 @@
         </li>
     </xsl:template>
 
-    <xsl:template match="xml">
+    <xsl:template match="letter">
         <a href="#{descendant::h1}">
             <h2 id="{base-uri() ! tokenize(., '/')[last()]}{(descendant::date/@when)[1]}">
                 <xsl:value-of select="current() ! base-uri() ! tokenize(., '/')[last()]"/>
@@ -71,12 +93,12 @@
         <div class="letter">
             <xsl:comment>WHAT FILE AM I? <xsl:value-of select="current() ! base-uri() ! tokenize(., '/')[last()]"/></xsl:comment>
             <xsl:comment>WHAT IS MY DATE LAST DIGITS? <xsl:value-of select="(current()//date[@when])[1]/@when ! tokenize(., '-')[last()] ! number(.)"/></xsl:comment>
-            
+
             <div class="header">
                 <xsl:value-of select="(descendant::date/@when)[1]"/>
             </div>
             <xsl:apply-templates select="descendant::p"/>
-            
+
         </div>
     </xsl:template>
 
@@ -108,7 +130,7 @@
         </p>
     </xsl:template>
 
-<!--    <xsl:template match="meal">
+    <!--    <xsl:template match="meal">
         <span class="meal">
             <xsl:apply-templates/>
         </span>
@@ -264,13 +286,27 @@
     </xsl:template>-->
 
     <xsl:template match="front">
-        <div class="front">
+        <a href="#{descendant::h1}">
+            <h2 id="{base-uri() ! tokenize(., '/')[last()]}1955-07-26">
+                <xsl:value-of select="current() ! base-uri() ! tokenize(., '/')[last()]"/>
+                <xsl:text>-front, 1955-07-26</xsl:text>
+            </h2>
+        </a>
+        <div class="letter">
+            <div class="header">1955-07-26</div>
             <xsl:apply-templates/>
         </div>
     </xsl:template>
 
     <xsl:template match="back">
-        <div class="back">
+        <a href="#{descendant::h1}">
+            <h2 id="{base-uri() ! tokenize(., '/')[last()]}1955-07-26-back">
+                <xsl:value-of select="current() ! base-uri() ! tokenize(., '/')[last()]"/>
+                <xsl:text>-back, 1955-07-26</xsl:text>
+            </h2>
+        </a>
+        <div class="letter">
+            <div class="header"> 1955-07-26 </div>
             <xsl:apply-templates/>
         </div>
     </xsl:template>
