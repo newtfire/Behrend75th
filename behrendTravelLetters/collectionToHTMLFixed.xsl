@@ -1,111 +1,172 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    xmlns:math="http://www.w3.org/2005/xpath-functions/math"
-    xmlns="http://www.w3.org/1999/xhtml"
-    exclude-result-prefixes="xs math"
-    version="3.0">
-    
-    <xsl:output method="xhtml" html-version="5" omit-xml-declaration="yes" 
-        include-content-type="no" indent="yes"/>
-    
-    <xsl:variable name="travelColl" as="document-node()+" select="collection('XMLforThetravelProjects/?select=*.xml')"/>
+    xmlns:math="http://www.w3.org/2005/xpath-functions/math" xmlns="http://www.w3.org/1999/xhtml"
+    exclude-result-prefixes="xs math" version="3.0">
+
+    <xsl:output method="xhtml" html-version="5" omit-xml-declaration="yes" include-content-type="no"
+        indent="yes"/>
+
+    <!-- This html layout is based on WB75v1.xsl for Warren Letters. -->
+
+    <xsl:variable name="travelColl" as="document-node()+"
+        select="collection('XMLforThetravelProjects/?select=*.xml')"/>
 
     <xsl:template match="/">
-    <html>
-        
-        <head> 
-            <link rel="stylesheet" type="text/css" href="webstyle.css"/>
-            <title>Behrend Travel Letters</title>
-        </head>
-        <body>
-            <h1>Behrends Travel Adventures</h1>
-            <div class="main">
-            <xsl:apply-templates select="$travelColl//letter">
-                <xsl:sort select="(descendant::date[@when])[1]/@when ! tokenize(., '-')[last()] ! number(.)"/>
-            </xsl:apply-templates>
+        <html>
+            <head>
+                <link rel="stylesheet" type="text/css" href="webstyle.css"/>
+                <title>Behrend Travel Letters</title>
+            </head>
+            <body>
+                <h1>Behrends Travel Adventures</h1>
+                <section id="toc">
+                    <h2>Contents</h2>
+                    <ul>
+                        <xsl:apply-templates select="$travelColl//xml" mode="toc">
+                            <xsl:sort select="(descendant::date/@when)[1]"/>
+                        </xsl:apply-templates>
+                    </ul>
+                </section>
+
+                <section id="fulltext">
+                    <xsl:for-each select="$travelColl//letter">
+                        <xsl:sort select="(descendant::date/@when)[1]"/>
+
+                        <xsl:choose>
+                            <xsl:when test="current()/front ! name() = 'front'">
+                                <section class="document">
+                                    <div class="docImage">
+                                        <xsl:apply-templates select="descendant::figure[1]"/>
+                                    </div>
+                                    <div class="transcript">
+                                        <xsl:apply-templates select="current()/front"/>
+                                    </div>
+                                </section>
+                                <section class="document">
+                                    <div class="docImage">
+                                        <xsl:apply-templates select="descendant::figure[2]"/>
+                                    </div>
+                                    <div class="transcript">
+                                        <xsl:apply-templates select="current()/back"/>
+                                    </div>
+                                </section>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <section class="document">
+                                    <div class="docImage">
+                                        <xsl:apply-templates select="descendant::figure"/>
+                                    </div>
+                                    <div class="transcript">
+                                        <xsl:apply-templates select="current()"/>
+                                    </div>
+                                </section>
+                            </xsl:otherwise>
+                        </xsl:choose>
+
+                    </xsl:for-each>
+                </section>
+                <!--            <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.-->
+            </body>
+        </html>
+    </xsl:template>
+
+    <!--Templates in toc mode for the table of contents -->
+    <xsl:template match="xml" mode="toc">
+        <li>
+            <a href="#{base-uri() ! tokenize(., '/')[last()]}{(descendant::date/@when)[1]}">
+                <xsl:value-of select="base-uri() ! tokenize(., '/')[last()]"/>
+                <xsl:text>-</xsl:text>
+                <xsl:value-of select="(descendant::date/@when)[1]"/>
+            </a>
+        </li>
+    </xsl:template>
+
+    <xsl:template match="letter">
+        <a href="#{descendant::h1}">
+            <h2 id="{base-uri() ! tokenize(., '/')[last()]}{(descendant::date/@when)[1]}">
+                <xsl:value-of select="current() ! base-uri() ! tokenize(., '/')[last()]"/>
+                <xsl:text>, </xsl:text>
+                <xsl:apply-templates select="(descendant::date/@when)[1]"/>
+            </h2>
+        </a>
+        <div class="letter">
+            <xsl:comment>WHAT FILE AM I? <xsl:value-of select="current() ! base-uri() ! tokenize(., '/')[last()]"/></xsl:comment>
+            <xsl:comment>WHAT IS MY DATE LAST DIGITS? <xsl:value-of select="(current()//date[@when])[1]/@when ! tokenize(., '-')[last()] ! number(.)"/></xsl:comment>
+
+            <div class="header">
+                <xsl:value-of select="(descendant::date/@when)[1]"/>
             </div>
-            <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
-        </body>
-        
-    </html>
-</xsl:template>
-    
- 
-<!--ebb: Write more template rules to continue processing!-->
-   <xsl:template match="letter">
-       <div class="letter">
-           <xsl:comment>WHAT FILE AM I? <xsl:value-of select="current() ! base-uri() ! tokenize(., '/')[last()]"/></xsl:comment>
-           <xsl:comment>WHAT IS MY DATE LAST DIGITS? <xsl:value-of select="(current()//date[@when])[1]/@when ! tokenize(., '-')[last()] ! number(.)"/></xsl:comment>
-           <xsl:apply-templates/>
-       </div>
-   </xsl:template>
-    
-    <xsl:template match="timePeriod">
+            <xsl:apply-templates select="descendant::p"/>
+
+        </div>
+    </xsl:template>
+
+    <!--    <xsl:template match="timePeriod">
         <span class="Period">
             <xsl:apply-templates/>
         </span>
-    </xsl:template>
-    
+    </xsl:template>-->
+
     <xsl:template match="dateLine">
         <div class="dateLine">
             <xsl:apply-templates/>
         </div>
     </xsl:template>
-    
+
     <xsl:template match="date">
         <span class="date">
-               <b>              
-                   <i>
-                   <xsl:apply-templates/>
-                   </i>
-               </b>
+            <b>
+                <i>
+                    <xsl:apply-templates/>
+                </i>
+            </b>
         </span>
     </xsl:template>
-    
+
     <xsl:template match="p">
         <p id="{base-uri() ! tokenize(., '/')[last()]}-n-{preceding::p => count()+1}">
             <xsl:apply-templates/>
         </p>
     </xsl:template>
-    
-    <xsl:template match="meal">
+
+    <!--    <xsl:template match="meal">
         <span class="meal">
             <xsl:apply-templates/>
         </span>
-    </xsl:template>
-    
+    </xsl:template>-->
+
     <xsl:template match="figure">
         <figure>
             <img src="{graphic/@url}" alt="{caption}"/>
-        <figcaption>
-            <xsl:apply-templates select="caption"/>
-        </figcaption>
+            <figcaption>
+                <xsl:apply-templates select="caption"/>
+            </figcaption>
         </figure>
     </xsl:template>
-      
+
     <xsl:template match="placeName">
         <span class="place">
             <xsl:apply-templates/>
         </span>
     </xsl:template>
-    
+
     <xsl:template match="persName">
         <span class="person">
-           <b>
-               <i>
-                   <xsl:apply-templates/>
-               </i>
-           </b>
+            <b>
+                <i>
+                    <xsl:apply-templates/>
+                </i>
+            </b>
         </span>
     </xsl:template>
-    
+
     <xsl:template match="transport">
         <span class="transport">
-            <xsl:apply-templates/>    
+            <xsl:apply-templates/>
         </span>
     </xsl:template>
-    
+
     <xsl:template match="u">
         <span class="underlined">
             <u>
@@ -113,7 +174,7 @@
             </u>
         </span>
     </xsl:template>
-    
+
     <xsl:template match="x">
         <span class="x" title="{@rw}">
             <s>
@@ -121,38 +182,38 @@
             </s>
         </span>
     </xsl:template>
-    
+
     <xsl:template match="misspelling">
         <span class="spelling" title="{@word}">
             <xsl:apply-templates/>
         </span>
     </xsl:template>
-    
-    <xsl:template match="item">
+
+    <!--    <xsl:template match="item">
         <span class="item">
             <xsl:apply-templates/>
         </span>
-    </xsl:template>
-    
+    </xsl:template>-->
+
     <xsl:template match="hand">
         <span class="hand">
             <xsl:apply-templates/>
         </span>
     </xsl:template>
-    
+
     <xsl:template match="fade">
         <span class="fade">
             <xsl:apply-templates/>
         </span>
     </xsl:template>
-    
+
     <xsl:template match="merge">
         <span class="merge">
             <xsl:apply-templates/>
         </span>
     </xsl:template>
-    
-    <xsl:template match="money">
+
+    <!--    <xsl:template match="money">
         <span class="money">
             <xsl:apply-templates/>
         </span>
@@ -174,20 +235,20 @@
         <span class="signOff">
             <xsl:apply-templates/>
         </span>
-    </xsl:template>
-    
+    </xsl:template>-->
+
     <xsl:template match="pencil">
         <span class="pencil">
             <xsl:apply-templates/>
         </span>
     </xsl:template>
-    
+
     <xsl:template match="typeWritten">
         <div class="type">
             <xsl:apply-templates/>
         </div>
     </xsl:template>
-    
+    <!--    
     <xsl:template match="animal">
         <span class="animal">
             <xsl:apply-templates/>
@@ -222,21 +283,35 @@
         <span class="measure">
             <xsl:apply-templates/>
         </span>
-    </xsl:template>
-    
+    </xsl:template>-->
+
     <xsl:template match="front">
-        <div class="front">
+        <a href="#{descendant::h1}">
+            <h2 id="{base-uri() ! tokenize(., '/')[last()]}1955-07-26">
+                <xsl:value-of select="current() ! base-uri() ! tokenize(., '/')[last()]"/>
+                <xsl:text>-front, 1955-07-26</xsl:text>
+            </h2>
+        </a>
+        <div class="letter">
+            <div class="header">1955-07-26</div>
             <xsl:apply-templates/>
         </div>
     </xsl:template>
-    
+
     <xsl:template match="back">
-        <div class="back">
+        <a href="#{descendant::h1}">
+            <h2 id="{base-uri() ! tokenize(., '/')[last()]}1955-07-26-back">
+                <xsl:value-of select="current() ! base-uri() ! tokenize(., '/')[last()]"/>
+                <xsl:text>-back, 1955-07-26</xsl:text>
+            </h2>
+        </a>
+        <div class="letter">
+            <div class="header"> 1955-07-26 </div>
             <xsl:apply-templates/>
         </div>
     </xsl:template>
-    
-    <xsl:template match="readers">
+
+    <!--    <xsl:template match="readers">
         <span class="readers">
             <xsl:apply-templates/>
         </span>
@@ -246,12 +321,12 @@
         <span class="month">
             <xsl:apply-templates/>
         </span>
-    </xsl:template>
-    
+    </xsl:template>-->
+
     <xsl:template match="eSpace">
-      <span class="space" title="She left a space.">
-        <xsl:apply-templates/>
-      </span>
+        <span class="space" title="She left a space.">
+            <xsl:apply-templates/>
+        </span>
     </xsl:template>
 
 </xsl:stylesheet>

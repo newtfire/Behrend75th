@@ -10,36 +10,36 @@
         include-content-type="no" indent="yes"/>
     
     <xsl:variable name="travelColl" as="document-node()+" select="collection('XMLforThetravelProjects/?select=*.xml')"/>
-
-    <xsl:template match="/">
-    <html>
-        
-        <head> 
-            <link rel="stylesheet" type="text/css" href="webstyle.css"/>
-            <title>Behrend Travel Letters</title>
-        </head>
-        <body>
-            <h1>Behrends Travel Adventures</h1>
-            <div class="main">
-            <xsl:apply-templates select="$travelColl//letter">
-                <xsl:sort select="(descendant::date[@when])[1]/@when ! tokenize(., '-')[last()] ! number(.)"/>
-            </xsl:apply-templates>
-            </div>
-            <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
-        </body>
-        
-    </html>
-</xsl:template>
     
- 
-<!--ebb: Write more template rules to continue processing!-->
-   <xsl:template match="letter">
-       <div class="letter">
-           <xsl:comment>WHAT FILE AM I? <xsl:value-of select="current() ! base-uri() ! tokenize(., '/')[last()]"/></xsl:comment>
-           <xsl:comment>WHAT IS MY DATE LAST DIGITS? <xsl:value-of select="(current()//date[@when])[1]/@when ! tokenize(., '-')[last()] ! number(.)"/></xsl:comment>
-           <xsl:apply-templates/>
-       </div>
-   </xsl:template>
+    <xsl:template match="/">
+        <html>
+            
+            <head> 
+                <link rel="stylesheet" type="text/css" href="webstyle.css"/>
+                <title>Behrend Travel Letters</title>
+            </head>
+            <body>
+                <h1>Behrends Travel Adventures</h1>
+                <div class="main">
+                    <xsl:apply-templates select="$travelColl//letter">
+                        <xsl:sort select="(descendant::date[@when])[1]/@when ! tokenize(., '-')[last()] ! number(.)"/>
+                    </xsl:apply-templates>
+                </div>
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+            </body>
+            
+        </html>
+    </xsl:template>
+    
+    
+    <!--ebb: Write more template rules to continue processing!-->
+    <xsl:template match="letter">
+        <div class="letter">
+            <xsl:comment>WHAT FILE AM I? <xsl:value-of select="current() ! base-uri() ! tokenize(., '/')[last()]"/></xsl:comment>
+            <xsl:comment>WHAT IS MY DATE LAST DIGITS? <xsl:value-of select="(current()//date[@when])[1]/@when ! tokenize(., '-')[last()] ! number(.)"/></xsl:comment>
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
     
     <xsl:template match="timePeriod">
         <span class="Period">
@@ -55,11 +55,11 @@
     
     <xsl:template match="date">
         <span class="date">
-               <b>              
-                   <i>
-                   <xsl:apply-templates/>
-                   </i>
-               </b>
+            <b>              
+                <i>
+                    <xsl:apply-templates/>
+                </i>
+            </b>
         </span>
     </xsl:template>
     
@@ -78,12 +78,12 @@
     <xsl:template match="figure">
         <figure>
             <img src="{graphic/@url}" alt="{caption}"/>
-        <figcaption>
-            <xsl:apply-templates select="caption"/>
-        </figcaption>
+            <figcaption>
+                <xsl:apply-templates select="caption"/>
+            </figcaption>
         </figure>
     </xsl:template>
-      
+    
     <xsl:template match="placeName">
         <span class="place">
             <xsl:apply-templates/>
@@ -92,11 +92,11 @@
     
     <xsl:template match="persName">
         <span class="person">
-           <b>
-               <i>
-                   <xsl:apply-templates/>
-               </i>
-           </b>
+            <b>
+                <i>
+                    <xsl:apply-templates/>
+                </i>
+            </b>
         </span>
     </xsl:template>
     
@@ -249,9 +249,9 @@
     </xsl:template>
     
     <xsl:template match="eSpace">
-      <span class="space" title="She left a space.">
-        <xsl:apply-templates/>
-      </span>
+        <span class="space" title="She left a space.">
+            <xsl:apply-templates/>
+        </span>
     </xsl:template>
-
+    
 </xsl:stylesheet>
