@@ -22,11 +22,11 @@
             <ln n="2"/><greeting>Dear Father &amp; Mother,</greeting>
         </header>
         <p n="1">
-            <ln n="1"/>It is <weather>raining</weather> hard and freezing on <!-- seb: added weather element -->
+            <ln n="1"/>It is <weather>raining</weather> hard and <weather>freezing</weather> on <!-- seb: added weather element -->
             <ln n="2"/>the trees; very beautiful indeed, but not
             <ln n="3"/>so practical for people who would drive
             <ln n="4"/>their cars on a night like this. I <!-- seb: fixed spelling of "their" -->
-            <ln n="5"/>hope you had nice weather so
+            <ln n="5"/>hope you had <weather>nice weather</weather> so
             <ln n="6"/>that you could enjoy driving South
             <ln n="7"/>in the <car>Duesenburg</car><!--ged: might want to make a car element--> <!-- seb:added car element -->
         </p>

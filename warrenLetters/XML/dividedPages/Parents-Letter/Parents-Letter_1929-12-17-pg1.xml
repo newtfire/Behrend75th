@@ -10,7 +10,7 @@
             <editor>GD</editor>
             <editor>JG</editor>
             <editor>EM</editor>
-        </transDesc>
+<!--        </transDesc>-->
     </meta>
     <figure>
         <graphic src="../Letter_Images/Parents-LetterToWarren_1929-12-17/1929-12-17_ParentsLetterFront.jpeg" alt="front, p1"/>
@@ -26,7 +26,7 @@
             <ln n="1"/>Headed in
             <ln n="2"/><place placeId="NorthCarolina">Southern Pines</place>. Next day 
             <ln n="3"/>Charleston &amp; the <boat>Amida</boat> 
-            <ln n="4"/>hill ? wonderful to see
+            <ln n="4"/>hill ? <emotion>wonderful</emotion> to see
             <ln n="5"/>you &amp; H. &amp; all to 
             <ln n="6"/>&amp; gather for Christmas.
             <ln n="7"/>We telephoned Betty &amp;
@@ -34,7 +34,7 @@
             <ln n="9"/>she says she is coming
             <ln n="10"/><unclear reason="not sure">lawnell 27.?.</unclear> Possibly
             <ln n="11"/>You have heard were
-            <ln n="12"/>about this. Much love
+            <ln n="12"/>about this. Much <emotion>love</emotion>
             <ln n="13"/>think of how much
             <ln n="14"/>we care for you and
         </p>

@@ -20,7 +20,7 @@
 <body>
 <pb n="2"/>
 <p n="5 "><!-- This paragraph is on a different page but is still the same paragraph so p=5 is repeated -->
-    <ln n="28"/>life crowded as it was with all the rich promise of a most useful and happy
+    <ln n="28"/>life crowded as it was with all the rich promise of a most useful and <emotion>happy</emotion>
     <ln n="29"/>career, then suddenly ccrowned by <emotion>sacrificing</emotion> all to the safety of children,
     <ln n="30"/>though the children themselves were unkown to him.
 </p>
