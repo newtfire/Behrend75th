@@ -42,7 +42,9 @@
        <xsl:for-each select="$allCollections">  
         <xsl:variable name="currentCollection" as="document-node()+" select="current()"/>
    <!--     <xsl:result-document method="xhtml" href="docs/{$currentCollection/base-uri() ! tokenize(., '/')[last()]}.html" >  -->
-        
+        <xsl:apply-templates select="descendant::xml">
+                        <xsl:sort select="descendant::date[1]"/>
+                    </xsl:apply-templates>
                
             <xsl:comment>New structure for aligning page images and transcripts here.</xsl:comment>
              <section class="document">
@@ -51,9 +53,7 @@
                      <figcaption><xsl:value-of select="descendant::figure/graphic/@alt"/></figcaption>
                  </figure></div>
                   <div class="transcript"> 
-                    <xsl:apply-templates select="descendant::xml">
-                        <xsl:sort select="descendant::date[1]"/>
-                    </xsl:apply-templates>
+                    
                     </div>
                  
                 </section>
