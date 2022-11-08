@@ -2,17 +2,18 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:yxj="http://www.yxj5181.com"
+  xpath-default-namespace="http://www.w3.org/1999/xhtml"
   version="3.0"
   xmlns="http://www.w3.org/1999/xhtml">
   
   <xsl:output method="xhtml" html-version="5" omit-xml-declaration="yes" 
     include-content-type="no" indent="yes"/>
   
-  <xsl:variable name="Coll" select="collection('?select=*.xml')"/>
+  <xsl:variable name="Coll" select="collection('?select=*.html')"/>
   <xsl:variable name="inFileNmaes" as="xs:string+">
-    <xsl:value-of select="'BTLetter'"/>
+    <xsl:value-of select="'travelLetters'"/>
     <xsl:value-of select="'calendar'"/>
-    <xsl:value-of select="'sipleLetter'"/>
+    <xsl:value-of select="'sipleLetters'"/>
     <xsl:value-of select="'warrentLetters'"/>
   </xsl:variable> 
   
