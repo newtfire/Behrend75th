@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="letters_schema.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../letters_schema.rnc" type="application/relax-ng-compact-syntax"?>
 
 <xml>
     <meta>
@@ -9,6 +9,7 @@
         <transDesc>
             <editor>JG</editor>
             <editor>TH</editor>
+            <editor>EM</editor>
         </transDesc>
     </meta>
     <figure>
@@ -18,7 +19,7 @@
         <pb n="2"/>
        <p n="2"> 
         <ln n="3"/> ments you made about
-        <ln n="4"/> <unclear reason="hard to read">daring</unclear> the La Salle meet
+        <ln n="4"/> having the La Salle meet
         <ln n="5"/> me in <place placeId="WASH">Washington</place>. If
         <ln n="6"/> you haven't done this just say so
         <ln n="7"/> and I'll write <person personId="MF">Miss <unclear reason="unclear name">Fraters</unclear></person>. I

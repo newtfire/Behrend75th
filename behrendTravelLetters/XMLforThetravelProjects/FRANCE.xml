@@ -1,84 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="RelaxNGforThetravelProjects/Schema.rnc" type="application/relax-ng-compact-syntax"?>
 <xml>
-    <!--images you're working with: which ones are page images and which ones are photos?
-  Consider moving these so they sit with the parts of the transcription they connect to.
-  -->
-
-  <!--  <graphic url="images/IMG_7189.jpg" alt="rat"/>
-
-
-    <graphic url="images/IMG_7191.jpg" alt="france_adventure"/>
-
-
-    <graphic url="images/IMG_7193.jpg" alt="France_hot"/>
-
-
-    <graphic url="images/IMG_7200.jpg" alt="big castle"/>-->
-    <!-- MOVE and integrate these images with the transcript. -->
-
-<letter>   
-     <figure>
-        <graphic url="images/July19.jpg"/>
-        <caption>July 19th letter</caption>
-    </figure>
-    <!-- FIRST IMAGE TRANSCRIPT: -->
-    <dateLine>
-        <placeName>Paris</placeName>
-        <date when="1955-07-19">July 19th. <hand>1955</hand></date>
-    </dateLine>
-   
-    <p n="1">Took a <transport>motor</transport> from<fade>a</fade> travel agency- after <meal>breakfast</meal> in our fancy round sitting room. Drove all around <placeName>Paris</placeName> the driver named <persName>Harvey</persName> had a daughter named <eSpace>-</eSpace>  at <placeName>Waycross Georgia</placeName>. <eSpace>-</eSpace> Went to 
-        <placeName>Lubin's</placeName> for <misspelling word="perfume">perfrume</misspelling> (had the <item>pink flannel</item> <misspelling word="affair">faffair</misspelling> that <persName>Harriet</persName> had given me—REsented') Walked around the circle—<placeName>Place de Vendome</placeName> to
-            <placeName>Caron</placeName>, <placeName>The Ritz Hotel</placeName>, and a <placeName>Jewellers</placeName>
-        where I was intregued by a <item>Jewelled bird</item>. But did NOT get it! To a very nice resturant in
-        the <placeName>Bois</placeName> for <meal>lunch</meal> <placeName>Le Pre Catalan</placeName>. Went then to both sides of the <placeName>Sien</placeName> and got some little
-        <item>prints</item> of <placeName>Paris</placeName>. <placeName>R.R. station</placeName> and <placeName>Tourist Agency<hand>|</hand>reg</placeName>. <item>tickets</item>. <eSpace>-</eSpace> We had our evening meal at the
-        <placeName>Bristol</placeName> and then set out for the <placeName>Casion deParis</placeName>. Very amusing show- we stayed thro<hand>'</hand>
-            <u>half</u> of it but felt we needed <u>sleep</u>. <persName>Gail</persName> got a <transport>cab</transport> by her shrill <eSpace>-</eSpace>
+    <letter>   
+        <figure>
+            <graphic url="images/July19.jpg"/>
+            <caption>July 19th letter</caption>
+        </figure>
+        <!-- FIRST IMAGE TRANSCRIPT: -->
+        <dateLine>
+            <placeName>Paris</placeName>
+            <date when="1955-07-19">July 19th. <hand>1955-</hand></date>
+        </dateLine>
+        
+        <p n="1">Took a <transport>motor</transport> from<fade>a</fade> travel <fade>a</fade>gency- <fade>a</fade>fter breakfast in our f<fade>a</fade>ncy round sitting room.<eSpace i="extra space"/> Drove all around <placeName><fade>Pa</fade>ris</placeName> the driver named <persName>Harvey</persName> had <fade>a daugh</fade>ter named <eSpace i="Forgot to fill name"/>  at <placeName>Waycross Georgia</placeName>. <eSpace i="extra space"/> Went to 
+            <placeName>Lubin's</placeName> for <misspelling word="perfume">perfrume</misspelling> (had the pin<fade>k</fade> flannel <misspelling word="affair"><fade>f</fade>affair</misspelling> that <persName>Harriet</persName> had given me—REsented') W<eSpace i="extra space here"/>alked around the circle—<placeName>Place -<x>d</x>e <corr ori="Lan6ome">Vendome</corr></placeName> to
+            <placeName>Caron</placeName>, <placeName>The Ritz Hotel</placeName>, and a <placeName>jewellers</placeName>
+            where I was intregue<hand>s</hand> by <fade>a</fade> <misspelling word="lewelled"><hand>J</hand>ewelled</misspelling> bird. But did NOT get it<hand>!</hand><eSpace i="extra space"/> To a very nice resturant in
+            the <placeName>Bois</placeName> for lunch <placeName>Le Pre Catalan</placeName>. Went thento both sides of the <placeName><misspelling word="Siene">Siens</misspelling></placeName> and got some little
+            prints of <placeName>Paris</placeName>. <placeName>R.R. station</placeName> and <placeName>Tourist Agency<hand>|</hand>reg</placeName>. tickets. <eSpace i="extra space"/> We had our evening meal at the
+            <placeName>Bristol</placeName> and then set out for the <placeName>Casion deParis</placeName>. Very amusing show- we stayed thro<hand>'</hand>
+            <u>half</u> of it but felt we needed <u>sleep</u>. <persName>Gail</persName> got a <transport>cab</transport> by her shrill <eSpace i=""/>
             <u>whistle</u>!"</p>
-
-    <!-- Add in the <graphic/> element for this page? -->
-
-    <p n="2"><!-- SECOND IMAGE TRANSCRIPT: --> <hand><item>STATUE</item> IN THE <persName>DAVIDSON'S</persName> <placeName>GARDEN</placeName></hand>, <hand>PICNIC IN THE
-        FORREST</hand>.</p>
-</letter>
+        <p n="2"><hand>STATUE IN THE <persName>DAVIDSON'S</persName> <placeName>GARDEN</placeName></hand>, <hand>PICNIC IN THE
+            FORREST</hand>.</p>
+    </letter>
     
- <letter>   
-     <figure>
-         <graphic url="images/July26.jpg"/>
-         <caption>July 26th letter</caption>
-     </figure>
-    <!-- Is this a new letter? DO YOU WANT A NEW FILE FOR EACH LETTER?   -->
-    <dateLine><date when="1955-07-26">July 26, 1955</date></dateLine><p n="3"><!-- THIRD IMAGE TRANSCRIPT: -->  <placeName>Brussles</placeName> - Dear People: We are just about to
-        take off for <placeName>Copenhagen</placeName> and are sit-ting around so I will try to send this second
-        intallement of our trip report. If I remember correctly, the last letter came from the <transport>boat</transport>.
-        We arrived in <placeName>Cherbourg</placeName> and got safely on the <transport>train</transport> to find that it was over 90. We nearly
-        died on the ride to <placeName>Paris</placeName>. Very unairconditioned <transport>train</transport> and blazing sun. The first thing we
-        did when we arrived at <placeName>Le Bristol</placeName> was fall in a cold tub. WE went out for <meal>dinner</meal> later and
-        cele-brated with Cherrie Jubilee. Very Tasty! The next day <persName>Mrs. Behrend</persName> hired a car and
-        guide and we drove all over <placeName>Paris</placeName>. It is so beautiful but so expensive? $90 a minute to
-        breath! We did a bit of shopping, had <meal>lunch</meal> in the <placeName>Bois de Boulougne</placeName> shopped on the <placeName>Left
-        Bank</placeName>, got <transport>train</transport> <item>tickets</item> and that night went to the <placeName>Casino de Paris</placeName>. Pretty naked ladies I
-        must say. We were not carried away by it but see it, so that is that. The next morning we
-        were up at the crack of dawn and off to Tours. the man and his wife who ran the <placeName>Manior
-        Bercheron</placeName>, where we stayed as a member of the family were terribly nice. We arrived in time
-        for <meal>lunch</meal> and got in a little <transport>car</transport> and went through some beautiful country to see some of the
-        <placeName>chateaux</placeName>. We enjoyed it tremendously. You can see where all the old French painters got all
-        their inspirations. Lovely rivers, old mills and beautiful trees. That night after <meal>dinner</meal> we
-        went to a nearby <placeName>chateau</placeName>, <placeName>Azay-le-Rideau</placeName> which was illuminated. Just like <placeName>fairyland</placeName>. They
-        also had a sort of play very cleverly done just done with voices and lighting which told the
-        history of the <placeName>building</placeName>. We will never forget it. Thursday, the <persName>Davidsons</persName>, our hosts and
-        their little boy and ourselves went on another <placeName>chateaux</placeName> trip which was just a grand as the
-        day before. We had a picnic on the way and tea on the way home. Great fun. The only thing
-        that marred the trip was another guest who arrived who knew all about everything and told it
-        in the loudest of voices. I got in a ter-rible row with him about sports. Everyone was on my
-        side but you couldn't get a word in edge wise. It was was rather funny to look back on but I
-        nearly had a nervous breakdown when it was going on. Friday we left Tours at about eleven
-        and got back in <placeName>Paris</placeName> for <meal>lunch</meal>. After the lovely meal we charged out on foot to do some
-        shopping. </p>
-     
-
-       <p n="4"><!-- FOURTH IMAGE TRANSCRIPT: --> <hand><placeName>AZAY-LE-RIDEAU</placeName></hand></p>
-   </letter>
 </xml>

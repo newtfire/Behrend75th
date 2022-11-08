@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="letters_schema.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../letters_schema.rnc" type="application/relax-ng-compact-syntax"?>
 <xml>
     
     <meta>
@@ -10,6 +10,7 @@
             <editor>NV</editor>
             <editor>GD</editor>
             <editor>JG</editor>
+            <editor>EM</editor>
         </transDesc>
         
     </meta>
@@ -19,14 +20,14 @@
 <body>
 <pb n="2"/>
 <p n="5 "><!-- This paragraph is on a different page but is still the same paragraph so p=5 is repeated -->
-    <ln n="28"/>life crowded as it was with all the rich promise of a most useful and happy
+    <ln n="28"/>life crowded as it was with all the rich promise of a most useful and <emotion>happy</emotion>
     <ln n="29"/>career, then suddenly ccrowned by <emotion>sacrificing</emotion> all to the safety of children,
     <ln n="30"/>though the children themselves were unkown to him.
 </p>
 <p n="6">
     <ln n="31"/>If inspired by the <emotion>sacrifice</emotion> of this splendid young man, you
     <ln n="32"/>boys and girls will dedicate your lives to the great tasks of life, not
-    <ln n="33"/>sparing yourselves but giving youselves instantly and cheerfully when duty 
+    <ln n="33"/>sparing yourselves but giving youselves instantly and <emotion>cheerfully</emotion> when duty 
     <ln n="34"/>calls, then the beautiful example of this splendid young man will not have 
     <ln n="35"/>been in vein.
 </p>

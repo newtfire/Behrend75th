@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="letters_schema.rnc" type="application/relax-ng-compact-syntax"?>
 
+<?xml-model href="../../letters_schema.rnc" type="application/relax-ng-compact-syntax"?>
 <xml>
     <meta>
         <title titleId= "WtoP-1929-12-17-Letter2-pg3">Letter from Warren Behrend to Mary and Ernst Behrend, <date>1929-12-19</date></title>
@@ -9,6 +9,7 @@
         <transDesc>
             <editor>JG</editor>
             <editor>TH</editor>
+            <editor>EM</editor>
         </transDesc>
     </meta>
     <figure>
@@ -18,14 +19,14 @@
         <pb n="3"/>
         <p n="3">
         <ln n="6"/> dance here next Saturday and
-        <ln n="7"/> if she has no definite <unclear reason="hard to read">*</unclear> for
-        <ln n="8"/> next <crossOut>december</crossOut> Christmas and might
+        <ln n="7"/> if she has no definite plans for
+        <ln n="8"/> next <crossOut>summer</crossOut> Christmas and might
         <ln n="9"/> be able to go I'll ask her <unclear reason="hard to read">if for</unclear>
-        <ln n="10"/> that no that we can talk over that <!-- "no" might have meant "know" -->
+        <ln n="10"/> that so that we can talk over that <!-- "no" might have meant "know" --> <!-- em: 'no' was 'so' as in 'so that...' -->
         <ln n="11"/> matter. I think <person personId="Harriet">Harriet</person> would like
         <ln n="12"/> it better if I could get someone to
-        <ln n="13"/> * &amp; keep her company. I'll write
-        <ln n="14"/> you to New York the * * the
+        <ln n="13"/> sort of keep her company. I'll write
+        <ln n="14"/> you to New York the result of the
         <ln n="15"/> phone call.
         </p>
         <p n="4">
