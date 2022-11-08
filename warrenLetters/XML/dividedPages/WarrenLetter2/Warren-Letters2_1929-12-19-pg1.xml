@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="letters_schema.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../letters_schema.rnc" type="application/relax-ng-compact-syntax"?>
 
 <xml>
     <meta>
@@ -9,6 +9,7 @@
         <transDesc>
             <editor>JG</editor>
             <editor>TH</editor>
+            <editor>EM</editor>
         </transDesc>
     </meta>
     <figure>
@@ -30,7 +31,7 @@
             <ln n="7"/>house in <place placeId="ERIE">Erie</place>.
         </p>
         <p n="2">
-            <ln n="1"/> Please <unclear reason="unclear">dust</unclear> me a line some
+            <ln n="1"/> Please drop me a line some
             <ln n="2"/> time and tell me what arrange-
         </p>
     </body>

@@ -20,7 +20,7 @@
         </head>
         <body>
             <h1>Behrends Travel Adventures</h1>
-            <div class="main"><xsl:apply-templates select="descendant::letter"/>
+            <div class="main">
             <xsl:apply-templates select="$travelColl//letter">
                 <xsl:sort select="(descendant::date[@when])[1]/@when ! tokenize(., '-')[last()] ! number(.)"/>
             </xsl:apply-templates>
