@@ -1,8 +1,12 @@
 h1{
     margin:5px;
+    display:block;
 }
 h2{
     margin:5px 0;
+}
+.tables{
+    display: flex;
 }
 .table {
     float:left;
