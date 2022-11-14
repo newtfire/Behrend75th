@@ -71,7 +71,7 @@
                         </figDesc>
                     </figure>
                     <ab hand="#pencil" rend="cursive"> E.R.B.
-                    <lb/>"That dammned old clock
+                    <lb/>"That damned old clock
                     <lb/>gives me a</ab>
                 </div2>
                 
@@ -85,11 +85,11 @@
                         <lb/><date when="1909-02-16"> February 16, 1909. <lb/>Tuesday</date>
                     </ab>
                     <figure rend="color" hand="#multicolor">
-                        <figDesc resp="#acolemanreeves"> Mr Behrend holding a large bug.
+                        <figDesc resp="#acolemanreeves"> <persName>Mr Behrend</persName> holding a large bug.
                          
                         </figDesc>
                     </figure>
-                        <ab hand="#pencil" rend="cursive"> Mr. Behrend finds a 
+                        <ab hand="#pencil" rend="cursive"> <persName>Mr. Behrend</persName> finds a 
                             <lb/> big bug!</ab>
                         <ab hand="#redPen" rend="cursive"> I wonder if you have found many lately</ab>
                 </div2>
@@ -108,7 +108,7 @@
                     <figure><figDesc resp="#acolereeves"></figDesc>
                     </figure>
                     <ab hand="#pencil" rend="#cursive">
-                        <lb/> Each morning very early <lb/> When all is dark and still<lb/> <persName>Earnest</persName> goes off into likely blaclness <lb/>To work at Hammermill <lb/> I really think he's very good <lb/>to get up when it's dark <lb/> tho he says he doesn't mind <lb/> It cant (blank) (blank) a lark!
+                        <lb/> Each morning very early <lb/> When all is dark and still<lb/> <persName>Ernst</persName> goes off into likely blackness <lb/>To work at Hammermill <lb/> I really think he's very good <lb/>to get up when it's dark <lb/> tho he says he doesn't mind <lb/> It cant (blank) (blank) a lark!
                     </ab>
                     <ab><add hand="#redPen" rend="#cursive" place="bottom-right">(blank) is it still dark when you arise?</add></ab>
                 </div2>
@@ -141,13 +141,13 @@
                         <lb/><date when="1909-03-12">March 12, 1909. <lb/>Friday</date>
                     </ab>
                     <figure hand="#multicolor">
-                        <figDesc resp="#acolemanreeves">Drawing of a woman in snowshoes named Molly pointing
+                        <figDesc resp="#acolemanreeves">Drawing of a woman in snowshoes named <persName>Molly</persName> pointing
                             ahead of her. This is along the left-hand side of the page.</figDesc>
                     </figure>
                     <ab hand="#pencil">
-                        <lb/>Molly on <lb/>snowshoes <lb/>that <persName>Mr. Weir</persName> <lb/>got. <lb/>Pretty picture
+                        <lb/><persName>Molly</persName> on <lb/>snowshoes <lb/>that <persName>Mr. Weir</persName> <lb/>got. <lb/>Pretty picture
                         <lb/>is it not?!</ab>
-                    <ab><add hand="#redPen" rend="#cursive" place="bottom-right">Love from Molly</add></ab>
+                    <ab><add hand="#redPen" rend="#cursive" place="bottom-right">Love from <persName>Molly</persName></add></ab>
                 </div2>
                 
                 
@@ -164,7 +164,7 @@
                         <figDesc resp="#acolemanreeves"> Green Shamrocks dispersed throughout the paper. Two snakes drawn on the top of the paper. A drawing of the hammermill center bottom right corner. </figDesc>
                     </figure>
                     <ab hand="#brownink">
-                        <lb/>ST. Patrick was a usefuf saint<lb/> He frightened all the snakes away- <lb/>I wish he'd try his art on smoke  <lb/>around the hammermill some day! 
+                        <lb/><persName>ST. Patrick</persName> was a useful saint<lb/> He frightened all the snakes away- <lb/>I wish he'd try his art on smoke  <lb/>around the hammermill some day! 
                         <lb/>is it not?!</ab>
                     <ab><add hand="#redPen" rend="#cursive" >The Hammermill really lucky!</add></ab>  <!-- finish trasncribing here -->
                 </div2>
@@ -182,7 +182,7 @@
                         <figDesc resp="#acolemanreeves">Drawing of clothes hanging up to dry.</figDesc>
                     </figure>
                     <ab hand="#pencil">
-                        <lb/>Wash day at the behrends <lb/>oh, I say! <lb/>That's really a very  <lb/>unusual display! 
+                        <lb/>Wash day at <persName>the behrends</persName> <lb/>oh, I say! <lb/>That's really a very  <lb/>unusual display! 
                     </ab>
                     <ab><add hand="#redPen" rend="#cursive" place="bottom-right">Do you still miss me?</add></ab> 
                 </div2>
@@ -204,7 +204,7 @@
                         <title> At the Lavers </title>
                         <lb/>"Ill send the bill to <persName>Ernst</persName> <lb/> and take them every one <lb/>I'll watch his face &amp;see him <lb/>smile <lb/>It will be such jolly fun!"
                     </ab> 
-                    <ab><add hand="#redPen" rend="#cursive" place="top-right">Molly reviewing a full Gig bill Poor Ernst</add></ab> <!-- finish trasncribing here -->
+                    <ab><add hand="#redPen" rend="#cursive" place="top-right"><persName>Molly</persName> reviewing a full Gig bill Poor <persName>Ernst</persName></add></ab> <!-- finish trasncribing here -->
                 </div2>
                 
             </div1>

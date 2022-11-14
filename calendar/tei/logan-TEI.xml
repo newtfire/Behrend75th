@@ -71,13 +71,13 @@
                </figure>
                <ab hand="#pencil" rend="smallcaps">
                   <lb/>Latest styles
-                  <lb/>in <emph style="underline">hare</emph> dressing </ab>
+                  <lb/>in <emph style="underline"><rs type="animal">hare</rs></emph> dressing </ab>
                <ab rend="cursive"><add hand="#redPen" place="bottom-right" rend="cursive"> see the <emph style="underline"> joke</emph>?</add></ab>
                
-               <note resp="#lhering">It looks like Mary was in a creative mood on this day. Her drawing was quite playful
-               and she also made a pun with the word "hare" meaning both "a rabbit" and "hair". The joke being that
-               whaen you hear the words "hare dressing" you think about hair being stlyed but in this picture it refers
-               to two rabbits wearing in clothes.</note>
+               <note resp="#lhering">It looks like <persName>Mary</persName> was in a creative mood on this day. Her drawing was quite playful
+               and she also made a pun with the word <rs type="animal">"hare"</rs> meaning both <rs type="animal">"a rabbit"</rs> and "hair". The joke being that
+               whaen you hear the words "<rs type="animal">hare</rs> dressing" you think about hair being stlyed but in this picture it refers
+               to two <rs type="animal">rabbits</rs> wearing in clothes.</note>
             </div2>
             
             <div2 xml:id="e-1909-03-31"
@@ -147,7 +147,7 @@
                   <lb/>Theresa makes us every day 
                   <lb/>lovely puddings &amp; pies
                   <lb/>sometimes I order them
-                  <lb/>sometimes they're a suprise!</ab>
+                  <lb/>sometimes they're a surprise!</ab>
                <figure hand="multicolor" rend="color">
                   <figDesc resp="#lhering">
                      Two more desserts are drawn side by side. The one on the left appears to be some ball shaped pastries on a plate.
@@ -155,8 +155,8 @@
                </figure>
                <ab rend="cursive"><add hand="#redPen" rend="cursive" place="bottom">
                   Don't eat the really sweet things!!</add></ab>
-               <note resp="#lhering">It is apparent that Theresa and Mary are probably friends because sometimes she gives Mary desserts as
-               a suprise. It is also possible that Theresa is a baker and ownes a bakery.</note>
+               <note resp="#lhering">It is apparent that <persName>Theresa</persName> and <persName>Mary</persName> are probably friends because sometimes she gives <persName>Mary</persName> desserts as
+               a surprise. It is also possible that <persName>Theresa</persName> is a baker and owns a bakery.</note>
             </div2>
             
             <div2 xml:id="e-1909-04-07"
@@ -172,13 +172,13 @@
                   balls has a small dot on it that was drawn with a pencil possibly symbolizing a number on the ball.</figDesc>
                </figure>
                <ab hand="#pencil" rend="smallcaps">
-                  <lb/>Ernst wanted a billiard table
+                  <lb/><persName>Ernst</persName> wanted a billiard table
                   <lb/>to play on every day
                   <lb/>so <emph style="underline">we</emph> eat in the library
                   <lb/>just <emph style="underline">to be out</emph> of the way</ab>
                <ab hand="#redPen" rend="cursive">
                   Is the billiard table in the new room yet?!</ab>
-               <note resp="#lhering">A ballard table is the same thing that we often refer to as a pool table. It is just
+               <note resp="#lhering">A billiard table is the same thing that we often refer to as a pool table. It is just
                a different word to describe the same thing.</note>
             </div2>
             
@@ -199,10 +199,10 @@
                   <lb/>Hammermill - <!--wasn't sure if this was a "-" or "_"-->
                   <lb/>It's never been there before
                   <lb/>And what is inside of that cradle
-                  <lb/>Both Molly and Ernst adore</ab>
+                  <lb/>Both <persName>Molly</persName> and <persName>Ernst</persName> adore</ab>
                <ab hand="#redPen" rend="cursive"><add hand="#redPen" rend="cursive" place="bottom">
                   Aren't you curious to see it?</add></ab>
-               <note resp="#lhering">It appears that Mr. and Mrs. Behrend had a child somewhat recently and that is what
+               <note resp="#lhering">It appears that <persName>Mr. and Mrs. Behrend</persName> had a child somewhat recently and that is what
                this callendar page is about.</note>
             </div2>
             
@@ -225,10 +225,10 @@
                   <lb/>Whatever change the years <add rend="cursive" place="above-line">(weeks)</add> have made wrought
                   <lb/>I find not yet one lonely thought
                   <lb/>that cries against my wish for thee"
-                  <lb/>Tennyson.
+                  <lb/><persName>Tennyson</persName>.
                </ab>
                <note resp="#lhering">The flowers in the drawing might be chrysanthemums or minnow daffodils based on their color.
-               They may also just be a randomly colored flower that Marry Behrend decided to draw from her imagination.</note>
+               They may also just be a randomly colored flower that <persName>Mary Behrend</persName> decided to draw from her imagination.</note>
             </div2>
             
             <div2 xml:id="e-1909-04-14"
@@ -251,9 +251,9 @@
                </ab>
                <ab hand="#redPen" rend="cursive"><add hand="#redPen" rend="cursive" place="bottom">M.B</add>
                   </ab>
-               <note resp="#lhering">In the picture the woman sitting down is most likely Mary Behrend because her initials are
+               <note resp="#lhering">In the picture the woman sitting down is most likely <persName>Mary Behrend</persName> because her initials are
                written at the bottom of the page right next to the lady. Then the woman standing up is most likey one of her
-               servants/maids. The infant is probably one of her childeren and most likely Warren because he was born around
+               servants/maids. The infant is probably one of her children and most likely <persName>Warren</persName> because he was born around
                1909</note>
             </div2>
 
