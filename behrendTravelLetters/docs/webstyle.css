@@ -1,108 +1,31 @@
 body {
-    background-color:Tan;
-    color:MidnightBlue;
-    font-family:arial, helvetica, sans-serif;
+    background-color:#404040; /*dark grey*/
+    color: #fff2e6; /* light orange; */
+    font-family: "Georgia", Garamond, serif;
+    line-height: 1.5em;
+    padding:3vw;
 }
 
-ol {
-    list-style-type: square;
-    padding: 2px
+table { 
+    border-collapse: collapse;
+    border:.5vw solid #301934;
+    margin:auto;
+    
 }
+th, td {padding: 1em; }
+tr:nth-child(odd) {
+    background-color: #533d73; /* deep purple */
+    color: white; 
+    }
 
-li{
-   display:list-item; 
-}
-
-h1{
-    text-align:left;
-}
-
-p{
-    text-align:left;
-    height:75%;
-    width:75%;
-}
-
-.credits{
-    text-align:right;
-}
-
-.person{
-    color:red;
-}
-
-.place{
-    color:Indigo;
-}
-
-.transport{
-    color:Maroon;
-}
-
-u{
-    color:fuchsia;
-}
-
-.x{
-    color:DarkSlateGrey;
-}
-
-.hand{
-    color:DarkSeaGreen;
-}
-
-.spelling{
-    color:lime;
-    outline-style:groove;
-}
-
-.pencil{
-    color:brown;
-}
-
-.type{
-    color:black;
-}
-
-.space{
-    color:Olive;
-}
-
-figure {
-    background-color:lavender; 
-    margin:3em; 
-    width: 30%;
-} 
-
-figcaption {
-    font-style:italic; 
-    font-size:.8em;
-}
-
-figure img {
-    max-width:300px; 
-    width:100%;
-}
- 
- img{
-     border-radius: 15px;
-     flex-direction: row;
-     margin-bottom: 20px; 
-     margin: 10px;
-     height: 500px;
-     width: 300px;
-     background:Thistle;
+h1, h2 {
+    text-align: center; line-height:1.5em;
  }
  
- .header{
-     line-height: 150%;
-     font-size: 18px;
-     font-family: 'Sansita', sans-serif;
- }
- 
- .header:hover{
-     line-height: 150%;
-     font-size: 18px;
-     font-family: arial, helvetica, san-serif;
-     color:silver;
- }
+span.hand {background: #533d73 ; color: white; }
+
+span.placeName {color:aqua;}
+
+span.persName {color:pink;}
+
+span.x {background:maroon; color:white;}
