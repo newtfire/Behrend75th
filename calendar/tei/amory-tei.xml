@@ -13,8 +13,9 @@
                 <editor xml:id="lhering">Logan Hering</editor>
             </titleStmt>
             <editionStmt>
-                <edition>First digital edition, launched <date>October 2021</date> by students in the DIGIT 110 Text Encoding class 
-                    taught by <name xml:id="ebeshero">Elisa Beshero-Bondar</name> at Penn State Erie, The Behrend College.</edition>
+                <edition>First digital edition, launched <date>October 2021</date> by students in
+                    the DIGIT 110 Text Encoding class taught by <name xml:id="ebeshero">Elisa
+                        Beshero-Bondar</name> at Penn State Erie, The Behrend College.</edition>
             </editionStmt>
             <publicationStmt>
                 <p>As far as we know, Mary Behrend never published these.</p>
@@ -26,27 +27,29 @@
                     </msIdentifier>
                     <physDesc>
                         <handDesc>
-                            <handNote xml:id="calendarPub" medium="print">New Friendship Calendar Company
-                                printing the calendar sheets.</handNote>
-                            <handNote xml:id="redPen" medium="red inkpen">Mary Behrend writing in a red
-                                pen.</handNote>
+                            <handNote xml:id="calendarPub" medium="print">New Friendship Calendar
+                                Company printing the calendar sheets.</handNote>
+                            <handNote xml:id="redPen" medium="red inkpen">Mary Behrend writing in a
+                                red pen.</handNote>
                             <handNote xml:id="pencil" medium="pencil">Mary Behrend writing in a
                                 pencil.</handNote>
-                            <handNote xml:id="blackpen" medium="black inkpen"> This is usually large and
-                                very clear to read compared to red and pencil</handNote>
-                            <handNote xml:id="greenpen" medium="green inkpen"> This was used in saint Patrick's
-                                day its a special event in the calendar</handNote>
+                            <handNote xml:id="blackpen" medium="black inkpen"> This is usually large
+                                and very clear to read compared to red and pencil</handNote>
+                            <handNote xml:id="greenpen" medium="green inkpen"> This was used in
+                                saint Patrick's day its a special event in the calendar</handNote>
                             <handNote xml:id="multicolor" medium="multiple colors and media">This
-                                designates the inks or markings Mary Behrend made for artwork.</handNote>
+                                designates the inks or markings Mary Behrend made for
+                                artwork.</handNote>
                             <!--ebb: I'm adding this last one to help simplify how we describe the sketches. You'll be writing a description of the sketches, too.  -->
                         </handDesc>
-                        
+
                     </physDesc>
                     <history>
-                        <origin>Printed calendar sheets from <date>1909</date> with handwriting and illustrations added by Mary Behrend, found inside an
-                            envelope in a family baby album.</origin>
+                        <origin>Printed calendar sheets from <date>1909</date> with handwriting and
+                            illustrations added by Mary Behrend, found inside an envelope in a
+                            family baby album.</origin>
                     </history>
-                    
+
                 </msDesc>
             </sourceDesc>
         </fileDesc>
@@ -55,158 +58,188 @@
         <body>
             <div1 type="calendarCollection">
                 <!--div1 just wraps the whole collection. -->
-                
-                
+
+
                 <div2 xml:id="e-1909-01-30"
                     facs="https://arrowarchive.github.io/behrendcalendar/photos/february/1909-01-30.jpg">
-                    
-                    <fw place="top-center" hand="#calendarPub">COPYRIGHT 1908, BY FRIENDSHIP CALENDAR CO.
-                        NEW BRITAIN, CONN.</fw>
+
+                    <fw place="top-center" hand="#calendarPub">COPYRIGHT 1908, BY FRIENDSHIP
+                        CALENDAR CO. NEW BRITAIN, CONN.</fw>
                     <ab rend="print" hand="#calendarPub">
                         <lb/><date when="1909-01-30"> January 30, 1909. <lb/>Saturday</date>
                     </ab>
                     <figure rend="cutout" hand="#blackpen">
-                        <figDesc resp="#acolemanreeves"> A man with a mustache laying in bad.
-                            
-                        </figDesc>
+                        <figDesc resp="#acolemanreeves"> A man with a <rs type="object"
+                                >mustache</rs> laying in <rs type="object">bed</rs>. </figDesc>
                     </figure>
-                    <ab hand="#pencil" rend="cursive"> E.R.B.
-                    <lb/>"That damned old clock
-                    <lb/>gives me a</ab>
+                    <ab hand="#pencil" rend="cursive"> E.R.B. <lb/>"That damned old <rs
+                            type="object">clock</rs>
+                        <lb/>gives me a</ab>
                 </div2>
-                
-                
+
+
                 <div2 xml:id="e-1909-02-16"
                     facs="https://arrowarchive.github.io/behrendcalendar/photos/february/1909-02-16.jpg">
-                    
-                    <fw place="top-center" hand="#calendarPub">COPYRIGHT 1908, BY FRIENDSHIP CALENDAR CO.
-                        NEW BRITAIN, CONN.</fw>
+
+                    <fw place="top-center" hand="#calendarPub">COPYRIGHT 1908, BY FRIENDSHIP
+                        CALENDAR CO. NEW BRITAIN, CONN.</fw>
                     <ab rend="print" hand="#calendarPub">
                         <lb/><date when="1909-02-16"> February 16, 1909. <lb/>Tuesday</date>
                     </ab>
                     <figure rend="color" hand="#multicolor">
-                        <figDesc resp="#acolemanreeves"> <persName>Mr Behrend</persName> holding a large bug.
-                         
+                        <figDesc resp="#acolemanreeves">
+                            <persName>Mr Behrend</persName> holding a large <rs type="animal"
+                                >bug.</rs>
                         </figDesc>
                     </figure>
-                        <ab hand="#pencil" rend="cursive"> <persName>Mr. Behrend</persName> finds a 
-                            <lb/> big bug!</ab>
-                        <ab hand="#redPen" rend="cursive"> I wonder if you have found many lately</ab>
+                    <ab hand="#pencil" rend="cursive">
+                        <persName>Mr. Behrend</persName> finds a <lb/> big <rs type="animal"
+                            >bug!</rs></ab>
+                    <ab hand="#redPen" rend="cursive"> I wonder if you have found many lately</ab>
                 </div2>
-                
-                
-                
-                
+
+
+
+
                 <div2 xml:id="e-1909-02-17"
                     facs="https://arrowarchive.github.io/behrendcalendar/photos/february/1909-02-17.jpg">
-                    
-                    <fw place="top-center" hand="#calendarPub">COPYRIGHT 1908, BY FRIENDSHIP CALENDAR CO.
-                        NEW BRITAIN, CONN.</fw>
+
+                    <fw place="top-center" hand="#calendarPub">COPYRIGHT 1908, BY FRIENDSHIP
+                        CALENDAR CO. NEW BRITAIN, CONN.</fw>
                     <ab hand="#calendarPub">
                         <lb/><date when="1909-02-17">February 17, 1909. <lb/>Wednesday</date>
                     </ab>
-                    <figure><figDesc resp="#acolereeves"></figDesc>
+                    <figure>
+                        <figDesc resp="#acolereeves"/>
                     </figure>
                     <ab hand="#pencil" rend="#cursive">
-                        <lb/> Each morning very early <lb/> When all is dark and still<lb/> <persName>Ernst</persName> goes off into likely blackness <lb/>To work at Hammermill <lb/> I really think he's very good <lb/>to get up when it's dark <lb/> tho he says he doesn't mind <lb/> It cant (blank) (blank) a lark!
-                    </ab>
-                    <ab><add hand="#redPen" rend="#cursive" place="bottom-right">(blank) is it still dark when you arise?</add></ab>
+                        <lb/> Each morning very early <lb/> When all is dark and still<lb/>
+                        <persName>Ernst</persName> goes off into likely blackness <lb/>To work at
+                            <rs type="location">Hammermill</rs>
+                        <lb/> I really think he's very good <lb/>to get up when it's dark <lb/>
+                        though he says he doesn't mind <lb/> It can't (blank) (blank) a lark! </ab>
+                    <ab><add hand="#redPen" rend="#cursive" place="bottom-right">(blank) is it still
+                            dark when you arise?</add></ab>
                 </div2>
-                
-                
-                
+
+
+
                 <div2 xml:id="e-1909-03-08"
                     facs="https://arrowarchive.github.io/behrendcalendar/photos/march/1909-03-08.jpg">
-                    
-                    <fw place="top-center" hand="#calendarPub">COPYRIGHT 1908, BY FRIENDSHIP CALENDAR CO.
-                        NEW BRITAIN, CONN.</fw>
+
+                    <fw place="top-center" hand="#calendarPub">COPYRIGHT 1908, BY FRIENDSHIP
+                        CALENDAR CO. NEW BRITAIN, CONN.</fw>
                     <ab hand="#calendarPub">
                         <lb/><date when="1909-03-08">March 8, 1909. <lb/>Monday</date>
                     </ab>
                     <figure hand="#redink">
-                        <figDesc resp="#acolemanreeves">A large question mark in the center of the paper.</figDesc>
+                        <figDesc resp="#acolemanreeves">A large <rs type="object">question mark</rs>
+                            in the center of the paper.</figDesc>
                     </figure>
-                   <ab><add hand="#redPen" rend="#cursive" place="bottom-right">.. this is the day, this...later. done. the</add></ab> <!-- finish trasncribing here -->
+                    <ab><add hand="#redPen" rend="#cursive" place="bottom-right">.. this is the day,
+                            this...later. done. the</add></ab>
+                    <!-- finish trasncribing here -->
                 </div2>
-                
-                
-                
-                
+
+
+
+
                 <div2 xml:id="e-1909-03-12"
                     facs="https://arrowarchive.github.io/behrendcalendar/photos/march/1909-03-12.jpg">
-                    
-                    <fw place="top-center" hand="#calendarPub">COPYRIGHT 1908, BY FRIENDSHIP CALENDAR CO.
-                        NEW BRITAIN, CONN.</fw>
+
+                    <fw place="top-center" hand="#calendarPub">COPYRIGHT 1908, BY FRIENDSHIP
+                        CALENDAR CO. NEW BRITAIN, CONN.</fw>
                     <ab hand="#calendarPub">
                         <lb/><date when="1909-03-12">March 12, 1909. <lb/>Friday</date>
                     </ab>
                     <figure hand="#multicolor">
-                        <figDesc resp="#acolemanreeves">Drawing of a woman in snowshoes named <persName>Molly</persName> pointing
-                            ahead of her. This is along the left-hand side of the page.</figDesc>
+                        <figDesc resp="#acolemanreeves">Drawing of a woman in <rs type="object"
+                                >snowshoes</rs> named <persName>Molly</persName> pointing ahead of
+                            her. This is along the left-hand side of the page.</figDesc>
                     </figure>
                     <ab hand="#pencil">
-                        <lb/><persName>Molly</persName> on <lb/>snowshoes <lb/>that <persName>Mr. Weir</persName> <lb/>got. <lb/>Pretty picture
+                        <lb/><persName>Molly</persName> on <lb/><rs type="object">snowshoes</rs>
+                        <lb/>that <persName>Mr. Weir</persName>
+                        <lb/>got. <lb/>Pretty <rs type="object">picture</rs>
                         <lb/>is it not?!</ab>
-                    <ab><add hand="#redPen" rend="#cursive" place="bottom-right">Love from <persName>Molly</persName></add></ab>
+                    <ab><add hand="#redPen" rend="#cursive" place="bottom-right">Love from
+                                <persName>Molly</persName></add></ab>
                 </div2>
-                
-                
-                
+
+
+
                 <div2 xml:id="e-1909-03-17"
                     facs="https://arrowarchive.github.io/behrendcalendar/photos/march/1909-03-17.jpg">
-                    
-                    <fw place="top-center" hand="#calendarPub">COPYRIGHT 1908, BY FRIENDSHIP CALENDAR CO.
-                        NEW BRITAIN, CONN.</fw>
+
+                    <fw place="top-center" hand="#calendarPub">COPYRIGHT 1908, BY FRIENDSHIP
+                        CALENDAR CO. NEW BRITAIN, CONN.</fw>
                     <ab hand="#calendarPub">
                         <lb/><date when="1909-03-17">March 17, 1909. <lb/>Wednesday</date>
                     </ab>
                     <figure hand="#brownink">
-                        <figDesc resp="#acolemanreeves"> Green Shamrocks dispersed throughout the paper. Two <rs type="animal">snakes</rs> drawn on the top of the paper. A drawing of the hammermill center bottom right corner. </figDesc>
+                        <figDesc resp="#acolemanreeves">
+                            <rs type="object">Green Shamrocks</rs> dispersed throughout the paper.
+                            Two <rs type="animal">snakes</rs> drawn on the top of the paper. A
+                            drawing of the <rs type="location">hammermill center</rs> at the bottom
+                            right corner. </figDesc>
                     </figure>
                     <ab hand="#brownink">
-                        <lb/><persName>ST. Patrick</persName> was a useful saint<lb/> He frightened all the snakes away- <lb/>I wish he'd try his art on smoke  <lb/>around the hammermill some day! 
-                        <lb/>is it not?!</ab>
-                    <ab><add hand="#redPen" rend="#cursive" >The Hammermill really lucky!</add></ab>  <!-- finish trasncribing here -->
+                        <lb/><persName>ST. Patrick</persName> was a useful saint<lb/> He frightened
+                        all the <rs type="animal">snakes</rs> away- <lb/>I wish he'd try his art on
+                        smoke <lb/>around <rs type="location">the hammermill</rs> some day! <lb/>is
+                        it not?!</ab>
+                    <ab><add hand="#redPen" rend="#cursive"><rs type="location">The Hammermill</rs>
+                            is really lucky!</add></ab>
+                    <!-- finish trasncribing here -->
                 </div2>
-                
-                
+
+
                 <div2 xml:id="e-1909-03-23"
                     facs="https://arrowarchive.github.io/behrendcalendar/photos/march/1909-03-23.jpg">
-                    
-                    <fw place="top-center" hand="#calendarPub">COPYRIGHT 1908, BY FRIENDSHIP CALENDAR CO.
-                        NEW BRITAIN, CONN.</fw>
+
+                    <fw place="top-center" hand="#calendarPub">COPYRIGHT 1908, BY FRIENDSHIP
+                        CALENDAR CO. NEW BRITAIN, CONN.</fw>
                     <ab hand="#calendarPub">
                         <lb/><date when="1909-03-23">March 23, 1909. <lb/>Tuesday</date>
                     </ab>
                     <figure hand="#pencil">
-                        <figDesc resp="#acolemanreeves">Drawing of clothes hanging up to dry.</figDesc>
+                        <figDesc resp="#acolemanreeves">Drawing of <rs type="object">clothes</rs>
+                            hanging up to dry.</figDesc>
                     </figure>
                     <ab hand="#pencil">
-                        <lb/>Wash day at <persName>the behrends</persName> <lb/>oh, I say! <lb/>That's really a very  <lb/>unusual display! 
-                    </ab>
-                    <ab><add hand="#redPen" rend="#cursive" place="bottom-right">Do you still miss me?</add></ab> 
+                        <lb/>Wash day at <persName>the behrends</persName>
+                        <lb/>oh, I say! <lb/>That's really a very <lb/>unusual display! </ab>
+                    <ab><add hand="#redPen" rend="#cursive" place="bottom-right">Do you still miss
+                            me?</add></ab>
                 </div2>
-                
-                
-                
+
+
+
                 <div2 xml:id="e-1909-03-25"
                     facs="https://arrowarchive.github.io/behrendcalendar/photos/march/1909-03-25.jpg">
-                    
-                    <fw place="top-center" hand="#calendarPub">COPYRIGHT 1908, BY FRIENDSHIP CALENDAR CO.
-                        NEW BRITAIN, CONN.</fw>
+
+                    <fw place="top-center" hand="#calendarPub">COPYRIGHT 1908, BY FRIENDSHIP
+                        CALENDAR CO. NEW BRITAIN, CONN.</fw>
                     <ab hand="#calendarPub">
                         <lb/><date when="1909-03-25">March 25, 1909. <lb/>Thursday</date>
                     </ab>
                     <figure hand="#multicolor">
-                        <figDesc resp="#acolemanreeves">A woman walking in a garden</figDesc>
+                        <figDesc resp="#acolemanreeves">A woman walking in a <rs type="location"
+                                >garden</rs></figDesc>
                     </figure>
                     <ab hand="#pencil">
-                        <title> At the Lavers </title>
-                        <lb/>"Ill send the bill to <persName>Ernst</persName> <lb/> and take them every one <lb/>I'll watch his face &amp;see him <lb/>smile <lb/>It will be such jolly fun!"
-                    </ab> 
-                    <ab><add hand="#redPen" rend="#cursive" place="top-right"><persName>Molly</persName> reviewing a full Gig bill Poor <persName>Ernst</persName></add></ab> <!-- finish trasncribing here -->
+                        <title> At the <persName>Lavers</persName>
+                        </title>
+                        <lb/>"I'll send the <rs type="object">bill</rs> to
+                            <persName>Ernst</persName>
+                        <lb/> and take them every one <lb/>I'll watch his face &amp;see him
+                        <lb/>smile <lb/>It will be such jolly fun!" </ab>
+                    <ab><add hand="#redPen" rend="#cursive" place="top-right"
+                                ><persName>Molly</persName> reviewing a full Gig <rs type="object"
+                                >bill</rs> Poor <persName>Ernst</persName></add></ab>
+                    <!-- finish trasncribing here -->
                 </div2>
-                
+
             </div1>
         </body>
     </text>
