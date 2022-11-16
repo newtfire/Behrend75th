@@ -13,7 +13,7 @@
                 <city>ERIE, PENNA.</city>
             </p>
             <p>
-                <date format="MDY">December 9, 1935</date>
+                <date when="1935-12-09">December 9, 1935</date>
             </p>
         </head>
         <body>
@@ -24,8 +24,8 @@
                     Ford Mountain Range</placeName> of northern <placeName>Marie Byrd
                     Land, Antarctica</placeName>. </p>
             <p n="2"> The land was first discovered from the air by <persName>Admiral
-                    Byrd</persName> in <date>1929</date>, but it was first visited by our party
-                travelling by dog team during October - December, <date>1934</date>. The Mary Byrd Land
+                    Byrd</persName> in <date when="1929">1929</date>, but it was first visited by our party
+                travelling by dog team during October - December, <date when="1934">1934</date>. The Mary Byrd Land
                 sledging party was composed of four men - <persName>Alton Wade</persName>,
                     Geologist,<persName>Stevenson Corey</persName> and <persName>Olin Stancliff</persName>,
                 drivers and assistants, and myself as leader and Biologist. </p>
