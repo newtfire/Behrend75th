@@ -1,0 +1,48 @@
+start = xml
+xml = element xml { meta, figure, body}
+meta = element meta { title, sourceDesc,  paperOrigin, transDesc }
+title = element title {titleId,text, date}
+titleId = attribute titleId {xsd:ID}
+# ged: please be consistent with titleIds they should look like this (WtoP-YYYY-MM-DD) (PtoW-YYYY-MM-DD) 
+# if your date does not have a month or day just fill in what you can and follow the xsd: date datatypes. 
+
+# ged: For the Mem Service the titleId  should look like this (memService-YYYY-MM-DD)
+sourceDesc = element sourceDesc { location }
+location = attribute location { "John M. Lilley Library, Penn State Behrend Archives" }
+paperOrigin = element paperOrigin { text }
+transDesc = element transDesc { editor+}
+editor = element editor { "GD" | "JG" | "AM" | "TH" | "SB" | "NV" | "EM" | "JP" | "GT" }
+
+figure = element figure {graphic+}
+graphic = element graphic {src, alt}
+src = attribute src {xsd:anyURI}
+alt =  attribute alt {text}
+# ged: write text that describes about the figure/graphic
+
+body = element body {(pb, header)*, (pb | p)+ , (closer)*}
+pb = element pb {n+, empty}
+# ged: added a pb element to indicate page beginnings. 
+header = element header {ln, mixed{(ln+ | date | greeting)*}}
+date = element date { xsd:date | xsd:gYearMonth | xsd:gYear }
+greeting = element greeting { text }
+p = element p {n, ln, mixed{(ln | pb| person | place | weather | language| unclear | crossOut | underline | car| boat |closer | emotion | organization)*}}
+emotion =  element emotion {text}
+n = attribute n { xsd:integer }
+ln = element ln {n, empty}
+person = element person { mixed{(personId | personIdRef)},unclear? }
+personId = attribute personId { xsd:ID }
+personIdRef = attribute personIdRef {xsd:IDREF}
+place = element place { (placeId | placeIdRef), text }
+placeId = attribute placeId { xsd:ID }
+placeIdRef = attribute placeIdRef {xsd:IDREF}
+car = element car {text}
+boat = element boat {text}
+weather = element weather { text }
+language = element language { langID, text }
+organization = element organization {text}
+langID = attribute langID { xsd:ID }
+unclear = element unclear {reason, text }
+underline = element underline {text}
+crossOut = element crossOut {text }
+reason = attribute reason { text }
+closer = element closer {mixed{ln*} }

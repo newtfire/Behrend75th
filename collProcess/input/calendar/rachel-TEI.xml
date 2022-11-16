@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="out/behrendCalODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="out/behrendCalODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Mary Behrend's Calendar Sheets</title>
+            <author>Mary Behrend</author>
+            <editor xml:id="rgerzevske">Rachel Gerzevske</editor>
+            <editor xml:id="acolereeves">Amory Coleman-Reeves</editor>
+            <editor xml:id="zmurphy">Zak Murphy</editor>
+            <editor xml:id="lhering">Logan Hering</editor>
+         </titleStmt>
+         <editionStmt>
+            <edition>First digital edition, launched <date>October 2021</date> by students in the DIGIT 110 Text Encoding class 
+            taught by <name xml:id="ebeshero">Elisa Beshero-Bondar</name> at Penn State Erie, The Behrend College.</edition>
+         </editionStmt>
+         <publicationStmt>
+            <p>As far as we know, Mary Behrend never published these.</p>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <repository>Penn State Erie, The Behrend College Library</repository>
+               </msIdentifier>
+               <physDesc>
+                  <handDesc>
+                     <handNote xml:id="calendarPub" medium="print">New Friendship Calendar Company
+                        printing the calendar sheets.</handNote>
+                     <handNote xml:id="redPen" medium="red inkpen">Mary Behrend writing in a red
+                        pen.</handNote>
+                     <handNote xml:id="pencil" medium="pencil">Mary Behrend writing in a
+                        pencil.</handNote>
+                     <handNote xml:id="blackpen" medium="black inkpen"> This is usually large and
+                        very clear to read compared to red and pencil</handNote>
+                     <handNote xml:id="greenpen" medium="green inkpen"> This was used in saint Patrick's
+                        day its a special event in the calendar</handNote>
+                     <handNote xml:id="multicolor" medium="multiple colors and media">This
+                        designates the inks or markings Mary Behrend made for artwork.</handNote>
+                     <!--ebb: I'm adding this last one to help simplify how we describe the sketches. You'll be writing a description of the sketches, too.  -->
+                  </handDesc>
+
+               </physDesc>
+               <history>
+                  <origin>Printed calendar sheets from <date>1909</date> with handwriting and illustrations added by Mary Behrend, found inside an
+                     envelope in a family baby album.</origin>
+               </history>
+
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div1 type="calendarCollection">
+            <!--div1 just wraps the whole collection. -->
+
+            <!--  <div2 xml:id="e-1909-03-12"
+               facs="https://arrowarchive.github.io/behrendcalendar/photos/march/1909-03-12.jpg">-->
+               <!--div2 is for each calendar entry. 
+                 1. We can construct an xml:id (to hold a distinct identifier) for this entry:
+              it is just the letter "e" followed by the yyyy-mm-dd for the entry, with each piece separated by a hyphen.
+                 2. the @facs attribute points to the web URL where we're hosting the calendar images.
+              -->
+               <!--  <fw place="top-center" hand="#calendarPub">COPYRIGHT 1908, BY FRIENDSHIP CALENDAR CO.
+                  NEW BRITAIN, CONN.</fw>
+               <ab hand="#calendarPub">
+                  <lb/><date when="1909-03-12">March 12, 1909. <lb/>Friday</date>
+               </ab>
+               <figure hand="#multicolor">
+                  <figDesc resp="#zmurphy">Drawing of a woman in snowshoes named Molly pointing
+                     ahead of her. This is along the left-hand side of the page.</figDesc>
+               </figure>
+               <ab hand="#pencil">
+                  <lb/>Molly on <lb/>snowshoes <lb/>that <persName>Mr. Weir</persName> <lb/>got. <lb/>Pretty picture
+                  <lb/>is it not?!</ab>
+               <ab><add hand="#redPen" place="bottom-right">Love from Molly</add></ab>
+            </div2>-->
+
+            <div2 xml:id="e-1909-06-12"
+               facs="https://arrowarchive.github.io/behrendcalendar/photos/june/1909-06-12.jpg">
+               <fw place="top-center" hand="#calendarPub">COPYRIGHT 1908, BY FRIENDSHIP CALENDAR CO.
+                  NEW BRITAIN, CONN.</fw>
+               <ab rend="print" hand="#calendarPub">
+                  <lb/><date when="1909-06-12">June 12, 1909. <lb/>Saturday</date>
+               </ab>
+               <figure rend="pencil">
+                  <figDesc resp="#rgerzevske"><!--rgg: Everything in this image was written in pencil, and a lot of it is difficult to read because it has faded over the past century. I'll need help from my group to transcribe it correctly -->
+                     Two rooms of a house are drawn; the upstairs, which has a mother <persName>(Mary),</persName> her husband (can't remember his name), and a child <persName>(Warren).</persName> Meanwhile, two people are downstairs, and they appear to be playing pool. The upstairs and downstairs rooms are clearly labelled, and ironically, are the easiest things to read besides the date and copyright information.</figDesc>
+               </figure>
+               <ab hand="#pencil" rend="cursive">
+                  <!--ODD addition: customize @rend to "smallcaps" or "cursive" -->
+                  <lb/>The new rooves are very nice 
+                  <lb/><unclear reason="faded"/>
+                  <lb/>For <unclear reason="faded"/> he <unclear reason="faded"/> billiard <unclear reason="faded"/>
+                  <lb/><unclear reason="faded"/>, by golly.</ab>
+               
+               <note resp="#rgerzevske">This is one of the few pages written entirely in pencil. Unfortunately, this means that it isn't very clear to read. From what little I can gather, Mary's family had the roof of their house redone and ordered a billiard/pool table, and either her husband or someone they know loves to play pool.</note>
+            </div2>
+
+            <div2 xml:id="e-1909-06-16"
+               facs="https://arrowarchive.github.io/behrendcalendar/photos/june/1909-06-16.jpg">
+               <fw place="top-center" hand="#calendarPub">COPYRIGHT 1908, BY FRIENDSHIP CALENDAR CO.
+                  NEW BRITAIN, CONN.</fw>
+               <ab rend="print" hand="#calendarPub">
+                  <lb/><date when="1909-06-16">June 16, 1909. <lb/>Wednesday</date>
+               </ab>
+               <figure rend="cutout">
+                  <figDesc resp="#rgerzevske"><!--rgg: This was also written in pencil. I can read most of it, but not everything. -->
+                     This one is interesting: there are two cutouts from articles, with one containing a drawing of a large woman and a small man with some text underneath with while the second cutout only consists of text. It is unknown where it came from.</figDesc>
+                  <!-- Maybe someone can help me find where the image came from.  -->
+               </figure>
+               <ab rend="print">
+                  <lb/>In case a woman is so large around the waist
+                  <lb/>That her husband can't hug her all at once, he
+                  <lb/>can take one hug, make a chalk mark so as to
+                  <lb/>know where he left off and where to commence
+                  <lb/>next time going round.
+               </ab>
+               <ab hand="#pencil" rend="cursive">
+                  <!--ODD addition: customize @rend to "smallcaps" or "cursive" -->
+                  <lb/>I hope I won't be large
+                  <lb/>again <unclear reason="faded"/></ab>
+               
+               <ab rend="print">
+                  <lb/>Care of the Hands in Winter
+                  <lb/>Floreance. Proper washing and wiping of
+                  <lb/>the hands will prevent much redness and rough-
+                  <lb/>ness of the skin. Wipe every part thoroughly
+                  <lb/>with a soft, absorbent towel. Then rub in some
+                  <lb/> of the following lotion: One ounce of each
+                  <lb/>glycerine and rose-water; ten drops of tincture
+                  <lb/>of benozine.
+               </ab>
+               
+               <note resp="#rgerzevske">I took care to transcribe the printed text in the images. I couldn't read what was entirely in pencil, but I got most of it. It sounds like she hasn't had Warren yet, so she is worried about her weight and is reading up on skin-care.</note>
+            </div2>
+
+            <div2 xml:id="e-1909-06-19"
+               facs="https://arrowarchive.github.io/behrendcalendar/photos/june/1909-06-19.jpg">
+               <fw place="top-center" hand="#calendarPub">COPYRIGHT 1908, BY FRIENDSHIP CALENDAR CO.
+                  NEW BRITAIN, CONN.</fw>
+               <ab rend="print" hand="#calendarPub">
+                  <lb/><date when="1909-06-19">June 19, 1909. <lb/>Saturday</date>
+               </ab>
+               <figure  hand="#pencil" rend="color">
+                  <figDesc resp="#rgerzevske">
+                     Someone (possibly <persName>Mary</persName>) is tending to a man's hair. She appears to be rubbing in shampoo ( or "scalp food", as she called it) and the woman appears to be singing or talking. The image is drawn in pencil and what appears to be watercolor, with the woman's hair obscuring the year number.</figDesc>
+               </figure>
+               <ab hand="#blackpen" rend="blockcaps">
+                  <!--ODD addition: customize @rend to "smallcaps" or "cursive" -->
+                  <lb/>"Rubbing it in!"</ab>
+               
+               <note resp="#rgerzevske">I wonder: if this is <persName>Mary,</persName> did she cut and clean her husband's hair? Was she at a hairdresser waiting to have her hair done and saw this when she was waiting? Did they have a housekeeper of some kind? I have so many questions. </note>
+            </div2>
+
+            <div2 xml:id="e-1909-07-13"
+               facs="https://arrowarchive.github.io/behrendcalendar/photos/july/1909-07-13.jpg">
+               <fw place="top-center" hand="#calendarPub">COPYRIGHT 1908, BY FRIENDSHIP CALENDAR CO.
+                  NEW BRITAIN, CONN.</fw>
+               <ab rend="print" hand="#calendarPub">
+                  <lb/><date when="1909-07-13">July 13, 1909. <lb/>Tuesday</date>
+               </ab>
+               <figure rend="cutout">
+                  <figDesc resp="#rgerzevske #ebeshero"><!--ebb: As I zoom in on the image, it's clear this is printed, probably cut out from a magazine. -->
+                     An infant is seen from behind. Looking closely, the
+                     image was made with a different type of paper. It was likely first printed in a magazine, cut
+                     out, and glued onto the page.</figDesc>
+               </figure>
+               <ab hand="#blackPen" rend="smallcaps">
+                  <!--ODD addition: customize @rend to "smallcaps" or "cursive" -->
+                  <lb/>That little spot in the 
+                  <lb/>back of his neck 
+                  <lb/>is the sweetest spot to
+                  <lb/>kiss I know 
+                  <lb/>so I kiss him there 
+                  <lb/>and <emph style="underline">hold him close</emph>
+                  <lb/>just because I love him so.</ab>
+
+               <note resp="#rgerzevske">It's clear that Mary is talking about her son Warren here. From the way she
+                  talks about him, he is a few months old (or less) and she absolutely adores him.
+                  If Warren is her first born child, then her joy from being around him makes a lot
+                  more sense. </note>
+            </div2>
+
+            <div2 xml:id="e-1909-08-03"
+               facs="https://arrowarchive.github.io/behrendcalendar/photos/august/1909-08-03.jpg">
+               <fw place="top-center" hand="#calendarPub">COPYRIGHT 1908, BY FRIENDSHIP CALENDAR CO.
+                  NEW BRITAIN, CONN.</fw>
+               <ab rend="print" hand="#calendarPub">
+                  <lb/><date when="1909-08-03">August 3, 1909. <lb/>Tuesday</date>
+               </ab>
+               <figure  hand="#pencil" rend="color">
+                  <figDesc resp="#rgerzevske">
+                     A basket of fruits and vegetables is drawn using pencil and watercolor. The pencil is faded, but surprisingly legible.</figDesc>
+               </figure>
+               <ab hand="#blackPen" rend="blockcaps">
+                  <!--ODD addition: customize @rend to "smallcaps" or "cursive" -->
+                  <lb/>Here's a basket of things from
+                  <lb/>the garden
+                  <lb/>which help to reduce <persName>Becker's</persName> bill
+                  <lb/>Fresh vegetables always taste
+                  <lb/>nicest
+                  <lb/>So I am sure these will;</ab>
+               
+               <note resp="#rgerzevske"> I don't know if <persName>Becker</persName> has been mentioned before, but he appears he is a close friend of the Behrends. I remember that around this time more people were encouraged to start gardens (If I am remembering correctly), and <persName>Mary</persName>offering fresh fruits and vegetables to someone, friend or neighbor, was a sign of goodwill.</note>
+            </div2>
+            
+            <div2 xml:id="e-1909-08-09"
+               facs="https://arrowarchive.github.io/behrendcalendar/photos/august/1909-08-09.jpg">
+               <fw place="top-center" hand="#calendarPub">COPYRIGHT 1908, BY FRIENDSHIP CALENDAR CO.
+                  NEW BRITAIN, CONN.</fw>
+               <ab rend="print" hand="#calendarPub">
+                  <lb/><date when="1909-08-09">August 9, 1909. <lb/>Monday</date>
+               </ab>
+               <figure  hand="#multicolor" rend="color">
+                  <figDesc resp="#rgerzevske">
+                    An anthropomorphic peach or tomato lady is on the left of the page and a pear lady is drawn on the right. They are made with pencil and watercolor, and the text is about them.</figDesc>
+               </figure>
+               <ab hand="#blackPen" rend="blockcaps">
+                  <!--ODD addition: customize @rend to "smallcaps" or "cursive" -->
+                  <lb/><persName>Miss Peach</persName> has such a
+                  <lb/>lovely face
+                  <lb/>I think it would be
+                  <lb/>out of place
+                  <lb/>to tell you that,
+                  <lb/>tho' never tart,
+                  <lb/>she has a very
+                  <lb/>stony heart;
+                  <lb/>Poor <persName>Miss Pear</persName> has a
+                  <lb/>swollen cheek;
+                  <lb/>She's had it, too,
+                  <lb/>for nearly a week;
+                  <lb/>If you ask me now
+                  <lb/>how can that be -
+                  <lb/>I'll tell you why:
+                  <lb/>She fell out of a tree!</ab>
+               
+               <note resp="#rgerzevske"> I can tell, from reading enough pages, that <persName>Warren</persName> has already been born. Since he's a young child, I wouldn't be surprised if <persName>Mary</persName> tried writing little stories to read to her son. It's almost like something out of a children's book, and it reminds me of some of the books I had read to me when I was young.</note>
+            </div2>
+            
+            <div2 xml:id="e-1909-08-14"
+               facs="https://arrowarchive.github.io/behrendcalendar/photos/august/1909-08-14.jpg">
+               <fw place="top-center" hand="#calendarPub">COPYRIGHT 1908, BY FRIENDSHIP CALENDAR CO.
+                  NEW BRITAIN, CONN.</fw>
+               <ab rend="print" hand="#calendarPub">
+                  <lb/><date when="1909-08-14">August 14, 1909. <lb/>Saturday</date>
+               </ab>
+               <figure  hand="#multicolor" rend="color">
+                  <figDesc resp="#rgerzevske">
+                     There is no image here, just red pen.</figDesc>
+               </figure>
+               <ab rend="cursive"><lb/><quote>To live in hearts or leave behind,
+                  <lb/>is not to die.</quote>
+                  <lb/><name>Campbell</name></ab>
+               
+               <note resp="#rgerzevske"> This is one of the most bizarre calendar pages out of the collection. It's one of, if not, the only page that doesn't have a drawing or photo on it. I wonder if she couldn't think of anything to draw. Maybe she didn't have time, or maybe this quote inspired her. Who knows?</note>
+            </div2>
+            
+            <div2 xml:id="e-1909-08-16"
+               facs="https://arrowarchive.github.io/behrendcalendar/photos/august/1909-08-16.jpg">
+               <!-- rgg: need help transcribing this! -->
+               <fw place="top-center" hand="#calendarPub">COPYRIGHT 1908, BY FRIENDSHIP CALENDAR CO.
+                  NEW BRITAIN, CONN.</fw>
+               <ab rend="print" hand="#calendarPub">
+                  <lb/><date when="1909-08-16">August 16, 1909. <lb/>Monday</date>
+               </ab>
+               <figure hand="#print" rend="cursive">
+                  <figDesc resp="#rgerzevske">
+                     There is a photo of two men and two women walking down a street, with two other people walking in the background. Everyone in the foreground is wearing black, while everyone in the background is dressed in brighter colors.</figDesc>
+               </figure>
+               <ab hand="#redPen" rend="cursive">
+                  <lb/><quote><unclear reason="eccentric_ductus"> will love him dearly,</unclear>
+                  <lb/><unclear reason="eccentric_ductus"/>have a cheerful home"</quote>
+                  <lb/><unclear reason="eccentric_ductus"/></ab>
+               
+               <note resp="#rgerzevske"> I can't read everything, but it appears this was written after attending a funeral or recently losing a loved one. Unfortunately, I can't make out most of her handwriting here, and I wonder if that's her in the picture.</note>
+            </div2>
+            
+            <div2 xml:id="e-1909-08-18"
+               facs="https://arrowarchive.github.io/behrendcalendar/photos/august/1909-08-18.jpg">
+               <fw place="top-center" hand="#calendarPub">COPYRIGHT 1908, BY FRIENDSHIP CALENDAR CO.
+                  NEW BRITAIN, CONN.</fw>
+               <ab rend="print" hand="#calendarPub">
+                  <lb/><date when="1909-08-18">August 18, 1909. <lb/>Wednesday</date>
+               </ab>
+               <figure hand="#blackpen" rend="pencil">
+                  <figDesc resp="#rgerzevske">
+                     This is either a bunch of rabbits hopping together or one rabbit moving really quickly. Don't know for sure.</figDesc>
+               </figure>
+               <ab hand="#pencil" rend="blockcaps">
+                  <lb/><quote>Sic' em, Gamie!</quote></ab>
+               
+               <note resp="#rgerzevske"> This is a stark contrast from the previous page; it was somber, likely from losing someone close, and now she's drawn something silly about rabbits, a common "game" animal. Maybe she knew someone who was hunter, since rabbit are common game animals when they are not being kept as pets.</note>
+            </div2>
+         </div1>
+      </body>
+   </text>
+</TEI>
