@@ -17,20 +17,20 @@
             </p>
         </head>
         <body>
-            <greeting>Dear Mr. Behrend,</greeting>
+            <greeting>Dear <persName>Mr. Behrend</persName>,</greeting>
             <p n="1"> It is with great pleasure that I present this little token of friendship. This
                 rock was picked up on the "ash dump" - a unique moraine running out from the base of
-                an extinct volcano, <location>Mt. Raymond Fosdick</location> in the <location>Edsel
-                    Ford Mountain Range</location> of northern <location>Marie Byrd
-                    Land,</location> Antarctica. </p>
-            <p n="2"> The land was first discovered from the air by <person>Admiral
-                    Byrd</person> in <date>1929</date>, but it was first visited by our party
+                an extinct volcano, <placeName>Mt. Raymond Fosdick</placeName> in the <placeName>Edsel
+                    Ford Mountain Range</placeName> of northern <placeName>Marie Byrd
+                    Land, Antarctica</placeName>. </p>
+            <p n="2"> The land was first discovered from the air by <persName>Admiral
+                    Byrd</persName> in <date>1929</date>, but it was first visited by our party
                 travelling by dog team during October - December, <date>1934</date>. The Mary Byrd Land
-                sledging party was composed of four men - <person>Alton Wade</person>,
-                    Geologist,<person>Stevenson Corey</person> and <person>Olin Stancliff</person>,
+                sledging party was composed of four men - <persName>Alton Wade</persName>,
+                    Geologist,<persName>Stevenson Corey</persName> and <persName>Olin Stancliff</persName>,
                 drivers and assistants, and myself as leader and Biologist. </p>
             <p n="3"> The volcano was at the extreme turning point of our travels, about three
-                hundred miles from <location>Little America</location>. Corey and I spent Thanksgiving Day near the point
+                hundred miles from <placeName>Little America</placeName>. Corey and I spent Thanksgiving Day near the point
                 where this rock was picked up in a blizzard that blew almost continuously for three
                 days at a velocity rarely below thirty five miles an hour, and often of hurricane
                 velocity completely flattening our tent. </p>
@@ -42,7 +42,7 @@
         <foot>
             <p>With kindest regards,</p>
             <p>Sincerely yours,</p>
-            <p>Paul A. Siple </p>
+            <p><persName>Paul A. Siple</persName> </p>
             <img src="../pics/Penguin.PNG"/>
         </foot>
     </page>
