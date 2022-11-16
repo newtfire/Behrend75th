@@ -20,7 +20,7 @@
     <body>
         <pb n="1"/>
         <header>
-            <ln n="1"/><date>1929-12-19</date>
+            <ln n="1"/><date when="1929-12-19">1929-12-19</date>
             <ln n="2"/><greeting>Dear Mother and Father,</greeting>
         </header>
         <p n="1">
@@ -30,7 +30,7 @@
             <ln n="4"/>ginning to feel more like I was
             <ln n="5"/>going home when we all live
             <ln n="6"/>on board her than when in the <!-- jbg:removed the unclear element on board. -->
-            <ln n="7"/>house in <place placeId="ERIE">Erie</place>.
+            <ln n="7"/>house in <placeName placeId="ERIE">Erie</placeName>.
         </p>
         <p n="2">
             <ln n="1"/> Please drop me a line some <!-- seb: changed "dust" to "drop" after rereading -->
@@ -38,9 +38,9 @@
         <pb n="2"/>
             <ln n="3"/> ments you made about
             <ln n="4"/> <unclear reason="hard to read">daring</unclear> the La Salle meet <!-- seb: i beleive "daring" is actually "having" -->
-            <ln n="5"/> me in <place placeId="WASH">Washington</place>. If
+            <ln n="5"/> me in <placeName placeId="WASH">Washington</placeName>. If
             <ln n="6"/> you haven't done this just say so
-            <ln n="7"/> and I'll write <person personId="MF">Miss <unclear reason="unclear name">Fraters</unclear></person>. I
+            <ln n="7"/> and I'll write <persName personId="MF">Miss <unclear reason="unclear name">Fraters</unclear></persName>. I
             <ln n="8"/> shall probably write her anyway as <!-- seb: took out extra word -->
             <ln n="9"/> I want to be sure the boot for
             <ln n="10"/> the toy is in the car and have
@@ -48,7 +48,7 @@
         </p>
         <p n="3">
             <ln n="1"/> I haven't been able to get in
-            <ln n="2"/> touch with <person personId="BB">Betty Bratton</person> yet 
+            <ln n="2"/> touch with <persName personId="BB">Betty Bratton</persName> yet 
             <ln n="3"/> but I shall probably phone her
             <ln n="4"/> tonight if I can find out where
             <ln n="5"/> she lives. There is small informal
@@ -58,7 +58,7 @@
             <ln n="8"/> next <crossOut>december</crossOut> Christmas and might
             <ln n="9"/> be able to go I'll ask her <unclear reason="hard to read">if for</unclear>
             <ln n="10"/> that so that we can talk over the <!-- seb: changed "no" to "so" and "that" to "the" -->
-            <ln n="11"/> matter. I think <person personId="Harriet">Harriet</person> would like
+            <ln n="11"/> matter. I think <persName personId="Harriet">Harriet</persName> would like
             <ln n="12"/> it better if I could get someone to
             <ln n="13"/> sort of keep her company. I'll write <!-- seb: added words "sort of" -->
             <ln n="14"/> you to New York the * * the
@@ -74,12 +74,12 @@
         </p>
         <p n="5">
             <ln n="1"/> There is not as much snow
-            <ln n="2"/> here as there was in <place placeId="Erie">Erie</place>, but
+            <ln n="2"/> here as there was in <placeName placeId="Erie">Erie</placeName>, but
             <ln n="3"/> it <weather>very cold</weather>. The water question
             <ln n="4"/> is getting quite serious here now
             <ln n="5"/> and they are planning to drill a
             <ln n="6"/> number of wells next week. The
-            <ln n="7"/> springs at the <place placeId="EAGLE">Eaglehook</place> dried out <!-- seb: added s to "springs" -->
+            <ln n="7"/> springs at the <placeName placeId="EAGLE">Eaglehook</placeName> dried out <!-- seb: added s to "springs" -->
             <ln n="8"/> yesterday and so that <crossOut>is the jist</crossOut>
             <ln n="9"/> throws all the more drain on the
             <ln n="10"/> town system.
