@@ -13,8 +13,9 @@
             <editor xml:id="lhering">Logan Hering</editor>
          </titleStmt>
          <editionStmt>
-            <edition>First digital edition, launched <date>October 2021</date> by students in the DIGIT 110 Text Encoding class 
-            taught by <name xml:id="ebeshero">Elisa Beshero-Bondar</name> at Penn State Erie, The Behrend College.</edition>
+            <edition>First digital edition, launched <date>October 2021</date> by students in the
+               DIGIT 110 Text Encoding class taught by <name xml:id="ebeshero">Elisa
+                  Beshero-Bondar</name> at Penn State Erie, The Behrend College.</edition>
          </editionStmt>
          <publicationStmt>
             <p>As far as we know, Mary Behrend never published these.</p>
@@ -34,8 +35,8 @@
                         pencil.</handNote>
                      <handNote xml:id="blackpen" medium="black inkpen"> This is usually large and
                         very clear to read compared to red and pencil</handNote>
-                     <handNote xml:id="greenpen" medium="green inkpen"> This was used in saint Patrick's
-                        day its a special event in the calendar</handNote>
+                     <handNote xml:id="greenpen" medium="green inkpen"> This was used in saint
+                        Patrick's day its a special event in the calendar</handNote>
                      <handNote xml:id="multicolor" medium="multiple colors and media">This
                         designates the inks or markings Mary Behrend made for artwork.</handNote>
                      <!--ebb: I'm adding this last one to help simplify how we describe the sketches. You'll be writing a description of the sketches, too.  -->
@@ -43,8 +44,9 @@
 
                </physDesc>
                <history>
-                  <origin>Printed calendar sheets from <date>1909</date> with handwriting and illustrations added by Mary Behrend, found inside an
-                     envelope in a family baby album.</origin>
+                  <origin>Printed calendar sheets from <date>1909</date> with handwriting and
+                     illustrations added by Mary Behrend, found inside an envelope in a family baby
+                     album.</origin>
                </history>
 
             </msDesc>
@@ -66,20 +68,25 @@
                </ab>
                <figure hand="multicolor" rend="color">
                   <figDesc resp="#lhering">
-                     Two rabbits (or hares) next to each other. They are both dressed
-                     in fun and colorful clothing. This is right below the date on the middle of the page.</figDesc>
+                     <rs type="animal">Two rabbits</rs> (or hares) next to each other. They are both
+                     dressed in fun and colorful <rs type="object">clothing</rs>. This is right
+                     below the date on the middle of the page.</figDesc>
                </figure>
                <ab hand="#pencil" rend="smallcaps">
-                  <lb/>Latest styles
-                  <lb/>in <emph style="underline"><rs type="animal">hare</rs></emph> dressing </ab>
-               <ab rend="cursive"><add hand="#redPen" place="bottom-right" rend="cursive"> see the <emph style="underline"> joke</emph>?</add></ab>
-               
-               <note resp="#lhering">It looks like <persName>Mary</persName> was in a creative mood on this day. Her drawing was quite playful
-               and she also made a pun with the word <rs type="animal">"hare"</rs> meaning both <rs type="animal">"a rabbit"</rs> and "hair". The joke being that
-               whaen you hear the words "<rs type="animal">hare</rs> dressing" you think about hair being stlyed but in this picture it refers
-               to two <rs type="animal">rabbits</rs> wearing in clothes.</note>
+                  <lb/>Latest styles <lb/>in <emph style="underline"><rs type="animal"
+                     >hare</rs></emph> dressing </ab>
+               <ab rend="cursive"><add hand="#redPen" place="bottom-right" rend="cursive"> see the
+                        <emph style="underline"> joke</emph>?</add></ab>
+
+               <note resp="#lhering">It looks like <persName>Mary</persName> was in a creative mood
+                  on this day. Her drawing was quite playful and she also made a pun with the word
+                     <rs type="animal">"hare"</rs> meaning both <rs type="animal">"a rabbit"</rs>
+                  and "hair". The joke being that whaen you hear the words "<rs type="animal"
+                     >hare</rs> dressing" you think about hair being styled but in this picture it
+                  refers to two <rs type="animal">rabbits</rs> wearing <rs type="object"
+                     >clothes</rs>.</note>
             </div2>
-            
+
             <div2 xml:id="e-1909-03-31"
                facs="https://arrowarchive.github.io/behrendcalendar/photos/march/1909-03-31.jpg">
                <fw place="top-center" hand="#calendarPub">COPYRIGHT 1908, BY FRIENDSHIP CALENDAR CO.
@@ -87,27 +94,26 @@
                <ab rend="print" hand="#calendarPub">
                   <lb/><date when="1909-03-31">March 31, 1909. <lb/>Wednesday</date>
                </ab>
-               <ab hand="#pencil" rend="smallcaps">
-                  4.30 AM.
-               </ab>
+               <ab hand="#pencil" rend="smallcaps"> 4.30 AM. </ab>
                <figure hand="multicolor" rend="color">
-                  <figDesc resp="#lhering">
-                     A room is drawn, and within the room is a bed, nightstand with an alarm clock on it, and a window
-                  with a view of the sun rising above the horizon. A human is drawn getting out of bed and running over to the
-                  alarm clock to shut it off.</figDesc>
+                  <figDesc resp="#lhering"> A room is drawn, and within the room is a <rs
+                        type="object">bed</rs>, <rs type="object">nightstand</rs> with an <rs
+                        type="object">alarm clock</rs> on it, and a <rs type="object">window</rs>
+                     with a view of the sun rising above the horizon. A human is drawn getting out
+                     of <rs type="object">bed</rs> and running over to the <rs type="object">alarm
+                        clock</rs> to shut it off.</figDesc>
                </figure>
-               <ab hand="#pencil" rend="smallcaps">
-                  "An early spring."</ab>
+               <ab hand="#pencil" rend="smallcaps"> "An early spring."</ab>
                <ab rend="cursive"><add hand="#redPen" place="bottom" rend="cursive">
-                  <lb/>This is you springing out 
-                  <lb/>of bed, ready to murder 
-                  <lb/>the alarm clock!</add></ab>
-               
-               <note resp="#lhering">Mary has drawn a picture of this bedroom scene and once again uses a pun.
-               She says "an early spring". This both referenceing the person in the image getting out of bed early, and
-               the season of spring coming early.</note>
+                     <lb/>This is you springing out <lb/>of <rs type="object">bed</rs>, ready to
+                     murder <lb/>the <rs type="object">alarm clock</rs>!</add></ab>
+
+               <note resp="#lhering"><persName>Mary</persName> has drawn a picture of this <rs type="location">bedroom</rs>
+                  scene and once again uses a pun. She says "an early spring". This both referencing
+                  the person in the image getting out of bed early, and the season of spring coming
+                  early.</note>
             </div2>
-            
+
             <div2 xml:id="e-1909-04-01"
                facs="https://arrowarchive.github.io/behrendcalendar/photos/april/1909-04-01.jpg">
                <fw place="top-center" hand="#calendarPub">COPYRIGHT 1908, BY FRIENDSHIP CALENDAR CO.
@@ -116,21 +122,21 @@
                   <lb/><date when="1909-04-01">April 1, 1909. <lb/>Thursday</date>
                </ab>
                <figure rend="cutout">
-                  <figDesc resp="#lhering">
-                     A short man with a big a pencil behind his ear is shown holding up a piece of paper with a drawing on it.
-                  The drawing on the paper is of another goofy looking man. The image appears to be cut out (probably from a magazine)
-                  and pasted onto the page.</figDesc>
+                  <figDesc resp="#lhering"> A short man with a big a <rs type="object">pencil</rs>
+                     behind his ear is shown holding up <rs type="object">a piece of paper</rs> with
+                     a drawing on it. The drawing on the paper is of another goofy looking man. The
+                     image appears to be cut out (probably from a magazine) and pasted onto the
+                     page.</figDesc>
                </figure>
                <ab rend="cursive"><add hand="#redPen" place="top" rend="cursive">
-                  <lb/>This is your 
-                  <lb/>picture!</add></ab>
-               <ab hand="#pencil" rend="smallcaps">
-                  Look underneath, please!</ab>
-              <!--lnh: It appears that there is a sticky note on the page with this text written on it. I wasn't sure how to code that.-->
-               <note resp="#lhering">The words "Look underneath, please!" are written on a sticky note. Under the stick note there is more text that
-                  reads "APRIL FOOL!!" and is underlined.</note>
+                     <lb/>This is your <lb/>picture!</add></ab>
+               <ab hand="#pencil" rend="smallcaps"> Look underneath, please!</ab>
+               <!--lnh: It appears that there is a sticky note on the page with this text written on it. I wasn't sure how to code that.-->
+               <note resp="#lhering">The words "Look underneath, please!" are written on a sticky
+                  note. Under the sticky note there is more text that reads "APRIL FOOL!!" and is
+                  underlined.</note>
             </div2>
-            
+
             <div2 xml:id="e-1909-04-06"
                facs="https://arrowarchive.github.io/behrendcalendar/photos/april/1909-04-06.jpg">
                <fw place="top-center" hand="#calendarPub">COPYRIGHT 1908, BY FRIENDSHIP CALENDAR CO.
@@ -140,25 +146,31 @@
                </ab>
                <figure hand="multicolor" rend="color">
                   <figDesc resp="#lhering">
-                     Two desserts on plates are drawn side by side. The one on the left is a brown color and appears to possibly be a slice
-                  of pie or cake. The one on the right is a yellowish colored dessert with frosting on top and cherries around it.</figDesc>
+                     <rs type="object">Two desserts</rs> on <rs type="object">plates</rs> are drawn
+                     side by side. The one on the left is a brown color and appears to possibly be
+                        <rs type="object">a slice of pie or cake</rs>. The one on the right is a
+                     yellowish colored dessert with <rs type="object">frosting</rs> on top and <rs
+                        type="object">cherries</rs> around it.</figDesc>
                </figure>
                <ab hand="#pencil" rend="smallcaps">
-                  <lb/>Theresa makes us every day 
-                  <lb/>lovely puddings &amp; pies
-                  <lb/>sometimes I order them
-                  <lb/>sometimes they're a surprise!</ab>
+                  <lb/><persName>Theresa</persName> makes us every day <lb/><rs type="object">lovely
+                     puddings</rs> &amp; <rs type="object">pies</rs>
+                  <lb/>sometimes I order them <lb/>sometimes they're a surprise!</ab>
                <figure hand="multicolor" rend="color">
-                  <figDesc resp="#lhering">
-                     Two more desserts are drawn side by side. The one on the left appears to be some ball shaped pastries on a plate.
-                     The one on the right is a basket full of colorful desserts or candies.</figDesc>
+                  <figDesc resp="#lhering"> Two more desserts are drawn side by side. The one on the
+                     left appears to be some <rs type="object">ball shaped pastries</rs> on a <rs
+                        type="object">plate</rs>. The one on the right is a <rs type="object"
+                        >basket</rs> full of <rs type="object">colorful desserts or
+                     candies</rs>.</figDesc>
                </figure>
-               <ab rend="cursive"><add hand="#redPen" rend="cursive" place="bottom">
-                  Don't eat the really sweet things!!</add></ab>
-               <note resp="#lhering">It is apparent that <persName>Theresa</persName> and <persName>Mary</persName> are probably friends because sometimes she gives <persName>Mary</persName> desserts as
-               a surprise. It is also possible that <persName>Theresa</persName> is a baker and owns a bakery.</note>
+               <ab rend="cursive"><add hand="#redPen" rend="cursive" place="bottom"> Don't eat the
+                     really sweet things!!</add></ab>
+               <note resp="#lhering">It is apparent that <persName>Theresa</persName> and
+                     <persName>Mary</persName> are probably friends because sometimes she gives
+                  <persName>Mary</persName> <rs type="object">desserts</rs> as a surprise. It is also possible that
+                     <persName>Theresa</persName> is a baker and owns a <rs type="location">bakery</rs>.</note>
             </div2>
-            
+
             <div2 xml:id="e-1909-04-07"
                facs="https://arrowarchive.github.io/behrendcalendar/photos/april/1909-04-07.jpg">
                <fw place="top-center" hand="#calendarPub">COPYRIGHT 1908, BY FRIENDSHIP CALENDAR CO.
@@ -167,21 +179,24 @@
                   <lb/><date when="1909-04-07">April 7, 1909. <lb/>Wednesday</date>
                </ab>
                <figure hand="multicolor" rend="color">
-                  <figDesc resp="#lhering">
-                     There is a pool table with three balls on it. The one ball is red and the other two are white. One of the white
-                  balls has a small dot on it that was drawn with a pencil possibly symbolizing a number on the ball.</figDesc>
+                  <figDesc resp="#lhering"> There is a <rs type="object">pool table</rs> with <rs
+                        type="object">three balls</rs> on it. <rs type="object">The one ball is red
+                        and the other two are white</rs>. One of the white balls has a small dot on
+                     it that was drawn with a <rs type="object">pencil</rs> possibly symbolizing a number on the
+                     ball.</figDesc>
                </figure>
                <ab hand="#pencil" rend="smallcaps">
-                  <lb/><persName>Ernst</persName> wanted a billiard table
-                  <lb/>to play on every day
-                  <lb/>so <emph style="underline">we</emph> eat in the library
+                  <lb/><persName>Ernst</persName> wanted a <rs type="object">billiard table</rs>
+                  <lb/>to play on every day <lb/>so <emph style="underline">we</emph> eat in the <rs
+                     type="location">library</rs>
                   <lb/>just <emph style="underline">to be out</emph> of the way</ab>
-               <ab hand="#redPen" rend="cursive">
-                  Is the billiard table in the new room yet?!</ab>
-               <note resp="#lhering">A billiard table is the same thing that we often refer to as a pool table. It is just
-               a different word to describe the same thing.</note>
+               <ab hand="#redPen" rend="cursive"> Is the <rs type="object">billiard table</rs> in the new room
+                  yet?!</ab>
+               <note resp="#lhering">A <rs type="object">billiard table</rs> is the same thing that we often refer
+                  to as a <rs type="object">pool table</rs>. It is just a different word to describe the same
+                  thing.</note>
             </div2>
-            
+
             <div2 xml:id="e-1909-04-10"
                facs="https://arrowarchive.github.io/behrendcalendar/photos/april/1909-04-10.jpg">
                <fw place="top-center" hand="#calendarPub">COPYRIGHT 1908, BY FRIENDSHIP CALENDAR CO.
@@ -190,22 +205,20 @@
                   <lb/><date when="1909-04-10">April 10, 1909. <lb/>Saturday</date>
                </ab>
                <figure hand="multicolor" rend="color">
-                  <figDesc resp="#lhering">
-                     The image is of a baby cradle with a colorful blanket inside it. The cradle has a canopy over where
-                  the baby's head would be. It also appears to be made out of wood.</figDesc>
+                  <figDesc resp="#lhering"> The image is of a <rs type="object">baby cradle</rs> with a
+                        <rs type="object">colorful blanket</rs> inside it. The <rs type="object">cradle</rs> has a canopy over where the
+                     baby's head would be. It also appears to be made out of wood.</figDesc>
                </figure>
                <ab hand="#blackpen" rend="cursive">
-                  <lb/>There's a little old cradle at
-                  <lb/>Hammermill - <!--wasn't sure if this was a "-" or "_"-->
-                  <lb/>It's never been there before
-                  <lb/>And what is inside of that cradle
+                  <lb/>There's a little old <rs type="object">cradle</rs> at <lb/><rs type="location">Hammermill</rs> - <!--wasn't sure if this was a "-" or "_"-->
+                  <lb/>It's never been there before <lb/>And what is inside of that <rs>cradle</rs>
                   <lb/>Both <persName>Molly</persName> and <persName>Ernst</persName> adore</ab>
                <ab hand="#redPen" rend="cursive"><add hand="#redPen" rend="cursive" place="bottom">
-                  Aren't you curious to see it?</add></ab>
-               <note resp="#lhering">It appears that <persName>Mr. and Mrs. Behrend</persName> had a child somewhat recently and that is what
-               this callendar page is about.</note>
+                     Aren't you curious to see it?</add></ab>
+               <note resp="#lhering">It appears that <persName>Mr. and Mrs. Behrend</persName> had a
+                  child somewhat recently and that is what this calendar page is about.</note>
             </div2>
-            
+
             <div2 xml:id="e-1909-04-11"
                facs="https://arrowarchive.github.io/behrendcalendar/photos/april/1909-04-11.jpg">
                <fw place="top-center" hand="#calendarPub">COPYRIGHT 1908, BY FRIENDSHIP CALENDAR CO.
@@ -214,23 +227,23 @@
                   <lb/><date when="1909-04-11">April 11, 1909. <lb/>Saturday<lb/>Easter</date>
                </ab>
                <figure hand="multicolor" rend="color">
-                  <figDesc resp="#lhering">
-                     There is a drawing of two white flowers with yellow centers in a pot. the one on the left is
-                  drooped over slightly and is drawn from the side view. The flower on the right is taller and leaning
-                  out to the right side of the pot. The flower on the right is drawn from a front view. Both flowers have
-                  long green stems with leaves on them.</figDesc>
+                  <figDesc resp="#lhering"> There is a drawing of <rs>two white flowers</rs> with
+                     yellow centers in a <rs type="object">pot</rs>. the one on the left is drooped over slightly and is
+                     drawn from the side view. The flower on the right is taller and leaning out to
+                     the right side of the <rs type="object">pot</rs>. The flower on the right is drawn from a front view.
+                     Both flowers have long green stems with leaves on them.</figDesc>
                </figure>
                <ab hand="#redPen" rend="cursive">
-                  <lb/>"Ah dear but come thou back to me
-                  <lb/>Whatever change the years <add rend="cursive" place="above-line">(weeks)</add> have made wrought
-                  <lb/>I find not yet one lonely thought
-                  <lb/>that cries against my wish for thee"
-                  <lb/><persName>Tennyson</persName>.
-               </ab>
-               <note resp="#lhering">The flowers in the drawing might be chrysanthemums or minnow daffodils based on their color.
-               They may also just be a randomly colored flower that <persName>Mary Behrend</persName> decided to draw from her imagination.</note>
+                  <lb/>"Ah dear but come thou back to me <lb/>Whatever change the years <add
+                     rend="cursive" place="above-line">(weeks)</add> have made wrought <lb/>I find
+                  not yet one lonely thought <lb/>that cries against my wish for thee"
+                     <lb/><persName>Tennyson</persName>. </ab>
+               <note resp="#lhering">The flowers in the drawing might be <rs type="object">chrysanthemums</rs> or
+                  <rs type="object">minnow daffodils</rs> based on their color. They may also just be a
+                  randomly colored flower that <persName>Mary Behrend</persName> decided to draw
+                  from her imagination.</note>
             </div2>
-            
+
             <div2 xml:id="e-1909-04-14"
                facs="https://arrowarchive.github.io/behrendcalendar/photos/april/1909-04-14.jpg">
                <fw place="top-center" hand="#calendarPub">COPYRIGHT 1908, BY FRIENDSHIP CALENDAR CO.
@@ -239,22 +252,29 @@
                   <lb/><date when="1909-04-14">April 14, 1909. <lb/>Wednesday</date>
                </ab>
                <figure hand="#blackpen" rend="color">
-                  <figDesc resp="#lhering">
-                     In this drawing there are two women and an infant. The woman on the left is sitting in a chair holding
-                  the child. The woman on the right is standing next to her holding clothing for the child. Both women are
-                  wearing long dresses. The one staning up is also wearig an apron and appears to possibly be a maid. It looks
-                  like she is holding a bonnet and a dress for the child.</figDesc>
+                  <figDesc resp="#lhering"> In this drawing there are two women and an infant. The
+                     woman on the left is sitting in a <rs type="object">chair</rs> holding the
+                     child. The woman on the right is standing next to her holding <rs type="object"
+                        >clothing</rs> for the child. Both women are wearing long <rs type="object"
+                        >dresses</rs>. The one standing up is also wearing an <rs type="object"
+                        >apron</rs> and appears to possibly be a maid. It looks like she is holding
+                     a <rs type="object">bonnet</rs> and a <rs type="object">dress</rs> for the
+                     child.</figDesc>
                </figure>
-               <ab hand="#redPen" rend="cursive"><add hand="#redPen" rend="cursive" place="top-left">Love from Mary</add>
+               <ab hand="#redPen" rend="cursive"><add hand="#redPen" rend="cursive" place="top-left"
+                     >Love from <persName>Mary</persName></add>
                </ab>
-               <ab hand="#redPen" rend="cursive"><add hand="#redPen" rend="cursive" place="bottom-right">Alicia</add>
+               <ab hand="#redPen" rend="cursive"><add hand="#redPen" rend="cursive"
+                     place="bottom-right"><persName>Alicia</persName></add>
                </ab>
-               <ab hand="#redPen" rend="cursive"><add hand="#redPen" rend="cursive" place="bottom">M.B</add>
-                  </ab>
-               <note resp="#lhering">In the picture the woman sitting down is most likely <persName>Mary Behrend</persName> because her initials are
-               written at the bottom of the page right next to the lady. Then the woman standing up is most likey one of her
-               servants/maids. The infant is probably one of her children and most likely <persName>Warren</persName> because he was born around
-               1909</note>
+               <ab hand="#redPen" rend="cursive"><add hand="#redPen" rend="cursive" place="bottom"
+                     >M.B</add>
+               </ab>
+               <note resp="#lhering">In the picture the woman sitting down is most likely
+                     <persName>Mary Behrend</persName> because her initials are written at the
+                  bottom of the page right next to the lady. Then the woman standing up is most
+                  likey one of her servants/maids. The infant is probably one of her children and
+                  most likely <persName>Warren</persName> because he was born around 1909</note>
             </div2>
 
          </div1>
