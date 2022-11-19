@@ -26,6 +26,11 @@ svg text{
     font-family: 'Galdeano', sans-serif;
 }
 
+#svgTimeline{
+    margin: auto;    
+    width: 929px;
+}
+
 .timelineHeader{
     cursor: pointer;
 }

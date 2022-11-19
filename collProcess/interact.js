@@ -6,14 +6,13 @@ function init() {
     var y1935 = document.getElementById('y1935')
     var y1955 = document.getElementById('y1955')
 
-
-    y1909.addEventListener('click', timeline,false)
-    y1929.addEventListener('click', timeline, false)
-    y1935.addEventListener('click', timeline, false)
-    y1955.addEventListener('click', timeline, false)
+    y1909.addEventListener('click', project_HS,false)
+    y1929.addEventListener('click', project_HS, false)
+    y1935.addEventListener('click', project_HS, false)
+    y1955.addEventListener('click', project_HS, false)
 }
 
-function timeline(){
+function project_HS(){
     var status = 'none'
     switch (this.id){
         case 'y1909':
@@ -46,3 +45,4 @@ function timeline(){
             break
     }
 }
+
