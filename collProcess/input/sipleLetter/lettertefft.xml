@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xml>
+    <page>
+        <head>
+            <p>
+                <person>PAUL A. SIPLE</person>
+            </p>
+            <p>
+                <address>1158 WEST FIFTH STREET</address>
+            </p>
+            <p>
+                <city>ERIE, PENNA.</city>
+            </p>
+            <p>
+                <date when="1935-12-09" format="MDY">December 9, 1935</date>
+            </p>
+        </head>
+        <body>
+            <greeting>Dear Mr. Behrend,</greeting>
+            <p n="1"> It is with great pleasure that I present this little token of friendship. This
+                rock was picked up on the "ash dump" - a unique moraine running out from the base of
+                an extinct volcano, <location>Mt. Raymond Fosdick</location> in the <location>Edsel
+                    Ford Mountain Range</location> of northern <location>Marie Byrd
+                    Land,</location> Antarctica. </p>
+            <p n="2"> The land was first discovered from the air by <person>Admiral
+                    Byrd</person> in <date>1929</date>, but it was first visited by our party
+                travelling by dog team during October - December, <date>1934</date>. The Mary Byrd Land
+                sledging party was composed of four men - <person>Alton Wade</person>,
+                    Geologist,<person>Stevenson Corey</person> and <person>Olin Stancliff</person>,
+                drivers and assistants, and myself as leader and Biologist. </p>
+            <p n="3"> The volcano was at the extreme turning point of our travels, about three
+                hundred miles from <location>Little America</location>. Corey and I spent Thanksgiving Day near the point
+                where this rock was picked up in a blizzard that blew almost continuously for three
+                days at a velocity rarely below thirty five miles an hour, and often of hurricane
+                velocity completely flattening our tent. </p>
+            <p n="4"> The sextant you so kindly loaned us helped to <sic>guideus</sic> through the
+                hundreds of weary, uncharted miles, and I return it to you with deepest
+                appreciation and with it a piece of the Antarctic contintent
+                itself. </p>
+        </body>
+        <foot>
+            <p>With kindest regards,</p>
+            <p>Sincerely yours,</p>
+            <p>Paul A. Siple </p>
+            <img src="../pics/Penguin.PNG"/>
+        </foot>
+    </page>
+</xml>
