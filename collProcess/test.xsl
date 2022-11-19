@@ -252,8 +252,8 @@
         <script type="text/javascript" src="interact.js"/>
       </head>
       <body>
-        <g><!--<tables><h1>Table for number of different classes in each site</h1>
-        <div class="tables"><xsl:sequence select="yxj:tableMaker()"/></div></tables>--></g>
+        <g><tables><h1>Table for number of different classes in each site</h1>
+        <div class="tables"><xsl:sequence select="yxj:tableMaker()"/></div></tables></g>
         <br/>
         <h1>Timeline</h1>
         <div id="svgTimeline">
