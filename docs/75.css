@@ -55,8 +55,19 @@ h3 {
 
 p {
     font-size: 14px;
-    color: white;
+    color: black;
 }
+
+/*Paragraph color block*/
+.block {
+    background-color: white;
+    opacity: 0.5;
+    width: auto;
+    height: auto;
+    padding: 5px;
+}
+
+
 .navbar{
     width: 85%;
     margin: auto;
