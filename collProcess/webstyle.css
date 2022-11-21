@@ -18,7 +18,7 @@ h2{
 td{
     padding: 0 5px;
 }
-span{
+span.span{
     color:blue;
 }
 
@@ -31,12 +31,16 @@ svg text{
     width: 929px;
 }
 
-.timelineHeader{
+#timelineHeader{
     cursor: pointer;
 }
 
-.calendar,.warrenLetters,.sipleLetter,.travelLetters{
+#calendar,#warrenLetters,#sipleLetter,#travelLetters,
+#calendar-timelineInfo,#warrenLetters-timelineInfo,#sipleLetter-timelineInfo,#travelLetters-timelineInfo,
+#calendar-timeline,#warrenLetters-timeline,#sipleLetter-timeline,#travelLetters-timeline
+{
     display: none;
+    cursor: pointer;
 }
 
 

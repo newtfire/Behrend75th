@@ -73,8 +73,6 @@
     <xsl:variable name="travel" as="document-node()+"
       select="collection('input/travelLetters/?select=*.xml')"/>
     <xsl:variable name="Coll" as="document-node()+" select="$warren, $siple, $travel"/>
-    <!--<xsl:variable name="projectNameArray" select="$Coll ! base-uri() ! tokenize(., '/')[last() - 1]"
-      as="xs:string+"/>-->
     <xsl:variable name="projectNameArray" as="xs:string+"
       select="'Calendar', 'Warren Letters', 'Siple Letter', 'Travel Letters'"/>
     <xsl:variable name="yearArray" as="xs:string+" select="'1909', '1929', '1935', '1955'"/>
@@ -107,15 +105,10 @@
     </xsl:variable>
     <xsl:variable name="travelDateCount" as="xs:integer" select="sum($travelDateCountList)"/>
 
-    <xsl:variable name="dateCountList" as="xs:integer+"
-      select="$calendarDateCount, $warrenDateCount, $sipleDateCount, $travelDateCount"/>
-    <xsl:variable name="moveUpUnit" as="xs:integer+"
-      select="0, 0, $warrenDateCount, $sipleDateCount + $warrenDateCount"/>
-
     <xsl:variable name="lineX" select="5"/>
 
     <!-- Timeline header -->
-    <g class="timelineHeader">
+    <g id="timelineHeader">
       <path d="M881 30H918.238L929 40.5L918.238 51H881V30Z" fill="#B1B1B1"/>
       <xsl:for-each select="1 to 4">
         <xsl:variable name="index" select="current()"/>
@@ -136,112 +129,140 @@
     </g>
 
     <!-- timeline for calendar -->
-    <g class="calendar" transform="translate(50, {$yInterval*4})" fill="{$colorArray[1]}" >
+    <g id="calendar" transform="translate(50, {$yInterval*4})" fill="{$colorArray[1]}">
       <circle cx="{$lineX}" cy="{-0.5 * $yInterval}" r="5"/>
       <text x="{15+$lineX}" y="{-0.5 * $yInterval + 6}" font-size="22px">Calendar</text>
-
-
-      <g class="calendar-timelineInfo">
-        <text x="{20+$lineX}" y="{$yInterval}">Count: <xsl:value-of select="$dateCountList[1]"
+      <!-- date information of calendar -->
+      <g class="timelineInfo">
+        <text x="{15+$lineX}" y="{$yInterval}">Count: <xsl:value-of select="$calendarDateCount"
           /></text>
-        <text x="{20+$lineX}" y="{$yInterval * 2}">Earlist: <xsl:value-of select="($calendar[1]//@when)[1]"/></text>
-        <text x="{20+$lineX}" y="{$yInterval * 3}">Latest: <xsl:value-of select="($calendar[last()]//@when)[last()]"/></text>
+        <text x="{15+$lineX}" y="{$yInterval * 2}">Earlist: <xsl:value-of
+            select="($calendar[1]//@when)[1]"/></text>
+        <text x="{15+$lineX}" y="{$yInterval * 3}">Latest: <xsl:value-of
+            select="($calendar[last()]//@when)[last()]"/></text>
       </g>
-
-
-      <xsl:for-each select="$calendar/descendant::date/@when"
-        xpath-default-namespace="http://www.tei-c.org/ns/1.0">
-        <xsl:sort select="current()" order="ascending"/>
-        <text x="{20+$lineX}" y="{$yInterval*position()}">
-          <xsl:value-of select="current() ! substring(., 6, 10)"/>
-        </text>
-        <line x1="{$lineX}" y1="{$yInterval*(position()-1.5)}" x2="{$lineX}"
-          y2="{$yInterval*(position()+1)}" style="stroke:{$colorArray[1]};stroke-width:3"/>
-      </xsl:for-each>
-    </g>
-
-    <!-- timeline for warren, siple, and travel letters -->
-    <g transform="translate(50, {$yInterval*4})">
-      <xsl:for-each select="$Coll">
-        <xsl:sort select="current()/descendant::date/@when" order="ascending"/>
-        <xsl:variable name="currentLetterName" as="xs:string" 
-          select="current() ! base-uri() ! tokenize(., '/')[last() - 1]"/>
-        
-        <xsl:variable name="index" as="xs:integer">
-          <xsl:choose>
-            <xsl:when test="$currentLetterName = 'warrenLetters'">
-              <xsl:value-of select="2"/>
-            </xsl:when>
-            <xsl:when test="$currentLetterName = 'sipleLetter'">
-              <xsl:value-of select="3"/>
-            </xsl:when>
-            <xsl:when test="$currentLetterName = 'travelLetters'">
-              <xsl:value-of select="4"/>
-            </xsl:when>
-          </xsl:choose>
-        </xsl:variable>
-        
-        <xsl:variable name="currentLetterNode" as='item()'>
-          <xsl:choose>
-            <xsl:when test="$currentLetterName = 'warrenLetters'">
-              <xsl:value-of select="$warren"/>
-            </xsl:when>
-            <xsl:when test="$currentLetterName = 'sipleLetter'">
-              <xsl:value-of select="$siple"/>
-            </xsl:when>
-            <xsl:when test="$currentLetterName = 'travelLetters'">
-              <xsl:value-of select="$travel"/>
-            </xsl:when>
-          </xsl:choose>
-        </xsl:variable>
-        
-        <g class="{$currentLetterName}" fill="{$colorArray[$index]}"
-          transform="translate({($index - 1)*$xInterval}, {-$moveUpUnit[$index]*$yInterval})">
-          <circle cx="{$lineX}" cy="{-0.5 * $yInterval}" r="5"/>
-          <!-- text for project name -->
-          <text x="{15+$lineX}" y="{(-0.5 + $moveUpUnit[$index]) * $yInterval + 6}" font-size="22px">
-            <xsl:value-of select="$projectNameArray[$index]"/>
-          </text>
-          
-          <!-- text for date information: count, earliest, latest -->
-          <g class="{$currentLetterName}-timelineInfo"
-            transform="translate(0, {$moveUpUnit[$index]*$yInterval})">
-            <text x="{20+$lineX}" y="{$yInterval}">Count: <xsl:value-of
-                select="$dateCountList[$index]"/></text>
-            <text x="{20+$lineX}" y="{$yInterval * 2}">
-              <xsl:choose>
-                <xsl:when test="$currentLetterName = 'warrenLetters'">
-                  Earlist: <xsl:value-of select="'...'"/>
-                </xsl:when>
-                <xsl:when test="$currentLetterName = 'sipleLetter'">
-                  Date: <xsl:value-of select="($siple[1]//@when)[1]"/>
-                </xsl:when>
-                <xsl:when test="$currentLetterName = 'travelLetters'">
-                  Earlist: <xsl:value-of select="'...'"/>
-                </xsl:when>
-              </xsl:choose>
-            </text>
-            <text x="{20+$lineX}" y="{$yInterval * 3}">
-              <xsl:choose>
-              <xsl:when test="$currentLetterName = 'warrenLetters'">
-                Latest: <xsl:value-of select="'...'"/>
-              </xsl:when>
-              <xsl:when test="$currentLetterName = 'travelLetters'">
-                Latest: <xsl:value-of select="'...'"/>
-              </xsl:when>
-              </xsl:choose>
-            </text>
-          </g>
-
-
+      <!-- list of MM-DD -->
+      <g class="timeline">
+        <xsl:for-each select="$calendar/descendant::date/@when"
+          xpath-default-namespace="http://www.tei-c.org/ns/1.0">
+          <xsl:sort select="current()" order="ascending"/>
           <text x="{20+$lineX}" y="{$yInterval*position()}">
-            <xsl:value-of select="current()/descendant::date/@when ! substring(., 6, 10)"/>
+            <xsl:value-of select="current() ! substring(., 6, 10)"/>
           </text>
           <line x1="{$lineX}" y1="{$yInterval*(position()-1.5)}" x2="{$lineX}"
-            y2="{$yInterval*(position()+1)}" style="stroke:{$colorArray[$index]};stroke-width:3"/>
-        </g>
-      </xsl:for-each>
+            y2="{$yInterval*(position()+1)}" style="stroke:{$colorArray[1]};stroke-width:3"/>
+        </xsl:for-each>
+      </g>
     </g>
+
+    <!-- timeline for warren -->
+    <g id="warrenLetters" transform="translate({50 + $xInterval}, {$yInterval*4})">
+      <xsl:variable name="index" as="xs:integer" select="2"/>
+      <g fill="{$colorArray[$index]}">
+        <circle cx="{$lineX}" cy="{-0.5 * $yInterval}" r="5"/>
+        <!-- text for project name -->
+        <text x="{15+$lineX}" y="{-0.5 * $yInterval + 6}" font-size="22px">
+          <xsl:value-of select="$projectNameArray[$index]"/>
+        </text>
+        <!-- text for date information: count, earliest, latest -->
+        <g class="timelineInfo">
+          <text x="{15+$lineX}" y="{$yInterval}">Count: <xsl:value-of select="$warrenDateCount"
+            /></text>
+          <xsl:for-each select="$warren">
+            <xsl:sort select="current()/descendant::date/@when" order="ascending"/>
+            <xsl:if test="position() = 1">
+              <text x="{15+$lineX}" y="{$yInterval * 2}"> Earlist: <xsl:value-of select="current()/descendant::date/@when"/>
+              </text>
+            </xsl:if>
+            <xsl:if test="position() = last()">
+              <text x="{15+$lineX}" y="{$yInterval * 3}"> Latest: <xsl:value-of select="current()/descendant::date/@when"/></text>
+            </xsl:if>
+          </xsl:for-each>
+        </g>
+        <!-- list of MM-DD -->
+        <g class="timeline">
+          <xsl:for-each select="$warren">
+            <xsl:sort select="current()/descendant::date/@when" order="ascending"/>
+            <text x="{20+$lineX}" y="{$yInterval*position()}">
+              <xsl:value-of select="current()/descendant::date/@when ! substring(., 6, 10)"/>
+            </text>
+            <line x1="{$lineX}" y1="{$yInterval*(position()-1.5)}" x2="{$lineX}"
+              y2="{$yInterval*(position()+1)}" style="stroke:{$colorArray[$index]};stroke-width:3"/>
+          </xsl:for-each>
+        </g>
+      </g>
+    </g>
+
+
+    <!-- timeline for siple -->
+    <g id="sipleLetter" transform="translate({50 + 2 * $xInterval}, {$yInterval*4})">
+      <xsl:variable name="index" as="xs:integer" select="3"/>
+      <g fill="{$colorArray[$index]}">
+        <circle cx="{$lineX}" cy="{-0.5 * $yInterval}" r="5"/>
+        <!-- text for project name -->
+        <text x="{15+$lineX}" y="{-0.5 * $yInterval + 6}" font-size="22px">
+          <xsl:value-of select="$projectNameArray[$index]"/>
+        </text>
+        <!-- text for date information: count, earliest, latest -->
+        <g class="timelineInfo">
+          <text x="{15+$lineX}" y="{$yInterval}">Count: <xsl:value-of select="$sipleDateCount"
+            /></text>
+          <text x="{15+$lineX}" y="{$yInterval * 2}">Date: <xsl:value-of
+              select="($siple[1]//@when)[1]"/></text>
+        </g>
+        <!-- list of MM-DD -->
+        <g class="timeline">
+          <xsl:for-each select="$siple">
+            <xsl:sort select="current()/descendant::date/@when" order="ascending"/>
+            <text x="{20+$lineX}" y="{$yInterval*position()}">
+              <xsl:value-of select="current()/descendant::date/@when ! substring(., 6, 10)"/>
+            </text>
+            <line x1="{$lineX}" y1="{$yInterval*(position()-1.5)}" x2="{$lineX}"
+              y2="{$yInterval*(position()+1)}" style="stroke:{$colorArray[$index]};stroke-width:3"/>
+          </xsl:for-each>
+        </g>
+      </g>
+    </g>
+
+
+    <!-- timeline for travel -->
+    <g id="travelLetters" transform="translate({50 + 3 * $xInterval}, {$yInterval*4})">
+      <xsl:variable name="index" as="xs:integer" select="4"/>
+      <g fill="{$colorArray[$index]}">
+        <circle cx="{$lineX}" cy="{-0.5 * $yInterval}" r="5"/>
+        <!-- text for project name -->
+        <text x="{15+$lineX}" y="{-0.5 * $yInterval + 6}" font-size="22px">
+          <xsl:value-of select="$projectNameArray[$index]"/>
+        </text>
+        <!-- text for date information: count, earliest, latest -->
+        <g class="timelineInfo">
+          <text x="{15+$lineX}" y="{$yInterval}">Count: <xsl:value-of select="$travelDateCount"
+            /></text>
+          <xsl:for-each select="$travel">
+            <xsl:sort select="current()/descendant::date/@when" order="ascending"/>
+            <xsl:if test="position() = 1">
+              <text x="{15+$lineX}" y="{$yInterval * 2}"> Earlist: <xsl:value-of select="current()/descendant::date/@when"/>
+              </text>
+            </xsl:if>
+            <xsl:if test="position() = last()">
+              <text x="{15+$lineX}" y="{$yInterval * 3}"> Latest: <xsl:value-of select="current()/descendant::date/@when"/></text>
+            </xsl:if>
+          </xsl:for-each>
+        </g>
+        <!-- list of MM-DD -->
+        <g class="timeline">
+          <xsl:for-each select="$travel">
+            <xsl:sort select="current()/descendant::date/@when" order="ascending"/>
+            <text x="{20+$lineX}" y="{$yInterval*position()}">
+              <xsl:value-of select="current()/descendant::date/@when ! substring(., 6, 10)"/>
+            </text>
+            <line x1="{$lineX}" y1="{$yInterval*(position()-1.5)}" x2="{$lineX}"
+              y2="{$yInterval*(position()+1)}" style="stroke:{$colorArray[$index]};stroke-width:3"/>
+          </xsl:for-each>
+        </g>
+      </g>
+    </g>
+
   </xsl:function>
 
   <xsl:template match="/">
@@ -252,8 +273,14 @@
         <script type="text/javascript" src="interact.js"/>
       </head>
       <body>
-        <g><tables><h1>Table for number of different classes in each site</h1>
-        <div class="tables"><xsl:sequence select="yxj:tableMaker()"/></div></tables></g>
+        <g>
+          <tables>
+            <h1>Table for number of different classes in each site</h1>
+            <div class="tables">
+              <xsl:sequence select="yxj:tableMaker()"/>
+            </div>
+          </tables>
+        </g>
         <br/>
         <h1>Timeline</h1>
         <div id="svgTimeline">
