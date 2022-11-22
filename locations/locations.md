@@ -2,6 +2,33 @@
 
 In style of a heatmap.
 
+## States in US Mentions
+- PA (6)
+- New York (2)
+- North Carolina
+- South Carolina
+- Connecticut
+- New Jersey
+- Massachusetts
+- Georgia
+- Texas
+- Wyoming(?)
+- United States as a whole (1)
+
+## European Countries
+- Belgium (7)
+- Denmark (11)
+- France (43)
+- England (5)
+- Netherlands (1)
+- Germany (2)
+- Europe as a whole (2)
+
+## Other countries
+- Canada
+- Mexico
+- Antarctica
+
 ## Warren
 - Charleston, South Carolina:
 Lat 32.776566; Long -79.930923
@@ -21,14 +48,13 @@ Lat 42.101391; Long -72.590279
 Lat 40.987080; Long -74.058655
 
 ## Siple
-- 1158 WEST FITH STREET
-ERIE, PENNA.
+- Erie, PA
 - Marie Byrd Land, Antarctica
 - Little America, Wyoming(?)
 
 ## Calander
 
-- Hammermill, erie (4)
+- Erie, PA (4)
 
 ## Travel
 ### Brussels Letter
@@ -36,69 +62,45 @@ ERIE, PENNA.
 - Copenhagen, Denmark (2)
 - Cherbourg, France
 - Paris, France (6)
-- Minor Berheron
+- Manior Berheron
 - Azay-le-Rideau, France
 - London, England (2)
 - Burges, Belgium
 - Osten, Germany
 - Wilsons Hotel, Belgium (?)
-- Amsterdam
-- New York
+- Amsterdam, Netherlands
+- New York, US
 
 ### France Letter
 
-- Paris (6)
+- Paris (13)
 - Waycross Georgia
-- Lubin's
-- Vendome
 - The Ritz Hotel, London, England
-- Jewellers
-- Bois
-- Le Pre Catalan
-- Siene
-- Davidsons Garden
 
 ### Copenhagen July 28th Letter
 
-- Astoria (2)
-- Weavers Embroidery shop
-- Oscars Davidsons
-- Permente
+- Copenhagen, Denmark (6)
 - Palace Hotel, France
-- Rosenborg palace, Copenhagen Denmark
 - Roya Deer Park, Yorkshire, England
 - Mexico
 - Texas
-- Mr Dessau's Garden
 
 ### July 29th Letter
 
 - Palace Hotel, France
-- bangs
+- Bangs
 - Friendrichborg Palace, Copenhagen, Denmark (2) (Frederiksberg)
 - Kronberg Castle, Helsingør, Denmark
 
 ### Manoir de Becheron Letter
 
-- Azay-le-Rideau, France (3)
-- Manior de Becheron, France(?) (3)
-- Indre-et-Loire, France (2)
-- Paris
-- Langeais, France
-- The Sache Museum
-- Europe Becheron
+- France (16)
+- Europe
 - United States
-- Becheron
-- Sleeping Beauty Castle of Usse
-- Foret de Loches
-- Mne. de Pompadour
 
 ### Noon July
 
 - Greenwich, England
-- Dock
-- Waldorf- the Reacock Alley
 - Europe
 - Franconia, cultural region in Germany
-- Paris (3)
-- Crenailliere
+- Paris, France (4)
