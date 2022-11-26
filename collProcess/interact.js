@@ -10,10 +10,10 @@ function init() {
     y1935.addEventListener('click', project_HS, false)
     y1955.addEventListener('click', project_HS, false)
 
-    var calendar = document.getElementById('calendar')
-    var warren = document.getElementById('warrenLetters')
-    var siple = document.getElementById('sipleLetter')
-    var travel = document.getElementById('travelLetters')
+    var calendar = document.getElementById('calendarTitle')
+    var warren = document.getElementById('warrenLettersTitle')
+    var siple = document.getElementById('sipleLetterTitle')
+    var travel = document.getElementById('travelLettersTitle')
     calendar.addEventListener('click', timeline_HS, false)
     warren.addEventListener('click', timeline_HS, false)
     siple.addEventListener('click', timeline_HS, false)
@@ -60,16 +60,16 @@ function project_HS(){
 
 function timeline_HS(){
     switch (this.id){
-        case 'calendar':
+        case 'calendarTitle':
             switch_status('', 0)
             break
-        case 'warrenLetters':
+        case 'warrenLettersTitle':
             switch_status('', 1)
             break
-        case 'sipleLetter':
+        case 'sipleLetterTitle':
             switch_status('', 2)
             break
-        case 'travelLetters':
+        case 'travelLettersTitle':
             switch_status('', 3)
             break
     }
