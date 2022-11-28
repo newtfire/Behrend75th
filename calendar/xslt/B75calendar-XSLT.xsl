@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xpath-default-namespace="http://www.tei-c.org/ns/1.0"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns="http://www.w3.org/1999/xhtml"
     version="3.0">
     
@@ -9,7 +10,9 @@
     
     <xsl:variable name="MBCal" select="collection('../tei/?select=*.xml')"/>
     <xsl:template match="/">
-        <html>
+        <xsl:result-document method="xhtml" html-version="5" omit-xml-declaration="yes" include-content-type="no"
+            indent="yes" href="../../docs/calendar/calendarTOC.html" >
+            <html>
             <head>
                 <title><xsl:apply-templates select="descendant::title"/></title>
                 <link rel="stylesheet" type="text/css" href="../styling.css"/>
@@ -29,6 +32,7 @@
                   
                 </div>  
                 <h1>Group XSLT</h1> -->
+                
                  <section id="toc">
                     <h2>Table of Contents</h2>
                     <ul>
@@ -38,18 +42,43 @@
                         </xsl:apply-templates>
                     </ul>
                 </section>
-                <section id="fulltext">
-                    <xsl:apply-templates select="$MBCal//div2">
-                        
-                        <xsl:sort select="descendant::date/@when"/>
-                    </xsl:apply-templates>
-                    
-                </section>
-                
+               
             </body>
             
         </html>
+        </xsl:result-document>
         
+        <xsl:for-each select="$MBCal//div2">
+            <xsl:variable name="filename" as="xs:string" select="@xml:id"/>
+            <xsl:result-document method="xhtml" html-version="5" omit-xml-declaration="yes" include-content-type="no"
+                indent="yes" href="../../docs/calendar/{$filename}.html" >
+            
+           
+               <html> 
+                   <head>
+                       <title>Calendar Entry <xsl:value-of select="@xml:id"/></title>
+                       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                       <!--ebb: The line above helps your HTML scale to fit lots of different devices. -->
+                       <link rel="stylesheet" type="text/css" href="calendar-style.css"/>
+                       
+                       
+                   </head>
+                <body>
+              
+                <xsl:apply-templates select="current()">
+                    
+                    <xsl:sort select="descendant::date/@when"/>
+                </xsl:apply-templates>
+                
+                
+                </body>
+               </html>
+            
+             </xsl:result-document>
+        </xsl:for-each>
+        
+        
+
         
     </xsl:template>
     
