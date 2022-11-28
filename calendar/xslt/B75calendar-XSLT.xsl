@@ -11,7 +11,7 @@
     <xsl:variable name="MBCal" select="collection('../tei/?select=*.xml')"/>
     <xsl:template match="/">
         <xsl:result-document method="xhtml" html-version="5" omit-xml-declaration="yes" include-content-type="no"
-            indent="yes" href="../../docs/calendar/calendarTOC.html" >
+            indent="yes" href="../../docs/calendar/index.html" >
             <html>
             <head>
                 <title><xsl:apply-templates select="descendant::title"/></title>
