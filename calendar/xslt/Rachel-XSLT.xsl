@@ -15,18 +15,20 @@
                 <link rel="stylesheet" type="text/css" href="../styling.css"/>
             </head> 
             <body>
-                <div class="navbar">
+             <!-- 2022-11-28 ebb: OLD NAVBAR 
+                 
+                 <div class="navbar">
                     <h1 class="pageName">Mary Behrend's 1909 Calendar</h1>
                     <a href="../index.html" class="header">Home</a>
                     <a href="../about.html" class="header">History</a>
                     <a href="../authors.html" class="header">Authors</a>
                     <a href="../archive.html" class="header">Archive</a>
-                    <!--  <a>additional info</a>
-            <a>additional info</a> -->
+                    <!-\-  <a>additional info</a>
+            <a>additional info</a> -\->
                     <a href="https://github.com/arrowarchive/behrendcalendar" class="header">Code View</a>
-                    
-                </div>
-                <h1>Group XSLT</h1>
+                  
+                </div>  
+                <h1>Group XSLT</h1> -->
                  <section id="toc">
                     <h2>Table of Contents</h2>
                     <ul>
@@ -60,7 +62,7 @@
     </xsl:template>
     
     <xsl:template match="div2">
-        <section id="{@xml:id}">
+        <section id="{@xml:id}" class="document">
             <div class="facsblock">
                 <figure>
                     <img src="{@facs}" alt="{descendant::date}: {descendant::figDesc ! normalize-space()}" title="{descendant::date}: {descendant::figDesc ! normalize-space()}" class="entry"/>

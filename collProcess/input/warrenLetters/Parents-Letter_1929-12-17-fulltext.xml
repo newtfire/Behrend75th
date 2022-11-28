@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../letters_schema.rnc" type="application/relax-ng-compact-syntax"?>
+<xml>
+    <meta>
+        <title titleId= "PtoW-1929-12-17">Letter from Mary and Ernst Behrend to Warren Behrend, <date>1929-12-17</date></title>
+        <sourceDesc location="John M. Lilley Library, Penn State Behrend Archives"/>
+        <paperOrigin>The Monticello Tidewater's Leading Hotel. Norfolk,VA.</paperOrigin>
+        <transDesc>
+            <editor>AM</editor>
+            <editor>GD</editor>
+        </transDesc>
+    </meta>
+    <figure>
+        <graphic src="../Letter_Images/Parents-LetterToWarren_1929-12-17/1929-12-17_ParentsLetterFront.jpeg" alt="front, p1"/>
+        <graphic src="../Letter_Images/Parents-LetterToWarren_1929-12-17/1929-12-17_ParentsLetterBack.jpeg" alt="back, p2"/>
+    </figure>
+    <body>
+        <pb n="1"/>
+        <header>
+            <ln n="1"/><date>1929-12-17</date>
+            <ln n="2"/><greeting>Dear Warren-</greeting>
+        </header>
+        <p n="1">
+            <ln n="1"/>Headed in
+            <ln n="2"/><place placeId="NorthCarolina">Southern Pines</place>. Next day 
+            <ln n="3"/>Charleston &amp; the <boat>Amida</boat> 
+            <ln n="4"/>hill ? wonderful to see
+            <ln n="5"/><unclear reason="not sure">for it.</unclear> <unclear reason="not sure">O all </unclear>
+            <ln n="6"/>&amp; gather for Christmas.
+            <ln n="7"/>We telephoned Betty &amp;
+            <ln n="8"/><underline>offically</underline> invite her -and
+            <ln n="9"/>she says she is coming
+            <ln n="10"/><unclear reason="not sure">lawnell 27.?.</unclear> Possibly
+            <ln n="11"/>You have heard were
+            <ln n="12"/>about this. Much love
+            <ln n="13"/>think of how much
+            <ln n="14"/>we care for you and
+            <!-- ged: start of 2 page -->
+            <pb n="2"/>
+            <ln n="15"/><unclear reason="no idea">found</unclear> with due <unclear reason="no idea">caution</unclear> <!-- seb: i believe the first word in this line is "Proceed -->
+            <ln n="16"/>Lot of wild drivers on 
+            <ln n="17"/>the road 
+            <closer> 
+                <ln n="18" />M. Warren.
+            </closer>
+        </p>
+        <p n="2"> <!-- am: Fathers letter on the back of the page-->
+            <ln n="1"/><car>Duesenberg</car> ran beautifully -so far!
+            <ln n="2"/>First day <weather>nice weather</weather>;<underline>very</underline> cold
+            <ln n="3"/>yesterday. You may need your coon
+            <ln n="4"/>coat, heavy hat or fur cap!!
+            <ln n="5"/>Look forward to our Wiedersehen. <!-- ged: This is German for meet again --> 
+        </p>    
+        <closer>
+            <ln n="1"/>Faithfully
+            <ln n="2"/>Father.
+        </closer>
+    </body>
+</xml>

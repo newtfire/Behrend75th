@@ -67,17 +67,17 @@
                   <lb/><date when="1909-05-12">May 12, 1909. <lb/>Wednesday</date>
                </ab>
                <figure rend="color" hand="#multicolor">
-                  <figDesc resp="#zmurphy">Drawing of a women in white pushing a stroller, talking
-                     to a women in black named Gamie that has a black dog to the left of
+                  <figDesc resp="#zmurphy">Drawing of a woman in white pushing a <rs type="object">stroller</rs>, talking
+                     to a woman in black named <persName>Gamie</persName> that has a <rs type="animal">black dog</rs> to the left of
                      her.</figDesc>
                </figure>
                <ab hand="#blackpen" rend="smallcaps">
-                  <lb/>"There's something queer inside that thing"<lb/> Gamie seems to think-
-                  <lb/>"I really dont know what it is <lb/>That can only sleep and drink"</ab>
+                  <lb/>"There's something queer inside that thing"<lb/> <persName>Gamie</persName> seems to think-
+                  <lb/>"I really don't know what it is <lb/>That can only sleep and drink"</ab>
                <ab rend="smallcaps"><add rend="print" hand="#redPen" place="bottom-center"><lb/>What
                      do you think is inside!</add></ab>
-               <note resp="zmurphy">This shows tha gamie is not sure about the baby that is inside
-                  of the stroller, and is very confused about the baby.</note>
+               <note resp="zmurphy">This shows that <persName>Gamie</persName> is not sure about the baby that is inside
+                  of the <rs type="object">stroller,</rs> and is very confused about the baby.</note>
 
             </div2>
 
@@ -90,21 +90,21 @@
                   <lb/><date when="1909-04-16">April 16, 1909. <lb/>Friday</date>
                </ab>
                <figure rend="color" hand="#multicolor">
-                  <figDesc resp="#zmurphy">Drawing of a white fish that is alive then a drawing of
-                     the white fish cooked.</figDesc>
+                  <figDesc resp="#zmurphy">Drawing of a <rs type="animal">white fish</rs> that is alive, then a drawing of
+                     the <rs type="animal">white fish</rs> cooked.</figDesc>
                </figure>
                <ab hand="#blackpen" rend="smallcaps">
                   <lb/>
-                  <emph style="underline">fish day</emph>
-                  <lb/> this is the day we have <lb/> white-fish <lb/> truly a most delicious <lb/>
-                  <emph style="underline">dish.</emph>
+                  <emph style="underline"><rs type="animal">fish</rs> day</emph>
+                  <lb/> This is the day we have <lb/> <rs type="animal">white-fish</rs> <lb/> truly a most delicious <lb/>
+                  <emph style="underline"><rs type="object">dish.</rs></emph>
                </ab>
                <ab rend="cursive"><add rend="print" hand="#redPen" place="right-verticle">
-                     <lb/> are you having white fish today? <lb/> I'll be back soon love from
-                     Molly.</add>
+                     <lb/> are you having <rs type="animal">white fish</rs> today? <lb/> I'll be back soon love from
+                     <persName>Molly.</persName></add>
                </ab>
-               <note resp="#zmurphy">This is showing that Mary is cooking fish for dinner and is
-                  asking if Ernst will be attending and having fish with her.</note>
+               <note resp="#zmurphy">This is showing that <persName>Mary</persName> is cooking <rs type="animal">fish</rs> for dinner and is
+                  asking if <persName>Ernst</persName> will be attending and having <rs type="animal">fish</rs> with her.</note>
             </div2>
             <div2 xml:id="e-1909-05-06"
                facs="https://arrowarchive.github.io/behrendcalendar/photos/may/1909-05-06.jpg">
@@ -115,16 +115,16 @@
                   <lb/><date when="1909-05-06">May 06, 1909. <lb/>Thursday</date>
                </ab>
                <figure rend="color" hand="#multicolor">
-                  <figDesc resp="#zmurphy">Drawing of a house with grass around the house, as well
-                     as smoke coming out of the chimney</figDesc>
+                  <figDesc resp="#zmurphy">Drawing of a <rs type="location">house</rs> with <rs type="object">grass</rs> around it, as well
+                     as <rs type="object">smoke</rs> coming out of the <rs type="object">chimney</rs></figDesc>
                </figure>
                <ab rend="cursive"><add rend="print" hand="#redPen" place="center">
                      <lb/> "Some love the glow of outward show <lb/> Some love mere wealth and try
-                     to win it <lb/> The house to me may lovely be <lb/> If i but like the people in
-                     it" <lb/><unclear>Chaz Levain </unclear></add>
+                     to win it <lb/> The <rs type="object">house</rs> to me may lovely be <lb/> If I but like the people in
+                     it" <lb/><unclear><persName>Chaz Levain</persName> </unclear></add>
                   <lb/> Very true indeed </ab>
-               <note resp="#zmurphy">This shows that Mary loves the people that consist of her
-                  household and loves her house because of that.</note>
+               <note resp="#zmurphy">This shows that <persName>Mary</persName> loves the people that consist of her
+                  household and loves her <rs type="location">house</rs> because of that.</note>
             </div2>
             <div2 xml:id="e-1909-04-18"
                facs="https://arrowarchive.github.io/behrendcalendar/photos/april/1909-04-18.jpg">
@@ -135,21 +135,21 @@
                   <lb/><date when="1909-04-18">April 18, 1909. <lb/>Sunday</date>
                </ab>
                <figure rend="color" hand="#multicolor">
-                  <figDesc resp="#zmurphy">Drawing of a women that is blushing because of the
-                     jewelry that is around her neck.</figDesc>
+                  <figDesc resp="#zmurphy">Drawing of a woman that is blushing because of the
+                     <rs>jewelry</rs> that is around her <rs>neck.</rs></figDesc>
                </figure>
                <ab rend="cursive"><add rend="cursive" hand="#Blackpen, " place="center">
-                     <lb/>Jewels are all very nice <lb/> But Ernst &amp; I will think twice <lb/>
-                     Before buying collars <lb/> For thousands of dollars <lb/>You see we ???????
+                     <lb/><rs type="object">Jewels</rs> are all very nice <lb/> But <persName>Ernst</persName> &amp; I will think twice <lb/>
+                     Before buying <rs type="object">collars</rs> <lb/> For thousands of <rs type="object">dollars</rs> <lb/>You see we ???????
                      the price!</add>
                </ab>
                <ab rend="cursive"><add hand="#redPen" place="top-right" rend="cursive">
-                     <lb/>I don’t want a <lb/> dog collar anyway <lb/> so it’s all right! <lb/> Love
-                     from Molly. </add>
+                     <lb/>I don’t want a <lb/> <rs type="animal">dog</rs> <rs type="object">collar</rs> anyway <lb/> so it’s all right! <lb/> Love
+                     from <persName>Molly.</persName> </add>
                </ab>
 
-               <note resp="#zmurphy">This is showing that mary is very conservative of her money and
-                  does not want to spend thousands of dollars on jewelry when they could because
+               <note resp="#zmurphy">This is showing that <persName>Mary</persName> is very conservative of her <rs type="object">money</rs> and
+                  does not want to spend thousands of dollars on <rs type="object">jewelry</rs> when they could because
                   they were very financially stable.</note>
             </div2>
             <div2 xml:id="e-1909-05-01"
@@ -161,19 +161,19 @@
                   <lb/><date when="1909-05-01">May 01, 1909. <lb/>Saturday</date>
                </ab>
                <figure rend="color" hand="#multicolor">
-                  <figDesc resp="#zmurphy">A picture of a basket that is very colorful and is
-                     adressed to Mr. Behrend.</figDesc>
+                  <figDesc resp="#zmurphy">A picture of a <rs>basket</rs> that is very colorful and is
+                     adressed to <persName>Mr. Behrend.</persName></figDesc>
                </figure>
                <ab rend="print"><add rend="print" hand="#smallcaps" place="center">
-                     <lb/> May Baskets <lb/> No one knows who sends them <lb/> But they come each
-                     first of May <lb/> Just full of lovely things to eat <lb/> Upon this joyful
+                     <lb/> May <rs type="object">Baskets</rs> <lb/> No one knows who sends them <lb/> But they come each
+                     first of May <lb/> Just full of lovely <rs type="object">things to eat</rs> <lb/> Upon this joyful
                      day.</add>
                </ab>
                <ab rend="cursive"><add hand="#redPen" place="top-right" rend="cursive">
-                     <lb/>Do you know <lb/> Who sent this? <lb/> Love From Molly </add>
+                     <lb/>Do you know <lb/> Who sent this? <lb/> Love From <persName>Molly</persName> </add>
                </ab>
-               <note resp="#zmurphy">This shows that Mary is receiving packages every May and there
-                  are tasty treats within the basket.</note>
+               <note resp="#zmurphy">This shows that <persName>Mary</persName> is receiving <rs type="object">packages</rs> every May and there
+                  are tasty <rs type="object">treats</rs> within the <rs type="object">basket</rs>.</note>
             </div2>
             <div2 xml:id="e-1909-05-14"
                facs="https://arrowarchive.github.io/behrendcalendar/photos/may/1909-05-14.jpg">
@@ -184,8 +184,8 @@
                   <lb/><date when="1909-05-14">May 14, 1909. <lb/>Friday</date>
                </ab>
                <figure rend="color" hand="#pencil">
-                  <figDesc resp="#zmurphy">Drawing of a black and white clock that shows the time of
-                     5:30 with an underline signifying a table that holds the clock.</figDesc>
+                  <figDesc resp="#zmurphy">Drawing of a <rs type="object">black and white clock</rs> that shows the time of
+                     5:30 with an <rs type="object">underline</rs> signifying a <rs type="object">table</rs> that holds the <rs type="object">clock.</rs></figDesc>
                </figure>
                <ab rend="print"><add rend="print" hand="#pencil" place="center">
                      <lb/> A Fiendish invention <lb/> Is what I call this <lb/> Without it our lives
@@ -195,7 +195,7 @@
                      <lb/> Parsle the old thing off </add>
                </ab>
 
-               <note resp="#zmurphy">This shows that Mary does not like clocks and that they should
+               <note resp="#zmurphy">This shows that <persName>Mary</persName> does not like <rs type="object">clocks</rs> and that they should
                   be thrown away</note>
             </div2>
 
@@ -208,18 +208,18 @@
                   <lb/><date when="1909-05-15">May 15, 1909. <lb/>Saturday</date>
                </ab>
                <figure rend="pencil" hand="#pencil">
-                  <figDesc resp="#zmurphy">Drawing of a bunnie that is hopping with a blue tie
-                     around its collar and red ears.</figDesc>
+                  <figDesc resp="#zmurphy">Drawing of a <rs type="animal">bunny</rs> that is hopping with a <rs type="object">blue tie</rs>
+                     around its <rs type="object">collar</rs> and <rs type="object">red ears.</rs></figDesc>
                </figure>
                <ab rend="print"><add rend="smallcaps" hand="#pencil" place="center">
-                     <lb/>This is not a "March Hare" <lb/> But a plain cotton bunny <lb/> When I
+                     <lb/>This is not a <rs type="animal">"March Hare"</rs> <lb/> But a plain <rs type="animal">cotton bunny</rs> <lb/> When I
                      look I must smile <lb/> He is really so funny! </add>
                </ab>
                <ab rend="cursive"><add rend="print" hand="#redpen" place="bottom-center">
-                     <lb/> Love From Molly</add>
+                     <lb/> Love From <persName>Molly</persName></add>
                </ab>
 
-               <note resp="#zmurphy">This is showing that Mary is so excited to see cotton bunnies
+               <note resp="#zmurphy">This is showing that <persName>Mary</persName> is so excited to see <rs>cotton bunnies</rs>
                   and they make her smile and she all around is happy when she sees one.</note>
             </div2>
             <div2 xml:id="e-1909-05-22"
@@ -231,19 +231,19 @@
                   <lb/><date when="1909-05-22">May 22, 1909. <lb/>Saturday</date>
                </ab>
                <figure rend="color" hand="#pencil">
-                  <figDesc resp="#zmurphy">Drawing of a small grey dog that is drinking german beer
-                     with water underneath the dogs feet.</figDesc>
+                  <figDesc resp="#zmurphy">Drawing of a <rs type="animal">small grey dog</rs> that is drinking <rs type="object">German beer</rs>
+                     with <rs type="object">water</rs> underneath the <rs type="animal">dogs</rs> <rs type="object">feet</rs>.</figDesc>
                </figure>
                <ab rend="print"><add rend="smallcaps" hand="#pencil" place="center">
-                     <lb/>Mr. Reichemheims dog is queer <lb/> He <emph style="underline"
-                        >likes</emph> that nasty german beer.<lb/> Here he is lapping it up - <lb/>
-                     <emph style="underline">Very</emph> bad for such a pup! </add>
+                     <lb/><persName>Mr. Reichemheims</persName> <rs type="animal">dog</rs> is queer <lb/> He <emph style="underline"
+                        >likes</emph> that nasty <rs type="object">German beer.</rs><lb/> Here he is lapping it up - <lb/>
+                     <emph style="underline">Very</emph> bad for such a <rs type="animal">pup!</rs> </add>
                </ab>
 
 
 
-               <note resp="#zmurphy">This is showing that Mary is very unhappy at Mr. Reichemheims
-                  dog for liking german beer and expresses that it is really bad for a puppy like it
+               <note resp="#zmurphy">This is showing that <persName>Mary</persName> is very unhappy at <persName>Mr. Reichemheims</persName>
+                  <rs type="animal">dog</rs> for liking <rs type="object">German beer</rs> and expresses that it is really bad for a <rs type="animal">puppy</rs> like it
                   to be drinking.</note>
             </div2>
             <div2 xml:id="e-1909-06-09"
@@ -252,11 +252,10 @@
                <fw place="top-center" hand="#calendarPub">COPYRIGHT 1908, BY FRIENDSHIP CALENDAR CO.
                   NEW BRITAIN, CONN.</fw>
                <ab rend="smallcaps" hand="#calendarPub">
-                  <lb/><date when="1909-06-09">June 09, 1909. <lb/>Saturday</date>
+                  <lb/><date when="1909-06-09">June 09, 1909. <lb/>Wednesday</date>
                </ab>
                <figure rend="color" hand="#pencil">
-                  <figDesc resp="#zmurphy">Drawing of a small grey dog that is drinking german beer
-                     with water underneath the dogs feet.</figDesc>
+                  <figDesc resp="#zmurphy">Drawing of a large red house made with pencil and watercolor. </figDesc>
                </figure>
                <ab rend="print"><add rend="smallcaps" hand="#pencil" place="center">
                   <lb/>Mr. Reichemheims dog is queer <lb/> He <emph style="underline"
