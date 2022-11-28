@@ -3,15 +3,15 @@
 In style of a heatmap.
 
 ## States in US Mentions
-- PA (6)
-- New York (2)
-- North Carolina
-- South Carolina
-- Connecticut
-- New Jersey
-- Massachusetts
-- Georgia
-- Texas
+- PA (7)
+- New York (3)
+- North Carolina (1)
+- South Carolina(2)
+- Connecticut(1)
+- New Jersey(1)
+- Massachusetts (2)
+- Georgia (1)
+- Texas(1)
 - Wyoming(?)
 - United States as a whole (1)
 
@@ -30,22 +30,14 @@ In style of a heatmap.
 - Antarctica
 
 ## Warren
-- Charleston, South Carolina:
-Lat 32.776566; Long -79.930923
-- Eaglehook, Mississauga, Canada:
-Lat 43.651070; Long -79.347015
-- Erie, Pennsylvania:
-Lat 42.129223; Long -80.085060
-- New Haven, Connecticut:
-Lat 41.310726; Long -72.929916
-- New York City, New York:
-Lat 40.730610; Long -73.935242
-- Southern Pines, North Carolina:
-Lat 35.174046; Long -79.392258
-- Springfield, Massachusetts:
-Lat 42.101391; Long -72.590279
-- Washington, New Jersey:
-Lat 40.987080; Long -74.058655
+- Charleston, South Carolina (1):
+- Eaglehook, Mississauga, Canada(1):
+- Erie, Pennsylvania (2):
+- New Haven, Connecticut(1):
+- New York City, New York(1):
+- Southern Pines, North Carolina(1):
+- Springfield, Massachusetts(2):
+- Washington, New Jersey (1):
 
 ## Siple
 - Erie, PA
