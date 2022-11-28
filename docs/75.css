@@ -66,17 +66,17 @@ a:link {
 
 /* visited link */
 a:visited {
-  color: DarkSlateGray;
+  color: #001E44;
 }
 
 /* mouse over link */
 a:hover {
-  color: cornflowerblue;
+  color: #001E44;
 }
 
 /* selected link */
 a:active {
-  color: DarkSlateGray;
+  color: #001E44;
 }
 
 /*Paragraph color block*/
