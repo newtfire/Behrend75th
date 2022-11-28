@@ -11,41 +11,44 @@
     <xsl:variable name="MBCal" select="collection('../tei/?select=*.xml')"/>
     <xsl:template match="/">
         <xsl:result-document method="xhtml" html-version="5" omit-xml-declaration="yes" include-content-type="no"
-            indent="yes" href="../../docs/calendar/index.html" >
-            <html>
-            <head>
-                <title><xsl:apply-templates select="descendant::title"/></title>
-                <link rel="stylesheet" type="text/css" href="../styling.css"/>
-            </head> 
-            <body>
-             <!-- 2022-11-28 ebb: OLD NAVBAR 
-                 
-                 <div class="navbar">
-                    <h1 class="pageName">Mary Behrend's 1909 Calendar</h1>
-                    <a href="../index.html" class="header">Home</a>
-                    <a href="../about.html" class="header">History</a>
-                    <a href="../authors.html" class="header">Authors</a>
-                    <a href="../archive.html" class="header">Archive</a>
-                    <!-\-  <a>additional info</a>
-            <a>additional info</a> -\->
-                    <a href="https://github.com/arrowarchive/behrendcalendar" class="header">Code View</a>
-                  
-                </div>  
-                <h1>Group XSLT</h1> -->
+            indent="yes" href="../../docs/calendarPage.html" >
+           
+            <html xmlns="http://www.w3.org/1999/xhtml">
+                <head>
+                    <link rel="stylesheet" type="text/css" href="75.css" />
+                    <title>Calendars</title>
+                </head>
+                <body>
+                    <h2>Behrend Calendars</h2>
+                    <nav>
+                        <hr />
+                        <p class="navbar"><a href="index.html">Home</a> | <a href="calendarPage.html">Behrend
+                            Calendars</a> | <a href="travelLettersPage.html">Behrend Travel Letters</a> | <a
+                                href="sipleLettersPage.html">Behrend Siple Letters</a> | <a
+                                    href="warrenLettersPage.html">Behrend Warren Letters</a></p>
+                        <hr />
+                    </nav>
+                    <div class="block">
+                        <p>One staple archive of Behrend 75 is the collection of calendar dates that span throughout
+                            the 1900s. These calendar entries were simple illustrations with ancedotes of what
+                            occurred on that day. Though hundreds of these were made time has not treated the
+                            calendar pages very well. Only 34 pages remain, but they will be held as a special
+                            portion of Penn State Behrend history as time passes by.</p>
+                    </div>
+                    <section id="toc">
+                        <h2>Table of Contents</h2>
+                        <ul>
+                            <xsl:apply-templates select="$MBCal//text//date" mode="toc">
+                                
+                                <xsl:sort select="@when"/>
+                            </xsl:apply-templates>
+                        </ul>
+                    </section>
+                </body>
+            </html>
                 
-                 <section id="toc">
-                    <h2>Table of Contents</h2>
-                    <ul>
-                        <xsl:apply-templates select="$MBCal//text//date" mode="toc">
-                            
-                            <xsl:sort select="@when"/>
-                        </xsl:apply-templates>
-                    </ul>
-                </section>
+                
                
-            </body>
-            
-        </html>
         </xsl:result-document>
         
         <xsl:for-each select="$MBCal//div2">
@@ -84,7 +87,7 @@
     
     <xsl:template match="date" mode="toc">
         <li>
-            <a href="#e-{@when}">
+            <a href="calendar/e-{@when}.html">
                 <xsl:apply-templates mode="toc"/>
             </a>
         </li>
