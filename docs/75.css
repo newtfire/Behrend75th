@@ -66,17 +66,17 @@ a:link {
 
 /* visited link */
 a:visited {
-  color: DarkSlateGray;
+  color: #001E44;
 }
 
 /* mouse over link */
 a:hover {
-  color: cornflowerblue;
+  color: #001E44;
 }
 
 /* selected link */
 a:active {
-  color: DarkSlateGray;
+  color: #001E44;
 }
 
 /*Paragraph color block*/
@@ -97,11 +97,17 @@ a:active {
   height: 150px;
 }
 
+
 .pennStateFooter{
-    position: absolute;
+  position: relative;
   object-fit: contain;
-  width: 500px;
-  height: 150px;
+  width: 200px;
+  height: 100px;
+}
+
+footer.main {
+    text-align: right;
+    font-size: 9px;
 }
 
 
@@ -137,3 +143,116 @@ a:active {
 .navbar ul li:hover::after{
      width: 100%;
 }
+
+
+
+
+
+/*GRID*/
+figure img {
+object-fit: contain;
+    max-width: 500px;
+    width: 100%;
+}
+
+section#page div.transcription {
+    flex: 2;
+    padding: 5vw;
+    background-color: white;
+    border-radius: 15px;
+    max-width: 300px;
+    margin-bottom: 100px;
+    font-size: 12px;
+    color: black;
+}
+
+section#page div.transcription p {
+    font-size: 12px;
+}
+
+.entry{
+    width: 500px;
+    height: 666px;
+}
+/*
+.footer{
+   /\* ebb: position:absolute means this always floats on the bottom 
+    * of a screen, even on a long page where you scroll PAST thte bottom 
+    * of a screen. So I think you want this to remain at the very bottm? *\/
+    /\*  position: absolute; *\/
+    background-color: gray;
+    bottom: 0px; 
+ color: white;   
+}
+
+div.footer a, div.footer p {
+  color: white;  background-color:black;
+}
+
+div.footer a:visited{
+    /\*color: blueviolet;*\/
+    color:yellow;
+}
+div.footer p img{display:inline;}
+
+*/
+
+
+/* 2021-12-06 ebb: The following CSS is for the Reading View to make a CSS grid */
+/*  section elements wrap each unit of calendar page information, so this is our 
+ * CSS grid container.
+ * 2021-12-08: ebb I'm revising this to use fr units (fractional units). These help for 
+ * proportional scaling to the window. */
+ 
+ /*  I'm using an atttribute selector to look for sections 
+  * whose id attributes START WITH this string: e-1909  since those are the sections
+  * we want to be grid containers*/
+ section[id^="e-1909"] {
+ background-color:lavender;
+ border: thin solid maroon;
+ display:grid;
+ grid-auto-flow:column; 
+ grid-template-columns:.8fr .2fr; 
+ grid-column-gap:2em;
+ }
+ 
+ /*  let's try creating a grid for the div.facsblock, so all the text appears in a new column to the right of the image.  */
+ 
+ section[id^="e-1909"] div.facsblock {
+background-color:white; 
+display:grid;
+grid-auto-flow:column;
+grid-template-columns: .75fr .23fr; 
+/*  ebb: need to look up how minmax works.  */
+grid-column-gap:2em;
+padding:1em;
+}
+
+/* ebb: Here we are making the image size scale proportionally with the browser size: 
+ * The CSS selector syntax reads: style the <img> element this way when its parent is a figure,
+ *  and the figure's parent is something with class="facsblock".  */
+div.facsblock > figure > img {
+ object-fit:contain;
+ width:100%;
+   
+}
+
+/* This CSS selector syntax reads: Style the <div class="note"> when it's a descendant
+ * of a <section> with an @id that starts with "e-1909". */
+ section[id^="e-1909"] div.note  {
+     padding:1em;
+ }
+
+/* The rule belows styles the OUTERMOST grid container. Maybe we'd like to control the spaces between the sections, so we can make a big
+ * grid of the surrounding section#fulltext that holds all the calendar entries.
+ * This time, we'll organize it in rows (vertically). I'm only doing this to specify a gap to appear in between each section. 
+ *  */
+ 
+/*section#fulltext {
+    width:85%;
+    margin:auto;
+    display:grid;
+    grid-auto-flow:row;
+    grid-row-gap:50px;
+}
+*/
