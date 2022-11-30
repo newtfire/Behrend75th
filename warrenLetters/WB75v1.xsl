@@ -104,22 +104,17 @@
     <xsl:template match="fw">
         
     </xsl:template>
-    <xsl:template match="person">
+    <xsl:template match="person | persName">
         <span class="person">
             <xsl:apply-templates/>
         </span>
     </xsl:template>
-    <xsl:template match="place">
+    <xsl:template match="place | placeName">
         <span class="place">
             <xsl:apply-templates/>
         </span>
     </xsl:template>
-    <xsl:template match="boat">
-        <span class="transport">
-            <xsl:apply-templates/>
-        </span>
-    </xsl:template>
-    <xsl:template match="car">
+    <xsl:template match="boat | transport | car">
         <span class="transport">
             <xsl:apply-templates/>
         </span>
