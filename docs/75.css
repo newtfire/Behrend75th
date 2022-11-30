@@ -97,6 +97,16 @@ a:active {
   height: 150px;
 }
 
+/*Images in progress*/
+.calendarImageDoc {
+  position: absolute;
+  object-fit: contain;
+  top: auto;
+  right: 0;
+  width: 500px;
+  height: 700px;
+}
+
 .pennStateFooter{
     position: absolute;
   object-fit: contain;
@@ -137,3 +147,4 @@ a:active {
 .navbar ul li:hover::after{
      width: 100%;
 }
+
