@@ -10,7 +10,7 @@
     <!-- This html layout is based on WB75v1.xsl for Warren Letters. -->
 
     <xsl:variable name="travelColl" as="document-node()+"
-        select="collection('XMLforThetravelProjects/?select=*.xml')"/>
+        select="collection('xml-letters/?select=*.xml')"/>
 
     <xsl:template match="/">
         <html>
@@ -74,39 +74,39 @@
     <!--Templates in toc mode for the table of contents -->
     <xsl:template match="xml" mode="toc">
         <li>
-            <a href="#{base-uri() ! tokenize(., '/')[last()]}{(descendant::date/@when)[1]}">
-                <xsl:value-of select="base-uri() ! tokenize(., '/')[last()]"/>
-                <xsl:text>-</xsl:text>
-                <xsl:value-of select="(descendant::date/@when)[1]"/>
+            <a href="#{letter/@xml:id}">
+                <xsl:value-of select="letter/@xml:id"/>
             </a>
         </li>
     </xsl:template>
 
     <xsl:template match="letter">
         <a href="#{descendant::h1}">
-            <h2 id="{base-uri() ! tokenize(., '/')[last()]}{(descendant::date/@when)[1]}">
-                <xsl:value-of select="current() ! base-uri() ! tokenize(., '/')[last()]"/>
+            <h2 id="{@xml:id}">
+                <xsl:value-of select="@xml:id"/>
                 <xsl:text>, </xsl:text>
                 <xsl:apply-templates select="(descendant::date/@when)[1]"/>
             </h2>
         </a>
         <div class="letter">
-            <xsl:comment>WHAT FILE AM I? <xsl:value-of select="current() ! base-uri() ! tokenize(., '/')[last()]"/></xsl:comment>
-            <xsl:comment>WHAT IS MY DATE LAST DIGITS? <xsl:value-of select="(current()//date[@when])[1]/@when ! tokenize(., '-')[last()] ! number(.)"/></xsl:comment>
-
             <div class="header">
                 <xsl:value-of select="(descendant::date/@when)[1]"/>
             </div>
             <xsl:apply-templates select="descendant::p"/>
-
         </div>
     </xsl:template>
 
-    <!--    <xsl:template match="timePeriod">
+    <xsl:template match="timePeriod">
         <span class="Period">
             <xsl:apply-templates/>
         </span>
-    </xsl:template>-->
+    </xsl:template>
+
+    <xsl:template match="time">
+        <span class="time">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
 
     <xsl:template match="dateLine">
         <div class="dateLine">
@@ -129,12 +129,6 @@
             <xsl:apply-templates/>
         </p>
     </xsl:template>
-
-    <!--    <xsl:template match="meal">
-        <span class="meal">
-            <xsl:apply-templates/>
-        </span>
-    </xsl:template>-->
 
     <xsl:template match="figure">
         <figure>
@@ -189,12 +183,6 @@
         </span>
     </xsl:template>
 
-    <!--    <xsl:template match="item">
-        <span class="item">
-            <xsl:apply-templates/>
-        </span>
-    </xsl:template>-->
-
     <xsl:template match="hand">
         <span class="hand">
             <xsl:apply-templates/>
@@ -213,30 +201,6 @@
         </span>
     </xsl:template>
 
-    <!--    <xsl:template match="money">
-        <span class="money">
-            <xsl:apply-templates/>
-        </span>
-    </xsl:template>
-    
-    <xsl:template match="day">
-        <span class="day">
-            <xsl:apply-templates/>
-        </span>
-    </xsl:template>
-    
-    <xsl:template match="drink">
-        <span class="drink">
-            <xsl:apply-templates/>
-        </span>
-    </xsl:template>
-    
-    <xsl:template match="signOff">
-        <span class="signOff">
-            <xsl:apply-templates/>
-        </span>
-    </xsl:template>-->
-
     <xsl:template match="pencil">
         <span class="pencil">
             <xsl:apply-templates/>
@@ -248,42 +212,6 @@
             <xsl:apply-templates/>
         </div>
     </xsl:template>
-    <!--    
-    <xsl:template match="animal">
-        <span class="animal">
-            <xsl:apply-templates/>
-        </span>
-    </xsl:template>
-    
-    <xsl:template match="nationality">
-        <span class="nationality">
-            <xsl:apply-templates/>
-        </span>
-    </xsl:template>
-    
-    <xsl:template match="holiday">
-        <span class="holiday">
-            <xsl:apply-templates/>
-        </span>
-    </xsl:template>
-    
-    <xsl:template match="number">
-        <span class="number">
-            <xsl:apply-templates/>
-        </span>
-    </xsl:template>
-    
-    <xsl:template match="language">
-        <span class="language">
-            <xsl:apply-templates/>
-        </span>
-    </xsl:template>
-    
-    <xsl:template match="measure">
-        <span class="measure">
-            <xsl:apply-templates/>
-        </span>
-    </xsl:template>-->
 
     <xsl:template match="front">
         <a href="#{descendant::h1}">
@@ -311,17 +239,6 @@
         </div>
     </xsl:template>
 
-    <!--    <xsl:template match="readers">
-        <span class="readers">
-            <xsl:apply-templates/>
-        </span>
-    </xsl:template>
-    
-    <xsl:template match="month">
-        <span class="month">
-            <xsl:apply-templates/>
-        </span>
-    </xsl:template>-->
 
     <xsl:template match="eSpace">
         <span class="space" title="She left a space.">

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../letters_schema.rnc" type="application/relax-ng-compact-syntax"?>
+<xml>
+    <meta>
+        <title titleId= "WtoP-1929-12-17-Letter1">Letter from Warren Behrend to Mary and Ernst Behrend, <date>1929-12-17</date></title>
+        <sourceDesc location="John M. Lilley Library, Penn State Behrend Archives"/>
+        <paperOrigin>Deerfield Academy Deerfield, Massachutsetts</paperOrigin>
+        <transDesc>
+            <editor>GD</editor>
+            <editor>SB</editor>
+        </transDesc>
+    </meta>
+    <figure>
+        <graphic src="../Letter_Images/Warren-Letter1_1929-12-17/1929-12-17_Warrenp1.jpeg" alt="p1"/>
+        <graphic src="../Letter_Images/Warren-Letter1_1929-12-17/1929-12-17_Warrenp2.jpeg" alt="p2"/>
+        <graphic src="../Letter_Images/Warren-Letter1_1929-12-17/1929-12-17_Warrenp3.jpeg" alt="p3"/>
+        <graphic src="../Letter_Images/Warren-Letter1_1929-12-17/1929-12-17_Warrenp4.jpeg" alt="p4"/>
+    </figure>
+    <body>
+        <pb n="1"/>
+        <header>
+            <ln n="1"/><date>1929-12-17</date>
+            <ln n="2"/><greeting>Dear Father &amp; Mother,</greeting>
+        </header>
+        <p n="1">
+            <ln n="1"/>It is <weather>raining</weather> hard and freezing on <!-- seb: added weather element -->
+            <ln n="2"/>the trees; very beautiful indeed, but not
+            <ln n="3"/>so practical for people who would drive
+            <ln n="4"/>their cars on a night like this. I <!-- seb: fixed spelling of "their" -->
+            <ln n="5"/>hope you had nice weather so
+            <ln n="6"/>that you could enjoy driving South
+            <ln n="7"/>in the <car>Duesenburg</car><!--ged: might want to make a car element--> <!-- seb:added car element -->
+        </p>
+        <p n="2">
+            <ln n="1"/><person personId="NR">Ned Richardson</person> and I have
+            <ln n="2"/>both promised each other to drive care-
+            <ln n="3"/>fully. and are<unclear reason="not sure what this says">nothing</unclear> our parents
+            <ln n="4"/>such a promise. You already have
+            <ln n="5"/> mine anyway <unclear reason="1st letter looks like a n, we think it is a the word but.">but</unclear>here it is again. 
+            <ln n="6"/><underline>Don't worry</underline>.
+        </p>
+        <pb n="2"/>
+        <p n="3"> 
+            <ln n="1"/>I am going to drop in and see
+            <ln n="2"/><person personId="HAR">Harriet</person>tomorrow night.<person personId="MBS">Miss Black</person>- <!-- seb: should I make two person elements for Miss Black, and one for -stone? or do a self closing line element? -->
+            <ln n="3"/><person personIdRef="MBS">stone</person> said that <unclear reason="looks like it could be mother or brother">brother</unclear>might get
+            <ln n="4"/>through the portals to see their <unclear reason="not entirely sure what this says">sisters.</unclear>
+        </p>
+        <p n="4">
+            <ln  n="1"/>I have a "blind date" for to-
+            <ln  n="2"/>morrow night in <place placeId="NY">New York</place>. If
+            <ln  n="3"/>you know what a blind date is
+            <ln  n="4"/>you will realize that I awaite it
+            <ln  n="5"/>with fear trembling. The only thing 
+            <ln  n="6"/>the girl who made the date knows
+            <ln  n="7"/>about me is that I am 5'8" tall.
+        </p> 
+        <p n="5">
+            <ln  n="1"/>Tomorrow we have 20 minute<!-- seb: should we add a time element -->
+            <ln  n="2"/>periods and are all through at
+            <ln  n="3"/>11.30. As I have no classes the 
+            <ln  n="4"/>sixth and seventh periods I shall
+            <ln  n="5"/>be all through at 10.50. This works
+            <ln  n="6"/>out very well, because <person personId= "OAK">Mr.Oatley</person>
+       <pb n="3"/>
+            <!-- ged: The unclear element is not allowed in a person element. Once we figure out the unclear element. This error will be resolved. -->
+            <ln  n="7"/>is leaving at eleven o'clock for
+            <ln  n="8"/><place placeId="SPRING">Springfield</place> in his car. He is going
+            <ln  n="9"/>to take us <crossOut>unknown</crossOut> along and so that
+            <ln  n="10"/>gives us plenty of time to get the one
+            <ln  n="11"/>o'clock out of <place placeIdRef="SPRING">Springfield</place>. That
+            <ln  n="12"/>gives <person personIdRef="NR">Ned</person> a chance to stay off in
+            <ln  n="13"/><place placeId="NH">New Haven</place> and gives me a chance <!-- seb: added place placeId element -->
+            <ln  n="14"/>to see <person personIdRef="HAR">Harriet</person>.
+        </p>
+        <p n="6">
+            <ln  n="1"/>I'm looking forward to seeing you
+            <ln  n="2"/>in <place placeId="CHAR">Charleston</place> soon and it will
+            <ln  n="3"/>be mighty nice to have the whole family
+            <ln  n="4"/>together again. I'm telephoning <person personId="BB">Betty</person>
+            <ln  n="5"/><person personIdRef="BB">Bratton</person>tonight find out whether
+            <ln  n="6"/>she can come and if so when. If she
+        </p>
+        <pb n="4"/>
+        <p n="7">
+            <ln n="1"/>can come you will have received
+            <ln n="2"/>a telegram from me before you get
+            <ln n="3"/>this letter. I think she is <unclear reason ="bringing???">bring</unclear> another <!-- seb:added a missing word "she" --> <!-- seb: changed "better" to "letter" -->
+            <ln n="4"/>boy and another girl with her. Do 
+            <ln n="5"/>you think we can find room for all?
+        </p>
+        <p n="8">
+            <ln n="1"/>I received the map and tickets <!-- seb:fixed typo in received -->
+            <ln n="2"/>O.K. Someone <unclear reason="not sure what that word is">may</unclear> thoughtfully mark- <!-- seb: i think "may" might be "very" -->
+            <ln n="3"/>ed the best route in red pencil. Wish <!-- seb: what we thought was wrote or write is actually "route" -->
+            <ln n="4"/>I knew who it was so that I could thank
+            <ln n="5"/>them.
+        </p>
+        <p n="9">
+            <ln n="1"/>Don't get me any<crossOut>n</crossOut> more things
+            <ln n="2"/>for X mas. Give it to the Red Cross
+            <ln n="3"/>or the Near East Relief or something.
+            <ln n="4"/>You do too much for <crossOut>me</crossOut>.
+        </p>
+        <closer>
+            <ln n="1"/>Much love,
+            <ln n="2"/>Warren.
+        </closer>
+    </body>
+
+
+</xml>
