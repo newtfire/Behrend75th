@@ -26,10 +26,10 @@
             <ln n="1"/>It is <weather>raining</weather> hard and freezing on <!-- seb: added weather element -->
             <ln n="2"/>the trees; very beautiful indeed, but not
             <ln n="3"/>so practical for people who would drive
-            <ln n="4"/>their cars on a night like this. I <!-- seb: fixed spelling of "their" -->
+            <ln n="4"/>their <transport>cars</transport> on a night like this. I <!-- seb: fixed spelling of "their" -->
             <ln n="5"/>hope you had nice weather so
             <ln n="6"/>that you could enjoy driving South
-            <ln n="7"/>in the <car>Duesenburg</car><!--ged: might want to make a car element--> <!-- seb:added car element -->
+            <ln n="7"/>in the <transport>Duesenburg</transport>
         </p>
         <p n="2">
             <ln n="1"/><persName personId="NR">Ned Richardson</persName> and I have
@@ -84,15 +84,15 @@
         <pb n="4"/>
         <p n="7">
             <ln n="1"/>can come you will have received
-            <ln n="2"/>a telegram from me before you get
-            <ln n="3"/>this letter. I think she is <unclear reason ="bringing???">bring</unclear> another <!-- seb:added a missing word "she" --> <!-- seb: changed "better" to "letter" -->
+            <ln n="2"/>a <rs type="object">telegram</rs> from me before you get
+            <ln n="3"/>this <rs type="object">letter</rs>. I think she is <unclear reason ="bringing???">bring</unclear> another <!-- seb:added a missing word "she" --> <!-- seb: changed "better" to "letter" -->
             <ln n="4"/>boy and another girl with her. Do 
             <ln n="5"/>you think we can find room for all?
         </p>
         <p n="8">
-            <ln n="1"/>I received the map and tickets <!-- seb:fixed typo in received -->
+            <ln n="1"/>I received the <rs type="object">map</rs> and <rs type="object">tickets</rs> <!-- seb:fixed typo in received -->
             <ln n="2"/>O.K. Someone <unclear reason="not sure what that word is">may</unclear> thoughtfully mark- <!-- seb: i think "may" might be "very" -->
-            <ln n="3"/>ed the best route in red pencil. Wish <!-- seb: what we thought was wrote or write is actually "route" -->
+            <ln n="3"/>ed the best route in red <rs type="object">pencil</rs>. Wish <!-- seb: what we thought was wrote or write is actually "route" -->
             <ln n="4"/>I knew who it was so that I could thank
             <ln n="5"/>them.
         </p>
