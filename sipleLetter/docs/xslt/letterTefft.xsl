@@ -34,13 +34,13 @@
     
     <xsl:template match="head">
         
-        <meta><xsl:apply-templates select="child::person"/></meta>
+        <meta><xsl:apply-templates select="descendant::person | descendant::persName"/></meta>
         <br/>
-        <meta><xsl:apply-templates select="child::address"/></meta>
+        <meta><xsl:apply-templates select="descendant::address"/></meta>
         <br/>
-        <meta><xsl:apply-templates select="child::city"/></meta>
+        <meta><xsl:apply-templates select="descendant::city"/></meta>
         <br/>
-        <meta><xsl:apply-templates select="child::date"/></meta>
+        <meta><xsl:apply-templates select="descendant::date"/></meta>
         <br/>
         
     </xsl:template>
