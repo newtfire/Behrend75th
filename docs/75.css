@@ -98,20 +98,25 @@ a:active {
 }
 
 /*Images in progress*/
-.calendarImageDoc {
+.figure {
   position: absolute;
   object-fit: contain;
   top: auto;
   right: 0;
-  width: 500px;
-  height: 700px;
+  width: 200px;
+  height: 400px;
 }
 
 .pennStateFooter{
-    position: absolute;
+  position: relative;
   object-fit: contain;
-  width: 500px;
-  height: 150px;
+  width: 200px;
+  height: 100px;
+}
+
+footer {
+    text-align: right;
+    font-size: 9px;
 }
 
 
