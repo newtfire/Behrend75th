@@ -5,7 +5,7 @@
     <letter xml:id="Brussels-1955-07-26">
         <figure>
             <graphic url="images/July26.jpg"/>
-            <caption>July 26th letter</caption>
+            <caption>July 26th letter</caption> 
         </figure>
         <dateLine><date when="1955-07-26"> July 26, 1955</date></dateLine>
         <placeName>Brussels</placeName>

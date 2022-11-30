@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="schema/schema.rnc" type="application/relax-ng-compact-syntax"?>
 <xml>
+    <!--This goes in the Neatherlands possible a journal entry on the way to Demark-->
     <letter xml:id="copenhagen-1955-07-28">
             <hand>Thus</hand>
             <hand><date when="1955-07-28">July 28</date>. uruet vilt oer cae c<u>otto</u> oei deierr
