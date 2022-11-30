@@ -62,7 +62,7 @@
                        <title>Calendar Entry <xsl:value-of select="@xml:id"/></title>
                        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                        <!--ebb: The line above helps your HTML scale to fit lots of different devices. -->
-                       <link rel="stylesheet" type="text/css" href="calendar-style.css"/>
+                       <link rel="stylesheet" type="text/css" href="../75.css"/>
                        
                        
                    </head>
@@ -97,7 +97,7 @@
         <section id="{@xml:id}" class="document">
             <div class="facsblock">
                 <figure>
-                    <img src="{@facs}" alt="{descendant::date}: {descendant::figDesc ! normalize-space()}" title="{descendant::date}: {descendant::figDesc ! normalize-space()}" class="entry"/>
+                    <img src="photos/{@facs!tokenize(.,'/')[last()]}" alt="{descendant::date}: {descendant::figDesc ! normalize-space()}" title="{descendant::date}: {descendant::figDesc ! normalize-space()}" class="entry"/>
                     <figcaption><xsl:apply-templates select="descendant::figDesc"/><xsl:text>—</xsl:text><xsl:value-of select="descendant::figDesc/@resp"/></figcaption>
                 </figure>
                 
