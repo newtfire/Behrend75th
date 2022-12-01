@@ -15,11 +15,20 @@
     <xsl:template match="/">
         <html>
             <head>
-                <link rel="stylesheet" type="text/css" href="webstyle.css"/>
+                <link rel="stylesheet" type="text/css" href="75.css" />
                 <title>Behrend Travel Letters</title>
             </head>
             <body>
-                <h1>Behrends Travel Adventures</h1>
+                <h2>Behrend Travel Letters</h2>
+                <nav>
+                    <hr/>
+                    <p class="navbar"><a href="index.html">Home</a> | <a href="calendarPage.html">Behrend Calendars</a> | <a href="travelLettersPage.html">Behrend Travel Letters</a> | <a href="sipleLettersPage.html">Behrend Siple Letters</a> | <a href="warrenLettersPage.html">Behrend Warren Letters</a> | <a href="search.html">Search</a></p>
+                    <hr/>
+                </nav>
+                <div class="block">
+                    <p>Welcome to the Behrend Travel Letters page! This page shows all the trips that the Behrend family took in Europe. The information here gives the dates, places, and detail of transportation. They also show you some important names that were mentioned in the letters. Take a look around and enjoy getting to know the history of the Behrend family's travels!</p>
+                </div>
+                
                 <section id="toc">
                     <h2>Contents</h2>
                     <ul>
@@ -28,11 +37,11 @@
                         </xsl:apply-templates>
                     </ul>
                 </section>
-
+                <!--  
                 <section id="fulltext">
                     <xsl:for-each select="$travelColl//letter">
                         <xsl:sort select="(descendant::date/@when)[1]"/>
-
+                        <xsl:apply-templates select="current()"/>
                         <xsl:choose>
                             <xsl:when test="current()/front ! name() = 'front'">
                                 <section class="document">
@@ -65,7 +74,7 @@
                         </xsl:choose>
 
                     </xsl:for-each>
-                </section>
+                </section>-->
                 <!--            <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.-->
             </body>
         </html>
@@ -74,13 +83,13 @@
     <!--Templates in toc mode for the table of contents -->
     <xsl:template match="xml" mode="toc">
         <li>
-            <a href="#{letter/@xml:id}">
+            <a href="#travelLetters/{letter/@xml:id}">
                 <xsl:value-of select="letter/@xml:id"/>
             </a>
         </li>
     </xsl:template>
 
-    <xsl:template match="letter">
+    <!-- <xsl:template match="letter">
         <a href="#{descendant::h1}">
             <h2 id="{@xml:id}">
                 <xsl:value-of select="@xml:id"/>
@@ -244,6 +253,6 @@
         <span class="space" title="She left a space.">
             <xsl:apply-templates/>
         </span>
-    </xsl:template>
+    </xsl:template>-->
 
 </xsl:stylesheet>
