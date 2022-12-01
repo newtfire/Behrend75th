@@ -24,13 +24,10 @@
       </person>
       <person>
          <persName>Olin Stan-cliff</persName>
-<<<<<<< HEAD
-         <note resp="hjl"
-            ><!--Your comments about this person: do we know anything about them? Or what do you learn from the letters?
-                      You can use your initials as the value of @resp to indicate who wrote this note.--></note>
-=======
+
+         
          <note resp="hjl">Olin was also an explorer of the Byrd Atlantic Expedition.</note>
->>>>>>> a2cc139b8dd63189fbce09daf4ab26dd0f7356c8
+
       </person>
       <person>
          <persName>PAUL A. SPILE</persName>
@@ -66,13 +63,7 @@
             <lat>Not Able to Be Found</lat>
             <long>Not Able to Be Found</long>
          </geo>
-<<<<<<< HEAD
-         <note resp=""
-            ><!--Your comments about this place: Why was it important in your collection? Or what do you learn from the letters?
-                      You can use your initials as the value of @resp to indicate who wrote this note.--></note>
-=======
          <note resp="">Not Able to Be Found</note>
->>>>>>> a2cc139b8dd63189fbce09daf4ab26dd0f7356c8
       </place>
    </listPlace>
 </xml>
