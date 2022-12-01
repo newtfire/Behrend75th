@@ -207,7 +207,7 @@ div.footer p img{display:inline;}
  /*  I'm using an atttribute selector to look for sections 
   * whose id attributes START WITH this string: e-1909  since those are the sections
   * we want to be grid containers*/
- section[id^="e-1909"] {
+ section[id^="e-"] {
  background-color:lavender;
  border: thin solid maroon;
  display:grid;
@@ -218,7 +218,7 @@ div.footer p img{display:inline;}
  
  /*  let's try creating a grid for the div.facsblock, so all the text appears in a new column to the right of the image.  */
  
- section[id^="e-1909"] div.facsblock {
+ section[id^="e-"] div.facsblock {
 background-color:white; 
 display:grid;
 grid-auto-flow:column;
@@ -239,7 +239,7 @@ div.facsblock > figure > img {
 
 /* This CSS selector syntax reads: Style the <div class="note"> when it's a descendant
  * of a <section> with an @id that starts with "e-1909". */
- section[id^="e-1909"] div.note  {
+ section[id^="e-"] div.note  {
      padding:1em;
  }
 
