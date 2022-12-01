@@ -83,7 +83,7 @@
     <!--Templates in toc mode for the table of contents -->
     <xsl:template match="xml" mode="toc">
         <li>
-            <a href="#travelLetters/{letter/@xml:id}">
+            <a href="travelLetters/{letter/@xml:id}.html">
                 <xsl:value-of select="letter/@xml:id"/>
             </a>
         </li>

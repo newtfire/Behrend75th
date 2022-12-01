@@ -167,6 +167,12 @@
             <xsl:apply-templates/>
         </span>
     </xsl:template>
+    
+    <xsl:template match="animal">
+        <span class="animal">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
 
     <xsl:template match="u">
         <span class="underlined">
