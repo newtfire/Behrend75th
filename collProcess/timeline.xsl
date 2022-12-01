@@ -108,8 +108,31 @@
           xpath-default-namespace="http://www.tei-c.org/ns/1.0">
           <xsl:variable name="dayIntervalFromFirst"
             select="days-from-duration(xs:date(current()) - xs:date($calendarDateOrdered[1]))"/>
-          <!--<xsl:variable name="dayInternalFromPrevious"
-            select="days-from-duration(xs:date(current()) - xs:date(current()/preceding::date[@when][1]/@when))"/>-->
+
+          <xsl:variable name="dayInternvalFromPreviousFixed">
+            <xsl:for-each select="$calendarDateOrdered">
+              <xsl:choose>
+                <xsl:when test="position() != 1">
+                  <xsl:variable name="dayInternalFromPrevious"
+                    select="days-from-duration($calendarDateOrdered[position()] - $calendarDateOrdered[position() - 1])"/>
+                  <xsl:choose>
+                    <xsl:when test="$dayInternalFromPrevious &lt; 5">
+                      <xsl:value-of select="$dayInternalFromPrevious"/>
+                    </xsl:when>
+                    <xsl:otherwise> <!-- The day interval between current date and previous date is more than 5 days. -->
+                      <xsl:value-of select="2"/>
+                      <!-- The height of the gap symbol is 40 px, which equals that 2 times $yInterval. -->
+                    </xsl:otherwise>
+                  </xsl:choose>
+                </xsl:when>
+                <xsl:otherwise><!-- position = 1 -->
+                  <!-- The interval between first date and previous date is 0. -->
+                  <xsl:value-of select="0"/>
+                </xsl:otherwise>
+              </xsl:choose>
+            </xsl:for-each>
+          </xsl:variable>
+
           <text id="{current()}" x="{20+$lineX}" y="{$yInterval * $dayIntervalFromFirst}">
             <xsl:value-of select="current() ! string() ! substring(., 6, 10)"/>
           </text>
@@ -118,13 +141,20 @@
                 d="M8 1.5V10.5L3.5 15L9.5 17.5L3.5 23.5L10 26L8 30V41.5" stroke="black"
                 stroke-width="3" stroke-linecap="round"/>-->
 
-          <line x1="{$lineX}" y1="{$yInterval * $dayIntervalFromFirst}" x2="{$lineX + 10}"
-            y2="{$yInterval * $dayIntervalFromFirst}" stroke-width="2" transform="translate(0,-4)"
+
+          <line x1="{$lineX}" y1="{$yInterval * $dayInternvalFromPreviousFixed}" x2="{$lineX + 10}"
+            y2="{$yInterval * $dayInternvalFromPreviousFixed}" stroke-width="2" transform="translate(0,-4)"
             stroke="{$colorArray[1]}"/>
+
+
+
+          <!--<line x1="{$lineX}" y1="{$yInterval * $dayIntervalFromFirst}" x2="{$lineX + 10}"
+            y2="{$yInterval * $dayIntervalFromFirst}" stroke-width="2" transform="translate(0,-4)"
+            stroke="{$colorArray[1]}"/>-->
         </xsl:for-each>
-        <line x1="{$lineX}" y1="{$yInterval * - 1.5}" x2="{$lineX}"
+        <!--<line x1="{$lineX}" y1="{$yInterval * - 1.5}" x2="{$lineX}"
           y2="{$yInterval*(days-from-duration(xs:date($calendarDateOrdered[last()]) - xs:date($calendarDateOrdered[1])) + 1)}"
-          stroke-width="3" stroke="{$colorArray[1]}"/>
+          stroke-width="3" stroke="{$colorArray[1]}"/>-->
       </g>
     </g>
 
@@ -237,22 +267,6 @@
     </g>
   </xsl:function>
 
-  <xsl:template match="letter" mode="modal-travel">
-    <div class="modal-content" id="{@xml:id}">
-        <span class="close">&amp;times;</span>
-        <table>
-          <tr>
-            <th>Letter Name</th>
-            <th>Date</th>
-          </tr>
-          <tr>
-            <td><xsl:value-of select="@xml:id ! tokenize(., '-')[1]"/></td>
-            <td><xsl:value-of select="(descendant::date/@when)[1]"/></td>
-          </tr>
-        </table>
-      </div>
-  </xsl:template>
-
   <xsl:template match="/">
     <html>
       <head>
@@ -266,11 +280,6 @@
           <svg xmlns="http://www.w3.org/2000/svg" height="4500px" width="9290px">
             <xsl:sequence select="yxj:timeline()"/>
           </svg>
-        </div>
-        <div id="modal">
-          <xsl:for-each select="$Coll/descendant::letter">
-            <xsl:apply-templates select="current()" mode="modal-travel"/>
-          </xsl:for-each>
         </div>
       </body>
     </html>
