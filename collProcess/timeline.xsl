@@ -166,7 +166,7 @@
                 x2="{$lineX}" y2="{$yInterval*($dayIntervalFromFirstFixed)}" stroke-width="3"
                 stroke="{$colorArray[1]}"/>
               <line x1="{$lineX}" y1="{$yInterval * ($dayIntervalFromFirstFixed)}" x2="{$lineX}"
-                y2="{$yInterval*($dayIntervalFromFirstFixed + 2)}" stroke-width="3"
+                y2="{$yInterval*($dayIntervalFromFirstFixed + 1.5)}" stroke-width="3"
                 stroke="{$colorArray[1]}"/>
               <path transform="translate(-3, {$yInterval * ($dayIntervalFromFirstFixed - 3)})"
                 d="M8 1.5V10.5L3.5 15L9.5 17.5L3.5 23.5L10 26L8 30V41.5" stroke="{$colorArray[1]}"
