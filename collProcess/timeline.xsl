@@ -106,55 +106,80 @@
       <g class="timeline" transform="translate(0, {$yInterval})">
         <xsl:for-each select="$calendarDateOrdered"
           xpath-default-namespace="http://www.tei-c.org/ns/1.0">
+          <xsl:variable name="pos" as="xs:integer" select="position()"/>
           <xsl:variable name="dayIntervalFromFirst"
-            select="days-from-duration(xs:date(current()) - xs:date($calendarDateOrdered[1]))"/>
+            select="days-from-duration(current() - xs:date($calendarDateOrdered[1]))"/>
 
-          <xsl:variable name="dayInternvalFromPreviousFixed">
+          <!-- This variable is a list. It is to reduce the interval between days if the interval is too large. 
+          If the interval >= 4, which means the distance between two dates will be more than 80 px, 
+          a gap symbol with 100 px height will replace this too large interval. 
+          -->
+          <xsl:variable name="dayIntervalFromPreviousFixedList" as="xs:integer+">
             <xsl:for-each select="$calendarDateOrdered">
+              <xsl:variable name="pos" select="position()"/>
               <xsl:choose>
                 <xsl:when test="position() != 1">
-                  <xsl:variable name="dayInternalFromPrevious"
-                    select="days-from-duration($calendarDateOrdered[position()] - $calendarDateOrdered[position() - 1])"/>
+                  <xsl:variable name="dayIntervalFromPrevious" as="xs:integer"
+                    select="days-from-duration(current() - $calendarDateOrdered[$pos - 1])"/>
                   <xsl:choose>
-                    <xsl:when test="$dayInternalFromPrevious &lt; 5">
-                      <xsl:value-of select="$dayInternalFromPrevious"/>
+                    <xsl:when test="$dayIntervalFromPrevious &gt; 3">
+                      <!-- The day interval between current date and previous date is more than 3 days. -->
+                      <xsl:number value="4"/>
                     </xsl:when>
-                    <xsl:otherwise> <!-- The day interval between current date and previous date is more than 5 days. -->
-                      <xsl:value-of select="2"/>
-                      <!-- The height of the gap symbol is 40 px, which equals that 2 times $yInterval. -->
+                    <xsl:otherwise>
+                      <xsl:number value="$dayIntervalFromPrevious"/>
                     </xsl:otherwise>
                   </xsl:choose>
                 </xsl:when>
-                <xsl:otherwise><!-- position = 1 -->
+                <xsl:otherwise>
+                  <!-- position = 1 -->
                   <!-- The interval between first date and previous date is 0. -->
-                  <xsl:value-of select="0"/>
+                  <xsl:number value="0"/>
                 </xsl:otherwise>
               </xsl:choose>
             </xsl:for-each>
           </xsl:variable>
 
-          <text id="{current()}" x="{20+$lineX}" y="{$yInterval * $dayIntervalFromFirst}">
+          <!-- This variable is to store the part of values in $dayIntervalFromPreviousFixedList. -->
+          <xsl:variable name="dayIntervalBuffer" as="xs:integer+">
+            <xsl:for-each select="1 to $pos">
+              <xsl:variable name="index" as="xs:integer" select="position()"/>
+              <xsl:number value="$dayIntervalFromPreviousFixedList[$index]"/>
+            </xsl:for-each>
+          </xsl:variable>
+
+          <xsl:variable name="dayIntervalFromFirstFixed" as="xs:integer">
+            <xsl:value-of select="$dayIntervalBuffer => sum()"/>
+          </xsl:variable>
+
+          <text id="{current()}" x="{20+$lineX}" y="{$yInterval * $dayIntervalFromFirstFixed}">
             <xsl:value-of select="current() ! string() ! substring(., 6, 10)"/>
+            <!--            <xsl:value-of select="$dayIntervalFromPreviousFixedList[position()]"/>-->
           </text>
 
-          <!-- <path transform="translate(-3, {$yInterval * $yPos})"
-                d="M8 1.5V10.5L3.5 15L9.5 17.5L3.5 23.5L10 26L8 30V41.5" stroke="black"
-                stroke-width="3" stroke-linecap="round"/>-->
+          <line x1="{$lineX}" y1="{$yInterval * $dayIntervalFromFirstFixed}" x2="{$lineX + 10}"
+            y2="{$yInterval * $dayIntervalFromFirstFixed}" stroke-width="2"
+            transform="translate(0,-4)" stroke="{$colorArray[1]}"/>
 
-
-          <line x1="{$lineX}" y1="{$yInterval * $dayInternvalFromPreviousFixed}" x2="{$lineX + 10}"
-            y2="{$yInterval * $dayInternvalFromPreviousFixed}" stroke-width="2" transform="translate(0,-4)"
-            stroke="{$colorArray[1]}"/>
-
-
-
-          <!--<line x1="{$lineX}" y1="{$yInterval * $dayIntervalFromFirst}" x2="{$lineX + 10}"
-            y2="{$yInterval * $dayIntervalFromFirst}" stroke-width="2" transform="translate(0,-4)"
-            stroke="{$colorArray[1]}"/>-->
+          <xsl:choose>
+            <xsl:when test="$dayIntervalFromPreviousFixedList[$pos] &gt; 3">
+              <line x1="{$lineX}" y1="{$yInterval * ($dayIntervalFromFirstFixed - 1.5)}" x2="{$lineX}"
+                y2="{$yInterval*($dayIntervalFromFirstFixed)}"
+                stroke-width="3" stroke="{$colorArray[1]}"/>
+              <line x1="{$lineX}" y1="{$yInterval * ($dayIntervalFromFirstFixed)}" x2="{$lineX}"
+                y2="{$yInterval*($dayIntervalFromFirstFixed + 2)}"
+                stroke-width="3" stroke="{$colorArray[1]}"/>
+              <path transform="translate(-3, {$yInterval * ($dayIntervalFromFirstFixed - 3)})"
+                d="M8 1.5V10.5L3.5 15L9.5 17.5L3.5 23.5L10 26L8 30V41.5" stroke="{$colorArray[1]}"
+                stroke-width="3" stroke-linecap="round"/>
+            </xsl:when>
+            <xsl:otherwise>
+              <line x1="{$lineX}" y1="{$yInterval * ($dayIntervalFromFirstFixed - 1.5)}" x2="{$lineX}"
+                y2="{$yInterval*($dayIntervalFromFirstFixed + 1.5)}"
+                stroke-width="3" stroke="{$colorArray[1]}"/>
+            </xsl:otherwise>
+          </xsl:choose>
         </xsl:for-each>
-        <!--<line x1="{$lineX}" y1="{$yInterval * - 1.5}" x2="{$lineX}"
-          y2="{$yInterval*(days-from-duration(xs:date($calendarDateOrdered[last()]) - xs:date($calendarDateOrdered[1])) + 1)}"
-          stroke-width="3" stroke="{$colorArray[1]}"/>-->
       </g>
     </g>
 
@@ -277,7 +302,7 @@
       <body>
         <h1>Timeline</h1>
         <div id="svgTimeline">
-          <svg xmlns="http://www.w3.org/2000/svg" height="4500px" width="9290px">
+          <svg xmlns="http://www.w3.org/2000/svg" height="2100px" width="9290px">
             <xsl:sequence select="yxj:timeline()"/>
           </svg>
         </div>
