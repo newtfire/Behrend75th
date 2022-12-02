@@ -37,7 +37,7 @@
                                 >Search</a></p>
                             <hr/>
                         </nav>
-                        <section id="{@xml:id}" class="document">
+                        <section id="e-{@xml:id}" class="document">
                             <xsl:choose>
                                 <xsl:when test="current()/front ! name() = 'front'">
                                     <div class="facsblock">
