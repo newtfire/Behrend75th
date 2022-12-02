@@ -1,3 +1,6 @@
+body {padding: 1em; }
+div.banner {display:flex; justify-content:space-between; }
+
 /* latin */
 @font-face {
   font-family: 'Roboto Condensed';
@@ -45,11 +48,11 @@ h1 {
 
 h2 {
     font-size: 36px;
-    color: white;
+    color: #001E44; /* Nittany navy */
 }
 
 h3 {
-    font-size: 24px;
+    font-size: 1.5vw;
     color: white;
 }
 
@@ -89,7 +92,7 @@ a:active {
 }
 
 .PSB{
-  position: absolute;
+  position: relative;
   object-fit: contain;
   top: -10px;
   right: 0;
@@ -143,9 +146,17 @@ footer.main {
 .navbar ul li:hover::after{
      width: 100%;
 }
+/* Project image gallery for main page */
+
+section.gallery { display:flex; width:90%;}
+
+figure.intro img {width:15vw; max-width:300px; border-radius:50%;}
 
 
+/* NOT USING ::
+ * iframe */
 
+/*iframe {height:10vw; width:80vw;}*/
 
 
 /*GRID*/
