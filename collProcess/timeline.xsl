@@ -91,11 +91,8 @@
       <g class="timelineInfo">
         <text x="{15+$lineX}" y="{$yInterval}">Count: <xsl:value-of select="$calendarDateCount"
           /></text>
-
         <text x="{15+$lineX}" y="{$yInterval * 2}">Earlist: <xsl:value-of
             select="$calendarDateList[1]"/></text>
-
-
         <text x="{15+$lineX}" y="{$yInterval * 2}">Earlist: <xsl:value-of
             select="$calendarDateOrdered[1]"/></text>
         <text x="{15+$lineX}" y="{$yInterval * 3}">Latest: <xsl:value-of
@@ -110,9 +107,9 @@
           <xsl:variable name="dayIntervalFromFirst"
             select="days-from-duration(current() - xs:date($calendarDateOrdered[1]))"/>
 
-          <!-- This variable is a list. It is to reduce the interval between days if the interval is too large. 
-          If the interval >= 4, which means the distance between two dates will be more than 80 px, 
-          a gap symbol with 100 px height will replace this too large interval. 
+          <!-- This variable is a list. It is to reduce the interval between dates if the day interval is too large. 
+          If the day interval > 3, which means the distance between two dates will be at least 80 px, 
+          a gap symbol with 80 px will replace the too large interval here. 
           -->
           <xsl:variable name="dayIntervalFromPreviousFixedList" as="xs:integer+">
             <xsl:for-each select="$calendarDateOrdered">
@@ -124,24 +121,25 @@
                   <xsl:choose>
                     <xsl:when test="$dayIntervalFromPrevious &gt; 3">
                       <!-- The day interval between current date and previous date is more than 3 days. -->
-                      <xsl:number value="4"/>
+                      <xsl:value-of select="4"/>
                     </xsl:when>
                     <xsl:otherwise>
-                      <xsl:number value="$dayIntervalFromPrevious"/>
+                      <xsl:value-of select="$dayIntervalFromPrevious"/>
                     </xsl:otherwise>
                   </xsl:choose>
                 </xsl:when>
                 <xsl:otherwise>
-                  <!-- position = 1 -->
-                  <!-- The interval between first date and previous date is 0. -->
-                  <xsl:number value="0"/>
+                  <!-- when position = 1 -->
+                  <!-- The day interval between first date and previous date is 0. -->
+                  <xsl:value-of select="0"/>
                 </xsl:otherwise>
               </xsl:choose>
             </xsl:for-each>
           </xsl:variable>
 
-          <!-- This variable is to store the part of values in $dayIntervalFromPreviousFixedList. -->
+          <!-- This variable is to store elements in $dayIntervalFromPreviousFixedList with index that 1 to current position(). -->
           <xsl:variable name="dayIntervalBuffer" as="xs:integer+">
+            <!-- The variable $pos is necessary for for-each here, because if using position() directly, xml editor will get confused. -->
             <xsl:for-each select="1 to $pos">
               <xsl:variable name="index" as="xs:integer" select="position()"/>
               <xsl:number value="$dayIntervalFromPreviousFixedList[$index]"/>
@@ -152,31 +150,31 @@
             <xsl:value-of select="$dayIntervalBuffer => sum()"/>
           </xsl:variable>
 
+          <!-- print MM-DD -->
           <text id="{current()}" x="{20+$lineX}" y="{$yInterval * $dayIntervalFromFirstFixed}">
             <xsl:value-of select="current() ! string() ! substring(., 6, 10)"/>
-            <!--            <xsl:value-of select="$dayIntervalFromPreviousFixedList[position()]"/>-->
           </text>
-
           <line x1="{$lineX}" y1="{$yInterval * $dayIntervalFromFirstFixed}" x2="{$lineX + 10}"
             y2="{$yInterval * $dayIntervalFromFirstFixed}" stroke-width="2"
             transform="translate(0,-4)" stroke="{$colorArray[1]}"/>
 
+          <!-- line and gap symbol -->
           <xsl:choose>
             <xsl:when test="$dayIntervalFromPreviousFixedList[$pos] &gt; 3">
-              <line x1="{$lineX}" y1="{$yInterval * ($dayIntervalFromFirstFixed - 1.5)}" x2="{$lineX}"
-                y2="{$yInterval*($dayIntervalFromFirstFixed)}"
-                stroke-width="3" stroke="{$colorArray[1]}"/>
+              <line x1="{$lineX}" y1="{$yInterval * ($dayIntervalFromFirstFixed - 1.5)}"
+                x2="{$lineX}" y2="{$yInterval*($dayIntervalFromFirstFixed)}" stroke-width="3"
+                stroke="{$colorArray[1]}"/>
               <line x1="{$lineX}" y1="{$yInterval * ($dayIntervalFromFirstFixed)}" x2="{$lineX}"
-                y2="{$yInterval*($dayIntervalFromFirstFixed + 2)}"
-                stroke-width="3" stroke="{$colorArray[1]}"/>
+                y2="{$yInterval*($dayIntervalFromFirstFixed + 2)}" stroke-width="3"
+                stroke="{$colorArray[1]}"/>
               <path transform="translate(-3, {$yInterval * ($dayIntervalFromFirstFixed - 3)})"
                 d="M8 1.5V10.5L3.5 15L9.5 17.5L3.5 23.5L10 26L8 30V41.5" stroke="{$colorArray[1]}"
                 stroke-width="3" stroke-linecap="round"/>
             </xsl:when>
             <xsl:otherwise>
-              <line x1="{$lineX}" y1="{$yInterval * ($dayIntervalFromFirstFixed - 1.5)}" x2="{$lineX}"
-                y2="{$yInterval*($dayIntervalFromFirstFixed + 1.5)}"
-                stroke-width="3" stroke="{$colorArray[1]}"/>
+              <line x1="{$lineX}" y1="{$yInterval * ($dayIntervalFromFirstFixed - 1.5)}"
+                x2="{$lineX}" y2="{$yInterval*($dayIntervalFromFirstFixed + 1.5)}" stroke-width="3"
+                stroke="{$colorArray[1]}"/>
             </xsl:otherwise>
           </xsl:choose>
         </xsl:for-each>
@@ -230,10 +228,11 @@
         </text>
         <!-- text for date information: count, earliest, latest -->
         <g class="timelineInfo">
-          <text x="{15+$lineX}" y="{$yInterval}">Count: <xsl:value-of select="$sipleDateCount"
-            /></text>
-          <text x="{15+$lineX}" y="{$yInterval * 2}">Date: <xsl:value-of
-              select="($siple[1]//@when)[1]"/></text>
+          <text x="{15+$lineX}" y="{$yInterval}"> Count: <xsl:value-of select="$sipleDateCount"/>
+          </text>
+          <text x="{15+$lineX}" y="{$yInterval * 2}"> Date: <xsl:value-of
+              select="($siple[1]//@when)[1]"/>
+          </text>
         </g>
         <!-- list of MM-DD -->
         <g class="timeline">
@@ -255,7 +254,6 @@
     <!-- timeline for travel -->
     <g id="travelLetters" transform="translate({50 + 3 * $xInterval}, {$yInterval*4})">
       <xsl:variable name="index" as="xs:integer" select="4"/>
-
       <g fill="{$colorArray[$index]}">
         <circle cx="{$lineX}" cy="{-0.5 * $yInterval}" r="5"/>
         <!-- text for project name -->
