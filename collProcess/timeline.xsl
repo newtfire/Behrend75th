@@ -151,9 +151,10 @@
           </xsl:variable>
 
           <!-- print MM-DD -->
-          <text id="{current()}" x="{20+$lineX}" y="{$yInterval * $dayIntervalFromFirstFixed}">
+          <a href="{($calendar//div2/@xml:id => sort(xs:string(.)))[$pos]}.html">
+            <text id="{current()}" x="{20+$lineX}" y="{$yInterval * $dayIntervalFromFirstFixed}">
             <xsl:value-of select="current() ! string() ! substring(., 6, 10)"/>
-          </text>
+          </text></a>
           <line x1="{$lineX}" y1="{$yInterval * $dayIntervalFromFirstFixed}" x2="{$lineX + 10}"
             y2="{$yInterval * $dayIntervalFromFirstFixed}" stroke-width="2"
             transform="translate(0,-4)" stroke="{$colorArray[1]}"/>
@@ -204,9 +205,9 @@
         <g class="timeline">
           <xsl:for-each select="$warren">
             <xsl:sort select="current()/descendant::date/@when" order="ascending"/>
-            <text id="{current()}" x="{20+$lineX}" y="{$yInterval*position()}">
+            <a href="{}"><text id="{current()}" x="{20+$lineX}" y="{$yInterval*position()}">
               <xsl:value-of select="current()/descendant::date/@when ! substring(., 6, 10)"/>
-            </text>
+            </text></a>
             <line x1="{$lineX}" y1="{$yInterval*(position()-1.5)}" x2="{$lineX}"
               y2="{$yInterval*(position()+1)}" style="stroke:{$colorArray[$index]};stroke-width:3"/>
             <line x1="{$lineX}" y1="{$yInterval*position()}" x2="{$lineX + 10}"
@@ -237,10 +238,9 @@
         <!-- list of MM-DD -->
         <g class="timeline">
           <xsl:for-each select="$siple">
-            <xsl:sort select="current()/descendant::date/@when" order="ascending"/>
-            <text id="{descendant::date/@when}" x="{20+$lineX}" y="{$yInterval*position()}">
-              <xsl:value-of select="current()/descendant::date/@when ! substring(., 6, 10)"/>
-            </text>
+            <a href="{current()/descendant::date[1]/@when}.html"><text id="{descendant::date/@when}" x="{20+$lineX}" y="{$yInterval*position()}">
+              <xsl:value-of select="current()/descendant::date[1]/@when ! substring(., 6, 10)"/>
+            </text></a>
             <line x1="{$lineX}" y1="{$yInterval*(position()-1.5)}" x2="{$lineX}"
               y2="{$yInterval*(position()+1)}" style="stroke:{$colorArray[$index]};stroke-width:3"/>
             <line x1="{$lineX}" y1="{$yInterval*position()}" x2="{$lineX + 10}"
@@ -272,12 +272,15 @@
         </g>
         <!-- list of MM-DD -->
         <g class="timeline" transform="translate(0, {$yInterval})">
-          <xsl:for-each select="$travelDateOrdered">
+          <xsl:for-each select="$travel">
+            <xsl:sort select="descendant::date/@when"></xsl:sort>
+            <xsl:variable name="currentDate" select="descendant::date[1]/@when" as="xs:date"/>
+            <xsl:variable name="pos" select="position()"/>
             <xsl:variable name="daysNumFromFirst"
-              select="days-from-duration(current() - $travelDateOrdered[1])"/>
-            <text id="{current()}" x="{20+$lineX}" y="{$yInterval*$daysNumFromFirst}">
-              <xsl:value-of select="current() ! string() ! substring(., 6, 10)"/>
-            </text>
+              select="days-from-duration($currentDate - $travelDateOrdered[1])"/>
+            <a href="{descendant::letter/@xml:id}.html"><text id="{current()}" x="{20+$lineX}" y="{$yInterval*$daysNumFromFirst}">
+              <xsl:value-of select="$currentDate ! string() ! substring(., 6, 10)"/>
+            </text></a>
             <line x1="{$lineX}" y1="{$yInterval*$daysNumFromFirst}" x2="{$lineX + 10}"
               y2="{$yInterval*$daysNumFromFirst}"
               style="stroke:{$colorArray[$index]};stroke-width:2" transform="translate(0,-4)"/>
