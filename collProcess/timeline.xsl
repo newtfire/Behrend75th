@@ -101,6 +101,7 @@
 
       <!-- list of MM-DD -->
       <g class="timeline" transform="translate(0, {$yInterval})">
+        <xsl:variable name="largestDayInterval" as="xs:integer" select="3"/>
         <xsl:for-each select="$calendarDateOrdered"
           xpath-default-namespace="http://www.tei-c.org/ns/1.0">
           <xsl:variable name="pos" as="xs:integer" select="position()"/>
@@ -119,9 +120,9 @@
                   <xsl:variable name="dayIntervalFromPrevious" as="xs:integer"
                     select="days-from-duration(current() - $calendarDateOrdered[$pos - 1])"/>
                   <xsl:choose>
-                    <xsl:when test="$dayIntervalFromPrevious &gt; 3">
+                    <xsl:when test="$dayIntervalFromPrevious &gt; $largestDayInterval">
                       <!-- The day interval between current date and previous date is more than 3 days. -->
-                      <xsl:value-of select="4"/>
+                      <xsl:value-of select="$largestDayInterval + 1"/>
                     </xsl:when>
                     <xsl:otherwise>
                       <xsl:value-of select="$dayIntervalFromPrevious"/>
@@ -161,14 +162,14 @@
 
           <!-- line and gap symbol -->
           <xsl:choose>
-            <xsl:when test="$dayIntervalFromPreviousFixedList[$pos] &gt; 3">
+            <xsl:when test="$dayIntervalFromPreviousFixedList[$pos] &gt; $largestDayInterval">
               <line x1="{$lineX}" y1="{$yInterval * ($dayIntervalFromFirstFixed - 1.5)}"
                 x2="{$lineX}" y2="{$yInterval*($dayIntervalFromFirstFixed)}" stroke-width="3"
                 stroke="{$colorArray[1]}"/>
               <line x1="{$lineX}" y1="{$yInterval * ($dayIntervalFromFirstFixed)}" x2="{$lineX}"
                 y2="{$yInterval*($dayIntervalFromFirstFixed + 1.5)}" stroke-width="3"
                 stroke="{$colorArray[1]}"/>
-              <path transform="translate(-3, {$yInterval * ($dayIntervalFromFirstFixed - 3)})"
+              <path transform="translate(-3, {$yInterval * ($dayIntervalFromFirstFixed - $largestDayInterval)})"
                 d="M8 1.5V10.5L3.5 15L9.5 17.5L3.5 23.5L10 26L8 30V41.5" stroke="{$colorArray[1]}"
                 stroke-width="3" stroke-linecap="round"/>
             </xsl:when>
