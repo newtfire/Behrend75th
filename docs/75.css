@@ -172,6 +172,9 @@ border-radius:50%;
   background-color: #CCDAE6;
 }
 
+.tocHeader {
+    text-align: center;
+}
 
 /*GRID*/
 figure img {
@@ -248,7 +251,7 @@ div.footer p img{display:inline;}
   * we want to be grid containers*/
  section[id^="e-"] {
  background-color: #CCDAE6; /* Slate Light+ */
- border: thin solid maroon;
+ border: thin solid navy;
  display:grid;
  grid-auto-flow:column; 
  grid-template-columns:.8fr .2fr; 
@@ -273,6 +276,7 @@ grid-template-columns: .75fr .23fr;
 /*  ebb: need to look up how minmax works.  */
 grid-column-gap:2em;
 padding:1em;
+ padding-left: 20%;
 }
 
 /* ebb: Here we are making the image size scale proportionally with the browser size: 
