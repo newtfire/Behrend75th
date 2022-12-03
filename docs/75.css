@@ -323,12 +323,14 @@ div.facsblock > figure > img {
 form#ssForm{
     display: flex;
     flex-direction: column;
+    width: auto;
+    justify-content: center;
 }
 span.ssQueryAndButton{
     display: flex;
     flex-direction: row;
     margin: 0.25em auto;
-    width: 100%;
+    width: 50%;
 }
 input#ssQuery{
     flex: 1;
@@ -336,6 +338,8 @@ input#ssQuery{
 input.staticSearch_feat:disabled{
   cursor: wait;
 }
+
+
 
 /* Visually hide elements necessary for accessibility */
 fieldset.ssFieldset > legend.sr-only{
@@ -355,6 +359,9 @@ div.ssDescFilters, div.ssDateFilters, div.ssNumFilters, div.ssBoolFilters, div.s
     flex-direction: row;
     flex-wrap: wrap;
     gap: 0.25em;
+    color: black;
+    width: 50%;
+    margin: auto;
 }
 div.ssDescFilters fieldset, div.ssDateFilters fieldset, div.ssNumFilters fieldset, div.ssBoolFilters fieldset, div.ssSearchInFilters fieldset{
     margin: 0.25em auto;
