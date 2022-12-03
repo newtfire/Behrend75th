@@ -146,13 +146,31 @@ footer.main {
 .navbar ul li:hover::after{
      width: 100%;
 }
+
+
 /* Project image gallery for main page */
 
-section.gallery { display:flex; width:90%;}
+section.gallery { 
+display:flex; 
+width:90%;
+}
 
-figure.intro img {width:15vw; max-width:300px; border-radius:50%;}
+figure.intro img {
+width:15vw;
+max-width:300px;
+border-radius:50%;
+}
 
 
+/* Sticky Sidebar */
+.sidebar {
+  position: fixed;
+  bottom: 50px;
+  left: 5px;
+  width: 300px;
+  border: 1px solid #001E44;
+  background-color: #CCDAE6;
+}
 
 
 /*GRID*/
