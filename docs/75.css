@@ -323,7 +323,7 @@ div.facsblock > figure > img {
 form#ssForm{
     display: flex;
     flex-direction: column;
-    width: auto;
+    width: 50%;
     justify-content: center;
 }
 span.ssQueryAndButton{
