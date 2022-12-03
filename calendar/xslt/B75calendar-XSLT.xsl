@@ -70,13 +70,34 @@
                     <nav>
                         <hr/>
                         <p class="navbar">
-                            <a href="../index.html">Home</a> | 
+                            <!--<a href="../index.html">Home</a> | 
                             <a href="../calendarPage.html">Behrend Calendars</a> | 
                             <a href="../travelLettersPage.html">Behrend Travel Letters</a> | 
                             <a href="../sipleLettersPage.html">Behrend Siple Letters</a> | 
-                            <a href="../warrenLettersPage.html">Behrend Warren Letters</a> | <a href="search.html">Search</a></p>
+                            <a href="../warrenLettersPage.html">Behrend Warren Letters</a> |--> 
+                            <a href="search.html">Search</a></p>
                         <hr/>
                     </nav>
+                    <div class="sidebar">
+                        <section id="toc">
+                            <div class="tocHeader"><h3>Table of Contents</h3></div>
+                            <ul>
+                                <li><a href="../index.html">Home</a></li>
+                                <li><a href="../calendarPage.html">Behrend Calendars</a></li>
+                                <li><a href="../travelLettersPage.html">Behrend Travel Letters</a></li>
+                                <li><a href="../sipleLettersPage.html">Behrend Siple Letters</a></li>
+                                <li><a href="../warrenLettersPage.html">Behrend Warren Letters</a></li>
+                            </ul>
+                            
+                            <ul>    
+                                    <xsl:apply-templates select="$MBCal//text//date" mode="toc">
+                                        
+                                        <xsl:sort select="@when"/>
+                                    </xsl:apply-templates>
+                                
+                            </ul>
+                        </section>
+                    </div>
                 <xsl:apply-templates select="current()">
                     
                     <xsl:sort select="descendant::date/@when"/>
@@ -99,7 +120,7 @@
     
     <xsl:template match="date" mode="toc">
         <li>
-            <a href="calendar/e-{@when}.html">
+            <a href="e-{@when}.html">
                 <xsl:apply-templates mode="toc"/>
             </a>
         </li>
