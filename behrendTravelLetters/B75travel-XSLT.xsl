@@ -227,12 +227,12 @@
     </xsl:template>
 
     <xsl:template match="front">
-        <a href="#{descendant::h1}">
+        <!--<a href="#{descendant::h1}">
             <h2 id="{base-uri() ! tokenize(., '/')[last()]}1955-07-26">
                 <xsl:value-of select="current() ! base-uri() ! tokenize(., '/')[last()]"/>
                 <xsl:text>-front, 1955-07-26</xsl:text>
             </h2>
-        </a>
+        </a>-->
         <div class="letter">
             <div class="header">1955-07-26</div>
             <xsl:apply-templates/>
@@ -240,12 +240,12 @@
     </xsl:template>
 
     <xsl:template match="back">
-        <a href="#{descendant::h1}">
+        <!--<a href="#{descendant::h1}">
             <h2 id="{base-uri() ! tokenize(., '/')[last()]}1955-07-26-back">
                 <xsl:value-of select="current() ! base-uri() ! tokenize(., '/')[last()]"/>
                 <xsl:text>-back, 1955-07-26</xsl:text>
             </h2>
-        </a>
+        </a>-->
         <div class="letter">
             <div class="header"> 1955-07-26 </div>
             <xsl:apply-templates/>
