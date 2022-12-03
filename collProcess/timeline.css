@@ -18,9 +18,6 @@ h2{
 td{
     padding: 0 5px;
 }
-span.span{
-    color:blue;
-}
 
 svg text{
     font-family: 'Galdeano', sans-serif;
@@ -41,6 +38,10 @@ svg text{
 {
     display: none;
     cursor: pointer;
+}
+
+#modal{
+    
 }
 
 
