@@ -57,7 +57,7 @@ h3 {
 }
 
 p {
-    font-size: 16px;
+    font-size: 18px;
     color: black;
 }
 
@@ -88,7 +88,7 @@ a:active {
     opacity: 0.65;
     width: auto;
     height: auto;
-    padding: 5px;
+    padding: 30px;
 }
 
 .PSB{
@@ -158,7 +158,7 @@ width:90%;
 figure.intro img {
 width:15vw;
 max-width:300px;
-border-radius:50%;
+border-radius: 15px;
 }
 
 
