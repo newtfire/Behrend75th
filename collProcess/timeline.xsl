@@ -332,9 +332,8 @@
           <script type="text/javascript" src="interact.js"/>
         </head>
         <body>
-          <h1>Timeline</h1>
           <div id="svgTimeline">
-            <svg xmlns="http://www.w3.org/2000/svg" height="1450px" width="9290px">
+            <svg xmlns="http://www.w3.org/2000/svg" height="1450px" width="930px">
               <xsl:sequence select="yxj:timeline()"/>
             </svg>
           </div>
