@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+    <title>List of Important People, Places, and Things mentioned in Paul Siple's Letter to Mr. Behrend</title>
+    <people>
+        <person>
+            <name>Ernst Behrend</name>
+            <desc>President of the Hammermill Paper Company. Lent a sextant to Paul Siple for use in his Antarctic expedition.</desc>
+        </person>
+        <person>
+            <name>Paul Siple</name>
+            <role>Leader/Biologist</role>
+            <desc>American Antarctic explorer. Participated in all 5 expeditions conducted by Admiral Byrd.</desc>
+            <graphic src="photos/Paulsiple1932" alt="Paul Siple in 1932"/>
+        </person>
+        <person>
+            <name>Richard Byrd</name>
+            <role>Admiral</role>
+            <desc>American naval officer and Antarctic explorer. Admiral Byrd conducted 5 Antarctic expeditions between 1928 and 1956.</desc>
+        </person>
+        <person>
+            <name>Alton Wade</name>
+            <role>Geologist</role>
+            <desc>Franklin Alton Wade was an American geologist who accompanied Admiral Richard Byrd on two Antarctic expeditions.</desc>
+        </person>
+        <person>
+            <name>Olin Stancliff</name>
+            <role>Driver/Assistant</role>
+            <desc>Part of Admiral Byrd's Antarctic sledging party. Olin Stancliff primarily served as a dog driver. Little other information is available.</desc>
+        </person>
+        <person>
+            <name>Stevenson Corey</name>
+            <role>Driver/Assistant</role>
+            <desc>A supply officer on Admiral Byrd's Antarctic expedition team. He also served as a dog driver along with Olin Stancliff.</desc>
+        </person>
+    </people>
+    <places>
+        <place>
+            <name>Marie Byrd Land</name>
+            <desc>Unclaimed region of Antarctica. Named after the wife of Admiral Richard E. Byrd.</desc>
+            <coords>Between 158°00'W and 103°24'W</coords>
+        </place>
+        <place>
+            <name>Little America</name>
+            <desc>A series of bases established in Antarctica by Admiral Byrd.</desc>
+            <coords>78°12′S 162°12′W</coords>
+        </place>
+        <place>
+            <name>Mt. Raymond Fosdick</name>
+            <desc>A mountain located in the Fosdick Mountain Range in Marie Byrd Land.</desc>
+            <coords>76°32′S 144°45′W</coords>
+        </place>
+        <place>
+            <name>Edsel Ford Mountain Range</name>
+            <desc>The mountain range containing Mt Raymond Fosdick</desc>
+        </place>
+    </places>
+    <things>
+        <thing>
+            <name>Sextant</name>
+            <desc>An instrument used in celestial navigation used to measure the distance between two visible objects.</desc>
+        </thing>
+    </things>
+</xml>
