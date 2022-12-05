@@ -5,7 +5,7 @@
     <xsl:output method="xhtml" html-version="5" omit-xml-declaration="yes" 
         include-content-type="no" indent="yes"/>
     
-   <!-- <xsl:variable name="WBColl" select="collection('XML?select=*.xml')"/>  -->
+    <!--<xsl:variable name="WBColl" select="collection('XML?select=*.xml')"/>--> 
     <!--<xsl:variable name="WBPic" select="collection('Letter_Images?select=*.jpeg')"/> -->
     
     <xsl:variable name="memorialPages" as="document-node()+" select="collection('XML/dividedPages/memorialPages/?select=*.xml')"/>
@@ -16,38 +16,44 @@
     <xsl:variable name="allCollections" as="document-node()+" select="($memorialPages | $parentsLetter | $warrenLetter1 | $warrenLetter2)"/>
     
     <xsl:template match="/">
+        
+        
+   <section id="fulltext"> 
+       <xsl:for-each select="$allCollections">  
+           <xsl:sort select="descendant::date[1]"/>
+        <xsl:variable name="currentCollection" as="document-node()+" select="current()"/>
+    <xsl:result-document method="xhtml" href="../docs/warrenLetters/{$currentCollection/base-uri() ! tokenize(., '/')[last()]}.html" > 
         <html>
             <head>
                 <title>Warren Behrend’s Last Correspondence and Memorial</title>
-                <link rel="stylesheet" type="text/css" href="webstyle.css"/>
+                <link rel="stylesheet" type="text/css" href="../75.css"/>
                 <style type="text/css"> </style>
             </head>
             <!-- <div class="graphics">
                        <xsl:apply-templates select="figure"/>
             </div>-->
             <body>
+                <nav>
+                    <hr/>
+                    <p class="navbar">
+                        <a href="../index.html">Home</a> | 
+                            <a href="../calendarPage.html">Behrend Calendars</a> | 
+                            <a href="../travelLettersPage.html">Behrend Travel Letters</a> | 
+                            <a href="../sipleLettersPage.html">Behrend Siple Letters</a> | 
+                            <a href="../warrenLettersPage.html">Behrend Warren Letters</a> |
+                        <a href="search.html">Search</a></p>
+                    <hr/>
+                </nav>
                 <h1>Warren Behrend’s Last Correspondence and Memorial</h1>
                 
-                <section id="toc">
-                    <h2>Contents</h2>
-                    <ul>
-                        <xsl:apply-templates select="$allCollections//xml" mode="toc">
-                            <xsl:sort select="descendant::date[1]"/>
-                            
-                        </xsl:apply-templates>   
-                    </ul>
-                </section> 
-        
-   <section id="fulltext"> 
-       <xsl:for-each select="$allCollections">  
-           <xsl:sort select="descendant::date[1]"/>
-        <xsl:variable name="currentCollection" as="document-node()+" select="current()"/>
-   <!--     <xsl:result-document method="xhtml" href="docs/{$currentCollection/base-uri() ! tokenize(., '/')[last()]}.html" >  -->
-
+                
                
             <xsl:comment>New structure for aligning page images and transcripts here.</xsl:comment>
              <section class="document">
-                 <div class="docImage"><figure>
+                 <div class="docImage">
+             <section id="{@xml:id}" class="document">
+               <div class="facsblock">
+                     <figure>
                      <img src="images/{descendant::figure/graphic/@src ! tokenize(., '/')[last()]}"/>
                      <figcaption><xsl:value-of select="descendant::figure/graphic/@alt"/></figcaption>
                  </figure></div>
@@ -58,25 +64,27 @@
                     </div>
                  
                 </section>
-  
-      <!--</xsl:result-document>-->
-    </xsl:for-each>
-   </section>
+                 </div>
+             </section>
             </body>
         </html>
+      </xsl:result-document>
+    </xsl:for-each>
+   </section>
+            
     </xsl:template>
     
-    <!--Templates in toc mode for the table of contents -->
+    <!--Templates in toc mode for the table of contents 
     <xsl:template match="xml" mode="toc">
         <li><a href="#{descendant::title/@titleId}"><xsl:apply-templates select="descendant::title/@titleId"/></a></li>
 
     </xsl:template>
-    
+    -->
 
     
     <!--Normal templates for fulltext view -->
     <xsl:template match="xml">
-        <a href="#{descendant::h1}"><h2 id="{descendant::title/@titleId}"><xsl:apply-templates select="descendant::title"/></h2></a>
+        <h2 id="{descendant::title/@titleId}"><xsl:apply-templates select="descendant::title"/></h2>
       <!--  <div class="img">
             <img src="{//graphic[1]/@src}" alt="{//figure/graphic[1]/@alt}"/>
             <img src="{//graphic[2]/@src}" alt="{//figure/graphic[2]/@alt}"/>
