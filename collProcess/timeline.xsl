@@ -163,7 +163,7 @@
           </xsl:variable>
 
           <!-- print MM-DD -->
-          <a href="../doc/calendar/{($calendar//div2/@xml:id => sort(xs:string(.)))[$pos]}.html">
+          <a href="../docs/calendar/{($calendar//div2/@xml:id => sort(xs:string(.)))[$pos]}.html">
             <text x="{20+$lineX}" y="{$yInterval * $dayIntervalFromFirstFixed}"
               fill="{$colorArray[1]}">
               <xsl:value-of select="current() ! string() ! substring(., 6, 10)"/>
