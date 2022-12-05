@@ -321,7 +321,7 @@ display:grid;
 grid-auto-flow:column;
 grid-template-columns: .75fr .23fr; 
 /*  ebb: need to look up how minmax works.  */
-grid-column-gap:2em;
+grid-column-gap:0.10em;
 padding:1em;
  padding-left: 20%;
 }
