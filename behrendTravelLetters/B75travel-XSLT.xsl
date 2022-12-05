@@ -89,13 +89,13 @@
     </xsl:template>
 
     <xsl:template match="letter">
-        <!--<a href="#{descendant::h1}">
+<!--        <a href="#{descendant::h1}">-->
             <h2 id="{@xml:id}">
-                <xsl:value-of select="@xml:id"/>
+                <xsl:value-of select="@xml:id ! tokenize(., '-')[1]"/>
                 <xsl:text>, </xsl:text>
                 <xsl:apply-templates select="(descendant::date/@when)[1]"/>
             </h2>
-        </a>-->
+        <!--</a>-->
         <!--        <div class="letter">-->
         <div class="header">
             <xsl:value-of select="(descendant::date/@when)[1]"/>
