@@ -22,7 +22,7 @@
        <xsl:for-each select="$allCollections">  
            <xsl:sort select="descendant::date[1]"/>
         <xsl:variable name="currentCollection" as="document-node()+" select="current()"/>
-    <xsl:result-document method="xhtml" href="../docs/warrenLetters/{$currentCollection/base-uri() ! tokenize(., '/')[last()]}.html" > 
+    <xsl:result-document method="xhtml" href="../docs/warrenLetters/{$currentCollection/base-uri() ! tokenize(., '/')[last()] ! substring-before(., '.xml')}.html" > 
         <html>
             <head>
                 <title>Warren Behrend’s Last Correspondence and Memorial</title>
@@ -51,7 +51,7 @@
             <xsl:comment>New structure for aligning page images and transcripts here.</xsl:comment>
              <section class="document">
                  <div class="docImage">
-             <section id="{@xml:id}" class="document">
+                     <section id="e-{$currentCollection/base-uri() ! tokenize(., '/')[last()] ! substring-before(., '.xml')}" class="document">
                <div class="facsblock">
                      <figure>
                      <img src="images/{descendant::figure/graphic/@src ! tokenize(., '/')[last()]}"/>
