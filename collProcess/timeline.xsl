@@ -264,7 +264,7 @@
         <g class="timeline">
           <xsl:for-each select="$siple">
             <a href="../docs/siple/{current()/descendant::date[1]/@when}.html" target="_blank">
-              <text x="{20+$lineX}" y="{$yInterval*position()}">
+              <text x="{20+$lineX}" y="{$yInterval*position()}"  fill="{$colorArray[$index]}">
                 <xsl:value-of select="current()/descendant::date[1]/@when ! substring(., 6, 10)"/>
               </text>
             </a>
