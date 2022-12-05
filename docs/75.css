@@ -313,6 +313,11 @@ div.footer p img{display:inline;}
      color: black;
  }
  
+ 
+ span[title]{
+     color: green;
+ }
+ 
  /*  let's try creating a grid for the div.facsblock, so all the text appears in a new column to the right of the image.  */
  
  section[id^="e-"] div.facsblock {
