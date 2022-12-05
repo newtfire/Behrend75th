@@ -29,7 +29,7 @@ svg text{
 }
 
 text[id$="Title"]:hover, .timeline text:hover, #timelineHeader g:hover{
-    filter: saturate(3);
+    filter: brightness(1.2);
 }
 
 
