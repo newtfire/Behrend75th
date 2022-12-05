@@ -26,7 +26,33 @@
                         <link rel="stylesheet" type="text/css" href="../75.css"/>
                     </head>
                     <body>
-                        <nav>
+                       <!-- <nav>
+                            <hr/>
+                            <p class="navbar"><a href="search.html">Search</a></p>
+                            <hr/>
+                        </nav>-->
+                        
+                        <div class="sidebar">
+                            <section id="toc">
+                                <h3>Table of Contents</h3>
+                                <ul>
+                                    <li><a href="../index.html">Home</a></li>
+                                    <li><a href="../calendarPage.html">Behrend Calendars</a></li>
+                                    <li><a href="../travelLettersPage.html">Behrend Travel Letters</a></li>
+                                    <li><a href="../sipleLettersPage.html">Behrend Siple Letters</a></li>
+                                    <li><a href="../warrenLettersPage.html">Behrend Warren Letters</a></li>
+                                    <li><a href="../search.html">🔎 Search</a></li>
+                                </ul>
+                                <ul>
+                                    <xsl:apply-templates select="$travelColl//xml" mode="toc">
+                                        <xsl:sort select="(descendant::date/@when)[1]"/>
+                                    </xsl:apply-templates>
+                                </ul>
+                            </section>
+                        </div>
+                        
+                        
+                       <!-- <nav>
                             <hr/>
                             <p class="navbar">
                                 <a href="../index.html">Home</a> | <a href="../calendarPage.html"
@@ -36,22 +62,24 @@
                                     >Behrend Warren Letters</a> | <a href="search.html"
                                 >Search</a></p>
                             <hr/>
-                        </nav>
+                        </nav>-->
                         <section id="e-{@xml:id}" class="document">
                             <xsl:choose>
                                 <xsl:when test="current()/front ! name() = 'front'">
                                     <div class="facsblock">
                                         <xsl:apply-templates select="descendant::figure[1]"/>
-                                        <div class="transcript">
-                                            <xsl:apply-templates select="current()/front"/>
-                                        </div>
                                     </div>
+                                    <div class="transcript">
+                                        <xsl:apply-templates select="current()/front"/>
+                                    </div>
+
                                     <div class="facsblock">
                                         <xsl:apply-templates select="descendant::figure[2]"/>
-                                        <div class="transcript">
-                                            <xsl:apply-templates select="current()/back"/>
-                                        </div>
                                     </div>
+                                    <div class="transcript">
+                                        <xsl:apply-templates select="current()/back"/>
+                                    </div>
+
                                 </xsl:when>
                                 <xsl:otherwise>
                                     <div class="facsblock">
@@ -82,19 +110,19 @@
     <!--Templates in toc mode for the table of contents -->
     <xsl:template match="xml" mode="toc">
         <li>
-            <a href="#{letter/@xml:id}">
+            <a href="{letter/@xml:id}.html">
                 <xsl:value-of select="letter/@xml:id"/>
             </a>
         </li>
     </xsl:template>
 
     <xsl:template match="letter">
-<!--        <a href="#{descendant::h1}">-->
-            <h2 id="{@xml:id}">
-                <xsl:value-of select="@xml:id ! tokenize(., '-')[1]"/>
-                <xsl:text>, </xsl:text>
-                <xsl:apply-templates select="(descendant::date/@when)[1]"/>
-            </h2>
+        <!--        <a href="#{descendant::h1}">-->
+        <h2 id="{@xml:id}">
+            <xsl:value-of select="@xml:id ! tokenize(., '-')[1]"/>
+            <xsl:text>, </xsl:text>
+            <xsl:apply-templates select="(descendant::date/@when)[1]"/>
+        </h2>
         <!--</a>-->
         <!--        <div class="letter">-->
         <div class="header">
