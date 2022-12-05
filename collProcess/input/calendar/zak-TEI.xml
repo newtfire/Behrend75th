@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="out/behrendCalODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="out/behrendCalODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Mary Behrend's Calendar Sheets</title>
+            <author>Mary Behrend</author>
+            <editor xml:id="rgerzevske">Rachel Gerzevske</editor>
+            <editor xml:id="acolereeves">Amory Coleman-Reeves</editor>
+            <editor xml:id="zmurphy">Zak Murphy</editor>
+            <editor xml:id="lhering">Logan Hering</editor>
+         </titleStmt>
+         <editionStmt>
+            <edition>First digital edition, launched <date>October 2021</date> by students in the
+               DIGIT 110 Text Encoding class taught by <name xml:id="ebeshero">Elisa
+                  Beshero-Bondar</name> at Penn State Erie, The Behrend College.</edition>
+         </editionStmt>
+         <publicationStmt>
+            <p>As far as we know, Mary Behrend never published these.</p>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <repository>Penn State Erie, The Behrend College Library</repository>
+               </msIdentifier>
+               <physDesc>
+                  <handDesc>
+                     <handNote xml:id="calendarPub" medium="print">New Friendship Calendar Company
+                        printing the calendar sheets.</handNote>
+                     <handNote xml:id="redPen" medium="red inkpen">Mary Behrend writing in a red
+                        pen.</handNote>
+                     <handNote xml:id="pencil" medium="pencil">Mary Behrend writing in a
+                        pencil.</handNote>
+                     <handNote xml:id="blackpen" medium="black inkpen"> This is usually large and
+                        very clear to read compared to red and pencil</handNote>
+                     <handNote xml:id="greenpen" medium="green inkpen"> This was used in saint
+                        Patrick's day its a special event in the calendar</handNote>
+                     <handNote xml:id="multicolor" medium="multiple colors and media">This
+                        designates the inks or markings Mary Behrend made for artwork.</handNote>
+
+                  </handDesc>
+
+               </physDesc>
+               <history>
+                  <origin>Printed calendar sheets from <date>1909</date> with handwriting and
+                     illustrations added by Mary Behrend, found inside an envelope in a family baby
+                     album.</origin>
+               </history>
+
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div1 type="calendarCollection">
+
+
+            <div2 xml:id="e-1909-05-12"
+               facs="https://arrowarchive.github.io/behrendcalendar/photos/may/1909-05-12.jpg">
+
+               <fw place="top-center" hand="#calendarPub">COPYRIGHT 1908, BY FRIENDSHIP CALENDAR CO.
+                  NEW BRITAIN, CONN.</fw>
+               <ab rend="smallcaps" hand="#calendarPub">
+                  <lb/><date when="1909-05-12">May 12, 1909. <lb/>Wednesday</date>
+               </ab>
+               <figure rend="color" hand="#multicolor">
+                  <figDesc resp="#zmurphy">Drawing of a women in white pushing a stroller, talking
+                     to a women in black named Gamie that has a black dog to the left of
+                     her.</figDesc>
+               </figure>
+               <ab hand="#blackpen" rend="smallcaps">
+                  <lb/>"There's something queer inside that thing"<lb/> Gamie seems to think-
+                  <lb/>"I really dont know what it is <lb/>That can only sleep and drink"</ab>
+               <ab rend="smallcaps"><add rend="print" hand="#redPen" place="bottom-center"><lb/>What
+                     do you think is inside!</add></ab>
+               <note resp="zmurphy">This shows tha gamie is not sure about the baby that is inside
+                  of the stroller, and is very confused about the baby.</note>
+
+            </div2>
+
+            <div2 xml:id="e-1909-04-16"
+               facs="https://arrowarchive.github.io/behrendcalendar/photos/april/1909-04-16.jpg">
+
+               <fw place="top-center" hand="#calendarPub">COPYRIGHT 1908, BY FRIENDSHIP CALENDAR CO.
+                  NEW BRITAIN, CONN.</fw>
+               <ab rend="smallcaps" hand="#calendarPub">
+                  <lb/><date when="1909-04-16">April 16, 1909. <lb/>Friday</date>
+               </ab>
+               <figure rend="color" hand="#multicolor">
+                  <figDesc resp="#zmurphy">Drawing of a white fish that is alive then a drawing of
+                     the white fish cooked.</figDesc>
+               </figure>
+               <ab hand="#blackpen" rend="smallcaps">
+                  <lb/>
+                  <emph style="underline">fish day</emph>
+                  <lb/> this is the day we have <lb/> white-fish <lb/> truly a most delicious <lb/>
+                  <emph style="underline">dish.</emph>
+               </ab>
+               <ab rend="cursive"><add rend="print" hand="#redPen" place="right-verticle">
+                     <lb/> are you having white fish today? <lb/> I'll be back soon love from
+                     Molly.</add>
+               </ab>
+               <note resp="#zmurphy">This is showing that Mary is cooking fish for dinner and is
+                  asking if Ernst will be attending and having fish with her.</note>
+            </div2>
+            <div2 xml:id="e-1909-05-06"
+               facs="https://arrowarchive.github.io/behrendcalendar/photos/may/1909-05-06.jpg">
+
+               <fw place="top-center" hand="#calendarPub">COPYRIGHT 1908, BY FRIENDSHIP CALENDAR CO.
+                  NEW BRITAIN, CONN.</fw>
+               <ab rend="smallcaps" hand="#calendarPub">
+                  <lb/><date when="1909-05-06">May 06, 1909. <lb/>Thursday</date>
+               </ab>
+               <figure rend="color" hand="#multicolor">
+                  <figDesc resp="#zmurphy">Drawing of a house with grass around the house, as well
+                     as smoke coming out of the chimney</figDesc>
+               </figure>
+               <ab rend="cursive"><add rend="print" hand="#redPen" place="center">
+                     <lb/> "Some love the glow of outward show <lb/> Some love mere wealth and try
+                     to win it <lb/> The house to me may lovely be <lb/> If i but like the people in
+                     it" <lb/><unclear>Chaz Levain </unclear></add>
+                  <lb/> Very true indeed </ab>
+               <note resp="#zmurphy">This shows that Mary loves the people that consist of her
+                  household and loves her house because of that.</note>
+            </div2>
+            <div2 xml:id="e-1909-04-18"
+               facs="https://arrowarchive.github.io/behrendcalendar/photos/april/1909-04-18.jpg">
+
+               <fw place="top-center" hand="#calendarPub">COPYRIGHT 1908, BY FRIENDSHIP CALENDAR CO.
+                  NEW BRITAIN, CONN.</fw>
+               <ab rend="smallcaps" hand="#calendarPub">
+                  <lb/><date when="1909-04-18">April 18, 1909. <lb/>Sunday</date>
+               </ab>
+               <figure rend="color" hand="#multicolor">
+                  <figDesc resp="#zmurphy">Drawing of a women that is blushing because of the
+                     jewelry that is around her neck.</figDesc>
+               </figure>
+               <ab rend="cursive"><add rend="cursive" hand="#Blackpen, " place="center">
+                     <lb/>Jewels are all very nice <lb/> But Ernst &amp; I will think twice <lb/>
+                     Before buying collars <lb/> For thousands of dollars <lb/>You see we ???????
+                     the price!</add>
+               </ab>
+               <ab rend="cursive"><add hand="#redPen" place="top-right" rend="cursive">
+                     <lb/>I don’t want a <lb/> dog collar anyway <lb/> so it’s all right! <lb/> Love
+                     from Molly. </add>
+               </ab>
+
+               <note resp="#zmurphy">This is showing that mary is very conservative of her money and
+                  does not want to spend thousands of dollars on jewelry when they could because
+                  they were very financially stable.</note>
+            </div2>
+            <div2 xml:id="e-1909-05-01"
+               facs="https://arrowarchive.github.io/behrendcalendar/photos/may/1909-05-01.jpg">
+
+               <fw place="top-center" hand="#calendarPub">COPYRIGHT 1908, BY FRIENDSHIP CALENDAR CO.
+                  NEW BRITAIN, CONN.</fw>
+               <ab rend="smallcaps" hand="#calendarPub">
+                  <lb/><date when="1909-05-01">May 01, 1909. <lb/>Saturday</date>
+               </ab>
+               <figure rend="color" hand="#multicolor">
+                  <figDesc resp="#zmurphy">A picture of a basket that is very colorful and is
+                     adressed to Mr. Behrend.</figDesc>
+               </figure>
+               <ab rend="print"><add rend="print" hand="#smallcaps" place="center">
+                     <lb/> May Baskets <lb/> No one knows who sends them <lb/> But they come each
+                     first of May <lb/> Just full of lovely things to eat <lb/> Upon this joyful
+                     day.</add>
+               </ab>
+               <ab rend="cursive"><add hand="#redPen" place="top-right" rend="cursive">
+                     <lb/>Do you know <lb/> Who sent this? <lb/> Love From Molly </add>
+               </ab>
+               <note resp="#zmurphy">This shows that Mary is receiving packages every May and there
+                  are tasty treats within the basket.</note>
+            </div2>
+            <div2 xml:id="e-1909-05-14"
+               facs="https://arrowarchive.github.io/behrendcalendar/photos/may/1909-05-14.jpg">
+
+               <fw place="top-center" hand="#calendarPub">COPYRIGHT 1908, BY FRIENDSHIP CALENDAR CO.
+                  NEW BRITAIN, CONN.</fw>
+               <ab rend="smallcaps" hand="#calendarPub">
+                  <lb/><date when="1909-05-14">May 14, 1909. <lb/>Friday</date>
+               </ab>
+               <figure rend="color" hand="#pencil">
+                  <figDesc resp="#zmurphy">Drawing of a black and white clock that shows the time of
+                     5:30 with an underline signifying a table that holds the clock.</figDesc>
+               </figure>
+               <ab rend="print"><add rend="print" hand="#pencil" place="center">
+                     <lb/> A Fiendish invention <lb/> Is what I call this <lb/> Without it our lives
+                        <lb/><emph style="underline">would be heavenly bliss!</emph></add>
+               </ab>
+               <ab rend="cursive"><add rend="print" hand="#redpen" place="bottom-center">
+                     <lb/> Parsle the old thing off </add>
+               </ab>
+
+               <note resp="#zmurphy">This shows that Mary does not like clocks and that they should
+                  be thrown away</note>
+            </div2>
+
+            <div2 xml:id="e-1909-05-15"
+               facs="https://arrowarchive.github.io/behrendcalendar/photos/may/1909-05-15.jpg">
+
+               <fw place="top-center" hand="#calendarPub">COPYRIGHT 1908, BY FRIENDSHIP CALENDAR CO.
+                  NEW BRITAIN, CONN.</fw>
+               <ab rend="smallcaps" hand="#calendarPub">
+                  <lb/><date when="1909-05-15">May 15, 1909. <lb/>Saturday</date>
+               </ab>
+               <figure rend="pencil" hand="#pencil">
+                  <figDesc resp="#zmurphy">Drawing of a bunnie that is hopping with a blue tie
+                     around its collar and red ears.</figDesc>
+               </figure>
+               <ab rend="print"><add rend="smallcaps" hand="#pencil" place="center">
+                     <lb/>This is not a "March Hare" <lb/> But a plain cotton bunny <lb/> When I
+                     look I must smile <lb/> He is really so funny! </add>
+               </ab>
+               <ab rend="cursive"><add rend="print" hand="#redpen" place="bottom-center">
+                     <lb/> Love From Molly</add>
+               </ab>
+
+               <note resp="#zmurphy">This is showing that Mary is so excited to see cotton bunnies
+                  and they make her smile and she all around is happy when she sees one.</note>
+            </div2>
+            <div2 xml:id="e-1909-05-22"
+               facs="https://arrowarchive.github.io/behrendcalendar/photos/may/1909-05-22.jpg">
+
+               <fw place="top-center" hand="#calendarPub">COPYRIGHT 1908, BY FRIENDSHIP CALENDAR CO.
+                  NEW BRITAIN, CONN.</fw>
+               <ab rend="smallcaps" hand="#calendarPub">
+                  <lb/><date when="1909-05-22">May 22, 1909. <lb/>Saturday</date>
+               </ab>
+               <figure rend="color" hand="#pencil">
+                  <figDesc resp="#zmurphy">Drawing of a small grey dog that is drinking german beer
+                     with water underneath the dogs feet.</figDesc>
+               </figure>
+               <ab rend="print"><add rend="smallcaps" hand="#pencil" place="center">
+                     <lb/>Mr. Reichemheims dog is queer <lb/> He <emph style="underline"
+                        >likes</emph> that nasty german beer.<lb/> Here he is lapping it up - <lb/>
+                     <emph style="underline">Very</emph> bad for such a pup! </add>
+               </ab>
+
+
+
+               <note resp="#zmurphy">This is showing that Mary is very unhappy at Mr. Reichemheims
+                  dog for liking german beer and expresses that it is really bad for a puppy like it
+                  to be drinking.</note>
+            </div2>
+            <div2 xml:id="e-1909-06-09"
+               facs="https://arrowarchive.github.io/behrendcalendar/photos/june/1909-06-09.jpg">
+               
+               <fw place="top-center" hand="#calendarPub">COPYRIGHT 1908, BY FRIENDSHIP CALENDAR CO.
+                  NEW BRITAIN, CONN.</fw>
+               <ab rend="smallcaps" hand="#calendarPub">
+                  <lb/><date when="1909-06-09">June 09, 1909. <lb/>Saturday</date>
+               </ab>
+               <figure rend="color" hand="#pencil">
+                  <figDesc resp="#zmurphy">Drawing of a small grey dog that is drinking german beer
+                     with water underneath the dogs feet.</figDesc>
+               </figure>
+               <ab rend="print"><add rend="smallcaps" hand="#pencil" place="center">
+                  <lb/>Mr. Reichemheims dog is queer <lb/> He <emph style="underline"
+                     >likes</emph> that nasty german beer.<lb/> Here he is lapping it up - <lb/>
+                  <emph style="underline">Very</emph> bad for such a pup! </add>
+               </ab>
+               
+               
+               
+               <note resp="#zmurphy">This is showing that Mary is very unhappy at Mr. Reichemheims
+                  dog for liking german beer and expresses that it is really bad for a puppy like it
+                  to be drinking.</note>
+            </div2>
+
+
+
+
+
+
+
+
+         </div1>
+      </body>
+   </text>
+</TEI>
