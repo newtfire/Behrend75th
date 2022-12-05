@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Galdeano&display=swap');
+
+body{
+    background: white;
+}
+
+svg text{
+    font-family: 'Galdeano', sans-serif;
+}
+
+#svgTimeline{
+    margin: auto;    
+    width: 929px;
+}
+
+#timelineHeader{
+    cursor: pointer;
+}
+
+#calendar,#warrenLetters,#sipleLetter,#travelLetters,
+#calendar-timeline,#warrenLetters-timeline,#sipleLetter-timeline,#travelLetters-timeline
+{
+    display: none;
+    cursor: pointer;
+}
+
+#calendar-timelineInfo,#warrenLetters-timelineInfo,#sipleLetter-timelineInfo,#travelLetters-timelineInfo{
+    display: none;
+}
+
+text[id$="Title"]:hover, .timeline text:hover, #timelineHeader g:hover{
+    filter: saturate(3);
+}
+
+
+
+

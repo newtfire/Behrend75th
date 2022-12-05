@@ -324,7 +324,7 @@
 
   <xsl:template match="/">
     <xsl:result-document method="xhtml" html-version="5" omit-xml-declaration="yes"
-      include-content-type="no" indent="yes" href="timeline.html">
+      include-content-type="no" indent="yes" href="../docs/timeline.html">
       <html>
         <head>
           <title>Timeline</title>
