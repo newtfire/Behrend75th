@@ -333,7 +333,7 @@
         </head>
         <body>
           <div id="svgTimeline">
-            <svg xmlns="http://www.w3.org/2000/svg" height="1450px" width="930px">
+            <svg xmlns="http://www.w3.org/2000/svg" height="1400px" width="930px">
               <xsl:sequence select="yxj:timeline()"/>
             </svg>
           </div>
