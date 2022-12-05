@@ -205,15 +205,16 @@
               select="$warrenDateOrdered[last()]"/></text>
         </g>
         <!-- list of MM-DD -->
-        <g class="timeline">
+        <g class="timeline" transform="translate(0, {$yInterval})">
           <xsl:for-each select="$warrenDateOrdered => distinct-values()">
-            <text x="{20+$lineX}" y="{$yInterval*position()}" fill="{$colorArray[$index]}">
+            <xsl:variable name="daysNumFromFirst"
+              select="days-from-duration(xs:date(current()) - $warrenDateOrdered[1])"/>
+            <text x="{20+$lineX}" y="{$yInterval*$daysNumFromFirst}" fill="{$colorArray[$index]}">
               <xsl:value-of select="current()"/> (2 letters) </text>
-
-            <line x1="{$lineX}" y1="{$yInterval*(position()-1.5)}" x2="{$lineX}"
-              y2="{$yInterval*(position()+1)}" style="stroke:{$colorArray[$index]};stroke-width:3"/>
-            <line x1="{$lineX}" y1="{$yInterval*position()}" x2="{$lineX + 10}"
-              y2="{$yInterval*position()}" style="stroke:{$colorArray[$index]};stroke-width:2"
+            <line x1="{$lineX}" y1="{$yInterval*($daysNumFromFirst - 1.5)}" x2="{$lineX}"
+              y2="{$yInterval*($daysNumFromFirst+1)}" style="stroke:{$colorArray[$index]};stroke-width:3"/>
+            <line x1="{$lineX}" y1="{$yInterval*$daysNumFromFirst}" x2="{$lineX + 10}"
+              y2="{$yInterval*$daysNumFromFirst}" style="stroke:{$colorArray[$index]};stroke-width:2"
               transform="translate(0,-4)"/>
           </xsl:for-each>
         </g>

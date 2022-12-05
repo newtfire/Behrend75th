@@ -30,7 +30,7 @@
                 </div>
                 
                 <section id="toc">
-                    <h2>Contents</h2>
+                    <h2>Contents</h2> 
                     <ul>
                         <xsl:apply-templates select="$travelColl//xml" mode="toc">
                             <xsl:sort select="(descendant::date/@when)[1]"/>
