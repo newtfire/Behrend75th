@@ -56,10 +56,11 @@
                                 <xsl:otherwise>
                                     <div class="facsblock">
                                         <xsl:apply-templates select="descendant::figure"/>
-                                        <div class="transcript">
-                                            <xsl:apply-templates select="current()"/>
-                                        </div>
                                     </div>
+                                    <div class="transcript">
+                                        <xsl:apply-templates select="current()"/>
+                                    </div>
+
                                 </xsl:otherwise>
                             </xsl:choose>
                         </section>
@@ -95,11 +96,11 @@
                 <xsl:apply-templates select="(descendant::date/@when)[1]"/>
             </h2>
         </a>-->
-<!--        <div class="letter">-->
-            <div class="header">
-                <xsl:value-of select="(descendant::date/@when)[1]"/>
-            </div>
-            <xsl:apply-templates select="descendant::p"/>
+        <!--        <div class="letter">-->
+        <div class="header">
+            <xsl:value-of select="(descendant::date/@when)[1]"/>
+        </div>
+        <xsl:apply-templates select="descendant::p"/>
         <!--</div>-->
     </xsl:template>
 
@@ -167,7 +168,7 @@
             <xsl:apply-templates/>
         </span>
     </xsl:template>
-    
+
     <xsl:template match="animal">
         <span class="animal">
             <xsl:apply-templates/>
