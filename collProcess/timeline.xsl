@@ -163,7 +163,7 @@
           </xsl:variable>
 
           <!-- print MM-DD -->
-          <a href="calendar/{($calendar//div2/@xml:id => sort(xs:string(.)))[$pos]}.html">
+          <a href="../docs/calendar/{($calendar//div2/@xml:id => sort(xs:string(.)))[$pos]}.html">
             <text x="{20+$lineX}" y="{$yInterval * $dayIntervalFromFirstFixed}"
               fill="{$colorArray[1]}">
               <xsl:value-of select="current() ! string() ! substring(., 6, 10)"/>
@@ -228,7 +228,7 @@
           <xsl:for-each select="$warrenDateOrdered => distinct-values()">
             <xsl:variable name="daysNumFromFirst"
               select="days-from-duration(xs:date(current()) - $warrenDateOrdered[1])"/>
-            <a href="warrenLettersPage.html">
+            <a href="../docs/warrenLettersPage.html">
               <text x="{20+$lineX}" y="{$yInterval*$daysNumFromFirst}" fill="{$colorArray[$index]}">
                 <xsl:value-of select="current()"/> (2 letters) </text>
             </a>
@@ -263,7 +263,7 @@
         <!-- list of MM-DD -->
         <g class="timeline">
           <xsl:for-each select="$siple">
-            <a href="siple/{current()/descendant::date[1]/@when}.html">
+            <a href="../docs/siple/{current()/descendant::date[1]/@when}.html">
               <text x="{20+$lineX}" y="{$yInterval*position()}">
                 <xsl:value-of select="current()/descendant::date[1]/@when ! substring(., 6, 10)"/>
               </text>
@@ -305,7 +305,7 @@
             <xsl:variable name="pos" select="position()"/>
             <xsl:variable name="daysNumFromFirst"
               select="days-from-duration($currentDate - $travelDateOrdered[1])"/>
-            <a href="travelLetters/{descendant::letter/@xml:id}.html">
+            <a href="../docs/travelLetters/{descendant::letter/@xml:id}.html">
               <text x="{20+$lineX}" y="{$yInterval*$daysNumFromFirst}" fill="{$colorArray[$index]}">
                 <xsl:value-of select="$currentDate ! string() ! substring(., 6, 10)"/>
               </text>
@@ -332,9 +332,8 @@
           <script type="text/javascript" src="interact.js"/>
         </head>
         <body>
-          <h1>Timeline</h1>
           <div id="svgTimeline">
-            <svg xmlns="http://www.w3.org/2000/svg" height="1450px" width="9290px">
+            <svg xmlns="http://www.w3.org/2000/svg" height="1400px" width="930px">
               <xsl:sequence select="yxj:timeline()"/>
             </svg>
           </div>
