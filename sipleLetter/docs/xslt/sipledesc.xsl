@@ -10,10 +10,10 @@
     <xsl:template match="/">
         <html>
             <head>
-                <title>Descriptions of People, Places, and Things</title>
+                <title>Guide to People, Places, and Things Mentioned in this Letter</title>
             </head>
             <body>            
-                <h1>Descriptions of People, Places, and Things</h1>
+                <h1>Guide to People, Places, and Things Mentioned in this Letter</h1>
                 <div>
                     <xsl:apply-templates/>
                 </div>
@@ -23,11 +23,18 @@
         </html>
     </xsl:template>
     <xsl:template match="person | place |thing">
+        <xsl:apply-templates select="name"/>
         <ul>
-                <xsl:apply-templates/>
+                <xsl:apply-templates select="*[not(name()='name')]"/>
         </ul>
     </xsl:template>
-    <xsl:template match="name | role | desc | coords">
+    <xsl:template match="name">
+        
+        <h3>
+            <xsl:apply-templates/>
+        </h3>
+    </xsl:template>
+    <xsl:template match="role | desc | coords">
         <li>
             <xsl:apply-templates/>
         </li>
