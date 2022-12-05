@@ -67,17 +67,17 @@
                        
                    </head>
                 <body>
-                    <nav>
+                   <!-- <nav>
                         <hr/>
                         <p class="navbar">
-                            <!--<a href="../index.html">Home</a> | 
+                            <!-\-<a href="../index.html">Home</a> | 
                             <a href="../calendarPage.html">Behrend Calendars</a> | 
                             <a href="../travelLettersPage.html">Behrend Travel Letters</a> | 
                             <a href="../sipleLettersPage.html">Behrend Siple Letters</a> | 
-                            <a href="../warrenLettersPage.html">Behrend Warren Letters</a> |--> 
+                            <a href="../warrenLettersPage.html">Behrend Warren Letters</a> |-\-> 
                             <a href="search.html">Search</a></p>
                         <hr/>
-                    </nav>
+                    </nav>-->
                     <div class="sidebar">
                         <section id="toc">
                             <div class="tocHeader"><h3>Table of Contents</h3></div>
@@ -87,6 +87,7 @@
                                 <li><a href="../travelLettersPage.html">Behrend Travel Letters</a></li>
                                 <li><a href="../sipleLettersPage.html">Behrend Siple Letters</a></li>
                                 <li><a href="../warrenLettersPage.html">Behrend Warren Letters</a></li>
+                                <li><a href="../search.html">🔎 Search</a></li>
                             </ul>
                             
                             <ul>    
