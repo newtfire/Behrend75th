@@ -11,8 +11,7 @@
             </head>
             <body>            
                 <h1>Letter from Paul Siple to Mr. Behrend</h1>
-                <meta></meta>
-                <br/>
+
                 <div>
                     <ul>
                     
