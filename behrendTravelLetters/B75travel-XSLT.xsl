@@ -284,7 +284,7 @@
        <h3>Front</h3>
         <!--</a>-->
         <div class="letter">
-            <div class="header">1955-07-26</div>
+            <div class="header"><xsl:value-of select="(//date/@when)[1]"/></div>
             <xsl:apply-templates/>
         </div>
     </xsl:template>
@@ -295,7 +295,7 @@
        <h3>Back</h3>
         <!--</a>-->
         <div class="letter">
-            <div class="header"> 1955-07-26 </div>
+            <div class="header"><xsl:value-of select="(//date/@when)[1]"/></div>
             <xsl:apply-templates/>
         </div>
     </xsl:template>
