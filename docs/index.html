@@ -4,15 +4,83 @@
         <title>Behrend's 75th</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" type="text/css" href="75.css5.css" />
+        <link rel="stylesheet" type="text/css" href="75.css" />
+
     </head>
     <body>
-        <h1>75 Years of Behrend</h1>
-        <nav>
+        <div class="banner"><h1>75 Years of Behrend</h1><h1><a href="search.html">🔎 Search</a> </h1>
+       <!-- ebb: Maybe let's not be this overt with the university logo. 
+           <img src="images/pennStateHorizontal.png" class="PSB"/>-->
+        </div>
+      <!-- Save this for internal pages? <nav>
             <hr/>
-            <p class="navbar"><a href="index.html">Home</a> | <a href="calendarPage.html">Behrend Calendars</a> | <a href="travelLettersPage.html">Behrend Travel Letters</a> | <a href="sipleLettersPage.html">Behrend Siple Letters</a> | <a href="warrenLettersPage.html">Behrend Warren Letters</a></p>
+            <p class="navbar"><a href="index.html">Home</a> | <a href="calendarPage.html">Behrend Calendars</a> | <a href="travelLettersPage.html">Behrend Travel Letters</a> | <a href="sipleLettersPage.html">Behrend Siple Letters</a> | <a href="warrenLettersPage.html">Behrend Warren Letters</a> | <a href="search.html">Search</a></p>
             <hr/>
-        </nav>
-        <p> Insert Text Here</p>
+        </nav>-->
+        <div class="block">
+            <!-- ebb: Move the simple contents of the search page here?  -->
+            <p>Welcome! Happy 75th Anniversary to Behrend! This site features student-designed projects about the history of the Behrend family and the origins of Penn State Behrend. 
+                <br/>
+               The following projects are available for browsing.</p>
+        <h3>Not sure where to start?</h3>
+            <p>Check out the timeline at the bottom of the page, and pick a date!</p>
+           
+        </div>
+        <section class="gallery">
+            <figure class="intro">
+                <figcaption><h3><a href="calendarPage.html">Mary Behrend's 1909 calendar</a></h3></figcaption>
+                <img src="calendar/photos/1909-03-17.jpg" alt="March 17, 1909 image from Mary Behrend's 1909 calendar"/>
+            </figure>
+            
+            <figure class="intro">
+                <figcaption><h3><a href="warrenLettersPage.html">Warren Behrend’s last letters, December 1929</a></h3></figcaption>
+                <img src="warrenLetters/images/warren-from-behrend-remembered.jpg" alt="Warren Behrend"/>
+            </figure>
+            
+            <figure class="intro">
+                <figcaption><h3><a href="sipleLettersPage.html">1935 letter from Paul Siple to Mr. Behrend</a></h3></figcaption>
+                <img src="siple/photos/Glacier.jpg" alt="glacier image to introduce Paul Siple's letter"/>
+                
+            </figure>
+            
+            <figure class="intro">
+                <figcaption><h3><a href="travelLettersPage.html">Behrends' travel letters from Europe, July 1955</a></h3></figcaption>
+                <img src="travelLetters/images/bdtravel-Elinore.png" alt="Postcard image marked Elsinore for Hamlet's castle in Denmark from Behrend family travel letters"/>
+            </figure>
+            
+        </section>
+ 
+        <div class="timeLine">
+            <p>Behrend Family Interactable Timeline</p>
+            <iframe src="timeline.html" height="500" width="100%" title="Iframe Example"></iframe>
+        </div>
+        
+        
+        
+  <!--  2022-12-02 ebb: I think these iframes just aren't working well. They're hard to control and we're better off
+      with simple links and images to introduce the projects.     
+        <section>
+        
+            <iframe src="calendarPage.html" name="calendar" title="calendar"></iframe>
+        </section>
+        
+        <section>
+            <iframe src="travelLettersPage.html" name="travel-2021" title="travel-2021"></iframe>
+        <p><a href="frame.html" target="iframe_a">Check out the Travel Letters!</a></p>
+        </section>
+        
+       <section>
+           <iframe src="sipleLettersPage.html" name="siple" title="Siple"></iframe>
+        <p><a href="frame.html" target="iframe_a">Check out the Siple Letter!</a></p>
+       </section>
+        
+        <section>
+            <iframe src="warrenLettersPage.html" name="warren" title="Warren"></iframe>
+        <p><a href="frame.html" target="iframe_a">Check out the Warren Letters!</a></p>
+        </section>-->
+        
+        <footer class="main">
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
+        </footer>
     </body>
 </html>

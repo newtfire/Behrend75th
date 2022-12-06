@@ -2,7 +2,7 @@
 <?xml-model href="../../letters_schema.rnc" type="application/relax-ng-compact-syntax"?>
 <xml>
     <meta>
-        <title titleId= "PtoW-1929-12-17-pg1">Letter from Mary and Ernst Behrend to Warren Behrend, <date>1929-12-17</date></title>
+        <title titleId= "PtoW-1929-12-17-pg1">Letter from Mary and Ernst Behrend to Warren Behrend, <date when="1929-12-17">1929-12-17</date></title>
         <sourceDesc location="John M. Lilley Library, Penn State Behrend Archives"/>
         <paperOrigin>The Monticello Tidewater's Leading Hotel. Norfolk,VA.</paperOrigin>
         <transDesc>
@@ -10,7 +10,7 @@
             <editor>GD</editor>
             <editor>JG</editor>
             <editor>EM</editor>
-<!--        </transDesc>-->
+       </transDesc>
     </meta>
     <figure>
         <graphic src="../Letter_Images/Parents-LetterToWarren_1929-12-17/1929-12-17_ParentsLetterFront.jpeg" alt="front, p1"/>
@@ -19,12 +19,12 @@
     <body>
         <pb n="1"/>
         <header>
-            <ln n="1"/><date>1929-12-17</date>
+            <ln n="1"/><date when="1929-12-17">1929-12-17</date>
             <ln n="2"/><greeting>Dear Warren-</greeting>
         </header>
         <p n="1">
             <ln n="1"/>Headed in
-            <ln n="2"/><place placeId="NorthCarolina">Southern Pines</place>. Next day 
+            <ln n="2"/><placeName placeId="NorthCarolina">Southern Pines</placeName>. Next day 
             <ln n="3"/>Charleston &amp; the <boat>Amida</boat> 
             <ln n="4"/>hill ? <emotion>wonderful</emotion> to see
             <ln n="5"/>you &amp; H. &amp; all to 

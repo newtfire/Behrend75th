@@ -1,3 +1,6 @@
+body {padding: 1em; }
+div.banner {display:flex; justify-content:space-between; }
+
 /* latin */
 @font-face {
   font-family: 'Roboto Condensed';
@@ -27,29 +30,611 @@
   src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fBBc4.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
-
+title {
+ font-size: 36px;
+    color: white; 
+    
+}
 body {
 font-family: arial, helvetica, sans-serif;
-background-color: #001E44;
-color: white;
+background-color: #96BEE6; /* Pugh Blue */
+color: navy;
 }
 
 h1 {
     font-size: 48px;
-    color: white;    
+    color: #001E44;    
 }
 
 h2 {
     font-size: 36px;
-    color: white;
+    color: #001E44; /* Nittany navy */
 }
 
 h3 {
-    font-size: 24px;
-    color: white;
+    font-size: 1.5vw;
+    color: #001E44;
 }
 
 p {
-    font-size: 14px;
-    color: white;
+    font-size: 18px;
+    color: black;
 }
+
+
+/* unvisited link */
+a:link {
+  color: #001E44;
+}
+
+/* visited link */
+a:visited {
+  color: #491D70;
+}
+
+/* mouse over link */
+a:hover {
+  color: #491D70;
+}
+
+/* selected link */
+a:active {
+  color: #001E44;
+}
+
+
+
+/* TABLE */
+.tables{
+    display: flex;
+}
+.table {
+    float:left;
+    text-align: left;
+    margin:0 10px;
+}
+td{
+    padding: 0 5px;
+}
+span.span{
+    color:blue;
+}
+
+svg text{
+    font-family: 'Galdeano', sans-serif;
+}
+
+#svgTimeline{
+    margin: auto;    
+    width: 929px;
+}
+
+#timelineHeader{
+    cursor: pointer;
+}
+
+#calendar,#warrenLetters,#sipleLetter,#travelLetters,
+#calendar-timelineInfo,#warrenLetters-timelineInfo,#sipleLetter-timelineInfo,#travelLetters-timelineInfo,
+#calendar-timeline,#warrenLetters-timeline,#sipleLetter-timeline,#travelLetters-timeline
+{
+    display: none;
+    cursor: pointer;
+}
+
+
+
+
+
+/*Paragraph color block*/
+.block {
+    background-color: white;
+    opacity: 0.65;
+    width: auto;
+    height: auto;
+    padding: 30px;
+}
+
+.PSB{
+  position: relative;
+  object-fit: contain;
+  top: -10px;
+  right: 0;
+  width: 500px;
+  height: 150px;
+}
+
+
+.pennStateFooter{
+  position: relative;
+  object-fit: contain;
+  width: 200px;
+  height: 100px;
+}
+
+footer.main {
+    text-align: right;
+    font-size: 9px;
+}
+
+
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar ul li {
+     list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.navbar ul li a {
+       text-decoration: none;
+    color: azure;
+    text-transform: uppercase;
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{
+     width: 100%;
+}
+
+
+/* Project image gallery for main page */
+
+section.gallery { 
+display:flex; 
+width:90%;
+}
+
+figure.intro img {
+width:15vw;
+max-width:300px;
+border-radius: 15px;
+}
+
+
+/* Sticky Sidebar */
+.sidebar {
+display: flex;
+  position: fixed;
+  bottom: 5%;
+  top: 0;
+  left: 0.5%;
+  width: 260px;
+  height: 1500px;
+  border: 1px solid #001E44;
+  background-color: #CCDAE6;
+  font-size: 10.25pt;
+}
+
+.tocHeader {
+    text-align: center;
+}
+
+/*GRID*/
+figure img {
+object-fit: contain;
+    max-width: 500px;
+    width: 100%;
+}
+/* Trying Buttons on index
+.btn {
+  border: none; /\* Remove borders *\/
+  color: white;
+  padding: 12px 16px; /\* Some padding *\/
+  font-size: 16px; /\* Set a font size *\/
+  cursor: pointer; /\* Mouse pointer on hover *\/
+  width:15vw; max-width:300px; border-radius:50%;
+}
+
+/\* Darker background on mouse-over *\/
+.btn:hover {
+  background-color: black;
+}
+*/
+section#page div.transcription {
+    flex: 2;
+    padding: 5vw;
+    background-color: white;
+    border-radius: 15px;
+    max-width: 300px;
+    margin-bottom: 100px;
+    font-size: 12px;
+    color: black;
+}
+
+section#page div.transcription p {
+    font-size: 12px;
+}
+
+.entry{
+    width: 500px;
+    height: 666px;
+}
+/*
+.footer{
+   /\* ebb: position:absolute means this always floats on the bottom 
+    * of a screen, even on a long page where you scroll PAST thte bottom 
+    * of a screen. So I think you want this to remain at the very bottm? *\/
+    /\*  position: absolute; *\/
+    background-color: gray;
+    bottom: 0px; 
+ color: white;   
+}
+
+div.footer a, div.footer p {
+  color: white;  background-color:black;
+}
+
+div.footer a:visited{
+    /\*color: blueviolet;*\/
+    color:yellow;
+}
+div.footer p img{display:inline;}
+
+*/
+
+
+/* 2021-12-06 ebb: The following CSS is for the Reading View to make a CSS grid */
+/*  section elements wrap each unit of calendar page information, so this is our 
+ * CSS grid container.
+ * 2021-12-08: ebb I'm revising this to use fr units (fractional units). These help for 
+ * proportional scaling to the window. */
+ 
+ /*  I'm using an atttribute selector to look for sections 
+  * whose id attributes START WITH this string: e-1909  since those are the sections
+  * we want to be grid containers*/
+ section[id^="e-"] {
+ background-color: #CCDAE6; /* Slate Light+ */
+ border: thin solid navy;
+ display:grid;
+ grid-auto-flow:column; 
+ grid-template-columns:.8fr .2fr; 
+ grid-column-gap:2em;
+ }
+ 
+ .transcript {
+     color: black;
+ }
+ 
+ .note {
+     color: black;
+ }
+ 
+ 
+ span[title]{
+     color: green;
+ }
+ 
+ /*  let's try creating a grid for the div.facsblock, so all the text appears in a new column to the right of the image.  */
+ 
+ section[id^="e-"] div.facsblock {
+background-color:white; 
+display:grid;
+grid-auto-flow:column;
+grid-template-columns: .75fr .23fr; 
+/*  ebb: need to look up how minmax works.  */
+grid-column-gap:0.10em;
+padding:1em;
+ padding-left: 20%;
+}
+
+/* ebb: Here we are making the image size scale proportionally with the browser size: 
+ * The CSS selector syntax reads: style the <img> element this way when its parent is a figure,
+ *  and the figure's parent is something with class="facsblock".  */
+div.facsblock > figure > img {
+ object-fit:contain;
+ width:100%;
+   
+}
+
+/* This CSS selector syntax reads: Style the <div class="note"> when it's a descendant
+ * of a <section> with an @id that starts with "e-1909". */
+ section[id^="e-"] div.note  {
+     padding:1em;
+ }
+
+/* The rule belows styles the OUTERMOST grid container. Maybe we'd like to control the spaces between the sections, so we can make a big
+ * grid of the surrounding section#fulltext that holds all the calendar entries.
+ * This time, we'll organize it in rows (vertically). I'm only doing this to specify a gap to appear in between each section. 
+ *  */
+ 
+/*section#fulltext {
+    width:85%;
+    margin:auto;
+    display:grid;
+    grid-auto-flow:row;
+    grid-row-gap:50px;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+/* SEARCH */
+form#ssForm{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+}
+span.ssQueryAndButton{
+    display: flex;
+    flex-direction: row;
+    margin: 0.25em auto;
+    width: 50%;
+}
+input#ssQuery{
+    flex: 1;
+}
+input.staticSearch_feat:disabled{
+  cursor: wait;
+}
+
+
+
+/* Visually hide elements necessary for accessibility */
+fieldset.ssFieldset > legend.sr-only{
+     position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0; 
+}
+
+
+div.ssDescFilters, div.ssDateFilters, div.ssNumFilters, div.ssBoolFilters, div.ssSearchInFilters{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.25em;
+    color: black;
+    width: 50%;
+    margin: auto;
+}
+div.ssDescFilters fieldset, div.ssDateFilters fieldset, div.ssNumFilters fieldset, div.ssBoolFilters fieldset, div.ssSearchInFilters fieldset{
+    margin: 0.25em auto;
+    padding: 0.25em;
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25em;
+}
+
+div.ssFeatFilters fieldset{
+    margin: 0.25em auto;
+    padding: 0.25em;
+}
+
+ul.ssDescCheckboxList,
+ul.ssSearchInCheckboxList{
+    list-style-type: none;
+    max-height: 8em;
+    overflow-y: auto;
+    min-width: 90%;
+    padding-left: 0.25em;
+}
+ul.ssDescCheckboxList li,
+ul.ssSearchInCheckboxList li{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+}
+div.ssDateFilters fieldset.ssFieldset span, div.ssNumFilters fieldset.ssFieldset span, div.ssBoolFilters fieldset.ssFieldset span{
+    padding: 0.5em 1em;
+}
+fieldset.ssFieldset > span {
+    background-color: #ddd;
+    border: solid 1px #aaa;
+    margin: 0.2em;
+}
+div.ssNumFilters input[type="number"], div.ssDateFilters input[type="text"], div.ssFeatFilters input[type="text"]{
+    padding: 0.5em;
+}
+
+div#ssResults{
+  min-height: 50vh;
+/* Leaving a bit of space above when scrolling to results. */
+  padding-top: 1rem;
+  margin-top: -1rem;
+}
+div#ssResults>ul>li{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: 0.75em;
+}
+div#ssResults>ul>li>a{
+    flex-grow: 0;
+}
+div#ssResults>ul>li>div{
+  flex-grow: 1;
+}
+div#ssResults>ul>li>a>img{
+    max-width: 10em;
+    margin-right: 1em;
+    min-width: 3em;
+    min-height: 3em;
+}
+div#ssResults>ul>li{
+padding: 0.5em 0.25em;
+}
+
+
+/* Pagination trigger to hide all following items */
+div#ssResults>ul>li.ssPaginationEnd ~ li{
+    display:none;
+}
+
+/* Special pagination controls */
+
+div#ssResults > div#ssPagination{
+    text-align:center;
+    margin-top:1rem;
+    margin-bottom:2rem;
+}
+
+div#ssResults > div#ssPagination > button{
+    margin: 0 .5rem;
+}
+
+
+
+/* Alternate bg colour. */
+div#ssResults>ul>li:nth-child(2n) {
+    background-color: rgb(240, 240, 240);
+    transition: background-color .5s;
+    border-top: 1px solid rgb(230, 230, 230);
+    border-bottom: 1px solid rgb(230, 230, 230);
+}
+/* Larger document titles */
+div#ssResults>ul>li>div>a{
+    font-size: 1.2em;
+}
+
+/* No list markers for kwics */
+div#ssResults>ul>li>div>ul.kwic{
+    list-style-type: none;
+}
+/* kwics laid out with flex */
+div#ssResults>ul>li>div>ul.kwic>li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 0.5em;
+    border-top: solid 1pt lightgray;
+    padding: 0.2em;
+}
+div#ssResults>ul>li>div>ul.kwic>li>span{
+    display: block;
+}
+
+/* Give fragment image a right margin */
+
+div#ssResults li[data-ss-img] > img{
+    margin-right:1em;
+}
+
+/* Larger and right aligned kwic link. */
+div#ssResults>ul>li>div>ul.kwic>li>a{
+    font-size: 2.0em;
+    line-height: 0.50;
+    margin-left:auto;
+}
+a.fidLink{
+    text-decoration: none;
+}
+/* This div contains the SVG staticSearch logo. */
+div#ssPoweredBy{
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5rem;
+}
+div#ssPoweredBy>* {
+    margin: 0;
+}
+
+/* Styles for the SSTypeAhead control. */
+div.ssFeatFilters>fieldset.ssFieldset>menu{
+    padding: 0;
+    margin: 0;
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    width: min-content;
+    min-width: 12em;
+    max-height: 30vh;
+    overflow-y: auto;
+}
+div.ssFeatFilters>fieldset.ssFieldset>menu>div.select{
+    border: solid 1pt darkgray;
+    cursor: pointer;
+    padding: 0.25em;
+}
+div.ssFeatFilters>fieldset.ssFieldset>menu>div.select:hover, div.ssFeatFilters>fieldset.ssFieldset>menu>div.select:focus{
+    background-color: lightgray;
+}
+/* Only display the menu when the focus is within the fieldset. */
+div.ssFeatFilters>fieldset.ssFieldset:focus-within>menu{
+  display: flex;
+}
+
+div.ssSuggest{
+    padding: 0.5em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+div.ssSuggest>span{
+    border: solid 1pt gray;
+    padding: 0.25em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0.25em;
+    align-items: center;
+}
+div.ssSuggest>span>button{
+    max-width: 1.5em;
+    padding: 0.25em;
+    text-align: center;
+}
+
+/* Signal that the search page is loading. */
+body.ssLoading{
+  cursor: wait;
+}
+
+body.ssSearching{
+    cursor: wait;
+}
+
+div#ssSplashMessage,
+div#ssSearching{
+  display: none;
+}
+
+body.ssSearching:not(.ssLoading) div#ssSearching, body.ssLoading:not(.ssSearching) div#ssSplashMessage, noscript{
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: 0.25rem 0.25rem;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+}
+
+
+
+
+
