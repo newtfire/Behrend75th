@@ -321,6 +321,7 @@ div.footer p img{display:inline;}
  /*  let's try creating a grid for the div.facsblock, so all the text appears in a new column to the right of the image.  */
  
  section[id^="e-"] div.facsblock {
+margin-left: 260px; /* ebb: adding this to prevent overlap with sidebar menu */
 background-color:white; 
 display:grid;
 grid-auto-flow:column;
@@ -360,15 +361,9 @@ div.facsblock > figure > img {
 }
 */
 
-
 /* ebb: Siple extra section */
 
 section.extra {margin-left: 260px;}
-
-
-
-
-
 
 
 /* SEARCH */
