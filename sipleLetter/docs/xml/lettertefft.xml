@@ -4,7 +4,7 @@
     <page>
         <head>
             <p>
-                <person>PAUL A. SIPLE</person>
+                <persName>PAUL A. SIPLE</persName>
             </p>
             <p>
                 <address>1158 WEST FIFTH STREET</address>
@@ -19,7 +19,7 @@
         <body>
             <greeting>Dear <persName>Mr. Behrend</persName>,</greeting>
             <p n="1"> It is with great pleasure that I present this little token of friendship. This
-                rock was picked up on the "ash dump" - a unique moraine running out from the base of
+                <obj>rock</obj> was picked up on the "ash dump" - a unique moraine running out from the base of
                 an extinct volcano, <placeName>Mt. Raymond Fosdick</placeName> in the <placeName>Edsel
                     Ford Mountain Range</placeName> of northern <placeName>Marie Byrd
                     Land, Antarctica</placeName>. </p>
@@ -34,7 +34,7 @@
                 where this rock was picked up in a blizzard that blew almost continuously for three
                 days at a velocity rarely below thirty five miles an hour, and often of hurricane
                 velocity completely flattening our tent. </p>
-            <p n="4"> The sextant you so kindly loaned us helped to <sic>guideus</sic> through the
+            <p n="4"> The <transport>sextant</transport> you so kindly loaned us helped to <sic>guideus</sic> through the
                 hundreds of weary, uncharted miles, and I return it to you with deepest
                 appreciation and with it a piece of the Antarctic contintent
                 itself. </p>
