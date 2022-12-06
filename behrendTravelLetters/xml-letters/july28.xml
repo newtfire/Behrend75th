@@ -2,12 +2,16 @@
 <?xml-model href="schema/schema.rnc" type="application/relax-ng-compact-syntax"?>
 <xml>
     <!--This goes in the Neatherlands possible a journal entry on the way to Demark-->
-    <letter xml:id="copenhagen-1955-07-28">
+    <letter xml:id="Copenhagen-1955-07-28">
+        <figure>
+            <graphic url="images/July28.jpg"/>
+            <caption>July 28th</caption>
+        </figure>
             <hand>Thus</hand>
-            <hand><date when="1955-07-28">July 28</date>. uruet vilt oer cae c<u>otto</u> oei deierr
+            <hand><date when="1955-07-28">July 28</date>. uruet vilt oer cae c<u>Otto</u> oei deierr
                 <u>THURSDAY</u></hand>
         <typeWritten>
-            <p n="1"> Did letter and left the <placeName>Astoria</placeName> with <persName>Otto</persName> and the <transport>ford
+            <p n="1"> Did letters and left the <placeName>Astoria</placeName> with <persName>Otto</persName> and the <transport>ford
                     car</transport>- our new car and driver for our jaunt. Went to Bang and looked at
                 fur jackets.And then to <persName>jensens</persName> where <persName>Gail</persName> made a purchase. To
                 <placeName>Weavers embroidery shop</placeName>. Then to <placeName>Oscar Davidson's</placeName> where the

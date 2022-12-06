@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="schema/schema.rnc" type="application/relax-ng-compact-syntax"?>
 <xml>
-    <letter xml:id="cofu-1955-07-29">
+    <letter xml:id="Copenhagen-1955-07-29">
         <figure>
             <graphic url="images/July29.jpg"/>
             <caption>July 29th letter</caption>
         </figure>
         <dateLine>
-            <date when="1955-07-29">July 29.</date>
-            <hand>cofuchagee Friday</hand>
+            
+            <hand><date when="1955-07-29">July 29.</date> Copenhagen FRIDAY</hand>
         </dateLine>
 
         <p n="1"> Still at the <placeName>Palace Hotel</placeName>. WEnt to several fu places One

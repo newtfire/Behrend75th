@@ -63,35 +63,39 @@
                                 >Search</a></p>
                             <hr/>
                         </nav>-->
-                        <section id="e-{@xml:id}" class="document">
+                       
                             <xsl:choose>
-                                <xsl:when test="current()/front ! name() = 'front'">
+                                <xsl:when test="front">
+                                <section id="e-{@xml:id}-front" class="document">
                                     <div class="facsblock">
                                         <xsl:apply-templates select="descendant::figure[1]"/>
                                     </div>
                                     <div class="transcript">
-                                        <xsl:apply-templates select="current()/front"/>
+                                        <xsl:apply-templates select="front"/>
                                     </div>
+                                </section>   
+                                <section id="e-{@xml:id}-back" class="document">
 
                                     <div class="facsblock">
                                         <xsl:apply-templates select="descendant::figure[2]"/>
                                     </div>
                                     <div class="transcript">
-                                        <xsl:apply-templates select="current()/back"/>
+                                        <xsl:apply-templates select="back"/>
                                     </div>
+                                </section>
 
                                 </xsl:when>
                                 <xsl:otherwise>
+                                 <section id="e-{@xml:id}" class="document">
                                     <div class="facsblock">
                                         <xsl:apply-templates select="descendant::figure"/>
                                     </div>
                                     <div class="transcript">
                                         <xsl:apply-templates select="current()"/>
-                                    </div>
-
+                                    </div>                                 
+                                 </section>
                                 </xsl:otherwise>
                             </xsl:choose>
-                        </section>
                         <footer class="main">
                             <img src="../images/pennStateHorizontal.png" class="pennStateFooter"/>
                             <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"
@@ -120,7 +124,7 @@
         <!--        <a href="#{descendant::h1}">-->
         <h2 id="{@xml:id}">
             <xsl:value-of select="@xml:id ! tokenize(., '-')[1]"/>
-            <xsl:text>, </xsl:text>
+                <xsl:text>, </xsl:text>
             <xsl:apply-templates select="(descendant::date/@when)[1]"/>
         </h2>
         <!--</a>-->
