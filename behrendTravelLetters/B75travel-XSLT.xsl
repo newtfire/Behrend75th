@@ -80,8 +80,8 @@
 
                         <xsl:choose>
                             <xsl:when test="front">
-                                <section id="e-{@xml:id}-front" class="document">
-                                    <div class="facsblock">
+                                <section id="f-{@xml:id}-front" class="document">
+                                    <div class="facs">
                                         <xsl:apply-templates select="descendant::figure[1]"/>
                                     </div>
                                     <div class="transcript">
@@ -93,9 +93,9 @@
                                         <xsl:apply-templates select="front"/>
                                     </div>
                                 </section>
-                                <section id="e-{@xml:id}-back" class="document">
+                                <section id="f-{@xml:id}-back" class="document">
 
-                                    <div class="facsblock">
+                                    <div class="facs">
                                         <xsl:apply-templates select="descendant::figure[2]"/>
                                     </div>
                                     <div class="transcript">
@@ -105,8 +105,8 @@
 
                             </xsl:when>
                             <xsl:otherwise>
-                                <section id="e-{@xml:id}" class="document">
-                                    <div class="facsblock">
+                                <section id="f-{@xml:id}" class="document">
+                                    <div class="facs">
                                         <xsl:apply-templates select="descendant::figure"/>
                                     </div>
                                     <div class="transcript">
@@ -281,10 +281,7 @@
     <xsl:template match="front">
         <!--<a href="#{descendant::h1}">
             <h2 id="{base-uri() ! tokenize(., '/')[last()]}1955-07-26">-->
-        <h2>
-            <xsl:value-of select="current()/ancestor::letter/@xml:id ! substring-before(., '-')"/>
-            <xsl:text>-front, 1955-07-26</xsl:text>
-        </h2>
+       <h3>Front</h3>
         <!--</a>-->
         <div class="letter">
             <div class="header">1955-07-26</div>
@@ -295,10 +292,7 @@
     <xsl:template match="back">
         <!--<a href="#{descendant::h1}">-->
         <!--            <h2 id="{base-uri() ! tokenize(., '/')[last()]}1955-07-26-back">-->
-        <h2>
-            <xsl:value-of select="current()/ancestor::letter/@xml:id ! substring-before(., '-')"/>
-            <xsl:text>-back, 1955-07-26</xsl:text>
-        </h2>
+       <h3>Back</h3>
         <!--</a>-->
         <div class="letter">
             <div class="header"> 1955-07-26 </div>
