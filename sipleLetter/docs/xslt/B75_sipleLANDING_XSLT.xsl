@@ -15,7 +15,7 @@
                 <title>Letter from Paul Siple</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <!--ebb: The line above helps your HTML scale to fit lots of different devices. -->
-                <link rel="stylesheet" type="text/css" href="../75.css"/>
+                <link rel="stylesheet" type="text/css" href="75.css"/>
            </head>
         <body>
             <div class="sidebar">
@@ -23,24 +23,24 @@
                     <h3>Table of Contents</h3>
                     <ul>
                         <li>
-                            <a href="../index.html">Home</a>
+                            <a href="index.html">Home</a>
                         </li>
                         <li>
-                            <a href="../calendarPage.html">Behrend Calendars</a>
+                            <a href="calendarPage.html">Behrend Calendars</a>
                         </li>
                         <li>
-                            <a href="../travelLettersPage.html">Behrend Travel
+                            <a href="travelLettersPage.html">Behrend Travel
                                 Letters</a>
                         </li>
                         <li>
-                            <a href="../sipleLettersPage.html">Behrend Siple Letters</a>
+                            <a href="sipleLettersPage.html">Behrend Siple Letters</a>
                         </li>
                         <li>
-                            <a href="../warrenLettersPage.html">Behrend Warren
+                            <a href="warrenLettersPage.html">Behrend Warren
                                 Letters</a>
                         </li>
                         <li>
-                            <a href="../search.html">🔎 Search</a>
+                            <a href="search.html">🔎 Search</a>
                         </li>
                     </ul>
                 </section>
@@ -49,7 +49,7 @@
         <section id="f-{descendant::date[1]/@when}" class="document">
             <div class="facs">
                 <figure>
-                    <img src="photos/letter_hires_cropped.png" alt="{descendant::date}: {descendant::figDesc ! normalize-space()}" title="{descendant::date}: {descendant::figDesc ! normalize-space()}" class="entry"/>
+                    <img src="siple/photos/letter_hires_cropped.png" alt="{descendant::date}: {descendant::figDesc ! normalize-space()}" title="{descendant::date}: {descendant::figDesc ! normalize-space()}" class="entry"/>
                     <figcaption><xsl:apply-templates select="descendant::figDesc"/><xsl:text>—</xsl:text><xsl:value-of select="descendant::figDesc/@resp"/></figcaption>
                 </figure>
             </div>
@@ -121,7 +121,7 @@
         </li>
     </xsl:template>
     <xsl:template match="graphic" mode="desc">
-        <li><figure><img src="{@src}" alt="{@alt}"/>
+        <li><figure><img src="siple/{@src}" alt="{@alt}"/>
             <figcaption>
                 <xsl:value-of select="@alt"/>
             </figcaption>
