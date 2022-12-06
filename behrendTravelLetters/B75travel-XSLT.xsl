@@ -26,22 +26,36 @@
                         <link rel="stylesheet" type="text/css" href="../75.css"/>
                     </head>
                     <body>
-                       <!-- <nav>
+                        <!-- <nav>
                             <hr/>
                             <p class="navbar"><a href="search.html">Search</a></p>
                             <hr/>
                         </nav>-->
-                        
+
                         <div class="sidebar">
                             <section id="toc">
                                 <h3>Table of Contents</h3>
                                 <ul>
-                                    <li><a href="../index.html">Home</a></li>
-                                    <li><a href="../calendarPage.html">Behrend Calendars</a></li>
-                                    <li><a href="../travelLettersPage.html">Behrend Travel Letters</a></li>
-                                    <li><a href="../sipleLettersPage.html">Behrend Siple Letters</a></li>
-                                    <li><a href="../warrenLettersPage.html">Behrend Warren Letters</a></li>
-                                    <li><a href="../search.html">🔎 Search</a></li>
+                                    <li>
+                                        <a href="../index.html">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="../calendarPage.html">Behrend Calendars</a>
+                                    </li>
+                                    <li>
+                                        <a href="../travelLettersPage.html">Behrend Travel
+                                            Letters</a>
+                                    </li>
+                                    <li>
+                                        <a href="../sipleLettersPage.html">Behrend Siple Letters</a>
+                                    </li>
+                                    <li>
+                                        <a href="../warrenLettersPage.html">Behrend Warren
+                                            Letters</a>
+                                    </li>
+                                    <li>
+                                        <a href="../search.html">🔎 Search</a>
+                                    </li>
                                 </ul>
                                 <ul>
                                     <xsl:apply-templates select="$travelColl//xml" mode="toc">
@@ -50,9 +64,9 @@
                                 </ul>
                             </section>
                         </div>
-                        
-                        
-                       <!-- <nav>
+
+
+                        <!-- <nav>
                             <hr/>
                             <p class="navbar">
                                 <a href="../index.html">Home</a> | <a href="../calendarPage.html"
@@ -63,9 +77,9 @@
                                 >Search</a></p>
                             <hr/>
                         </nav>-->
-                       
-                            <xsl:choose>
-                                <xsl:when test="front">
+
+                        <xsl:choose>
+                            <xsl:when test="front">
                                 <section id="e-{@xml:id}-front" class="document">
                                     <div class="facsblock">
                                         <xsl:apply-templates select="descendant::figure[1]"/>
@@ -73,7 +87,7 @@
                                     <div class="transcript">
                                         <xsl:apply-templates select="front"/>
                                     </div>
-                                </section>   
+                                </section>
                                 <section id="e-{@xml:id}-back" class="document">
 
                                     <div class="facsblock">
@@ -84,18 +98,18 @@
                                     </div>
                                 </section>
 
-                                </xsl:when>
-                                <xsl:otherwise>
-                                 <section id="e-{@xml:id}" class="document">
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <section id="e-{@xml:id}" class="document">
                                     <div class="facsblock">
                                         <xsl:apply-templates select="descendant::figure"/>
                                     </div>
                                     <div class="transcript">
                                         <xsl:apply-templates select="current()"/>
-                                    </div>                                 
-                                 </section>
-                                </xsl:otherwise>
-                            </xsl:choose>
+                                    </div>
+                                </section>
+                            </xsl:otherwise>
+                        </xsl:choose>
                         <footer class="main">
                             <img src="../images/pennStateHorizontal.png" class="pennStateFooter"/>
                             <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"
@@ -124,7 +138,7 @@
         <!--        <a href="#{descendant::h1}">-->
         <h2 id="{@xml:id}">
             <xsl:value-of select="@xml:id ! tokenize(., '-')[1]"/>
-                <xsl:text>, </xsl:text>
+            <xsl:text>, </xsl:text>
             <xsl:apply-templates select="(descendant::date/@when)[1]"/>
         </h2>
         <!--</a>-->
@@ -261,11 +275,12 @@
 
     <xsl:template match="front">
         <!--<a href="#{descendant::h1}">
-            <h2 id="{base-uri() ! tokenize(., '/')[last()]}1955-07-26">
-                <xsl:value-of select="current() ! base-uri() ! tokenize(., '/')[last()]"/>
-                <xsl:text>-front, 1955-07-26</xsl:text>
-            </h2>
-        </a>-->
+            <h2 id="{base-uri() ! tokenize(., '/')[last()]}1955-07-26">-->
+        <h2>
+            <xsl:value-of select="current()/ancestor::letter/@xml:id ! substring-before(., '-')"/>
+            <xsl:text>-front, 1955-07-26</xsl:text>
+        </h2>
+        <!--</a>-->
         <div class="letter">
             <div class="header">1955-07-26</div>
             <xsl:apply-templates/>
@@ -273,12 +288,13 @@
     </xsl:template>
 
     <xsl:template match="back">
-        <!--<a href="#{descendant::h1}">
-            <h2 id="{base-uri() ! tokenize(., '/')[last()]}1955-07-26-back">
-                <xsl:value-of select="current() ! base-uri() ! tokenize(., '/')[last()]"/>
-                <xsl:text>-back, 1955-07-26</xsl:text>
-            </h2>
-        </a>-->
+        <!--<a href="#{descendant::h1}">-->
+        <!--            <h2 id="{base-uri() ! tokenize(., '/')[last()]}1955-07-26-back">-->
+        <h2>
+            <xsl:value-of select="current()/ancestor::letter/@xml:id ! substring-before(., '-')"/>
+            <xsl:text>-back, 1955-07-26</xsl:text>
+        </h2>
+        <!--</a>-->
         <div class="letter">
             <div class="header"> 1955-07-26 </div>
             <xsl:apply-templates/>
