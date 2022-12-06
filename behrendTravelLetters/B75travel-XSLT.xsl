@@ -40,7 +40,7 @@
                                         <a href="../index.html">Home</a>
                                     </li>
                                     <li>
-                                        <a href="../calendarPage.html">Behrend Calendars</a>
+                                        <a href="../calendarPage.html">Behrend Calendar</a>
                                     </li>
                                     <li>
                                         <a href="../travelLettersPage.html">Behrend Travel
@@ -50,7 +50,7 @@
                                         <a href="../sipleLettersPage.html">Behrend Siple Letters</a>
                                     </li>
                                     <li>
-                                        <a href="../warrenLettersPage.html">Behrend Warren
+                                        <a href="../warrenLettersPage.html">Warren Behrend
                                             Letters</a>
                                     </li>
                                     <li>

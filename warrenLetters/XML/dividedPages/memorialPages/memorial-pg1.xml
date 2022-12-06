@@ -20,7 +20,7 @@
     <body> 
         <pb n="1"/>
         <header>
-            <ln n="1"/> <date>1929-12-19</date>
+            <ln n="1"/> <date when="1929-12-19">1929-12-19</date>
             <greeting><!-- no greeting was provided --></greeting>
         </header>
         <p n="1">
