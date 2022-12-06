@@ -328,8 +328,8 @@
       <html>
         <head>
           <title>Timeline</title>
-          <link rel="stylesheet" type="text/css" href="timeline.css"/>
-          <script type="text/javascript" src="interact.js"/>
+          <link rel="stylesheet" type="text/css" href="../collProcess/timeline.css"/>
+          <script type="text/javascript" src="../collProcess/interact.js"/>
         </head>
         <body>
           <div id="svgTimeline">

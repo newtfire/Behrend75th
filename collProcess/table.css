@@ -1,0 +1,21 @@
+h1{
+    margin:5px;
+    display:block;
+}
+h2{
+    margin:5px 0;
+}
+.tables{
+    display: flex;
+}
+.table {
+    float:left;
+    text-align: left;
+    margin:0 10px;
+}
+td{
+    padding: 0 5px;
+}
+span.span{
+    color:blue;
+}

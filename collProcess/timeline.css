@@ -13,23 +13,16 @@ svg text{
     width: 929px;
 }
 
-#timelineHeader{
-    cursor: pointer;
-}
-
 #calendar,#warrenLetters,#sipleLetter,#travelLetters,
+#calendar-timelineInfo,#warrenLetters-timelineInfo,#sipleLetter-timelineInfo,#travelLetters-timelineInfo,
 #calendar-timeline,#warrenLetters-timeline,#sipleLetter-timeline,#travelLetters-timeline
 {
-    display: none;
-    cursor: pointer;
-}
-
-#calendar-timelineInfo,#warrenLetters-timelineInfo,#sipleLetter-timelineInfo,#travelLetters-timelineInfo{
     display: none;
 }
 
 text[id$="Title"]:hover, .timeline text:hover, #timelineHeader g:hover{
     filter: brightness(1.2);
+    cursor: pointer;
 }
 
 
