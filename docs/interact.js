@@ -1,28 +1,16 @@
 window.addEventListener('DOMContentLoaded',init,false);
 
 function init() {
-    var y1909 = document.getElementById('y1909')
-    var y1929 = document.getElementById('y1929')
-    var y1935 = document.getElementById('y1935')
-    var y1955 = document.getElementById('y1955')
-    y1909.addEventListener('click', project_HS,false)
-    y1929.addEventListener('click', project_HS, false)
-    y1935.addEventListener('click', project_HS, false)
-    y1955.addEventListener('click', project_HS, false)
-
-    var calendar = document.getElementById('calendarTitle')
-    var warren = document.getElementById('warrenLettersTitle')
-    var siple = document.getElementById('sipleLetterTitle')
-    var travel = document.getElementById('travelLettersTitle')
-    calendar.addEventListener('click', timeline_HS, false)
-    warren.addEventListener('click', timeline_HS, false)
-    siple.addEventListener('click', timeline_HS, false)
-    travel.addEventListener('click', timeline_HS, false)
+    var years = document.querySelectorAll("g[id^='y19']")
+    var titles = document.querySelectorAll("text[id$='Title']")
+    for(var i = 0; i < years.length; i++){
+        years[i].addEventListener('click', project_HS,false)
+        titles[i].addEventListener('click', timeline_HS, false)
+    }
 }
 
 function switch_status (project_id, project_index){
-    var projStatus = 'none'
-    var status = ['none', 'block']
+    var projStatus = 'none', status = ['none', 'block']
     var info = document.getElementsByClassName('timelineInfo')[project_index]
     var timeline = document.getElementsByClassName('timeline')[project_index]
     if (project_id != '') {
@@ -31,46 +19,33 @@ function switch_status (project_id, project_index){
         project_id.style.display = projStatus
     }
     if (info.style.display == '' || info.style.display == 'none'){
-        [status[0], status[1] ] = [status[1], status[0]]
+        [status[0], status[1]] = [status[1], status[0]]
     }
-    info.style.display = status[0]
-    timeline.style.display = status[1]
+    [info.style.display, timeline.style.display] = [status[0], status[1]]
 }
 
 function project_HS(){
-    switch (this.id){
-        case 'y1909':
-            var calendar = document.getElementById('calendar')
-            switch_status(calendar, 0)
+    var years = document.querySelectorAll("g[id^='y19']")
+    var yearArray = Array.prototype.slice.call(years).reverse()
+    var project_index = 0
+    var proj = document.querySelectorAll("g[id^='proj']")
+    for(var i = 0; i < years.length; i++){
+        if(yearArray[i].id == this.id){
+            project_index = i
             break
-        case 'y1929':
-            var warren = document.getElementById('warrenLetters')
-            switch_status(warren, 1)
-            break
-        case 'y1935':
-            var siple = document.getElementById('sipleLetter')
-            switch_status(siple, 2)
-            break
-        case 'y1955':
-            var travel = document.getElementById('travelLetters')
-            switch_status(travel, 3)
-            break
+        }
     }
+    switch_status(proj[project_index], project_index)
 }
 
 function timeline_HS(){
-    switch (this.id){
-        case 'calendarTitle':
-            switch_status('', 0)
+    var titles = document.querySelectorAll("text[id$='Title']")
+    var project_index = 0
+    for(var i = 0; i < titles.length; i++){
+        if(titles[i].id == this.id){
+            project_index = i
             break
-        case 'warrenLettersTitle':
-            switch_status('', 1)
-            break
-        case 'sipleLetterTitle':
-            switch_status('', 2)
-            break
-        case 'travelLettersTitle':
-            switch_status('', 3)
-            break
+        }
     }
+    switch_status('', project_index)
 }

@@ -83,7 +83,7 @@
     </g>
 
     <!-- timeline for calendar -->
-    <g id="calendar" transform="translate(50, {$yInterval*4})" fill="{$colorArray[1]}">
+    <g id="projCalendar" transform="translate(50, {$yInterval*4})" fill="{$colorArray[1]}">
       <circle cx="{$lineX}" cy="{-0.5 * $yInterval}" r="5"/>
       <text id="calendarTitle" x="{15+$lineX}" y="{-0.5 * $yInterval + 6}" font-size="22px"
         >Calendar</text>
@@ -205,7 +205,7 @@
     </g>
 
     <!-- timeline for warren -->
-    <g id="warrenLetters" transform="translate({50 + $xInterval}, {$yInterval*4})">
+    <g id="projWarrenLetters" transform="translate({50 + $xInterval}, {$yInterval*4})">
       <xsl:variable name="index" as="xs:integer" select="2"/>
       <g fill="{$colorArray[$index]}">
         <circle cx="{$lineX}" cy="{-0.5 * $yInterval}" r="5"/>
@@ -244,7 +244,7 @@
     </g>
 
     <!-- timeline for siple -->
-    <g id="sipleLetter" transform="translate({50 + 2 * $xInterval}, {$yInterval*4})">
+    <g id="projSipleLetter" transform="translate({50 + 2 * $xInterval}, {$yInterval*4})">
       <xsl:variable name="index" as="xs:integer" select="3"/>
       <g fill="{$colorArray[$index]}">
         <circle cx="{$lineX}" cy="{-0.5 * $yInterval}" r="5"/>
@@ -279,7 +279,7 @@
     </g>
 
     <!-- timeline for travel -->
-    <g id="travelLetters" transform="translate({50 + 3 * $xInterval}, {$yInterval*4})">
+    <g id="projTravelLetters" transform="translate({50 + 3 * $xInterval}, {$yInterval*4})">
       <xsl:variable name="index" as="xs:integer" select="4"/>
       <g fill="{$colorArray[$index]}">
         <circle cx="{$lineX}" cy="{-0.5 * $yInterval}" r="5"/>

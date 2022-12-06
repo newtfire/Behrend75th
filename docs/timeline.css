@@ -13,10 +13,7 @@ svg text{
     width: 929px;
 }
 
-#calendar,#warrenLetters,#sipleLetter,#travelLetters,
-#calendar-timelineInfo,#warrenLetters-timelineInfo,#sipleLetter-timelineInfo,#travelLetters-timelineInfo,
-#calendar-timeline,#warrenLetters-timeline,#sipleLetter-timeline,#travelLetters-timeline
-{
+g[id^="proj"], g[class$="Info"], g[class$="timeline"]{
     display: none;
 }
 
