@@ -25,12 +25,11 @@ function switch_status (project_id, project_index){
 }
 
 function project_HS(){
-    var years = document.querySelectorAll("g[id^='y19']")
-    var yearArray = Array.prototype.slice.call(years).reverse()
-    var project_index = 0
+    var years = Array.prototype.slice.call( document.querySelectorAll("g[id^='y19']")).reverse()
     var proj = document.querySelectorAll("g[id^='proj']")
+    var project_index = 0
     for(var i = 0; i < years.length; i++){
-        if(yearArray[i].id == this.id){
+        if(years[i].id == this.id){
             project_index = i
             break
         }
