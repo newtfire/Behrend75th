@@ -71,6 +71,11 @@
                                         <xsl:apply-templates select="descendant::figure[1]"/>
                                     </div>
                                     <div class="transcript">
+                                        <h2 id="{@xml:id}">
+                                            <xsl:value-of select="@xml:id ! tokenize(., '-')[1]"/>
+                                            <xsl:text>, </xsl:text>
+                                            <xsl:apply-templates select="(descendant::date/@when)[1]"/>
+                                        </h2>
                                         <xsl:apply-templates select="front"/>
                                     </div>
                                 </section>   
