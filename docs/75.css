@@ -217,7 +217,7 @@ border-radius: 15px;
 
 /* Sticky Sidebar */
 .sidebar {
-display: flex;
+  display: none;
   position: fixed;
   bottom: 5%;
   top: 0;
@@ -228,10 +228,25 @@ display: flex;
   background-color: #CCDAE6;
   font-size: 10.25pt;
 }
+.sidebar button {
+    width:100%;; 
+    padding: .5em;
+    text-align:end;
+    font-size: larger;
+
+}
 
 .tocHeader {
     text-align: center;
 }
+
+div#hamburger button#openMe {
+        font-size:18pt;
+    
+}
+div#hamburger button#openMe:hover {
+        background-color:white;
+        transform: scale(1.5);
 
 /*GRID*/
 figure img {
