@@ -208,6 +208,13 @@ border-radius: 15px;
 }
 
 
+/* SIPLE EXTRA IMAGES */
+.siple {
+    object-fit: contain;
+    max-width: 200px;
+    width: 100%;
+}
+
 /* Sticky Sidebar */
 .sidebar {
 display: flex;
