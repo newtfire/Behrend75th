@@ -2,7 +2,7 @@
 <?xml-model href="../../letters_schema.rnc" type="application/relax-ng-compact-syntax"?>
 <xml>
     <meta>
-        <title titleId= "WtoP-1929-12-17-Letter1-pg2">Letter from Warren Behrend to Mary and Ernst Behrend, <date>1929-12-17</date></title>
+        <title titleId= "WtoP-1929-12-17-Letter1-pg2">Letter from Warren Behrend to Mary and Ernst Behrend, <date when="1929-12-17">1929-12-17</date></title>
         <sourceDesc location="John M. Lilley Library, Penn State Behrend Archives"/>
         <paperOrigin>Deerfield Academy Deerfield, Massachutsetts</paperOrigin>
         <transDesc>
