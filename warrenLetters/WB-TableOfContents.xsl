@@ -64,8 +64,7 @@
     <xsl:template match="xml" mode="toc">
         <li>
             <a href="warrenLetters/{current()/base-uri() ! tokenize(., '/')[last()] ! substring-before(., '.xml')}.html">
-                <xsl:apply-templates select="current()/base-uri() ! tokenize(., '/')[last()] ! substring-before(., '.xml')"/>
-            </a>
+                <xsl:apply-templates select="descendant::title/@titleId"/></a>
         </li>
     </xsl:template>
 </xsl:stylesheet>
