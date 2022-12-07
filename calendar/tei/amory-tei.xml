@@ -118,11 +118,11 @@
                     </figure>
                     <ab hand="#pencil" rend="#cursive">
                         <lb/> Each morning <emph style="underline">very</emph> early <lb/> When all is dark and still<lb/>
-                        <persName>Ernst</persName> goes off in inky blackness <lb/>To work at
+                        <persName>Ernst</persName> goes <emph style="underline">off</emph> in inky blackness <lb/>To work at
                             <rs type="location">Hammermill</rs>
-                        <lb/> I really think he's very good <lb/>to get up when it’s dark <lb/>
+                        <lb/> I really think he's <emph style="underline">very</emph> good <lb/>to get up when it’s dark <lb/>
                         For tho’ he <emph style="underline">says</emph> he doesn’t mind <lb/> 
-                        It can't be such a lark! </ab>
+                        It can't be such a <emph style="underline">lark!</emph> </ab>
                     <ab><add hand="#redPen" rend="#cursive" place="bottom-right">Poor thing! is it still
                             dark when you arise?</add></ab>
                 </div2>
@@ -168,7 +168,7 @@
                         <lb/>that <persName>Mr. Weir</persName>
                         <lb/>got. <lb/>Pretty <rs type="object">picture</rs>
                         <lb/>is it not?!</ab>
-                    <ab><add hand="#redPen" rend="#cursive" place="bottom-right">Love from
+                    <ab><add hand="#redPen" rend="#cursive" place="bottom-right"> Love from
                                 <persName>Molly</persName></add></ab>
                 </div2>
 
@@ -193,7 +193,7 @@
                         all the <rs type="animal">snakes</rs> away- <lb/>I wish he'd try his art on
                         smoke <lb/>around <rs type="location">the hammermill</rs> some day! <lb/>is
                         it not?!</ab>
-                    <ab><add hand="#redPen" rend="#cursive"><rs type="location">The Hammermill</rs>
+                    <ab><add hand="#redPen" rend="#cursive"><rs type="location"> The Hammermill</rs>
                             is really lucky!</add></ab>
                     <!-- finish trasncribing here -->
                 </div2>
@@ -216,7 +216,7 @@
                         <lb/>OH, I SAY!<lb/>
                         THAT’S REALLY A VERY<lb/>
                         UNUSUAL DISPLAY!</ab>
-                    <ab><add hand="#redPen" rend="#cursive" place="bottom-right">Do you <emph style="underline">still</emph> miss
+                    <ab><add hand="#redPen" rend="#cursive" place="bottom-right"> Do you <emph style="underline">still</emph> miss
                             me?</add></ab>
                 </div2>
 
