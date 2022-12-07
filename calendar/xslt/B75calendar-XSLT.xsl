@@ -78,7 +78,7 @@
                         <hr/>
                     </nav>-->
                     <div class="sidebar">
-                        <button id="closeMe">close x</button>
+                        <button id="closeMe">close ×</button>
                         <section id="toc">
                             <div class="tocHeader"><h3>Table of Contents</h3></div>
                             <ul>
