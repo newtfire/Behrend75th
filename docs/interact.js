@@ -24,25 +24,23 @@ function switch_status (project_id, project_index){
     [info.style.display, timeline.style.display] = [status[0], status[1]]
 }
 
-function project_HS(){
+function project_HS(years){
     var years = Array.prototype.slice.call( document.querySelectorAll("g[id^='y19']")).reverse()
     var proj = document.querySelectorAll("g[id^='proj']")
-    var project_index = 0
     for(var i = 0; i < years.length; i++){
         if(years[i].id == this.id){
-            project_index = i
+            var project_index = i
             break
         }
     }
     switch_status(proj[project_index], project_index)
 }
 
-function timeline_HS(){
+function timeline_HS(titles){
     var titles = document.querySelectorAll("text[id$='Title']")
-    var project_index = 0
     for(var i = 0; i < titles.length; i++){
         if(titles[i].id == this.id){
-            project_index = i
+            var project_index = i
             break
         }
     }
