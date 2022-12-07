@@ -163,7 +163,14 @@
             <xsl:apply-templates/>
         </span>
         
+        
     </xsl:template>
+    
+    <xsl:template match="emph">
+        <span class="underline"><xsl:apply-templates/></span>
+        
+    </xsl:template>
+    
     
     <!--  <xsl:template match="facs">
         <a href="#{@xml:id}">
