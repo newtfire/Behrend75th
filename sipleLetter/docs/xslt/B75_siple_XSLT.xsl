@@ -16,9 +16,11 @@
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <!--ebb: The line above helps your HTML scale to fit lots of different devices. -->
                 <link rel="stylesheet" type="text/css" href="../75.css"/>
+                <script type="text/javascript" src="../respMenu.js">/**/</script> 
            </head>
         <body>
             <div class="sidebar">
+                <button id="closeMe">close ×</button>
                 <section id="toc">
                     <h3>Table of Contents</h3>
                     <ul>
@@ -44,6 +46,9 @@
                         </li>
                     </ul>
                 </section>
+            </div>
+            <div id="hamburger">
+                <button id="openMe">☰</button>
             </div>
             
         <section id="f-{descendant::date[1]/@when}" class="document">
