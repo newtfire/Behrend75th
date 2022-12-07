@@ -45,7 +45,7 @@
                           </ul>
                            <ul>
                                <xsl:apply-templates select="$allCollections//xml" mode="toc">
-                                   <xsl:sort select="(descendant::date/@when)[1]"/>
+                                   <xsl:sort select="(descendant::date)[1]"/>
                                </xsl:apply-templates>
                            </ul>
                       </section>
@@ -56,36 +56,20 @@
                 
                
             <xsl:comment>New structure for aligning page images and transcripts here.</xsl:comment>
-                <section id="f-{descendant::date[1]/@when}" class="document">
+                <section id="f-{descendant::date[1]}" class="document">
                     <div class="facs">
                         <figure>
-                            <img src="images/{descendant::figure/graphic/@src ! base-uri() ! tokenize(., '/')[last()]}" alt="{descendant::date}: {descendant::figDesc ! normalize-space()}" title="{descendant::date}: {descendant::figDesc ! normalize-space()}" class="entry"/>
-                            <figcaption><xsl:apply-templates select="descendant::figDesc"/><xsl:text>—</xsl:text><xsl:value-of select="descendant::figDesc/@resp"/></figcaption>
+                            <img src="images/{descendant::figure/graphic/@src ! tokenize(., '/')[last()]}" alt="{descendant::figure/graphic/@alt}" title="{descendant::figure/graphic/@alt}" class="entry"/>
+                            <figcaption><xsl:apply-templates select="descendant::figure/graphic/@alt"/></figcaption>
                         </figure>
                     </div>
                     <div class="transcript">
-                        <xsl:apply-templates select="descendant::head | descendant::body | descendant::foot"/>
+                        <xsl:apply-templates select="descendant::meta"/>
+                        <xsl:apply-templates select="descendant::body"/>
                     </div>
                     
                 </section>   
                 
-            <!-- <section class="document">
-                 <div class="docImage">
-                     <section id="e-{$currentCollection/base-uri() ! tokenize(., '/')[last()] ! substring-before(., '.xml')}" class="document">
-               <div class="facsblock">
-                     <figure>
-                     <img src="images/{descendant::figure/graphic/@src ! tokenize(., '/')[last()]}"/>
-                     <figcaption><xsl:value-of select="descendant::figure/graphic/@alt"/></figcaption>
-                 </figure></div>
-                  <div class="transcript"> 
-                    <xsl:apply-templates select="descendant::xml">
-                        
-                    </xsl:apply-templates>
-                    </div>
-                 
-                </section>
-                 </div>
-             </section>-->
             </body>
         </html>
       </xsl:result-document>
@@ -94,16 +78,17 @@
             
     </xsl:template>
     
-    <!--Templates in toc mode for the table of contents 
+    <!--Templates in toc mode for the table of contents -->
     <xsl:template match="xml" mode="toc">
         <li><a href="#{descendant::title/@titleId}"><xsl:apply-templates select="descendant::title/@titleId"/></a></li>
 
     </xsl:template>
-    -->
+
 
     
     <!--Normal templates for fulltext view -->
-    <xsl:template match="xml">
+   
+    <xsl:template match="meta">
         <h2 id="{descendant::title/@titleId}"><xsl:apply-templates select="descendant::title"/></h2>
       <!--  <div class="img">
             <img src="{//graphic[1]/@src}" alt="{//figure/graphic[1]/@alt}"/>
@@ -111,27 +96,18 @@
             <img src="{//graphic[3]/@src}" alt="{//figure/graphic[3]/@alt}"/>
             <img src="{//graphic[4]/@src}" alt="{//figure/graphic[4]/@alt}"/>
         </div>-->
-        <br/>
-        <div class="letter" > <div class="header"><xsl:apply-templates select="descendant::header"/></div>
-         <p><xsl:apply-templates select="descendant::p"/></p>
-        <div class="closer"><xsl:apply-templates select="descendant::closer"/></div></div>
-        
+ 
     </xsl:template>
-   <!--  <xsl:template match="header">       
-        <div class="date"><xsl:apply-templates select="child::date"/></div>
-        <div class="greeting"><xsl:apply-templates select="child::greeting"/></div>
-    </xsl:template> -->
+
     <xsl:template match="p">
-        <xsl:apply-templates/>
-         <br/>
+        <p><xsl:apply-templates/></p>
+         
     </xsl:template>
     <xsl:template match="ln">
         <br/><span class="ln"><xsl:apply-templates/></span>
     </xsl:template>
-    <xsl:template match="title"><xsl:apply-templates/></xsl:template>
-    <xsl:template match="fw">
-        
-    </xsl:template>
+
+  
     <xsl:template match="person | persName">
         <span class="person">
             <xsl:apply-templates/>
