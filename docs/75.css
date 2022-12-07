@@ -210,7 +210,7 @@ border-radius: 15px;
 
 /* Sticky Sidebar */
 .sidebar {
-display: flex;
+  display: none;
   position: fixed;
   bottom: 5%;
   top: 0;
@@ -221,9 +221,26 @@ display: flex;
   background-color: #CCDAE6;
   font-size: 10.25pt;
 }
+.sidebar button {
+    width:100%;; 
+    padding: .5em;
+    text-align:end;
+    font-size: larger;
+
+}
 
 .tocHeader {
     text-align: center;
+}
+
+div#hamburger button#openMe {
+        font-size:18pt;
+    
+}
+div#hamburger button#openMe:hover {
+        background-color:white;
+        transform: scale(1.5);
+    
 }
 
 /*GRID*/
@@ -303,7 +320,7 @@ div.footer p img{display:inline;}
   * whose id attributes START WITH this string: e-1909  since those are the sections
   * we want to be grid containers*/
  section[id^="e-"] {
- margin-left: 260px; /* ebb: adding this to prevent overlap with sidebar menu */
+ /*margin-left: 260px;*/ /* ebb: adding this to prevent overlap with sidebar menu */
  background-color: #CCDAE6; /* Slate Light+ */
  border: thin solid navy;
  display:grid;
@@ -375,7 +392,7 @@ div.facsblock > figure > img {
  * holds the facsimile image inside. */
 
  section[id^="f-"] {
- margin-left: 260px; /* ebb: adding this to prevent overlap with sidebar menu */
+ /*margin-left: 260px;*/ /* ebb: adding this to prevent overlap with sidebar menu */
  background-color: #CCDAE6; /* Slate Light+ */
  border: thin solid navy;
  display:grid;
