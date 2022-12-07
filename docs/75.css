@@ -64,7 +64,6 @@ p {
     color: black;
 }
 
-
 /* unvisited link */
 a:link {
   color: #001E44;
@@ -123,8 +122,7 @@ svg text{
     display: none;
     cursor: pointer;
 }
-
-
+/*END OF TABLE*/
 
 
 
@@ -136,7 +134,9 @@ svg text{
     height: auto;
     padding: 30px;
 }
+/*END of color block*/
 
+/* Penn State */
 .PSB{
   position: relative;
   object-fit: contain;
@@ -153,6 +153,7 @@ svg text{
   width: 200px;
   height: 100px;
 }
+/*END of Penn State*/
 
 footer.main {
     text-align: right;
