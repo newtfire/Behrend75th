@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2022-11-14T20:13:30Z. .
+Schema generated from ODD source 2022-12-07T04:04:04Z. .
 TEI Edition: Version 4.4.0. Last updated on
         19th April 2022, revision ff9cc28b0
 TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.4.0/
@@ -1615,23 +1615,35 @@ Suggested values include: 1] volume (volume); 2] issue; 3] page (page); 4] line;
    </define>
    <define name="tei_model.pPart.transcriptional">
       <choice>
+         <ref name="tei_corr"/>
          <ref name="tei_add"/>
+         <ref name="tei_del"/>
          <ref name="tei_unclear"/>
       </choice>
    </define>
    <define name="tei_model.pPart.transcriptional_alternation">
       <choice>
+         <ref name="tei_corr"/>
          <ref name="tei_add"/>
+         <ref name="tei_del"/>
          <ref name="tei_unclear"/>
       </choice>
    </define>
    <define name="tei_model.pPart.transcriptional_sequence">
+      <ref name="tei_corr"/>
       <ref name="tei_add"/>
+      <ref name="tei_del"/>
       <ref name="tei_unclear"/>
    </define>
    <define name="tei_model.pPart.transcriptional_sequenceOptional">
       <optional>
+         <ref name="tei_corr"/>
+      </optional>
+      <optional>
          <ref name="tei_add"/>
+      </optional>
+      <optional>
+         <ref name="tei_del"/>
       </optional>
       <optional>
          <ref name="tei_unclear"/>
@@ -1639,7 +1651,13 @@ Suggested values include: 1] volume (volume); 2] issue; 3] page (page); 4] line;
    </define>
    <define name="tei_model.pPart.transcriptional_sequenceOptionalRepeatable">
       <zeroOrMore>
+         <ref name="tei_corr"/>
+      </zeroOrMore>
+      <zeroOrMore>
          <ref name="tei_add"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="tei_del"/>
       </zeroOrMore>
       <zeroOrMore>
          <ref name="tei_unclear"/>
@@ -1647,7 +1665,13 @@ Suggested values include: 1] volume (volume); 2] issue; 3] page (page); 4] line;
    </define>
    <define name="tei_model.pPart.transcriptional_sequenceRepeatable">
       <oneOrMore>
+         <ref name="tei_corr"/>
+      </oneOrMore>
+      <oneOrMore>
          <ref name="tei_add"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="tei_del"/>
       </oneOrMore>
       <oneOrMore>
          <ref name="tei_unclear"/>
@@ -2447,6 +2471,16 @@ Suggested values include: 1] volume (volume); 2] issue; 3] page (page); 4] line;
          <empty/>
       </element>
    </define>
+   <define name="tei_corr">
+      <element name="corr">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(correction) contains the correct form of a passage apparently erroneous in the copy text. [3.5.1. Apparent Errors]</a:documentation>
+         <ref name="tei_macro.paraContent"/>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.editLike.attributes"/>
+         <ref name="tei_att.typed.attributes"/>
+         <empty/>
+      </element>
+   </define>
    <define name="tei_gap">
       <element name="gap">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(gap) indicates a point where material has been omitted in a transcription, whether for editorial reasons described in the TEI header, as part of sampling practice, or because the material is illegible, invisible, or inaudible. [3.5.3. Additions, Deletions, and Omissions]</a:documentation>
@@ -2546,6 +2580,17 @@ Sample values include: 1] rubbing (rubbing); 2] mildew (mildew); 3] smoke (smoke
                </oneOrMore>
             </list>
          </attribute>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_del">
+      <element name="del">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(deletion) contains a letter, word, or passage deleted, marked as deleted, or otherwise indicated as superfluous or spurious in the copy text by an author, scribe, or a previous annotator or corrector. [3.5.3. Additions, Deletions, and Omissions]</a:documentation>
+         <ref name="tei_macro.paraContent"/>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.transcriptional.attributes"/>
+         <ref name="tei_att.typed.attributes"/>
+         <ref name="tei_att.dimensions.attributes"/>
          <empty/>
       </element>
    </define>

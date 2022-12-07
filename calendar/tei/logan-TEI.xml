@@ -235,7 +235,7 @@
                </figure>
                <ab hand="#redPen" rend="cursive">
                   <lb/>"Ah dear but come thou back to me <lb/>Whatever change the years <add
-                     rend="cursive" place="above-line">(weeks)</add> have made wrought <lb/>I find
+                     rend="cursive" place="above-line">(weeks)</add> have <del rend="strikethrough">made</del> wrought <lb/>I find
                   not yet one lonely thought <lb/>that cries against my wish for thee"
                      <lb/><persName>Tennyson</persName>. </ab>
                <note resp="#lhering">The flowers in the drawing might be <rs type="object">chrysanthemums</rs> or
