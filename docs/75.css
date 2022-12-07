@@ -1,6 +1,9 @@
 body {padding: 1em; }
 div.banner {display:flex; justify-content:space-between; }
 
+/* deletions in travel letters and calendar */
+span.x {text-decoration: line-through;}
+
 /* latin */
 @font-face {
   font-family: 'Roboto Condensed';

@@ -158,6 +158,13 @@
         <xsl:text> </xsl:text>
     </xsl:template>
     
+    <xsl:template match="del">
+        <span class="x">
+            <xsl:apply-templates/>
+        </span>
+        
+    </xsl:template>
+    
     <!--  <xsl:template match="facs">
         <a href="#{@xml:id}">
             <xsl:apply-templates/>
