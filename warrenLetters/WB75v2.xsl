@@ -63,7 +63,7 @@
                                                 Letters</a>
                                         </li>
                                         <li>
-                                            <a href="search.html">Search</a>
+                                            <a href="search.html">🔎 Search</a>
                                         </li>
                                     </ul>
                                     <ul>
