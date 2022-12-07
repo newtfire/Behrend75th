@@ -45,7 +45,7 @@
                           </ul>
                            <ul>
                                <xsl:apply-templates select="$allCollections//xml" mode="toc">
-                                   <xsl:sort select="(descendant::date/@when)[1]"/>
+                                   <xsl:sort select="(descendant::date)[1]"/>
                                </xsl:apply-templates>
                            </ul>
                       </section>
@@ -56,7 +56,7 @@
                 
                
             <xsl:comment>New structure for aligning page images and transcripts here.</xsl:comment>
-                <section id="f-{descendant::date[1]/@when}" class="document">
+                <section id="f-{descendant::date[1]}" class="document">
                     <div class="facs">
                         <figure>
                             <img src="images/{descendant::figure/graphic/@src ! base-uri() ! tokenize(., '/')[last()]}" alt="{descendant::date}: {descendant::figDesc ! normalize-space()}" title="{descendant::date}: {descendant::figDesc ! normalize-space()}" class="entry"/>
