@@ -216,6 +216,7 @@ border-radius: 15px;
 }
 
 /* Sticky Sidebar */
+/* Sticky Sidebar */
 .sidebar {
   display: none;
   position: fixed;
@@ -247,6 +248,7 @@ div#hamburger button#openMe {
 div#hamburger button#openMe:hover {
         background-color:white;
         transform: scale(1.5);
+        }
 
 /*GRID*/
 figure img {
