@@ -13,16 +13,7 @@
  * search form elements and search results on 
  * the search page. */
 
-body {
-font-family: arial, helvetica, sans-serif;
-background-color: #001E44;
-color: white;
-}
-
-h1 {
-    font-size: 48px;
-    color: white;    
-}
+body{background-color: red;}
 
 form#ssForm{
     display: flex;
