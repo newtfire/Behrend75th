@@ -70,11 +70,16 @@
                     </ab>
                     <figure rend="cutout" hand="#blackpen">
                         <figDesc resp="#acolemanreeves"> A man with a <rs type="object"
-                                >mustache</rs> laying in <rs type="object">bed</rs>. </figDesc>
+                                >mustache</rs> lying in <rs type="object">bed</rs>. </figDesc>
                     </figure>
                     <ab hand="#pencil" rend="cursive"> E.R.B. <lb/>"That damned old <rs
                             type="object">clock</rs>
-                        <lb/>gives me a</ab>
+                        <lb/>gives me a shock<lb/>
+                        Each morning when it’s dark<lb/>
+                        <emph style="underline">It likes</emph> the fun, but I’ve begun<lb/>
+                        To tire of the lark!”
+ 
+                    </ab>
                 </div2>
 
 
@@ -93,9 +98,8 @@
                         </figDesc>
                     </figure>
                     <ab hand="#pencil" rend="cursive">
-                        <persName>Mr. Behrend</persName> finds a <lb/> big <rs type="animal"
-                            >bug!</rs></ab>
-                    <ab hand="#redPen" rend="cursive"> I wonder if you have found many lately</ab>
+                        <persName>Mr. Behrend</persName> finds a <lb/> <rs type="animal">bed bug</rs>!</ab>
+                    <ab hand="#redPen" rend="cursive"> I wonder if you have found many lately?</ab>
                 </div2>
 
 
@@ -113,12 +117,13 @@
                         <figDesc resp="#acolereeves"/>
                     </figure>
                     <ab hand="#pencil" rend="#cursive">
-                        <lb/> Each morning very early <lb/> When all is dark and still<lb/>
-                        <persName>Ernst</persName> goes off into likely blackness <lb/>To work at
+                        <lb/> Each morning <emph style="underline">very</emph> early <lb/> When all is dark and still<lb/>
+                        <persName>Ernst</persName> goes off in inky blackness <lb/>To work at
                             <rs type="location">Hammermill</rs>
-                        <lb/> I really think he's very good <lb/>to get up when it's dark <lb/>
-                        though he says he doesn't mind <lb/> It can't (blank) (blank) a lark! </ab>
-                    <ab><add hand="#redPen" rend="#cursive" place="bottom-right">(blank) is it still
+                        <lb/> I really think he's very good <lb/>to get up when it’s dark <lb/>
+                        For tho’ he <emph style="underline">says</emph> he doesn’t mind <lb/> 
+                        It can't be such a lark! </ab>
+                    <ab><add hand="#redPen" rend="#cursive" place="bottom-right">Poor thing! is it still
                             dark when you arise?</add></ab>
                 </div2>
 
@@ -136,9 +141,10 @@
                         <figDesc resp="#acolemanreeves">A large <rs type="object">question mark</rs>
                             in the center of the paper.</figDesc>
                     </figure>
-                    <ab><add hand="#redPen" rend="#cursive" place="bottom-right">.. this is the day,
-                            this...later. done. the</add></ab>
-                    <!-- finish trasncribing here -->
+                    <ab><add hand="#redPen" rend="#cursive" place="bottom-right">Perhaps this is <emph style="underline">the</emph> day,
+                            tho’ I think it will be later. Love, M.</add></ab>
+                    <note resp="#ebeshero">Indeed, Warren Moritz Behrend would be born six days later on March 14, 1909. We conjecture that Mary Behrend wrote and sent these calendar sheets from
+                    while staying with her family in Greenwich, Connecticut preparing for the new baby’s arrival.</note>
                 </div2>
 
 
@@ -165,7 +171,6 @@
                     <ab><add hand="#redPen" rend="#cursive" place="bottom-right">Love from
                                 <persName>Molly</persName></add></ab>
                 </div2>
-
 
 
                 <div2 xml:id="e-1909-03-17"
@@ -207,9 +212,11 @@
                             hanging up to dry.</figDesc>
                     </figure>
                     <ab hand="#pencil">
-                        <lb/>Wash day at <persName>the behrends</persName>
-                        <lb/>oh, I say! <lb/>That's really a very <lb/>unusual display! </ab>
-                    <ab><add hand="#redPen" rend="#cursive" place="bottom-right">Do you still miss
+                        <lb/>WASHDAY AT <persName>THE BEHREND’S</persName>
+                        <lb/>OH, I SAY!<lb/>
+                        THAT’S REALLY A VERY<lb/>
+                        UNUSUAL DISPLAY!</ab>
+                    <ab><add hand="#redPen" rend="#cursive" place="bottom-right">Do you <emph style="underline">still</emph> miss
                             me?</add></ab>
                 </div2>
 
@@ -224,19 +231,20 @@
                         <lb/><date when="1909-03-25">March 25, 1909. <lb/>Thursday</date>
                     </ab>
                     <figure hand="#multicolor">
-                        <figDesc resp="#acolemanreeves">A woman walking in a <rs type="location"
-                                >garden</rs></figDesc>
+                        <figDesc resp="#ebeshero">A woman looking at flowers, presumably at a <rs type="location"
+                                >florist shop</rs>.</figDesc>
                     </figure>
                     <ab hand="#pencil">
-                        <title> At the <persName>Lavers</persName>
+                        <title> <emph style="underline">M.B. AT <persName>LAVER’S</persName></emph>
                         </title>
-                        <lb/>"I'll send the <rs type="object">bill</rs> to
-                            <persName>Ernst</persName>
-                        <lb/> and take them every one <lb/>I'll watch his face &amp;see him
-                        <lb/>smile <lb/>It will be such jolly fun!" </ab>
+                        <lb/>"I’LL SEND THE <rs type="object">BILL</rs> TO
+                            <persName>ERNST</persName>
+                        <lb/> AND TAKE THEM EVERY ONE<lb/>
+                        I’LL WATCH HIS FACE &amp; SEE HIM <emph style="underline">SMILE</emph>
+                        <lb/>IT WILL BE SUCH JOLLY FUN!" </ab>
                     <ab><add hand="#redPen" rend="#cursive" place="top-right"
-                                ><persName>Molly</persName> reviewing a full Gig <rs type="object"
-                                >bill</rs> Poor <persName>Ernst</persName></add></ab>
+                                ><persName>Molly</persName> running up a big <rs type="object"
+                                >bill</rs>. Poor <persName>Ernst</persName></add></ab>
                     <!-- finish trasncribing here -->
                 </div2>
 
