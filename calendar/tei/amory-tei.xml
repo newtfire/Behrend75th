@@ -185,16 +185,15 @@
                         <figDesc resp="#acolemanreeves">
                             <rs type="object">Green Shamrocks</rs> dispersed throughout the paper.
                             Two <rs type="animal">snakes</rs> drawn on the top of the paper. A
-                            drawing of the <rs type="location">hammermill center</rs> at the bottom
+                            drawing of the <rs type="location">Hammermill center</rs> at the bottom
                             right corner. </figDesc>
                     </figure>
                     <ab hand="#brownink">
                         <lb/><persName>ST. Patrick</persName> was a useful saint<lb/> He frightened
                         all the <rs type="animal">snakes</rs> away- <lb/>I wish he'd try his art on
-                        smoke <lb/>around <rs type="location">the hammermill</rs> some day! <lb/>is
-                        it not?!</ab>
-                    <ab><add hand="#redPen" rend="#cursive"><rs type="location"> The Hammermill</rs>
-                            is really lucky!</add></ab>
+                        smoke <lb/>around <rs type="location">the Hammermill</rs> some day! <lb/></ab>
+                    <ab><add hand="#redPen" rend="#cursive"><rs type="location">The Hammermill</rs>
+                            really <emph style="underline">doesn’t smoke</emph>!</add></ab>
                     <!-- finish trasncribing here -->
                 </div2>
 

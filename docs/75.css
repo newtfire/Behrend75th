@@ -4,6 +4,12 @@ div.banner {display:flex; justify-content:space-between; }
 /* deletions in travel letters and calendar */
 span.x {text-decoration: line-through;}
 span.underline {text-decoration: underline;}
+/* calendar styling */
+.redPen {color:red;}
+.fw {font-size:smaller;}
+.calendarPub {font-size:smaller;}
+
+
 /* latin */
 @font-face {
   font-family: 'Roboto Condensed';
@@ -137,9 +143,8 @@ footer.main {
 /* GitHub logo */
 footer.main img#git {
        width:50px;
-       text-align:left;
        padding-right:100vw;
-       
+       display:inline; 
    } 
 
 

@@ -221,7 +221,48 @@
         </span>
 
     </xsl:template>
+    
+    <!-- 2022-12-08 ebb: Adding the following templates to differentiate HTML output for 
+    calendar print vs. Mary Behrend's various modes of handwriting. -->
+    
+    <xsl:template match="fw">
+        <p class="fw"><xsl:apply-templates/></p>
+    </xsl:template>
+    
+    <xsl:template match="ab">
+       <xsl:choose>
+           <xsl:when test="@hand">
+               <p class="{@hand ! substring-after(., '#')}"><xsl:apply-templates/></p>
+           </xsl:when>
+           <xsl:otherwise>
+               <p><xsl:apply-templates/></p>
+           </xsl:otherwise>
 
+       </xsl:choose>
+    </xsl:template>
+    
+    
+    <xsl:template match="add[@hand]">
+        <span class="{@hand ! substring-after(., '#')}"><xsl:apply-templates/></span>
+    </xsl:template>
+    
+    <xsl:template match="emph">
+        
+        <span class="underline"><xsl:apply-templates/></span>
+    </xsl:template>
+    
+    <xsl:template match="rs">
+        <xsl:choose>
+            <xsl:when test="@type='location'">
+                <span class="place"><xsl:apply-templates/></span>
+            </xsl:when>
+            <xsl:otherwise>
+                <span class="{@type}"><xsl:apply-templates/></span>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    
+  
     <!--  <xsl:template match="facs">
         <a href="#{@xml:id}">
             <xsl:apply-templates/>
