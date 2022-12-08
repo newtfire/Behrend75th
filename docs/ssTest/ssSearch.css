@@ -13,7 +13,7 @@
  * search form elements and search results on 
  * the search page. */
 
-body{background-color: red;}
+body{background-color: #96BEE6;}
 
 form#ssForm{
     display: flex;
