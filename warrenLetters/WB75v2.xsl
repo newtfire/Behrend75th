@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="3.0"
-    xmlns="http://www.w3.org/1999/xhtml">
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
     <xsl:output method="xhtml" html-version="5" omit-xml-declaration="yes" include-content-type="no"
         indent="yes"/>
@@ -27,8 +28,9 @@
             <xsl:for-each select="$allCollections">
                 <xsl:sort select="descendant::date[1]"/>
                 <xsl:variable name="currentCollection" as="document-node()+" select="current()"/>
+                <xsl:variable name="filename" as="xs:string" select="$currentCollection/base-uri() ! tokenize(., '/')[last()] ! substring-before(., '.xml')"/>
                 <xsl:result-document method="xhtml"
-                    href="../docs/warrenLetters/{$currentCollection/base-uri() ! tokenize(., '/')[last()] ! substring-before(., '.xml')}.html">
+                    href="../docs/warrenLetters/{$filename}.html">
                     <html>
                         <head>
                             <title>Warren Behrend’s Last Correspondence and Memorial</title>
@@ -70,6 +72,8 @@
                                         <xsl:apply-templates select="$allCollections//xml"
                                             mode="toc">
                                             <xsl:sort select="(descendant::date)[1]"/>
+                                            <xsl:with-param as="xs:string" name="filename"
+                                                select="$filename" tunnel="yes"/>
                                         </xsl:apply-templates>
                                     </ul>
                                 </section>
@@ -79,7 +83,6 @@
                             </div>
 
                             <!--   <h1>Warren Behrend’s Last Correspondence and Memorial</h1>-->
-
 
                             <xsl:comment>New structure for aligning page images and transcripts here.</xsl:comment>
                             <section id="f-{descendant::date[1]}" class="document">
@@ -99,7 +102,6 @@
                                     <xsl:apply-templates select="descendant::meta"/>
                                     <xsl:apply-templates select="descendant::body"/>
                                 </div>
-
                             </section>
 
                         </body>
@@ -112,13 +114,23 @@
 
     <!--Templates in toc mode for the table of contents -->
     <xsl:template match="xml" mode="toc">
+        <xsl:param name="filename" tunnel="yes"/>
+        <xsl:variable name="linkText" as="xs:string" select="current()/base-uri() ! tokenize(., '/')[last()] ! substring-before(., '.xml')"/>
         <li>
-            <a href="{current()/base-uri() ! tokenize(., '/')[last()] ! substring-before(., '.xml')}.html">
-                <xsl:apply-templates select="descendant::title/string()"/></a>
+            <a href="{$linkText}.html">
+                <xsl:choose>
+                    <xsl:when test="$linkText = $filename">
+                        <b>
+                            <xsl:apply-templates select="descendant::title/string()"/>
+                        </b>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:apply-templates select="descendant::title/string()"/>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </a>
         </li>
-
     </xsl:template>
-
 
 
     <!--Normal templates for fulltext view -->

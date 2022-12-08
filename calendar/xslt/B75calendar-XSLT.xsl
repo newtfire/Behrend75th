@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xpath-default-namespace="http://www.tei-c.org/ns/1.0"
-    xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    xmlns="http://www.w3.org/1999/xhtml"
-    version="3.0">
-    
-    <xsl:output method="xhtml" html-version="5" omit-xml-declaration="yes" 
-        include-content-type="no" indent="yes"/>
-    
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.w3.org/1999/xhtml" version="3.0">
+
+    <xsl:output method="xhtml" html-version="5" omit-xml-declaration="yes" include-content-type="no"
+        indent="yes"/>
+
     <xsl:variable name="MBCal" select="collection('../tei/?select=*.xml')"/>
     <xsl:template match="/">
         <!--<xsl:result-document method="xhtml" html-version="5" omit-xml-declaration="yes" include-content-type="no"
@@ -50,23 +48,22 @@
                 
                
         </xsl:result-document>-->
-        
+
         <xsl:for-each select="$MBCal//div2">
             <xsl:variable name="filename" as="xs:string" select="@xml:id"/>
-            <xsl:result-document method="xhtml" html-version="5" omit-xml-declaration="yes" include-content-type="no"
-                indent="yes" href="../../docs/calendar/{$filename}.html" >
-            
-           
-               <html> 
-                   <head>
-                       <title>Calendar Entry <xsl:value-of select="@xml:id"/></title>
-                       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                       <!--ebb: The line above helps your HTML scale to fit lots of different devices. -->
-                       <link rel="stylesheet" type="text/css" href="../75.css"/>
-                       <script type="text/javascript" src="../respMenu.js">/**/</script>   
-                   </head>
-                <body>
-                   <!-- <nav>
+            <xsl:result-document method="xhtml" html-version="5" omit-xml-declaration="yes"
+                include-content-type="no" indent="yes" href="../../docs/calendar/{$filename}.html">
+                <html>
+                    <head>
+                        <title>Calendar Entry <xsl:value-of select="@xml:id"/></title>
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+                        <!--ebb: The line above helps your HTML scale to fit lots of different devices. -->
+                        <link rel="stylesheet" type="text/css" href="../75.css"/>
+                        <script type="text/javascript" src="../respMenu.js">
+                            /**/</script>
+                    </head>
+                    <body>
+                        <!-- <nav>
                         <hr/>
                         <p class="navbar">
                             <!-\-<a href="../index.html">Home</a> | 
@@ -77,66 +74,101 @@
                             <a href="search.html">Search</a></p>
                         <hr/>
                     </nav>-->
-                    <div class="sidebar">
-                        <button id="closeMe">close ×</button>
-                        <section id="toc">
-                            <div class="tocHeader"><h3>Table of Contents</h3></div>
-                            <ul>
-                                <li><a href="../index.html">Home</a></li>
-                                <li><a href="../calendarPage.html">Behrend Calendars</a></li>
-                                <li><a href="../travelLettersPage.html">Behrend Travel Letters</a></li>
-                                <li><a href="../sipleLettersPage.html">Behrend Siple Letters</a></li>
-                                <li><a href="../warrenLettersPage.html">Behrend Warren Letters</a></li>
-                                <li><a href="../search.html">🔎 Search</a></li>
-                            </ul>
-                            
-                            <ul>    
-                                    <xsl:apply-templates select="$MBCal//text//date" mode="toc">
-                                        
-                                        <xsl:sort select="@when"/>
-                                    </xsl:apply-templates>
-                                
-                            </ul>
-                        </section>
-                    </div>
-                    <div id="hamburger">
-                        <button id="openMe">☰</button>
-                    </div>
-                <xsl:apply-templates select="current()">
-                    <xsl:sort select="descendant::date/@when"/>
-                </xsl:apply-templates>
-                
-                    <footer class="main">
-                        <img src="../images/pennStateHorizontal.png" class="pennStateFooter"/>
-                        <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
-                    </footer>
-                </body>
-               </html>
-            
-             </xsl:result-document>
-        </xsl:for-each>
-        
-        
+                        <div class="sidebar">
+                            <button id="closeMe">close ×</button>
+                            <section id="toc">
+                                <div class="tocHeader">
+                                    <h3>Table of Contents</h3>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <a href="../index.html">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="../calendarPage.html">Behrend Calendars</a>
+                                    </li>
+                                    <li>
+                                        <a href="../travelLettersPage.html">Behrend Travel
+                                            Letters</a>
+                                    </li>
+                                    <li>
+                                        <a href="../sipleLettersPage.html">Behrend Siple Letters</a>
+                                    </li>
+                                    <li>
+                                        <a href="../warrenLettersPage.html">Behrend Warren
+                                            Letters</a>
+                                    </li>
+                                    <li>
+                                        <a href="../search.html">🔎 Search</a>
+                                    </li>
+                                </ul>
 
-        
+                                <ul>
+                                    <xsl:apply-templates select="$MBCal//text//date" mode="toc">
+                                        <xsl:sort select="@when"/>
+                                        <xsl:with-param as="xs:string" name="filename"
+                                            select="$filename" tunnel="yes"/>
+                                    </xsl:apply-templates>
+
+                                </ul>
+                            </section>
+                        </div>
+                        <div id="hamburger">
+                            <button id="openMe">☰</button>
+                        </div>
+                        <xsl:apply-templates select="current()">
+                            <xsl:sort select="descendant::date/@when"/>
+                        </xsl:apply-templates>
+
+                        <footer class="main">
+                            <img src="../images/pennStateHorizontal.png" class="pennStateFooter"/>
+                            <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"
+                                    ><img alt="Creative Commons License" style="border-width:0"
+                                    src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png"
+                            /></a><br/>This work is licensed under a <a rel="license"
+                                href="http://creativecommons.org/licenses/by-nc/4.0/">Creative
+                                Commons Attribution-NonCommercial 4.0 International License</a>.
+                        </footer>
+                    </body>
+                </html>
+
+            </xsl:result-document>
+        </xsl:for-each>
     </xsl:template>
-    
+
     <xsl:template match="date" mode="toc">
+        <xsl:param name="filename" tunnel="yes"/>
         <li>
             <a href="e-{@when}.html">
-                <xsl:apply-templates mode="toc"/>
+                <xsl:choose>
+                    <xsl:when test="@when = $filename ! substring-after(., '-')">
+                        <b>
+                            <xsl:apply-templates mode="toc"/>
+                        </b>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:apply-templates mode="toc"/>
+                    </xsl:otherwise>
+                </xsl:choose>
             </a>
         </li>
     </xsl:template>
-    
+
     <xsl:template match="div2">
         <section id="{@xml:id}" class="document">
             <div class="facsblock">
                 <figure>
-                    <img src="photos/{@facs!tokenize(.,'/')[last()]}" alt="{descendant::date}: {descendant::figDesc ! normalize-space()}" title="{descendant::date}: {descendant::figDesc ! normalize-space()}" class="entry"/>
-                    <figcaption><xsl:apply-templates select="descendant::figDesc"/><xsl:text>—</xsl:text><xsl:value-of select="descendant::figDesc/@resp"/></figcaption>
+                    <img src="photos/{@facs!tokenize(.,'/')[last()]}"
+                        alt="{descendant::date}: {descendant::figDesc ! normalize-space()}"
+                        title="{descendant::date}: {descendant::figDesc ! normalize-space()}"
+                        class="entry"/>
+                    <figcaption>
+                        <xsl:apply-templates select="descendant::figDesc"/>
+                        <xsl:text>—</xsl:text>
+                        <xsl:value-of select="descendant::figDesc/@resp"/>
+                    </figcaption>
                 </figure>
-                
+
                 <div class="transcript">
                     <xsl:apply-templates select="descendant::ab"/>
                 </div>
@@ -144,29 +176,33 @@
             <div class="note">
                 <xsl:apply-templates select="descendant::note"/>
             </div>
-            
+
         </section>
     </xsl:template>
-    
+
     <xsl:template match="note">
-        <p class="note"><xsl:apply-templates/><xsl:text>—</xsl:text><xsl:value-of select="@resp"/></p>
+        <p class="note">
+            <xsl:apply-templates/>
+            <xsl:text>—</xsl:text>
+            <xsl:value-of select="@resp"/>
+        </p>
     </xsl:template>
-    
-    
+
+
     <xsl:template match="lb">
         <br/>
     </xsl:template>
     <xsl:template match="lb" mode="toc">
         <xsl:text> </xsl:text>
     </xsl:template>
-    
+
     <xsl:template match="del">
         <span class="x">
             <xsl:apply-templates/>
         </span>
-        
+
     </xsl:template>
-    
+
     <!--  <xsl:template match="facs">
         <a href="#{@xml:id}">
             <xsl:apply-templates/>
@@ -180,5 +216,5 @@
             </a>
         </li>
     </xsl:template>-->
-    
+
 </xsl:stylesheet>

@@ -24,7 +24,8 @@
                         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
                         <!--ebb: The line above helps your HTML scale to fit lots of different devices. -->
                         <link rel="stylesheet" type="text/css" href="../75.css"/>
-                        <script type="text/javascript" src="../respMenu.js">/**/</script>   
+                        <script type="text/javascript" src="../respMenu.js">
+                            /**/</script>
                     </head>
                     <body>
                         <!-- <nav>
@@ -62,6 +63,8 @@
                                 <ul>
                                     <xsl:apply-templates select="$travelColl//xml" mode="toc">
                                         <xsl:sort select="(descendant::date/@when)[1]"/>
+                                        <xsl:with-param as="xs:string" name="filename"
+                                            select="$filename" tunnel="yes"/>
                                     </xsl:apply-templates>
                                 </ul>
                             </section>
@@ -69,18 +72,6 @@
                         <div id="hamburger">
                             <button id="openMe">☰</button>
                         </div>
-
-                        <!-- <nav>
-                            <hr/>
-                            <p class="navbar">
-                                <a href="../index.html">Home</a> | <a href="../calendarPage.html"
-                                    >Behrend Calendars</a> | <a href="../travelLettersPage.html"
-                                    >Behrend Travel Letters</a> | <a href="../sipleLettersPage.html"
-                                    >Behrend Siple Letters</a> | <a href="../warrenLettersPage.html"
-                                    >Behrend Warren Letters</a> | <a href="search.html"
-                                >Search</a></p>
-                            <hr/>
-                        </nav>-->
 
                         <xsl:choose>
                             <xsl:when test="front">
@@ -92,7 +83,8 @@
                                         <h2 id="{@xml:id}">
                                             <xsl:value-of select="@xml:id ! tokenize(., '-')[1]"/>
                                             <xsl:text>, </xsl:text>
-                                            <xsl:apply-templates select="(descendant::date/@when)[1]"/>
+                                            <xsl:apply-templates
+                                                select="(descendant::date/@when)[1]"/>
                                         </h2>
                                         <xsl:apply-templates select="front"/>
                                     </div>
@@ -136,9 +128,23 @@
 
     <!--Templates in toc mode for the table of contents -->
     <xsl:template match="xml" mode="toc">
+        <xsl:param name="filename" tunnel="yes"/>
         <li>
             <a href="{letter/@xml:id}.html">
-                <xsl:value-of select="letter/@xml:id"/>
+                <xsl:choose>
+                    <xsl:when test="letter/@xml:id = $filename">
+                        <b>
+                            <xsl:value-of select="letter/@xml:id ! tokenize(., '-')[1]"/>
+                            <xsl:text>, </xsl:text>
+                            <xsl:apply-templates select="(descendant::date/@when)[1]"/>
+                        </b>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:value-of select="letter/@xml:id ! tokenize(., '-')[1]"/>
+                        <xsl:text>, </xsl:text>
+                        <xsl:apply-templates select="(descendant::date/@when)[1]"/>
+                    </xsl:otherwise>
+                </xsl:choose>
             </a>
         </li>
     </xsl:template>
@@ -285,10 +291,12 @@
     <xsl:template match="front">
         <!--<a href="#{descendant::h1}">
             <h2 id="{base-uri() ! tokenize(., '/')[last()]}1955-07-26">-->
-       <h3>Front</h3>
+        <h3>Front</h3>
         <!--</a>-->
         <div class="letter">
-            <div class="header"><xsl:value-of select="(//date/@when)[1]"/></div>
+            <div class="header">
+                <xsl:value-of select="(//date/@when)[1]"/>
+            </div>
             <xsl:apply-templates/>
         </div>
     </xsl:template>
@@ -296,10 +304,12 @@
     <xsl:template match="back">
         <!--<a href="#{descendant::h1}">-->
         <!--            <h2 id="{base-uri() ! tokenize(., '/')[last()]}1955-07-26-back">-->
-       <h3>Back</h3>
+        <h3>Back</h3>
         <!--</a>-->
         <div class="letter">
-            <div class="header"><xsl:value-of select="(//date/@when)[1]"/></div>
+            <div class="header">
+                <xsl:value-of select="(//date/@when)[1]"/>
+            </div>
             <xsl:apply-templates/>
         </div>
     </xsl:template>
