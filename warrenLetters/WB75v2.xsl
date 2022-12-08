@@ -37,6 +37,7 @@
                             <link rel="stylesheet" type="text/css" href="../75.css"/>
                             <script type="text/javascript" src="../respMenu.js">
                                 /**/</script>
+                            <meta name="docImage" class="staticSearch_docImage" content="images/{descendant::figure/graphic/@src ! tokenize(., '/')[last()]}"/>
                         </head>
                         <!-- <div class="graphics">
                        <xsl:apply-templates select="figure"/>
@@ -50,22 +51,22 @@
                                             <a href="../index.html">Home</a>
                                         </li>
                                         <li>
-                                            <a href="../calendarPage.html">Behrend Calendar</a>
-                                        </li>
-                                        <li>
-                                            <a href="../travelLettersPage.html">Behrend Travel
-                                                Letters</a>
-                                        </li>
-                                        <li>
-                                            <a href="../sipleLettersPage.html">Behrend Siple
-                                                Letters</a>
+                                            <a href="../calendarPage.html">Mary Behrend's Calendar</a>
                                         </li>
                                         <li>
                                             <a href="../warrenLettersPage.html">Warren Behrend
                                                 Letters</a>
                                         </li>
                                         <li>
-                                            <a href="search.html">🔎 Search</a>
+                                            <a href="../sipleLettersPage.html">Siple
+                                                Letter</a>
+                                        </li>
+                                        <li>
+                                            <a href="../travelLettersPage.html">Behrend Travel
+                                                Letters</a>
+                                        </li>
+                                        <li>
+                                            <a href="../search.html">🔎 Search</a>
                                         </li>
                                     </ul>
                                     <ul>
