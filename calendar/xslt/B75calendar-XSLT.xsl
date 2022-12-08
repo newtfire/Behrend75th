@@ -262,6 +262,14 @@
         </xsl:choose>
     </xsl:template>
     
+    <xsl:template match="persName">
+        <span class="person"><xsl:apply-templates/></span>
+    </xsl:template>
+    <xsl:template match="placeName">
+        <span class="place"><xsl:apply-templates/></span>
+    </xsl:template>
+    
+    
   
     <!--  <xsl:template match="facs">
         <a href="#{@xml:id}">
