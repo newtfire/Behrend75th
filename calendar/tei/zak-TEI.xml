@@ -73,7 +73,7 @@
                </figure>
                <ab hand="#blackpen" rend="smallcaps">
                   <lb/>"There's something queer inside that thing"<lb/> <persName>Gamie</persName> seems to think-
-                  <lb/>"I really don't know what it is <lb/>That can only sleep and drink"</ab>
+                  <lb/>"I really don't know <emph style="underline">what</emph> it is <lb/>That can only sleep and drink"</ab>
                <ab rend="smallcaps"><add rend="print" hand="#redPen" place="bottom-center"><lb/>What
                      do you think is inside!</add></ab>
                <note resp="zmurphy">This shows that <persName>Gamie</persName> is not sure about the baby that is inside
@@ -141,7 +141,7 @@
                <ab rend="cursive"><add rend="cursive" hand="#Blackpen, " place="center">
                      <lb/><rs type="object">Jewels</rs> are all very nice <lb/> But <persName>Ernst</persName> &amp; I will think twice <lb/>
                      Before buying <rs type="object">collars</rs> <lb/> For thousands of <rs type="object">dollars</rs> <lb/>You see we ???????
-                     the price!</add>
+                  the <emph style="underline">price!</emph></add>
                </ab>
                <ab rend="cursive"><add hand="#redPen" place="top-right" rend="cursive">
                      <lb/>I don’t want a <lb/> <rs type="animal">dog</rs> <rs type="object">collar</rs> anyway <lb/> so it’s all right! <lb/> Love
@@ -165,7 +165,7 @@
                      adressed to <persName>Mr. Behrend.</persName></figDesc>
                </figure>
                <ab rend="print"><add rend="print" hand="#smallcaps" place="center">
-                     <lb/> May <rs type="object">Baskets</rs> <lb/> No one knows who sends them <lb/> But they come each
+                  <lb/> <emph style="underline">May <rs type="object">Baskets</rs></emph> <lb/> No one knows who sends them <lb/> But they come each
                      first of May <lb/> Just full of lovely <rs type="object">things to eat</rs> <lb/> Upon this joyful
                      day.</add>
                </ab>
@@ -258,16 +258,15 @@
                   <figDesc resp="#zmurphy">Drawing of a large red house made with pencil and watercolor. </figDesc>
                </figure>
                <ab rend="print"><add rend="smallcaps" hand="#pencil" place="center">
-                  <lb/>Mr. Reichemheims dog is queer <lb/> He <emph style="underline"
-                     >likes</emph> that nasty german beer.<lb/> Here he is lapping it up - <lb/>
-                  <emph style="underline">Very</emph> bad for such a pup! </add>
+                  <lb/><persName>Mr. Conrad</persName> drew the plans to make the <rs type="location">house</rs> much bigger.<lb/>
+                  <lb/>He likes it all aside the <emph style="underline">price</emph>
+                  <lb/> It was an awful "figger!"
+                  </add>
                </ab>
                
                
                
-               <note resp="#zmurphy">This is showing that Mary is very unhappy at Mr. Reichemheims
-                  dog for liking german beer and expresses that it is really bad for a puppy like it
-                  to be drinking.</note>
+               <note resp="#rgerzevske"><persName>The Behrends</persName> appear interested in expanding their <rs type="location">house</rs>. They like the idea, but the price for the project was more than they expected and don't know if it's worth the cost, or if they should have this done at a cheaper rate.</note>
             </div2>
 
 
