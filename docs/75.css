@@ -136,6 +136,7 @@ footer.main {
 
 
 .navbar{
+    color:black;
     width: 85%;
     margin: auto;
     padding: 35px 0;
@@ -158,7 +159,7 @@ footer.main {
     content: '';
     height: 3px;
     width: 0;
-    background: #009688;
+    background: Navy;
     position: absolute;
     left: 0;
     bottom: -10px;
