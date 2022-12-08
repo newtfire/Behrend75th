@@ -132,7 +132,18 @@ span.span{
 footer.main {
     text-align: right;
     font-size: 9px;
+    display:flex;
+    justify-content:space-Between;
+     
 }
+footer.main img#git {
+       width:50px;
+       text-align:left;
+       
+       
+       
+   } 
+
 
 
 .navbar{
