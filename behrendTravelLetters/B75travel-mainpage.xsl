@@ -19,15 +19,27 @@
                     <title>Behrend Travel Letters</title>
                 </head>
                 <body>
-                    <nav>
-                        <hr/>
-                        <p class="navbar"><a href="index.html">Home</a> | <a
-                                href="calendarPage.html">Behrend Calendars</a> | <a
-                                href="travelLettersPage.html">Behrend Travel Letters</a> | <a
-                                href="sipleLettersPage.html">Behrend Siple Letters</a> | <a
-                                href="warrenLettersPage.html">Behrend Warren Letters</a> | <a
-                                href="search.html">Search</a></p>
-                        <hr/>
+                    <nav class="navbar">
+                        <ul>
+                            <li>
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="calendarPage.html">Behrend Calendars</a>
+                            </li>
+                            <li>
+                                <a href="travelLettersPage.html">Behrend Travel Letters</a>
+                            </li>
+                            <li>
+                                <a href="sipleLettersPage.html">Behrend Siple Letters</a>
+                            </li>
+                            <li>
+                                <a href="warrenLettersPage.html">Behrend Warren Letters</a>
+                            </li>
+                            <li>
+                                <a href="search.html">Search</a>
+                            </li>
+                        </ul>
                     </nav>
                     <div class="block">
                         <h2>Behrend Travel Letters</h2>
