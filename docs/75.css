@@ -193,17 +193,17 @@ border-radius: 15px;
 /* Sticky Sidebar */
 .sidebar {
   /*display: none;*/
-  position: fixed;
-  bottom: 5%;
-  top: 0;
-  /*left: 0.5%;*/
-  left: -270px;
-  width: 260px;
-  height: 1500px;
-  border: 1px solid #001E44;
-  background-color: #CCDAE6;
-  font-size: 10.25pt;
-  transition: .5s ease;
+    position: fixed;
+    top: 0;
+    /*left: 0.5%;*/
+    left: -270px;
+    width: 260px;
+    /*height: 1500px;*/
+    border: 1px solid #001E44;
+    background-color: #CCDAE6;
+    font-size: 10.25pt;
+    transition: .5s ease;
+    align-items: center;
 }
 
 .openSidebar{
@@ -211,9 +211,8 @@ border-radius: 15px;
     left: 0.5%;
     transition: .5s ease;
 }
-
 .sidebar button {
-    width:100%;; 
+    width:100%;
     padding: .5em;
     text-align:end;
     font-size: larger;
@@ -225,19 +224,45 @@ border-radius: 15px;
     color: black;
     background: white;
 }
+.sidebar h3{
+    margin: 15px auto 0 auto;
+}
+.sidebar ul{
+    list-style: none;
+    padding: 5px;
+    margin: 0;
+}
+.sidebar li{
+    padding: 0 25px;
+    border-radius: 50px;
+}
+.sidebar li:hover{
+    background: #eef3f7;
+    transition: 0.2s ease-out;
+}
+.sidebar a{
+    text-decoration: none;
+}
 
+#toc{
+    height: 91.9vh;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
 .tocHeader {
     text-align: center;
 }
 
 div#hamburger button#openMe {
-        font-size:18pt;
-    
+    font-size:18pt;
+
 }
 div#hamburger button#openMe:hover {
-        background-color:white;
-        transform: scale(1.5);
-        }
+    background-color:white;
+    transform: scale(1.1);
+}
 
 /*GRID*/
 figure img {

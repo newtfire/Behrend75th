@@ -29,12 +29,7 @@
                         <meta name="docImage" class="staticSearch_docImage" content="{(//graphic/@url)[1]}"/>
                     </head>
                     <body>
-                        <!-- <nav>
-                            <hr/>
-                            <p class="navbar"><a href="search.html">Search</a></p>
-                            <hr/>
-                        </nav>-->
-
+                       
                         <div class="sidebar">
                             <button id="closeMe">close ×</button>
                             <section id="toc">

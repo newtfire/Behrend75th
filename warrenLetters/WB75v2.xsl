@@ -46,6 +46,7 @@
                             <div class="sidebar">
                                 <button id="closeMe">close ×</button>
                                 <section id="toc">
+                                    <h3>Table of Contents</h3>
                                     <ul>
                                         <li>
                                             <a href="../index.html">Home</a>
