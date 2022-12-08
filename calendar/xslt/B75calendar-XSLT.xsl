@@ -87,7 +87,7 @@
                                         <a href="../index.html">Home</a>
                                     </li>
                                     <li>
-                                        <a href="../calendarPage.html">Behrend Calendar</a>
+                                        <a href="../calendarPage.html">Mary Behrend’s Calendar</a>
                                     </li>
                                     <li>
                                         <a href="../sipleLettersPage.html">Siple Letter</a>
