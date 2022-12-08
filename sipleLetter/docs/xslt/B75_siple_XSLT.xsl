@@ -35,7 +35,7 @@
                                 Letters</a>
                         </li>
                         <li>
-                            <a href="../sipleLettersPage.html">Behrend Siple Letters</a>
+                            <b><a href="../sipleLettersPage.html">Behrend Siple Letters</a></b>
                         </li>
                         <li>
                             <a href="../warrenLettersPage.html">Warren Behrend
