@@ -263,7 +263,7 @@
         <!-- list of MM-DD -->
         <g class="timeline">
           <xsl:for-each select="$siple">
-            <a href="siple/{current()/descendant::date[1]/@when}.html" target="_blank">
+            <a href="sipleLettersPage.html" target="_blank">
               <text x="{20+$lineX}" y="{$yInterval*position()}"  fill="{$colorArray[$index]}">
                 <xsl:value-of select="current()/descendant::date[1]/@when ! substring(., 6, 10)"/>
               </text>
