@@ -103,31 +103,6 @@ span.span{
     color:blue;
 }
 
-svg text{
-    font-family: 'Galdeano', sans-serif;
-}
-
-#svgTimeline{
-    margin: auto;    
-    width: 929px;
-}
-
-#timelineHeader{
-    cursor: pointer;
-}
-
-#calendar,#warrenLetters,#sipleLetter,#travelLetters,
-#calendar-timelineInfo,#warrenLetters-timelineInfo,#sipleLetter-timelineInfo,#travelLetters-timelineInfo,
-#calendar-timeline,#warrenLetters-timeline,#sipleLetter-timeline,#travelLetters-timeline
-{
-    display: none;
-    cursor: pointer;
-}
-
-
-
-
-
 /*Paragraph color block*/
 .block {
     background-color: white;
