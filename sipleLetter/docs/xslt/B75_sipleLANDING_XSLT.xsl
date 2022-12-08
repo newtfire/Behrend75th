@@ -15,6 +15,7 @@
                 <title>Letter from Paul Siple</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <!--ebb: The line above helps your HTML scale to fit lots of different devices. -->
+                <meta name="docImage" content="siple/photos/letter_hires_cropped.png"/>
                 <link rel="stylesheet" type="text/css" href="75.css"/>
                 <script type="text/javascript" src="respMenu.js">/**/</script> 
            </head>
@@ -28,18 +29,16 @@
                             <a href="index.html">Home</a>
                         </li>
                         <li>
-                            <a href="calendarPage.html">Behrend Calendars</a>
+                            <a href="calendarPage.html">Mary Behrend's Calendar</a>
                         </li>
                         <li>
-                            <a href="travelLettersPage.html">Behrend Travel
-                                Letters</a>
+                            <a href="sipleLettersPage.html">Siple Letter</a>
                         </li>
                         <li>
-                            <b><a href="sipleLettersPage.html">Behrend Siple Letters</a></b>
+                            <a href="warrenLettersPage.html">Warren Behrend Letters</a>
                         </li>
                         <li>
-                            <a href="warrenLettersPage.html">Behrend Warren
-                                Letters</a>
+                            <a href="travelLettersPage.html">Behrend Travel Letters</a>
                         </li>
                         <li>
                             <a href="search.html">🔎 Search</a>
