@@ -114,7 +114,7 @@
     <xsl:template match="xml" mode="toc">
         <li>
             <a href="{current()/base-uri() ! tokenize(., '/')[last()] ! substring-before(., '.xml')}.html">
-                <xsl:apply-templates select="descendant::title/@titleId"/></a>
+                <xsl:apply-templates select="descendant::title/string()"/></a>
         </li>
 
     </xsl:template>
