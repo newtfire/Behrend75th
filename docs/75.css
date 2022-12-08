@@ -212,7 +212,7 @@ border-radius: 15px;
     left: 0.5%;
     transition: .5s ease;
 }
-.sidebar button {
+.sidebar>button {
     width:100%;
     padding: .5em;
     text-align:end;
@@ -221,7 +221,7 @@ border-radius: 15px;
     cursor: pointer;
     color: #404040; /*darkgrey*/
 }
-.sidebar button:hover{
+.sidebar>button:hover{
     color: black;
     background: white;
 }
@@ -237,12 +237,15 @@ border-radius: 15px;
     padding: 0 25px;
     border-radius: 50px;
 }
-.sidebar li:hover{
+.sidebar ul:nth-child(2) li:not(:last-child):hover, .sidebar ul:nth-child(3) li:hover {
     background: #eef3f7;
     transition: 0.2s ease-out;
 }
 .sidebar a{
     text-decoration: none;
+}
+.sidebar ul>li>form>input{
+    width:45%;
 }
 
 #toc{

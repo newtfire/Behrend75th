@@ -116,9 +116,10 @@
                                         <a href="../travelLettersPage.html">Behrend Travel
                                             Letters</a>
                                     </li>
-                                    <li>
-                                        <a href="../search.html">🔎 Search</a>
-                                    </li>
+                                    <li><form method="get" action="../search.html"><label for="search">🔎</label>
+                                        <input type="text" id="search" name="q"/>
+                                            <button type="submit">Search</button>
+                                    </form></li>
                                 </ul>
 
                                 <ul>
