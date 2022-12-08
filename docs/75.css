@@ -5,7 +5,7 @@ div.banner {display:flex; justify-content:space-between; }
 span.x {text-decoration: line-through;}
 span.underline {text-decoration: underline;}
 /* calendar styling */
-.redPen {color:red;}
+.redPen {color:/*red*/ #8B0000;}
 .fw {font-size:smaller;}
 .calendarPub {font-size:smaller;}
 
