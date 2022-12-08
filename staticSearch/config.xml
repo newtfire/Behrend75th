@@ -30,6 +30,10 @@
     </rules>
     
     <contexts>
+        <context match="span[@class='animal']"/>
+        <context match="span[@class='person']"/>
+        <context match="span[@class='place']"/>
+        <context match="span[@class='transport']"/>
         <context match="blockquote" label="Quotations"/>
         <context match="div[@class='l']"/>
         <context match="span[@class='note'] | *[contains-token(@class,'sidenotes')]"
@@ -41,6 +45,13 @@
     <excludes>
         <exclude type="index" match="html[@id='excluded']"/>
         <exclude match="meta[contains-token(@class,'excludedMeta')]" type="filter"/>
+    </excludes>
+    
+    <excludes>
+        <exclude type="filter"
+            match="div[@class='sidebar']"/>
+        <exclude type="filter"
+            match="nav"/>
     </excludes>
     
 </config>
