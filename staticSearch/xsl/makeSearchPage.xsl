@@ -153,6 +153,10 @@
             </xsl:comment>
         </style>-->
     </xsl:template>
+    
+    <xsl:template match="style[@id='b75'] | link[@id='b75']">
+        <link rel="stylesheet" href="{$outputFolder}/../75.css" id="b75"/>
+    </xsl:template>
 
     <xd:doc>
         <xd:desc>This  template detects an HTML head element which does not contain an
@@ -160,10 +164,11 @@
             the <xd:ref name="css">$css</xd:ref> parameter. We place it first in the head element
             so that any subsequent style element provided by the user can override it.</xd:desc>
     </xd:doc>
-    <xsl:template match="head[not(*[@id='ssCss'])]">
+    <xsl:template match="head[not(*[@id='ssCss']) or not(*[@id='b75'])]">
         <xsl:copy>
             <xsl:apply-templates select="@*"/>
             <link rel="stylesheet" href="{$outputFolder}/ssSearch.css" id="ssCss"/>
+            <link rel="stylesheet" href="{$outputFolder}/../75.css" id="b75"/>
             <xsl:apply-templates select="node()"/>
         </xsl:copy>
     </xsl:template>
@@ -218,6 +223,32 @@
           
             <script src="{$outputFolder}/ssInitialize.js"><!-- Don't self-close script tags. --></script>
             <noscript><xsl:value-of select="hcmc:getCaption('ssScriptRequired', $captionLang)"/></noscript>
+
+
+            <!-- Navigation Bar -->
+            <nav class="navbar">
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="calendarPage.html">Mary Behrend's Calendar</a>
+                    </li>
+                    <li>
+                        <a href="warrenLettersPage.html">Warren Behrend Letters</a>
+                    </li>
+                    <li>
+                        <a href="sipleLettersPage.html">Siple Letter</a>
+                    </li>
+                    <li>
+                        <a href="travelLettersPage.html">Behrend Travel Letters</a>
+                    </li>
+                    <li>
+                        <a href="search.html">Search</a>
+                    </li>
+                </ul>
+            </nav>
+            
 
             <!--Now create the form-->
             <form accept-charset="UTF-8" id="ssForm"
