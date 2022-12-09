@@ -4,6 +4,11 @@ div.banner {display:flex; justify-content:space-between; }
 /* deletions in travel letters and calendar */
 span.x {text-decoration: line-through;}
 span.underline {text-decoration: underline;}
+/* calendar styling */
+.redPen {color:/*red*/ #8B0000;}
+.fw {font-size:smaller;}
+.calendarPub {font-size:smaller;}
+
 /* latin */
 @font-face {
   font-family: 'Roboto Condensed';
@@ -162,6 +167,12 @@ footer.main {
     font-size: 9px;
 }
 
+/* GitHub logo */
+footer.main img#git {
+       width:50px;
+       padding-right:100vw;
+       display:inline; 
+   } 
 
 .navbar{
     width: 85%;
@@ -220,20 +231,79 @@ border-radius: 15px;
 
 /* Sticky Sidebar */
 .sidebar {
-  display: block;
-  position: fixed;
-  bottom: 5%;
-  top: 0;
-  left: 0.5%;
-  width: 260px;
-  height: 1500px;
-  border: 1px solid #001E44;
-  background-color: #CCDAE6;
-  font-size: 10.25pt;
+/*display: none;*/
+    position: fixed;
+    top: 0;
+    /*left: 0.5%;*/
+    left: -270px;
+    width: 260px;
+    /*height: 1500px;*/
+    border: 1px solid #001E44;
+    background-color: #CCDAE6;
+    font-size: 10.25pt;
+    transition: .5s ease;
+    align-items: center;
+}
+.openSidebar{
+    top: 0;
+    left: 0.5%;
+    transition: .5s ease;
 }
 
+.sidebar>button {
+    width:100%;
+    padding: .5em;
+    text-align:end;
+    font-size: larger;
+    border: 0;
+    cursor: pointer;
+    color: #404040; /*darkgrey*/
+}
+.sidebar>button:hover{
+    color: black;
+    background: white;
+}
+.sidebar h3{
+    margin: 15px auto 0 auto;
+}
+.sidebar ul{
+    list-style: none;
+    padding: 5px;
+    margin: 0;
+}
+.sidebar li{
+    padding: 0 25px;
+    border-radius: 50px;
+}
+.sidebar ul:nth-child(2) li:not(:last-child):hover, .sidebar ul:nth-child(3) li:hover {
+    background: #eef3f7;
+    transition: 0.2s ease-out;
+}
+.sidebar a{
+    text-decoration: none;
+}
+.sidebar ul>li>form>input{
+    width:45%;
+}
+
+#toc{
+    height: 91.9vh;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
 .tocHeader {
     text-align: center;
+}
+
+div#hamburger button#openMe {
+    font-size:18pt;
+
+}
+div#hamburger button#openMe:hover {
+    background-color:white;
+    transform: scale(1.1);
 }
 
 
