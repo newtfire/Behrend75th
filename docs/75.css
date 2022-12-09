@@ -35,7 +35,7 @@ span.underline {text-decoration: underline;}
 }
 title {
  font-size: 36px;
-    color: white; 
+    color: navy; 
     
 }
 body {
@@ -179,14 +179,14 @@ footer.main {
 }
 .navbar ul li a {
        text-decoration: none;
-    color: azure;
+    color: navy;
     text-transform: uppercase;
 }
 .navbar ul li::after{
     content: '';
     height: 3px;
     width: 0;
-    background: #009688;
+    background: navy;
     position: absolute;
     left: 0;
     bottom: -10px;
@@ -240,6 +240,10 @@ border-radius: 15px;
 /*Menu Lines for Page Contents*/
 .menuList{
     line-height: 1.6;
+}
+
+.menuSide {
+    line-height: 1.5;
 }
 
 
@@ -339,7 +343,7 @@ div.footer p img{display:inline;}
  
  
  span[title]{
-     color: green;
+     color: navy;
  }
  
  /*  let's try creating a grid for the div.facsblock, so all the text appears in a new column to the right of the image.  */
