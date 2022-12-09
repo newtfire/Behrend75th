@@ -101,12 +101,10 @@
                </figure>
                <ab hand="#pencil" rend="cursive">
                   <!--ODD addition: customize @rend to "smallcaps" or "cursive" -->
-                  <lb/>The new <rs type="object">rooves</rs> are very nice <lb/><unclear
-                     reason="faded"/>
-                  <lb/>For <unclear reason="faded"/> he <unclear reason="faded"/>
-                  <rs type="object">billiard</rs>
-                  <unclear reason="faded"/>
-                  <lb/><unclear reason="faded"/>, by golly.</ab>
+                  <lb/>The new <rs type="object">rooves</rs> are very nice <lb/>
+                  <lb/>and please both <persName>Ernst</persName> and <persName>Molly</persName>.
+                  <lb/>For now he has a <rs type="object">billiard</rs> room
+                  <lb/> and <emph style="underline">she</emph>, das Kind, by golly.</ab>
 
                <note resp="#rgerzevske">This is one of the few pages written entirely in <rs
                      type="object">pencil</rs>. Unfortunately, this means that it isn't very clear
@@ -230,8 +228,8 @@
                   <!--ODD addition: customize @rend to "smallcaps" or "cursive" -->
                   <lb/>Here's a <rs type="object">basket</rs> of things from <lb/>the <rs
                      type="location">garden</rs>
-                  <lb/>which help to reduce <persName>Becker's</persName>
-                  <rs type="object">bill</rs>
+                  <lb/>which help to reduce <emph style="underline"><persName>Becker's</persName>
+                  <rs type="object">bill</rs></emph>
                   <lb/>Fresh <rs type="object">vegetables</rs> always taste <lb/>nicest <lb/>So I am
                   sure these will;</ab>
 

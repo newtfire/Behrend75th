@@ -212,7 +212,7 @@
                <ab hand="#blackpen" rend="cursive">
                   <lb/>There's a little old <rs type="object">cradle</rs> at <lb/><rs type="location">Hammermill</rs> - <!--wasn't sure if this was a "-" or "_"-->
                   <lb/>It's never been there before <lb/>And what is inside of that <rs>cradle</rs>
-                  <lb/>Both <persName>Molly</persName> and <persName>Ernst</persName> adore</ab>
+                  <lb/>Both <emph style="underline"><persName>Molly</persName> and <persName>Ernst</persName></emph> adore</ab>
                <ab hand="#redPen" rend="cursive"><add hand="#redPen" rend="cursive" place="bottom">
                      Aren't you curious to see it?</add></ab>
                <note resp="#lhering">It appears that <persName>Mr. and Mrs. Behrend</persName> had a

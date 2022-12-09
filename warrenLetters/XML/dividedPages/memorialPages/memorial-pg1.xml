@@ -3,7 +3,7 @@
 <xml>
     
     <meta>
-        <title titleId="memService-1929-12-19-pg1">Speech prepared by P. J. Long for a memorial service for Warren Behrend, after <date>1930</date></title>
+        <title titleId="1929-12-30-memService-pg1">Speech prepared by P. J. Long for a memorial service for Warren Behrend<date when="1929-12-30">.</date> pg1</title>
         <sourceDesc location="John M. Lilley Library, Penn State Behrend Archives"/>
         <paperOrigin>Correct copy P. J. Long COPY Hammermill Paper Company</paperOrigin>
         <transDesc>
@@ -19,10 +19,10 @@
     </figure>
     <body> 
         <pb n="1"/>
-        <header>
+        <!--<header>
             <ln n="1"/> <date when="1929-12-19">1929-12-19</date>
-            <greeting><!-- no greeting was provided --></greeting>
-        </header>
+            <greeting><!-\- no greeting was provided -\-></greeting>
+        </header>-->
         <p n="1">
             <ln n="1"/>On December 19th, 1929 <person personId="WAR">Warren Behrend</person> on his way to join his family 
             <ln n="2"/>for the Christmas holiday met a school bus at this place. The bus Made a left

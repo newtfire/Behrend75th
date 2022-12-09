@@ -1,27 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Galdeano&display=swap');
 
-body{
+body {
     background: white;
 }
 
-svg text{
+svg text {
     font-family: 'Galdeano', sans-serif;
 }
 
-#svgTimeline{
-    margin: auto;    
+#svgTimeline {
+    margin: auto;
     width: 929px;
 }
 
-g[id^="proj"], g[class$="Info"], g[class$="timeline"]{
+g[id ^= "proj"],
+g[class $= "Info"],
+g[class $= "timeline"] {
     display: none;
 }
 
-text[id$="Title"]:hover, .timeline text:hover, #timelineHeader g:hover{
+text[id $= "Title"]:hover,
+.timeline text:hover,
+#timelineHeader g:hover {
     filter: brightness(1.2);
     cursor: pointer;
 }
 
+button {
+    font-family: 'Galdeano', sans-serif;
+    background: white;
+    color: #1C417D;
+    font-size: 18px;
+    border: 2px solid #1C417D;
+    border-radius: 25px;
+    padding: 5px 25px;
+    margin: 10px 8px 15px;
+}
+button:hover{
+    color: white;
+    background: #1C417D;
+}
 
-
-
+#button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

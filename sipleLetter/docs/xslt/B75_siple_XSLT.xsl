@@ -6,7 +6,7 @@
     
     <xsl:output method="xhtml" html-version="5" omit-xml-declaration="yes" 
         include-content-type="no" indent="yes"/>
-   
+     
    <xsl:variable name="descFile" as="document-node()" select="doc('../xml/desc.xml')"/>
     
     <xsl:template match="/">
@@ -15,10 +15,13 @@
                 <title>Letter from Paul Siple</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <!--ebb: The line above helps your HTML scale to fit lots of different devices. -->
+                <meta name="docImage" class="staticSearch_docImage" content="photos/letter_hires_cropped.png"/>
                 <link rel="stylesheet" type="text/css" href="../75.css"/>
+                <script type="text/javascript" src="../respMenu.js">/**/</script> 
            </head>
         <body>
             <div class="sidebar">
+                <button id="closeMe">close ×</button>
                 <section id="toc">
                     <h3>Table of Contents</h3>
                     <ul>
@@ -26,24 +29,26 @@
                             <a href="../index.html">Home</a>
                         </li>
                         <li>
-                            <a href="../calendarPage.html">Behrend Calendar</a>
+                            <a href="../calendarPage.html">Mary Behrend's Calendar</a>
                         </li>
                         <li>
-                            <a href="../travelLettersPage.html">Behrend Travel
-                                Letters</a>
+                            <a href="../sipleLettersPage.html">Siple Letter</a>
                         </li>
                         <li>
-                            <a href="../sipleLettersPage.html">Behrend Siple Letters</a>
+                            <a href="../warrenLettersPage.html">Warren Behrend Letters</a>
                         </li>
                         <li>
-                            <a href="../warrenLettersPage.html">Warren Behrend
-                                Letters</a>
+                            <a href="../travelLettersPage.html">Behrend Travel Letters</a>
                         </li>
                         <li>
                             <a href="../search.html">🔎 Search</a>
                         </li>
                     </ul>
+                  
                 </section>
+            </div>
+            <div id="hamburger">
+                <button id="openMe">☰</button>
             </div>
             
         <section id="f-{descendant::date[1]/@when}" class="document">

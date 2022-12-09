@@ -136,6 +136,8 @@ svg text{
 }
 /*END of color block*/
 
+
+
 /* Penn State */
 .PSB{
   position: relative;
@@ -218,7 +220,7 @@ border-radius: 15px;
 
 /* Sticky Sidebar */
 .sidebar {
-display: flex;
+  display: block;
   position: fixed;
   bottom: 5%;
   top: 0;
@@ -233,6 +235,13 @@ display: flex;
 .tocHeader {
     text-align: center;
 }
+
+
+/*Menu Lines for Page Contents*/
+.menuList{
+    line-height: 1.6;
+}
+
 
 /*GRID*/
 figure img {
