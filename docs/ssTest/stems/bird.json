@@ -1,1 +1,1 @@
-{"stem":"bird","instances":[{"docUri":"travelLetters\/Paris-1955-07-19.html","score":1,"contexts":[{"form":"bird","weight":"1","pos":52,"context":"...a jewellers where I was intregues by a Jewelled <mark>bird<\/mark>. But did NOT get it! To a very...","fid":"FRANCE.xml-n-1"}]}]}
+{"stem":"bird","instances":[{"docUri":"travelLetters\/Paris-1955-07-19.html","score":3,"contexts":[{"form":"bird","weight":"3","pos":52,"context":"...a jewellers where I was intregues by a Jewelled <mark>bird<\/mark>. But did NOT get it! To a very...","fid":"FRANCE.xml-n-1"}]}]}

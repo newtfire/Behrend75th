@@ -22,18 +22,20 @@
     
     <rules>
         <rule weight="3"
-            match="section//text()"/>
+            match="*[@class='document']"/>
         <rule weight="0"
             match="header | footer"/>
         <rule weight="0"
             match="script | style"/>
+        <rule weight="0" match="div[@class='timeline'] | div[@id='svgTimeline'] | 
+            section[id='toc'] | div[class='sidebar'] | button"/>
     </rules>
     
     <contexts>
-        <context match="*[.//span[@class='animal']]" label="Animals"/>
-        <context match="*[.//span[@class='person']]" label="People"/>
-        <context match="*[.//span[@class='place']]" label="Places"/>
-        <context match="*[.//span[@class='transport']]" label="Transportation"/>
+        <context match="*[span[@class='animal']]" label="Animals"/>
+        <context match="*[span[@class='person']]" label="People"/>
+        <context match="*[span[@class='place']]" label="Places"/>
+        <context match="*[span[@class='transport']]" label="Transportation"/>
     </contexts>
     
     <excludes>
@@ -41,6 +43,7 @@
             match="div[@class='sidebar']"/>
         <exclude type="filter"
             match="nav"/>
+        <exclude type="index" match="html[@id='index']"/>
     </excludes>
     
 </config>

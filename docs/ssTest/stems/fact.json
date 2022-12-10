@@ -1,1 +1,1 @@
-{"stem":"fact","instances":[{"docUri":"travelLetters\/Copenhagen-1955-07-28.html","score":1,"contexts":[{"form":"fact","weight":"1","pos":117,"context":"...months. She was born in Mexico and in <mark>fact<\/mark> IS Mexican but lived a long time in Texas...","fid":"july28.xml-n-2"}]}]}
+{"stem":"fact","instances":[{"docUri":"travelLetters\/Copenhagen-1955-07-28.html","score":3,"contexts":[{"form":"fact","weight":"3","pos":117,"context":"...months. She was born in Mexico and in <mark>fact<\/mark> IS Mexican but lived a long time in Texas...","fid":"july28.xml-n-2"}]}]}

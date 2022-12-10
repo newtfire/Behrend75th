@@ -1,1 +1,1 @@
-{"stem":"unhappi","instances":[{"docUri":"calendar\/e-1909-05-22.html","score":1,"contexts":[{"form":"unhappy","weight":"1","pos":30,"context":"This is showing that Mary is very <mark>unhappy<\/mark> at Mr. Reichemheims dog for liking German beer...","fid":"e-1909-05-22"}]}]}
+{"stem":"unhappi","instances":[{"docUri":"calendar\/e-1909-05-22.html","score":3,"contexts":[{"form":"unhappy","weight":"3","pos":30,"context":"This is showing that Mary is very <mark>unhappy<\/mark> at Mr. Reichemheims dog for liking German beer...","fid":"e-1909-05-22"}]}]}

@@ -1,1 +1,1 @@
-{"stem":"expens","instances":[{"docUri":"travelLetters\/Brussels-1955-07-26.html","score":1,"contexts":[{"form":"expensive","weight":"1","pos":74,"context":"...over Paris. It is so beautiful but so <mark>expensive<\/mark>! $90 a minute to breath! We...","fid":"brusselsJuly26.xml-n-1"}]}]}
+{"stem":"expens","instances":[{"docUri":"travelLetters\/Brussels-1955-07-26.html","score":3,"contexts":[{"form":"expensive","weight":"3","pos":74,"context":"...over Paris. It is so beautiful but so <mark>expensive<\/mark>! $90 a minute to breath! We...","fid":"brusselsJuly26.xml-n-1"}]}]}
