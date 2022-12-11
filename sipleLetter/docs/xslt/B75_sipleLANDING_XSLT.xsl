@@ -21,9 +21,22 @@
                     <meta name="Search in" class="staticSearch_desc" content="Siple Letter"/>
                     <meta name="dcterms.date" content="{(descendant::date)[1]/@when}"/>
                     <meta name="Date range" class="staticSearch_date" content="{(descendant::date)[1]/@when}"/>
-                    <xsl:apply-templates select="descendant::persName" mode="ss"/>
-                    <xsl:apply-templates select="descendant::placeName" mode="ss"/>
-                    <xsl:apply-templates select="descendant::transport" mode="ss"/>
+                    
+                    <xsl:for-each select="descendant::persName  ! normalize-space() => distinct-values()">
+                        <meta name="dcterms.subject" content="{current()}"/>
+                        <meta name="People involved" class="staticSearch_feat" content="{current()}"/>
+                    </xsl:for-each>
+                    
+                    <xsl:for-each select="descendant::placeName  ! normalize-space() => distinct-values()">
+                        <meta name="dcterms.subject" content="{current()}"/>
+                        <meta name="Places involved" class="staticSearch_feat" content="{current()}"/>
+                    </xsl:for-each>
+                    
+                    <xsl:for-each select="descendant::transport  ! normalize-space() => distinct-values()">
+                        <meta name="dcterms.subject" content="{current()}"/>
+                        <meta name="Transportation involved" class="staticSearch_feat" content="{current()}"/>
+                    </xsl:for-each>
+                    
                     
                     <link rel="stylesheet" type="text/css" href="75.css"/>
                     <script type="text/javascript" src="respMenu.js">
@@ -110,12 +123,12 @@
         <xsl:apply-templates/>
     </xsl:template>
     <xsl:template match="fw"> </xsl:template>
-    <xsl:template match="person | persName">
+    <xsl:template match="persName">
         <span class="person">
             <xsl:apply-templates/>
         </span>
     </xsl:template>
-    <xsl:template match="place | placeName">
+    <xsl:template match="placeName">
         <span class="place">
             <xsl:apply-templates/>
         </span>
@@ -159,18 +172,4 @@
             </figure>
         </li>
     </xsl:template>
-    
-    <xsl:template match="placeName" mode="ss">
-        <meta name="dcterms.subject" content="{current()}"/>
-        <meta name="Places involved" class="staticSearch_feat" content="{current()}"/>
-    </xsl:template>
-    <xsl:template match="persName" mode="ss">
-        <meta name="dcterms.subject" content="{current()}"/>
-        <meta name="People involved" class="staticSearch_feat" content="{current()}"/>
-    </xsl:template>
-    <xsl:template match="transport" mode="ss">
-        <meta name="dcterms.subject" content="{current()}"/>
-        <meta name="Transportation involved" class="staticSearch_feat" content="{current()}"/>
-    </xsl:template>
-
 </xsl:stylesheet>

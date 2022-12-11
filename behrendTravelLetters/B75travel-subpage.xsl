@@ -29,10 +29,26 @@
                         <meta name="Search in" class="staticSearch_desc" content="Behrend Travel Letters"/>
                         <meta name="dcterms.date" content="{(descendant::date)[1]/@when}"/>
                         <meta name="Date range" class="staticSearch_date" content="{(descendant::date)[1]/@when}"/>
-                        <xsl:apply-templates select="descendant::persName" mode="ss"/>
-                        <xsl:apply-templates select="descendant::placeName" mode="ss"/>
-                        <xsl:apply-templates select="descendant::animal" mode="ss"/>
-                        <xsl:apply-templates select="descendant::transport" mode="ss"/>
+                        
+                        <xsl:for-each select="descendant::persName  ! normalize-space() => distinct-values()">
+                            <meta name="dcterms.subject" content="{current()}"/>
+                            <meta name="People involved" class="staticSearch_feat" content="{current()}"/>
+                        </xsl:for-each>
+                        
+                        <xsl:for-each select="descendant::placeName  ! normalize-space() => distinct-values()">
+                            <meta name="dcterms.subject" content="{current()}"/>
+                            <meta name="Places involved" class="staticSearch_feat" content="{current()}"/>
+                        </xsl:for-each>
+                        
+                        <xsl:for-each select="descendant::animal ! normalize-space() => distinct-values()">
+                            <meta name="dcterms.subject" content="{current()}"/>
+                            <meta name="Animals involved" class="staticSearch_feat" content="{current()}"/>
+                        </xsl:for-each>
+                        
+                        <xsl:for-each select="descendant::transport ! normalize-space() => distinct-values()">
+                            <meta name="dcterms.subject" content="{current()}"/>
+                            <meta name="Transportation involved" class="staticSearch_feat" content="{current()}"/>
+                        </xsl:for-each>
 
 
                         <link rel="stylesheet" type="text/css" href="../75.css"/>
@@ -170,9 +186,7 @@
             <xsl:value-of select="(descendant::date/@when)[1]"/>
         </div>
         <xsl:apply-templates select="descendant::p"/>
-        <!--</div>-->
     </xsl:template>
-    
 
     <xsl:template match="timePeriod">
         <span class="Period">
@@ -318,28 +332,9 @@
         </div>
     </xsl:template>
 
-
     <xsl:template match="eSpace">
         <span class="space" title="She left a space.">
             <xsl:apply-templates/>
         </span>
     </xsl:template>
-    
-    <xsl:template match="placeName" mode="ss">
-        <meta name="dcterms.subject" content="{current()}"/>
-        <meta name="Places involved" class="staticSearch_feat" content="{current()}"/>
-    </xsl:template>
-    <xsl:template match="persName" mode="ss">
-        <meta name="dcterms.subject" content="{current()}"/>
-        <meta name="People involved" class="staticSearch_feat" content="{current()}"/>
-    </xsl:template>
-    <xsl:template match="transport" mode="ss">
-        <meta name="dcterms.subject" content="{current()}"/>
-        <meta name="Transportation involved" class="staticSearch_feat" content="{current()}"/>
-    </xsl:template>
-    <xsl:template match="animal" mode="ss">
-        <meta name="dcterms.subject" content="{current()}"/>
-        <meta name="Animals involved" class="staticSearch_feat" content="{current()}"/>
-    </xsl:template>
-
 </xsl:stylesheet>

@@ -42,10 +42,22 @@
                             <meta name="Search in" class="staticSearch_desc" content="Warren Behrend Letters"/>
                             <meta name="dcterms.date" content="{(descendant::date[@when])[1]/@when}"/>
                             <meta name="Date range" class="staticSearch_date" content="{(descendant::date[@when])[1]/@when}"/>
-                            <xsl:apply-templates select="descendant::person" mode="ss"/>
-                            <xsl:apply-templates select="descendant::place" mode="ss"/>
-                            <xsl:apply-templates select="descendant::boat | descendant::transport | descendant::car" mode="ss"/>
-                        
+                           
+                            <xsl:for-each select="descendant::person  ! normalize-space() => distinct-values()">
+                                <meta name="dcterms.subject" content="{current()}"/>
+                                <meta name="People involved" class="staticSearch_feat" content="{current()}"/>
+                            </xsl:for-each>
+                            
+                            <xsl:for-each select="descendant::place  ! normalize-space() => distinct-values()">
+                                <meta name="dcterms.subject" content="{current()}"/>
+                                <meta name="Places involved" class="staticSearch_feat" content="{current()}"/>
+                            </xsl:for-each>
+                            
+                            <xsl:for-each select="(descendant::boat | descendant::transport | descendant::car)  ! normalize-space() => distinct-values()">
+                                <meta name="dcterms.subject" content="{current()}"/>
+                                <meta name="Transportation involved" class="staticSearch_feat" content="{current()}"/>
+                            </xsl:for-each>
+                                
                         </head>
                        
                         <body>
@@ -180,17 +192,6 @@
         </span>
     </xsl:template>
     
-    <xsl:template match="place" mode="ss">
-        <meta name="dcterms.subject" content="{current()}"/>
-        <meta name="Places involved" class="staticSearch_feat" content="{current()}"/>
-    </xsl:template>
-    <xsl:template match="person" mode="ss">
-        <meta name="dcterms.subject" content="{current()}"/>
-        <meta name="People involved" class="staticSearch_feat" content="{current()}"/>
-    </xsl:template>
-    <xsl:template match="boat | transport | car" mode="ss">
-        <meta name="dcterms.subject" content="{current()}"/>
-        <meta name="Transportation involved" class="staticSearch_feat" content="{current()}"/>
-    </xsl:template>
+    
 
 </xsl:stylesheet>
