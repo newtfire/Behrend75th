@@ -28,15 +28,15 @@
         <rule weight="0"
             match="script | style"/>
         <rule weight="0" match="div[@class='timeline'] | div[@id='svgTimeline'] | 
-            section[id='toc'] | div[class='sidebar'] | button"/>
+            section[id='toc'] | div[class='sidebar'] | button | div[@id='staticSearch']"/>
     </rules>
-    
+<!--    
     <contexts>
         <context match="*[span[@class='animal']]" label="Animals"/>
         <context match="*[span[@class='person']]" label="People"/>
         <context match="*[span[@class='place']]" label="Places"/>
         <context match="*[span[@class='transport']]" label="Transportation"/>
-    </contexts>
+    </contexts>-->
     
     <excludes>
         <exclude type="filter"

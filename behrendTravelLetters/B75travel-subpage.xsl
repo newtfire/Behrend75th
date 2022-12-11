@@ -23,13 +23,24 @@
                         <title>Travel Letters <xsl:value-of select="@xml:id"/></title>
                         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
                         <!--ebb: The line above helps your HTML scale to fit lots of different devices. -->
+                        <meta name="docImage" class="staticSearch_docImage"
+                            content="{(//graphic/@url)[1]}"/>
+
+                        <meta name="Search in" class="staticSearch_desc" content="Behrend Travel Letters"/>
+                        <meta name="dcterms.date" content="{(descendant::date)[1]/@when}"/>
+                        <meta name="Date range" class="staticSearch_date" content="{(descendant::date)[1]/@when}"/>
+                        <xsl:apply-templates select="descendant::persName" mode="ss"/>
+                        <xsl:apply-templates select="descendant::placeName" mode="ss"/>
+                        <xsl:apply-templates select="descendant::animal" mode="ss"/>
+                        <xsl:apply-templates select="descendant::transport" mode="ss"/>
+
+
                         <link rel="stylesheet" type="text/css" href="../75.css"/>
                         <script type="text/javascript" src="../respMenu.js">
                             /**/</script>
-                        <meta name="docImage" class="staticSearch_docImage" content="{(//graphic/@url)[1]}"/>
                     </head>
                     <body>
-                       
+
                         <div class="sidebar">
                             <button id="closeMe">close ×</button>
                             <section id="toc">
@@ -42,18 +53,23 @@
                                         <a href="../calendarPage.html">Mary Behrend's Calendar</a>
                                     </li>
                                     <li>
-                                        <a href="../warrenLettersPage.html">Warren Behrend Letters</a>
+                                        <a href="../warrenLettersPage.html">Warren Behrend
+                                            Letters</a>
                                     </li>
                                     <li>
                                         <a href="../sipleLettersPage.html">Siple Letter</a>
                                     </li>
                                     <li>
-                                        <a href="../travelLettersPage.html">Behrend Travel Letters</a>
+                                        <a href="../travelLettersPage.html">Behrend Travel
+                                            Letters</a>
                                     </li>
-                                    <li><form method="get" action="../search.html"><label for="search">🔎</label>
-                                        <input type="text" id="search" name="q"/>
+                                    <li>
+                                        <form method="get" action="../search.html">
+                                            <label for="search">🔎</label>
+                                            <input type="text" id="search" name="q"/>
                                             <button type="submit">Search</button>
-                                    </form></li>
+                                        </form>
+                                    </li>
                                 </ul>
                                 <ul>
                                     <xsl:apply-templates select="$travelColl//xml" mode="toc">
@@ -145,20 +161,18 @@
     </xsl:template>
 
     <xsl:template match="letter">
-        <!--        <a href="#{descendant::h1}">-->
         <h2 id="{@xml:id}">
             <xsl:value-of select="@xml:id ! tokenize(., '-')[1]"/>
             <xsl:text>, </xsl:text>
             <xsl:apply-templates select="(descendant::date/@when)[1]"/>
         </h2>
-        <!--</a>-->
-        <!--        <div class="letter">-->
         <div class="header">
             <xsl:value-of select="(descendant::date/@when)[1]"/>
         </div>
         <xsl:apply-templates select="descendant::p"/>
         <!--</div>-->
     </xsl:template>
+    
 
     <xsl:template match="timePeriod">
         <span class="Period">
@@ -224,6 +238,7 @@
             <xsl:apply-templates/>
         </span>
     </xsl:template>
+    
 
     <xsl:template match="animal">
         <span class="animal">
@@ -284,10 +299,7 @@
     </xsl:template>
 
     <xsl:template match="front">
-        <!--<a href="#{descendant::h1}">
-            <h2 id="{base-uri() ! tokenize(., '/')[last()]}1955-07-26">-->
         <h3>Front</h3>
-        <!--</a>-->
         <div class="letter">
             <div class="header">
                 <xsl:value-of select="(//date/@when)[1]"/>
@@ -297,10 +309,7 @@
     </xsl:template>
 
     <xsl:template match="back">
-        <!--<a href="#{descendant::h1}">-->
-        <!--            <h2 id="{base-uri() ! tokenize(., '/')[last()]}1955-07-26-back">-->
         <h3>Back</h3>
-        <!--</a>-->
         <div class="letter">
             <div class="header">
                 <xsl:value-of select="(//date/@when)[1]"/>
@@ -314,6 +323,23 @@
         <span class="space" title="She left a space.">
             <xsl:apply-templates/>
         </span>
+    </xsl:template>
+    
+    <xsl:template match="placeName" mode="ss">
+        <meta name="dcterms.subject" content="{current()}"/>
+        <meta name="Places involved" class="staticSearch_feat" content="{current()}"/>
+    </xsl:template>
+    <xsl:template match="persName" mode="ss">
+        <meta name="dcterms.subject" content="{current()}"/>
+        <meta name="People involved" class="staticSearch_feat" content="{current()}"/>
+    </xsl:template>
+    <xsl:template match="transport" mode="ss">
+        <meta name="dcterms.subject" content="{current()}"/>
+        <meta name="Transportation involved" class="staticSearch_feat" content="{current()}"/>
+    </xsl:template>
+    <xsl:template match="animal" mode="ss">
+        <meta name="dcterms.subject" content="{current()}"/>
+        <meta name="Animals involved" class="staticSearch_feat" content="{current()}"/>
     </xsl:template>
 
 </xsl:stylesheet>

@@ -6,16 +6,25 @@
         indent="yes"/>
 
     <xsl:variable name="descFile" as="document-node()" select="doc('../xml/desc.xml')"/>
+    <xsl:variable name="inputFile" as="document-node()" select="collection('../xml/?select=lettertefft.xml')"/>
 
     <xsl:template match="/">
         <xsl:result-document method="xhtml" html-version="5" omit-xml-declaration="yes"
-            include-content-type="no" indent="yes" href="../docs/sipleLettersPage.html">
-            <html>
+            include-content-type="no" indent="yes" href="../../../docs/sipleLettersPage.html">
+            <xsl:for-each select="$inputFile"><html>
                 <head>
                     <title>Letter from Paul Siple</title>
                     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
                     <!--ebb: The line above helps your HTML scale to fit lots of different devices. -->
                     <meta name="docImage" content="siple/photos/letter_hires_cropped.png"/>
+                    
+                    <meta name="Search in" class="staticSearch_desc" content="Siple Letter"/>
+                    <meta name="dcterms.date" content="{(descendant::date)[1]/@when}"/>
+                    <meta name="Date range" class="staticSearch_date" content="{(descendant::date)[1]/@when}"/>
+                    <xsl:apply-templates select="descendant::persName" mode="ss"/>
+                    <xsl:apply-templates select="descendant::placeName" mode="ss"/>
+                    <xsl:apply-templates select="descendant::transport" mode="ss"/>
+                    
                     <link rel="stylesheet" type="text/css" href="75.css"/>
                     <script type="text/javascript" src="respMenu.js">
                         /**/</script>
@@ -73,18 +82,14 @@
                             <xsl:apply-templates
                                 select="descendant::head | descendant::body | descendant::foot"/>
                         </div>
-
                     </section>
                     <section class="extra">
                         <div>
                             <xsl:apply-templates select="$descFile" mode="desc"/>
                         </div>
-
-
                     </section>
                 </body>
-
-            </html>
+            </html></xsl:for-each>
         </xsl:result-document>
     </xsl:template>
 
@@ -153,6 +158,19 @@
                 </figcaption>
             </figure>
         </li>
+    </xsl:template>
+    
+    <xsl:template match="placeName" mode="ss">
+        <meta name="dcterms.subject" content="{current()}"/>
+        <meta name="Places involved" class="staticSearch_feat" content="{current()}"/>
+    </xsl:template>
+    <xsl:template match="persName" mode="ss">
+        <meta name="dcterms.subject" content="{current()}"/>
+        <meta name="People involved" class="staticSearch_feat" content="{current()}"/>
+    </xsl:template>
+    <xsl:template match="transport" mode="ss">
+        <meta name="dcterms.subject" content="{current()}"/>
+        <meta name="Transportation involved" class="staticSearch_feat" content="{current()}"/>
     </xsl:template>
 
 </xsl:stylesheet>

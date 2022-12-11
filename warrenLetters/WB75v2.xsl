@@ -38,10 +38,16 @@
                             <script type="text/javascript" src="../respMenu.js">
                                 /**/</script>
                             <meta name="docImage" class="staticSearch_docImage" content="images/{descendant::figure/graphic/@src ! tokenize(., '/')[last()]}"/>
+                        
+                            <meta name="Search in" class="staticSearch_desc" content="Warren Behrend Letters"/>
+                            <meta name="dcterms.date" content="{(descendant::date[@when])[1]/@when}"/>
+                            <meta name="Date range" class="staticSearch_date" content="{(descendant::date[@when])[1]/@when}"/>
+                            <xsl:apply-templates select="descendant::person" mode="ss"/>
+                            <xsl:apply-templates select="descendant::place" mode="ss"/>
+                            <xsl:apply-templates select="descendant::boat | descendant::transport | descendant::car" mode="ss"/>
+                        
                         </head>
-                        <!-- <div class="graphics">
-                       <xsl:apply-templates select="figure"/>
-            </div>-->
+                       
                         <body>
                             <div class="sidebar">
                                 <button id="closeMe">close ×</button>
@@ -142,13 +148,6 @@
         <h2 id="{descendant::title/@titleId}">
             <xsl:apply-templates select="descendant::title"/>
         </h2>
-        <!--  <div class="img">
-            <img src="{//graphic[1]/@src}" alt="{//figure/graphic[1]/@alt}"/>
-            <img src="{//graphic[2]/@src}" alt="{//figure/graphic[2]/@alt}"/>
-            <img src="{//graphic[3]/@src}" alt="{//figure/graphic[3]/@alt}"/>
-            <img src="{//graphic[4]/@src}" alt="{//figure/graphic[4]/@alt}"/>
-        </div>-->
-
     </xsl:template>
 
     <xsl:template match="p">
@@ -180,22 +179,18 @@
             <xsl:apply-templates/>
         </span>
     </xsl:template>
-    <!--<xsl:template match="emotion">
-        <span class="emotion">
-            <xsl:apply-templates/>
-        </span>
+    
+    <xsl:template match="place" mode="ss">
+        <meta name="dcterms.subject" content="{current()}"/>
+        <meta name="Places involved" class="staticSearch_feat" content="{current()}"/>
     </xsl:template>
-    -->
-    <!--   <xsl:template match="figure">
-        <figure>
-            <xsl:apply-templates select="graphic"/>
-        </figure>
+    <xsl:template match="person" mode="ss">
+        <meta name="dcterms.subject" content="{current()}"/>
+        <meta name="People involved" class="staticSearch_feat" content="{current()}"/>
     </xsl:template>
-    <xsl:template match="graphic">
-        <img src="{@src}"/>
-            
-        
+    <xsl:template match="boat | transport | car" mode="ss">
+        <meta name="dcterms.subject" content="{current()}"/>
+        <meta name="Transportation involved" class="staticSearch_feat" content="{current()}"/>
     </xsl:template>
-  -->
 
 </xsl:stylesheet>

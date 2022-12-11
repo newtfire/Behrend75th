@@ -75,6 +75,14 @@
                         <!--ebb: The line above helps your HTML scale to fit lots of different devices. -->
                         <meta name="docImage" class="staticSearch_docImage"
                             content="photos/{@facs ! tokenize(., '/')[last()]}"/>
+                        
+                        <meta name="Search in" class="staticSearch_desc" content="Mary Behrend’s Calendar"/>
+                        <meta name="dcterms.date" content="{(descendant::date[@when])[1]/@when}"/>
+                        <meta name="Date range" class="staticSearch_date" content="{(descendant::date[@when])[1]/@when}"/>
+                        <xsl:apply-templates select="descendant::persName" mode="ss"/>
+                        <xsl:apply-templates select="descendant::placeName" mode="ss"/>
+                        <xsl:apply-templates select="descendant::rs[@type='animal']" mode="ss"/>
+                        
                         <link rel="stylesheet" type="text/css" href="../75.css"/>
                         <script type="text/javascript" src="../respMenu.js">
                             /**/</script>
@@ -268,6 +276,20 @@
     <xsl:template match="placeName">
         <span class="place"><xsl:apply-templates/></span>
     </xsl:template>
+    
+    <xsl:template match="placeName" mode="ss">
+        <meta name="dcterms.subject" content="{current()}"/>
+        <meta name="Places involved" class="staticSearch_feat" content="{current()}"/>
+    </xsl:template>
+    <xsl:template match="persName" mode="ss">
+        <meta name="dcterms.subject" content="{current()}"/>
+        <meta name="People involved" class="staticSearch_feat" content="{current()}"/>
+    </xsl:template>
+    <xsl:template match="rs[@type='animal']" mode="ss">
+        <meta name="dcterms.subject" content="{current()}"/>
+        <meta name="Animals involved" class="staticSearch_feat" content="{current()}"/>
+    </xsl:template>
+        
     
     
   
