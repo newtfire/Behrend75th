@@ -55,10 +55,10 @@
                                     <a href="calendarPage.html">Mary Behrend's Calendar</a>
                                 </li>
                                 <li>
-                                    <a href="sipleLettersPage.html"><b>Siple Letter</b></a>
+                                    <a href="warrenLettersPage.html">Warren Behrend Letters</a>
                                 </li>
                                 <li>
-                                    <a href="warrenLettersPage.html">Warren Behrend Letters</a>
+                                    <a href="sipleLettersPage.html"><b>Siple Letter</b></a>
                                 </li>
                                 <li>
                                     <a href="travelLettersPage.html">Behrend Travel Letters</a>
