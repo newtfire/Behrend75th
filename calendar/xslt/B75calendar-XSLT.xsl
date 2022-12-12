@@ -240,14 +240,16 @@
                     </figcaption>
                 </figure>
 
+                
+            </div>
+            <div class="calText">
                 <div class="transcript">
                     <xsl:apply-templates select="descendant::ab"/>
                 </div>
+                <div class="note">
+                    <xsl:apply-templates select="descendant::note"/>
+                </div>
             </div>
-            <div class="note">
-                <xsl:apply-templates select="descendant::note"/>
-            </div>
-
         </section>
     </xsl:template>
 
