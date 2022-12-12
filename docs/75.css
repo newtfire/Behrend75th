@@ -394,7 +394,7 @@ div.footer p img{display:inline;}
   * whose id attributes START WITH this string: e-1909  since those are the sections
   * we want to be grid containers*/
  section[id^="e-"] {
- margin-left: 260px; /* ebb: adding this to prevent overlap with sidebar menu */
+ /*margin-left: 260px;  ebb: adding this to prevent overlap with sidebar menu */
  background-color: #CCDAE6; /* Slate Light+ */
  border: thin solid navy;
  display:grid;
@@ -466,7 +466,7 @@ div.facsblock > figure > img {
  * holds the facsimile image inside. */
 
  section[id^="f-"] {
- margin-left: 260px; /* ebb: adding this to prevent overlap with sidebar menu */
+ /*margin-left: 260px;  ebb: adding this to prevent overlap with sidebar menu */
  background-color: #CCDAE6; /* Slate Light+ */
  border: thin solid navy;
  display:grid;
