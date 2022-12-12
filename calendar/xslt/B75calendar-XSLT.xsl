@@ -65,6 +65,7 @@
         </xsl:result-document>-->
 
         <xsl:for-each select="$MBCal//div2">
+            <xsl:variable name="pos" select="position()"/>
             <xsl:variable name="filename" as="xs:string" select="@xml:id"/>
             <xsl:result-document method="xhtml" html-version="5" omit-xml-declaration="yes"
                 include-content-type="no" indent="yes" href="../../docs/calendar/{$filename}.html">
@@ -158,6 +159,37 @@
                         <xsl:apply-templates select="current()">
                             <xsl:sort select="descendant::date/@when"/>
                         </xsl:apply-templates>
+
+                        <div id="footerButton">
+                            <xsl:choose>
+                                <xsl:when test="$pos = 1">
+                                    <xsl:variable name="nextLink" select="($MBCal/descendant::div2/@xml:id)[2]"/>
+                                    <span id="nextPage">
+                                        <a href="{$nextLink}.html">Next</a>
+                                    </span>
+                                </xsl:when>
+                                <xsl:when test="$pos = last()">
+                                    <xsl:variable name="previousLink"
+                                        select="($MBCal/descendant::div2/@xml:id)[last() - 1]"/>
+                                    <span id="previousPage">
+                                        <a href="{$previousLink}.html">Previous</a>
+                                    </span>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                    <xsl:variable name="previousLink"
+                                        select="($MBCal/descendant::div2/@xml:id)[$pos - 1]"/>
+                                    <xsl:variable name="nextLink"
+                                        select="($MBCal/descendant::div2/@xml:id)[$pos + 1]"/>
+                                    <span id="previousPage">
+                                        <a href="{$previousLink}.html">Previous</a>
+                                    </span>
+                                    <span id="nextPage">
+                                        <a href="{$nextLink}.html">Next</a>
+                                    </span>
+                                </xsl:otherwise>
+                            </xsl:choose>
+                        </div>
+                        
 
                         <footer class="main">
                             <img src="../images/pennStateHorizontal.png" class="pennStateFooter"/>

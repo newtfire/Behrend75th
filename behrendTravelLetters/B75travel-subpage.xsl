@@ -9,15 +9,23 @@
 
     <!-- This html layout is based on WB75v1.xsl for Warren Letters. -->
 
-    <xsl:variable name="travelColl" as="document-node()+"
+    <xsl:variable name="travelCollDisordered" as="document-node()+"
         select="collection('xml-letters/?select=*.xml')"/>
+
+    <xsl:variable name="travelColl" as="document-node()+">
+        <xsl:for-each select="$travelCollDisordered">
+            <xsl:sort select="(descendant::date[@when])[1]/@when"/>
+            <xsl:sequence select="current()"/>
+        </xsl:for-each>
+    </xsl:variable>
 
     <xsl:template match="/">
         <xsl:for-each select="$travelColl//letter">
+            <xsl:sort select="descendant::date[1]/@when"/>
+            <xsl:variable name="pos" select="position()" as="xs:integer"/>
             <xsl:variable name="filename" as="xs:string" select="@xml:id"/>
             <xsl:result-document method="xhtml" html-version="5" omit-xml-declaration="yes"
                 include-content-type="no" indent="yes" href="../docs/travelLetters/{$filename}.html">
-
                 <html>
                     <head>
                         <title>Travel Letters <xsl:value-of select="@xml:id"/></title>
@@ -26,28 +34,38 @@
                         <meta name="docImage" class="staticSearch_docImage"
                             content="{(//graphic/@url)[1]}"/>
 
-                        <meta name="Search in" class="staticSearch_desc" content="Behrend Travel Letters"/>
+                        <meta name="Search in" class="staticSearch_desc"
+                            content="Behrend Travel Letters"/>
                         <meta name="dcterms.date" content="{(descendant::date)[1]/@when}"/>
-                        <meta name="Date range" class="staticSearch_date" content="{(descendant::date)[1]/@when}"/>
-                        
-                        <xsl:for-each select="descendant::persName  ! normalize-space() => distinct-values()">
+                        <meta name="Date range" class="staticSearch_date"
+                            content="{(descendant::date)[1]/@when}"/>
+
+                        <xsl:for-each
+                            select="descendant::persName ! normalize-space() => distinct-values()">
                             <meta name="dcterms.subject" content="{current()}"/>
-                            <meta name="People involved" class="staticSearch_feat" content="{current()}"/>
+                            <meta name="People involved" class="staticSearch_feat"
+                                content="{current()}"/>
                         </xsl:for-each>
-                        
-                        <xsl:for-each select="descendant::placeName  ! normalize-space() => distinct-values()">
+
+                        <xsl:for-each
+                            select="descendant::placeName ! normalize-space() => distinct-values()">
                             <meta name="dcterms.subject" content="{current()}"/>
-                            <meta name="Places involved" class="staticSearch_feat" content="{current()}"/>
+                            <meta name="Places involved" class="staticSearch_feat"
+                                content="{current()}"/>
                         </xsl:for-each>
-                        
-                        <xsl:for-each select="descendant::animal ! normalize-space() => distinct-values()">
+
+                        <xsl:for-each
+                            select="descendant::animal ! normalize-space() => distinct-values()">
                             <meta name="dcterms.subject" content="{current()}"/>
-                            <meta name="Animals involved" class="staticSearch_feat" content="{current()}"/>
+                            <meta name="Animals involved" class="staticSearch_feat"
+                                content="{current()}"/>
                         </xsl:for-each>
-                        
-                        <xsl:for-each select="descendant::transport ! normalize-space() => distinct-values()">
+
+                        <xsl:for-each
+                            select="descendant::transport ! normalize-space() => distinct-values()">
                             <meta name="dcterms.subject" content="{current()}"/>
-                            <meta name="Transportation involved" class="staticSearch_feat" content="{current()}"/>
+                            <meta name="Transportation involved" class="staticSearch_feat"
+                                content="{current()}"/>
                         </xsl:for-each>
 
 
@@ -125,7 +143,6 @@
                                         <xsl:apply-templates select="back"/>
                                     </div>
                                 </section>
-
                             </xsl:when>
                             <xsl:otherwise>
                                 <section id="f-{@xml:id}" class="document">
@@ -138,6 +155,38 @@
                                 </section>
                             </xsl:otherwise>
                         </xsl:choose>
+
+  
+                        <div id="footerButton">
+                            <xsl:choose>
+                                <xsl:when test="$pos = 1">
+                                    <xsl:variable name="nextLink" select="$travelColl[2]//@xml:id"/>
+                                    <span id="nextPage">
+                                        <a href="{$nextLink}.html">Next</a>
+                                    </span>
+                                </xsl:when>
+                                <xsl:when test="$pos = last()">
+                                    <xsl:variable name="previousLink"
+                                        select="$travelColl[last() - 1]//@xml:id"/>
+                                    <span id="previousPage">
+                                        <a href="{$previousLink}.html">Previous</a>
+                                    </span>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                    <xsl:variable name="previousLink"
+                                        select="$travelColl[$pos - 1]//@xml:id"/>
+                                    <xsl:variable name="nextLink"
+                                        select="$travelColl[$pos + 1]//@xml:id"/>
+                                    <span id="previousPage">
+                                        <a href="{$previousLink}.html">Previous</a>
+                                    </span>
+                                    <span id="nextPage">
+                                        <a href="{$nextLink}.html">Next</a>
+                                    </span>
+                                </xsl:otherwise>
+                            </xsl:choose>
+                        </div>
+
                         <footer class="main">
                             <img src="../images/pennStateHorizontal.png" class="pennStateFooter"/>
                             <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"
@@ -252,7 +301,7 @@
             <xsl:apply-templates/>
         </span>
     </xsl:template>
-    
+
 
     <xsl:template match="animal">
         <span class="animal">
