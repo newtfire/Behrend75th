@@ -7,6 +7,13 @@
         indent="yes"/>
 
     <xsl:variable name="MBCal" select="collection('../tei/?select=*.xml')"/>
+    <xsl:variable name="dateList" as="xs:string+">
+        <xsl:for-each select="$MBCal//div2/@xml:id">
+            <xsl:sort select="."/>
+            <xsl:value-of select="."/>
+        </xsl:for-each>
+    </xsl:variable>
+    
     <xsl:template match="/">
         <!--<xsl:result-document method="xhtml" html-version="5" omit-xml-declaration="yes"
             include-content-type="no" indent="yes" href="../../docs/calendarPage.html">
@@ -65,8 +72,11 @@
         </xsl:result-document>-->
 
         <xsl:for-each select="$MBCal//div2">
+            <xsl:sort select="descendant::date/@when"/>
             <xsl:variable name="pos" select="position()"/>
             <xsl:variable name="filename" as="xs:string" select="@xml:id"/>
+            
+            
             <xsl:result-document method="xhtml" html-version="5" omit-xml-declaration="yes"
                 include-content-type="no" indent="yes" href="../../docs/calendar/{$filename}.html">
                 <html>
@@ -76,26 +86,34 @@
                         <!--ebb: The line above helps your HTML scale to fit lots of different devices. -->
                         <meta name="docImage" class="staticSearch_docImage"
                             content="photos/{@facs ! tokenize(., '/')[last()]}"/>
-                        
-                        <meta name="Search in" class="staticSearch_desc" content="Mary Behrend’s Calendar"/>
+
+                        <meta name="Search in" class="staticSearch_desc"
+                            content="Mary Behrend’s Calendar"/>
                         <meta name="dcterms.date" content="{(descendant::date[@when])[1]/@when}"/>
-                        <meta name="Date range" class="staticSearch_date" content="{(descendant::date[@when])[1]/@when}"/>
-                        
-                        <xsl:for-each select="descendant::persName  ! normalize-space() => distinct-values()">
+                        <meta name="Date range" class="staticSearch_date"
+                            content="{(descendant::date[@when])[1]/@when}"/>
+
+                        <xsl:for-each
+                            select="descendant::persName ! normalize-space() => distinct-values()">
                             <meta name="dcterms.subject" content="{current()}"/>
-                            <meta name="People involved" class="staticSearch_feat" content="{current()}"/>
+                            <meta name="People involved" class="staticSearch_feat"
+                                content="{current()}"/>
                         </xsl:for-each>
-                        
-                        <xsl:for-each select="descendant::placeName  ! normalize-space() => distinct-values()">
+
+                        <xsl:for-each
+                            select="descendant::placeName ! normalize-space() => distinct-values()">
                             <meta name="dcterms.subject" content="{current()}"/>
-                            <meta name="Places involved" class="staticSearch_feat" content="{current()}"/>
+                            <meta name="Places involved" class="staticSearch_feat"
+                                content="{current()}"/>
                         </xsl:for-each>
-                        
-                        <xsl:for-each select="descendant::rs[@type='animal']  ! normalize-space() => distinct-values()">
+
+                        <xsl:for-each
+                            select="descendant::rs[@type = 'animal'] ! normalize-space() => distinct-values()">
                             <meta name="dcterms.subject" content="{current()}"/>
-                            <meta name="Animals involved" class="staticSearch_feat" content="{current()}"/>
+                            <meta name="Animals involved" class="staticSearch_feat"
+                                content="{current()}"/>
                         </xsl:for-each>
-                        
+
                         <link rel="stylesheet" type="text/css" href="../75.css"/>
                         <script type="text/javascript" src="../respMenu.js">
                             /**/</script>
@@ -137,10 +155,13 @@
                                         <a href="../travelLettersPage.html">Behrend Travel
                                             Letters</a>
                                     </li>
-                                    <li><form method="get" action="../search.html"><label for="search">🔎</label>
-                                        <input type="text" id="search" name="q"/>
+                                    <li>
+                                        <form method="get" action="../search.html">
+                                            <label for="search">🔎</label>
+                                            <input type="text" id="search" name="q"/>
                                             <button type="submit">Search</button>
-                                    </form></li>
+                                        </form>
+                                    </li>
                                 </ul>
 
                                 <ul>
@@ -156,30 +177,30 @@
                         <div id="hamburger">
                             <button id="openMe">☰</button>
                         </div>
-                        <xsl:apply-templates select="current()">
-                            <xsl:sort select="descendant::date/@when"/>
-                        </xsl:apply-templates>
+
+                        <xsl:apply-templates select="."/>
 
                         <div id="footerButton">
                             <xsl:choose>
                                 <xsl:when test="$pos = 1">
-                                    <xsl:variable name="nextLink" select="($MBCal/descendant::div2/@xml:id)[2]"/>
+                                    <xsl:variable name="nextLink"
+                                        select="$dateList[2]"/>
                                     <span id="nextPage">
                                         <a href="{$nextLink}.html">Next</a>
                                     </span>
                                 </xsl:when>
                                 <xsl:when test="$pos = last()">
                                     <xsl:variable name="previousLink"
-                                        select="($MBCal/descendant::div2/@xml:id)[last() - 1]"/>
+                                        select="$dateList[last() - 1]"/>
                                     <span id="previousPage">
                                         <a href="{$previousLink}.html">Previous</a>
                                     </span>
                                 </xsl:when>
                                 <xsl:otherwise>
                                     <xsl:variable name="previousLink"
-                                        select="($MBCal/descendant::div2/@xml:id)[$pos - 1]"/>
+                                        select="$dateList[$pos - 1]"/>
                                     <xsl:variable name="nextLink"
-                                        select="($MBCal/descendant::div2/@xml:id)[$pos + 1]"/>
+                                        select="$dateList[$pos + 1]"/>
                                     <span id="previousPage">
                                         <a href="{$previousLink}.html">Previous</a>
                                     </span>
@@ -189,7 +210,7 @@
                                 </xsl:otherwise>
                             </xsl:choose>
                         </div>
-                        
+
 
                         <footer class="main">
                             <img src="../images/pennStateHorizontal.png" class="pennStateFooter"/>
@@ -240,7 +261,7 @@
                     </figcaption>
                 </figure>
 
-                
+
             </div>
             <div class="calText">
                 <div class="transcript">
@@ -275,55 +296,73 @@
         </span>
 
     </xsl:template>
-    
+
     <!-- 2022-12-08 ebb: Adding the following templates to differentiate HTML output for 
     calendar print vs. Mary Behrend's various modes of handwriting. -->
-    
-    <xsl:template match="fw">
-        <p class="fw"><xsl:apply-templates/></p>
-    </xsl:template>
-    
-    <xsl:template match="ab">
-       <xsl:choose>
-           <xsl:when test="@hand">
-               <p class="{@hand ! substring-after(., '#')}"><xsl:apply-templates/></p>
-           </xsl:when>
-           <xsl:otherwise>
-               <p><xsl:apply-templates/></p>
-           </xsl:otherwise>
 
-       </xsl:choose>
+    <xsl:template match="fw">
+        <p class="fw">
+            <xsl:apply-templates/>
+        </p>
     </xsl:template>
-    
-    
-    <xsl:template match="add[@hand]">
-        <span class="{@hand ! substring-after(., '#')}"><xsl:apply-templates/></span>
-    </xsl:template>
-    
-    <xsl:template match="emph">
-        
-        <span class="underline"><xsl:apply-templates/></span>
-    </xsl:template>
-    
-    <xsl:template match="rs">
+
+    <xsl:template match="ab">
         <xsl:choose>
-            <xsl:when test="@type='location'">
-                <span class="place"><xsl:apply-templates/></span>
+            <xsl:when test="@hand">
+                <p class="{@hand ! substring-after(., '#')}">
+                    <xsl:apply-templates/>
+                </p>
             </xsl:when>
             <xsl:otherwise>
-                <span class="{@type}"><xsl:apply-templates/></span>
+                <p>
+                    <xsl:apply-templates/>
+                </p>
+            </xsl:otherwise>
+
+        </xsl:choose>
+    </xsl:template>
+
+
+    <xsl:template match="add[@hand]">
+        <span class="{@hand ! substring-after(., '#')}">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+
+    <xsl:template match="emph">
+
+        <span class="underline">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+
+    <xsl:template match="rs">
+        <xsl:choose>
+            <xsl:when test="@type = 'location'">
+                <span class="place">
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
+            <xsl:otherwise>
+                <span class="{@type}">
+                    <xsl:apply-templates/>
+                </span>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
-    
+
     <xsl:template match="persName">
-        <span class="person"><xsl:apply-templates/></span>
+        <span class="person">
+            <xsl:apply-templates/>
+        </span>
     </xsl:template>
     <xsl:template match="placeName">
-        <span class="place"><xsl:apply-templates/></span>
+        <span class="place">
+            <xsl:apply-templates/>
+        </span>
     </xsl:template>
-    
-        
+
+
     <!--  <xsl:template match="facs">
         <a href="#{@xml:id}">
             <xsl:apply-templates/>
