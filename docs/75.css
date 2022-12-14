@@ -756,7 +756,36 @@ body.ssSearching:not(.ssLoading) div#ssSearching, body.ssLoading:not(.ssSearchin
     display: block;
 }
 
+/* Footer buttons*/
+#footerButton{
+    width: 100%;
+    position: relative;
+    margin: 10px auto;
+}
 
+#footerButton span{
+    background: #F0F0F0;
+    width: 80px;
+    position: absolute;
+    border: 1px solid #001E44;
+    border-radius: 3px;
+    padding:10px;
+    text-align: center;
+
+}
+#footerButton span:hover{
+    background: white;
+}
+#footerButton span a{
+    text-decoration: none;
+    color: black;
+}
+#previousPage{
+    left: 0;
+}
+#nextPage{
+    right: 0;
+}
 
 
 
