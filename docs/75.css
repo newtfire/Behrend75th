@@ -231,22 +231,19 @@ border-radius: 15px;
 
 /* Sticky Sidebar */
 .sidebar {
-/*display: none;*/
     position: fixed;
     top: 0;
-    /*left: 0.5%;*/
-    left: -270px;
-    width: 260px;
-    /*height: 1500px;*/
+    left: -350px;
+    width: 300px;
     border: 1px solid #001E44;
     background-color: #CCDAE6;
-    font-size: 10.25pt;
+    font-size: 16px;
     transition: .5s ease;
     align-items: center;
 }
 .openSidebar{
     top: 0;
-    left: 0.5%;
+    left: 0;
     transition: .5s ease;
 }
 
@@ -264,7 +261,8 @@ border-radius: 15px;
     background: white;
 }
 .sidebar h3{
-    margin: 15px auto 0 auto;
+    font-size: 24px;
+    margin: 20px auto 5px auto;
 }
 .sidebar ul{
     list-style: none;
@@ -272,7 +270,7 @@ border-radius: 15px;
     margin: 0;
 }
 .sidebar li{
-    padding: 0 25px;
+    padding: 2px 20px;
     border-radius: 50px;
 }
 .sidebar ul:nth-child(2) li:not(:last-child):hover, .sidebar ul:nth-child(3) li:hover {
