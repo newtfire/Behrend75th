@@ -162,6 +162,10 @@ svg text{
 }
 /*END of Penn State*/
 
+
+/* FOOTER */
+
+
 footer.main {
     text-align: right;
     font-size: 9px;
@@ -788,6 +792,26 @@ body.ssSearching:not(.ssLoading) div#ssSearching, body.ssLoading:not(.ssSearchin
 #nextPage{
     right: 0;
 }
+
+/* XML */
+.person { color: green; }
+.object { color: #000099; }
+/* redPen is above with other calendar edits */
+.place { color: #6666CC; }
+.date { color: #660099; }
+.time { color: #660099; }
+.Period { color: #993399;}
+.transport { color: #CC6600; }
+.spelling { color: #FF6600; }
+.fade { color: #666666;}
+/*.space {  }*/
+.hand { color: #996600; }
+.animal { color: #990000; }
+/*.underlined { }*/
+/*.merge {}*/
+
+
+
 
 
 
