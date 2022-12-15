@@ -13,7 +13,7 @@
     <xsl:template match="/">
         <xsl:result-document method="xhtml" html-version="5" omit-xml-declaration="yes"
             include-content-type="no" indent="yes" href="../docs/travelLettersPage.html">
-            <html>
+            <html lang="en-US">
                 <head>
                     <link rel="stylesheet" type="text/css" href="75.css"/>
                     <title>Behrend Travel Letters</title>

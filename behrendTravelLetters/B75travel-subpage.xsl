@@ -26,7 +26,7 @@
             <xsl:variable name="filename" as="xs:string" select="@xml:id"/>
             <xsl:result-document method="xhtml" html-version="5" omit-xml-declaration="yes"
                 include-content-type="no" indent="yes" href="../docs/travelLetters/{$filename}.html">
-                <html>
+                <html lang="en-US">
                     <head>
                         <title>Travel Letters <xsl:value-of select="@xml:id"/></title>
                         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -156,33 +156,33 @@
                             </xsl:otherwise>
                         </xsl:choose>
 
-  
+
                         <div id="footerButton">
                             <xsl:choose>
                                 <xsl:when test="$pos = 1">
                                     <xsl:variable name="nextLink" select="$travelColl[2]//@xml:id"/>
-                                    <span id="nextPage">
-                                        <a href="{$nextLink}.html">Next</a>
-                                    </span>
+                                    <a href="{$nextLink}.html">
+                                        <span id="nextPage"> Next </span>
+                                    </a>
                                 </xsl:when>
                                 <xsl:when test="$pos = last()">
                                     <xsl:variable name="previousLink"
                                         select="$travelColl[last() - 1]//@xml:id"/>
-                                    <span id="previousPage">
-                                        <a href="{$previousLink}.html">Previous</a>
-                                    </span>
+                                    <a href="{$previousLink}.html">
+                                        <span id="previousPage"> Previous </span>
+                                    </a>
                                 </xsl:when>
                                 <xsl:otherwise>
                                     <xsl:variable name="previousLink"
                                         select="$travelColl[$pos - 1]//@xml:id"/>
                                     <xsl:variable name="nextLink"
                                         select="$travelColl[$pos + 1]//@xml:id"/>
-                                    <span id="previousPage">
-                                        <a href="{$previousLink}.html">Previous</a>
-                                    </span>
-                                    <span id="nextPage">
-                                        <a href="{$nextLink}.html">Next</a>
-                                    </span>
+                                    <a href="{$previousLink}.html">
+                                        <span id="previousPage"> Previous </span>
+                                    </a>
+                                    <a href="{$nextLink}.html">
+                                        <span id="nextPage"> Next </span>
+                                    </a>
                                 </xsl:otherwise>
                             </xsl:choose>
                         </div>

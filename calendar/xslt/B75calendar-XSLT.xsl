@@ -13,12 +13,12 @@
             <xsl:value-of select="."/>
         </xsl:for-each>
     </xsl:variable>
-    
+
     <xsl:template match="/">
         <!--<xsl:result-document method="xhtml" html-version="5" omit-xml-declaration="yes"
             include-content-type="no" indent="yes" href="../../docs/calendarPage.html">
 
-            <html xmlns="http://www.w3.org/1999/xhtml">
+            <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
                 <head>
                     <link rel="stylesheet" type="text/css" href="75.css"/>
                     <title>Calendars</title>
@@ -75,11 +75,11 @@
             <xsl:sort select="descendant::date/@when"/>
             <xsl:variable name="pos" select="position()"/>
             <xsl:variable name="filename" as="xs:string" select="@xml:id"/>
-            
-            
+
+
             <xsl:result-document method="xhtml" html-version="5" omit-xml-declaration="yes"
                 include-content-type="no" indent="yes" href="../../docs/calendar/{$filename}.html">
-                <html>
+                <html lang="en-US">
                     <head>
                         <title>Calendar Entry <xsl:value-of select="@xml:id"/></title>
                         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -183,30 +183,26 @@
                         <div id="footerButton">
                             <xsl:choose>
                                 <xsl:when test="$pos = 1">
-                                    <xsl:variable name="nextLink"
-                                        select="$dateList[2]"/>
-                                    <span id="nextPage">
-                                        <a href="{$nextLink}.html">Next</a>
-                                    </span>
+                                    <xsl:variable name="nextLink" select="$dateList[2]"/>
+                                    <a href="{$nextLink}.html">
+                                        <span id="nextPage"> Next </span>
+                                    </a>
                                 </xsl:when>
                                 <xsl:when test="$pos = last()">
-                                    <xsl:variable name="previousLink"
-                                        select="$dateList[last() - 1]"/>
-                                    <span id="previousPage">
-                                        <a href="{$previousLink}.html">Previous</a>
-                                    </span>
+                                    <xsl:variable name="previousLink" select="$dateList[last() - 1]"/>
+                                    <a href="{$previousLink}.html">
+                                        <span id="previousPage"> Previous </span>
+                                    </a>
                                 </xsl:when>
                                 <xsl:otherwise>
-                                    <xsl:variable name="previousLink"
-                                        select="$dateList[$pos - 1]"/>
-                                    <xsl:variable name="nextLink"
-                                        select="$dateList[$pos + 1]"/>
-                                    <span id="previousPage">
-                                        <a href="{$previousLink}.html">Previous</a>
-                                    </span>
-                                    <span id="nextPage">
-                                        <a href="{$nextLink}.html">Next</a>
-                                    </span>
+                                    <xsl:variable name="previousLink" select="$dateList[$pos - 1]"/>
+                                    <xsl:variable name="nextLink" select="$dateList[$pos + 1]"/>
+                                    <a href="{$previousLink}.html">
+                                        <span id="previousPage"> Previous </span>
+                                    </a>
+                                    <a href="{$nextLink}.html">
+                                        <span id="nextPage"> Next </span>
+                                    </a>
                                 </xsl:otherwise>
                             </xsl:choose>
                         </div>

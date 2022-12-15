@@ -10,7 +10,7 @@
    <xsl:variable name="descFile" as="document-node()" select="doc('../xml/desc.xml')"/>
     
     <xsl:template match="/">
-        <html> 
+        <html lang="en-US"> 
             <head>
                 <title>Letter from Paul Siple</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
