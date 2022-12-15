@@ -19,7 +19,7 @@
     <!--<xsl:variable name="WBPic" select="collection('Letter_Images?select=*.jpeg')"/> -->
 
     <xsl:template match="/">
-        <html>
+        <html lang="en-US">
             <head>
                 <title>Warren Behrend’s Last Correspondence and Memorial</title>
                 <link rel="stylesheet" type="text/css" href="75.css"/>

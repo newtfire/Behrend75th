@@ -28,7 +28,7 @@
             <xsl:variable name="current" select="current()"/>
             <xsl:variable name="pos" select="position()"/>
             <xsl:result-document method="xhtml" href="../docs/warrenLetters/{current()}.html">
-                <html>
+                <html lang="en-US">
                     <head>
                         <title>Warren Behrend’s Last Correspondence and Memorial</title>
                         <link rel="stylesheet" type="text/css" href="../75.css"/>
@@ -156,28 +156,28 @@
                             <xsl:choose>
                                 <xsl:when test="$pos = 1">
                                     <xsl:variable name="nextLink" select="$collectionNames[2]"/>
-                                    <span id="nextPage">
-                                        <a href="{$nextLink}.html">Next</a>
-                                    </span>
+                                    <a href="{$nextLink}.html">
+                                        <span id="nextPage"> Next </span>
+                                    </a>
                                 </xsl:when>
                                 <xsl:when test="$pos = last()">
                                     <xsl:variable name="previousLink"
                                         select="$collectionNames[last() - 1]"/>
-                                    <span id="previousPage">
-                                        <a href="{$previousLink}.html">Previous</a>
-                                    </span>
+                                    <a href="{$previousLink}.html">
+                                        <span id="previousPage"> Previous </span>
+                                    </a>
                                 </xsl:when>
                                 <xsl:otherwise>
                                     <xsl:variable name="previousLink"
                                         select="$collectionNames[$pos - 1]"/>
                                     <xsl:variable name="nextLink"
                                         select="$collectionNames[$pos + 1]"/>
-                                    <span id="previousPage">
-                                        <a href="{$previousLink}.html">Previous</a>
-                                    </span>
-                                    <span id="nextPage">
-                                        <a href="{$nextLink}.html">Next</a>
-                                    </span>
+                                    <a href="{$previousLink}.html">
+                                        <span id="previousPage"> Previous </span>
+                                    </a>
+                                    <a href="{$nextLink}.html">
+                                        <span id="nextPage"> Next </span>
+                                    </a>
                                 </xsl:otherwise>
                             </xsl:choose>
                         </div>
