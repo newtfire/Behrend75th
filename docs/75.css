@@ -162,10 +162,6 @@ svg text{
 }
 /*END of Penn State*/
 
-
-/* FOOTER */
-
-
 footer.main {
     text-align: right;
     font-size: 9px;
@@ -335,7 +331,6 @@ object-fit: contain;
   cursor: pointer; /\* Mouse pointer on hover *\/
   width:15vw; max-width:300px; border-radius:50%;
 }
-
 /\* Darker background on mouse-over *\/
 .btn:hover {
   background-color: black;
@@ -370,17 +365,14 @@ section#page div.transcription p {
     bottom: 0px; 
  color: white;   
 }
-
 div.footer a, div.footer p {
   color: white;  background-color:black;
 }
-
 div.footer a:visited{
     /\*color: blueviolet;*\/
     color:yellow;
 }
 div.footer p img{display:inline;}
-
 */
 /* **********CALENDAR GRID ****************************** */
 /* 2022-12-06 ebb: It's FUTURE ME! Exactly one year since I introduced this CSS Grid code to DIGIT 110, 
@@ -793,6 +785,7 @@ body.ssSearching:not(.ssLoading) div#ssSearching, body.ssLoading:not(.ssSearchin
     right: 0;
 }
 
+
 /* XML */
 .person { color: green; }
 .object { color: #000099; }
@@ -809,8 +802,6 @@ body.ssSearching:not(.ssLoading) div#ssSearching, body.ssLoading:not(.ssSearchin
 .animal { color: #990000; }
 /*.underlined { }*/
 /*.merge {}*/
-
-
 
 
 
