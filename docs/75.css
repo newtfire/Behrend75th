@@ -803,6 +803,17 @@ body.ssSearching:not(.ssLoading) div#ssSearching, body.ssLoading:not(.ssSearchin
 /*.underlined { }*/
 /*.merge {}*/
 
+.himg {
+ border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+
+}
+
 
 
 
