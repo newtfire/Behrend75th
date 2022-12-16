@@ -224,7 +224,7 @@
                <fw place="top-center" hand="#calendarPub">COPYRIGHT 1908, BY FRIENDSHIP CALENDAR CO.
                   NEW BRITAIN, CONN.</fw>
                <ab rend="print" hand="#calendarPub">
-                  <lb/><date when="1909-04-11">April 11, 1909. <lb/>Saturday<lb/>Easter</date>
+                  <lb/><date when="1909-04-11">April 11, 1909. <lb/>Sunday<lb/>Easter</date>
                </ab>
                <figure hand="multicolor" rend="color">
                   <figDesc resp="#lhering"> There is a drawing of <rs>two white flowers</rs> with
