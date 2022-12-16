@@ -48,7 +48,7 @@
             <ln n="1"/><transport>Duesenberg</transport> ran beautifully -so far!
             <ln n="2"/>First day <weather>nice weather</weather>;<underline>very</underline> cold
             <ln n="3"/>yesterday. You may need your coon
-            <ln n="4"/><rs type="object">coat</rs>, heavy <rs type="object">hat</rs> or fur <rs type="object">cap</rs>!!
+            <ln n="4"/><object>coat</object>, heavy <object>at</object> or fur <object>cap</object>!!
             <ln n="5"/>Look forward to our Wiedersehen. <!-- ged: This is German for meet again --> 
         </p>    
         <closer>
