@@ -15,68 +15,10 @@
     </xsl:variable>
 
     <xsl:template match="/">
-        <!--<xsl:result-document method="xhtml" html-version="5" omit-xml-declaration="yes"
-            include-content-type="no" indent="yes" href="../../docs/calendarPage.html">
-
-            <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
-                <head>
-                    <link rel="stylesheet" type="text/css" href="75.css"/>
-                    <title>Calendars</title>
-                </head>
-                <body>
-                    <h2>Behrend Calendars</h2>
-                    <nav class="navbar">
-                        <ul>
-                            <li>
-                                <a href="index.html">Home</a>
-                            </li>
-                            <li>
-                                <a href="calendarPage.html">Behrend Calendars</a>
-                            </li>
-                            <li>
-                                <a href="travelLettersPage.html">Behrend Travel Letters</a>
-                            </li>
-                            <li>
-                                <a href="sipleLettersPage.html">Behrend Siple Letters</a>
-                            </li>
-                            <li>
-                                <a href="warrenLettersPage.html">Behrend Warren Letters</a>
-                            </li>
-                            <li>
-                                <a href="search.html">Search</a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <div class="block">
-                        <p>One staple archive of Behrend 75 is the collection of calendar dates that
-                            span throughout the 1900s. These calendar entries were simple
-                            illustrations with ancedotes of what occurred on that day. Though
-                            hundreds of these were made time has not treated the calendar pages very
-                            well. Only 34 pages remain, but they will be held as a special portion
-                            of Penn State Behrend history as time passes by.</p>
-                    </div>
-                    <section id="toc">
-                        <h2>Table of Contents</h2>
-                        <ul>
-                            <xsl:apply-templates select="$MBCal//text//date" mode="toc">
-
-                                <xsl:sort select="@when"/>
-                            </xsl:apply-templates>
-                        </ul>
-                    </section>
-                </body>
-            </html>
-
-
-
-        </xsl:result-document>-->
-
         <xsl:for-each select="$MBCal//div2">
             <xsl:sort select="descendant::date/@when"/>
             <xsl:variable name="pos" select="position()"/>
             <xsl:variable name="filename" as="xs:string" select="@xml:id"/>
-
-
             <xsl:result-document method="xhtml" html-version="5" omit-xml-declaration="yes"
                 include-content-type="no" indent="yes" href="../../docs/calendar/{$filename}.html">
                 <html lang="en-US">
