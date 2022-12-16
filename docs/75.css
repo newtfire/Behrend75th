@@ -804,6 +804,7 @@ body.ssSearching:not(.ssLoading) div#ssSearching, body.ssLoading:not(.ssSearchin
 .animal { color: #990000; }
 /*.underlined { }*/
 /*.merge {}*/
+.lang { color: #3300CC; }
 
 .himg {
  border: 1px solid #ddd;
