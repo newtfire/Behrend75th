@@ -185,8 +185,10 @@ footer.main img#git {
 .navbar ul li {
      list-style: none;
     display: inline-block;
-    margin: 0 20px;
+    margin: 0 20px ;
+    padding: 15px;
     position: relative;
+    
 }
 .navbar ul li a {
        text-decoration: none;
