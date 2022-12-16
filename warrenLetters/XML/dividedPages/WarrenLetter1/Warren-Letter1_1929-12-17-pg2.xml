@@ -17,7 +17,7 @@
 <body><pb n="2"/>
 <p n="3"> 
     <ln n="1"/>I am going to drop in and see
-    <ln n="2"/><person personId="HAR">Harriet</person>tomorrow night.<person personId="MBS">Miss Black</person>- <!-- seb: should I make two person elements for Miss Black, and one for -stone? or do a self closing line element? -->
+    <ln n="2"/><person personId="HAR">Harriet</person> tomorrow night. <person personId="MBS">Miss Black</person>- <!-- seb: should I make two person elements for Miss Black, and one for -stone? or do a self closing line element? -->
     <ln n="3"/><person personIdRef="MBS">stone</person> said that brothers might get
     <ln n="4"/>through the portals to see their sisters.
 </p>
