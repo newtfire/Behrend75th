@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns="http://hcmc.uvic.ca/ns/staticSearch" version="2">
+    <params>
+        <searchFile>../docs/search.html</searchFile>
+        <versionFile>../test/VERSION</versionFile>
+        <recurse>true<!--Need to set recurse to true for the test--></recurse>
+        <phrasalSearch>true</phrasalSearch>
+        <wildcardSearch>true</wildcardSearch>
+        <createContexts>true</createContexts>
+        <resultsPerPage>5</resultsPerPage>
+        <minWordLength>2</minWordLength>
+        <!--NOTE: If phrasalSearch is set to TRUE, then
+        maxContexts prop will be ignored-->
+        <maxKwicsToHarvest>5</maxKwicsToHarvest>
+        <maxKwicsToShow>5</maxKwicsToShow>
+        <totalKwicLength>15</totalKwicLength>
+        <kwicTruncateString>...</kwicTruncateString>
+        <stopwordsFile>test/test_stopwords.txt</stopwordsFile>
+        <dictionaryFile>xsl/english_words.txt</dictionaryFile>
+        <outputFolder>ssTest</outputFolder>
+    </params>
+    
+    <rules>
+        <rule weight="3"
+            match="*[@class='document']"/>
+        <rule weight="0"
+            match="header | footer"/>
+        <rule weight="0"
+            match="script | style"/>
+        <rule weight="0" match="div[@class='timeline'] | div[@id='svgTimeline'] | 
+            section[id='toc'] | div[class='sidebar'] | button | div[@id='staticSearch']"/>
+    </rules>
+    
+<!--    <contexts>
+        <context match="p[@class='redPen'] | span[@class='redPen']" label="Red Pen"/>
+        <context match="p[@class='pencil']" label="Pencil"/>
+        <context match="span[@class='hand']" label="Hand"/>
+        <context match="p[@class='brownink']" label="Brown Ink"/>
+    </contexts>-->
+    
+    <excludes>
+        <exclude type="filter"
+            match="div[@class='sidebar']"/>
+        <exclude type="filter"
+            match="nav"/>
+        <exclude type="index" match="html[@id='index']"/>
+    </excludes>
+    
+</config>

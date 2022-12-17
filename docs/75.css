@@ -3,6 +3,11 @@ div.banner {display:flex; justify-content:space-between; }
 
 /* deletions in travel letters and calendar */
 span.x {text-decoration: line-through;}
+span.underline {text-decoration: underline;}
+/* calendar styling */
+.redPen {color:/*red*/ #8B0000;}
+.fw {font-size:smaller;}
+.calendarPub {font-size:smaller;}
 
 /* latin */
 @font-face {
@@ -35,7 +40,7 @@ span.x {text-decoration: line-through;}
 }
 title {
  font-size: 36px;
-    color: white; 
+    color: navy; 
     
 }
 body {
@@ -63,7 +68,6 @@ p {
     font-size: 18px;
     color: black;
 }
-
 
 /* unvisited link */
 a:link {
@@ -123,8 +127,7 @@ svg text{
     display: none;
     cursor: pointer;
 }
-
-
+/*END OF TABLE*/
 
 
 
@@ -136,7 +139,11 @@ svg text{
     height: auto;
     padding: 30px;
 }
+/*END of color block*/
 
+
+
+/* Penn State */
 .PSB{
   position: relative;
   object-fit: contain;
@@ -153,12 +160,19 @@ svg text{
   width: 200px;
   height: 100px;
 }
+/*END of Penn State*/
 
 footer.main {
     text-align: right;
     font-size: 9px;
 }
 
+/* GitHub logo */
+footer.main img#git {
+       width:50px;
+       padding-right:100vw;
+       display:inline; 
+   } 
 
 .navbar{
     width: 85%;
@@ -171,19 +185,21 @@ footer.main {
 .navbar ul li {
      list-style: none;
     display: inline-block;
-    margin: 0 20px;
+    margin: 0 20px ;
+    padding: 15px;
     position: relative;
+    
 }
 .navbar ul li a {
        text-decoration: none;
-    color: azure;
+    color: navy;
     text-transform: uppercase;
 }
 .navbar ul li::after{
     content: '';
     height: 3px;
     width: 0;
-    background: #009688;
+    background: navy;
     position: absolute;
     left: 0;
     bottom: -10px;
@@ -208,23 +224,99 @@ border-radius: 15px;
 }
 
 
-/* Sticky Sidebar */
-.sidebar {
-display: flex;
-  position: fixed;
-  bottom: 5%;
-  top: 0;
-  left: 0.5%;
-  width: 260px;
-  height: 1500px;
-  border: 1px solid #001E44;
-  background-color: #CCDAE6;
-  font-size: 10.25pt;
+/* SIPLE EXTRA IMAGES */
+.siple {
+    object-fit: contain;
+    max-width: 200px;
+    width: 100%;
 }
 
+/* Sticky Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -350px;
+    width: 300px;
+    border: 1px solid #001E44;
+    background-color: #CCDAE6;
+    font-size: 16px;
+    transition: .5s ease;
+    align-items: center;
+    z-index: 99;
+}
+.openSidebar{
+    top: 0;
+    left: 0;
+    transition: .5s ease;
+}
+
+.sidebar>button {
+    width:100%;
+    padding: .5em;
+    text-align:end;
+    font-size: larger;
+    border: 0;
+    cursor: pointer;
+    color: #404040; /*darkgrey*/
+}
+.sidebar>button:hover{
+    color: black;
+    background: white;
+}
+.sidebar h3{
+    font-size: 24px;
+    margin: 20px auto 5px auto;
+}
+.sidebar ul{
+    list-style: none;
+    padding: 5px;
+    margin: 0;
+}
+.sidebar li{
+    padding: 2px 20px;
+    border-radius: 50px;
+}
+.sidebar ul:nth-child(2) li:not(:last-child):hover, .sidebar ul:nth-child(3) li:hover {
+    background: #eef3f7;
+    transition: 0.2s ease-out;
+}
+.sidebar a{
+    text-decoration: none;
+}
+.sidebar ul>li>form>input{
+    width:45%;
+}
+
+#toc{
+    height: 91.9vh;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
 .tocHeader {
     text-align: center;
 }
+
+div#hamburger button#openMe {
+    font-size:18pt;
+
+}
+div#hamburger button#openMe:hover {
+    background-color:white;
+    transform: scale(1.1);
+}
+
+
+/*Menu Lines for Page Contents*/
+.menuList{
+    line-height: 1.6;
+}
+
+.menuSide {
+    line-height: 1.5;
+}
+
 
 /*GRID*/
 figure img {
@@ -241,7 +333,6 @@ object-fit: contain;
   cursor: pointer; /\* Mouse pointer on hover *\/
   width:15vw; max-width:300px; border-radius:50%;
 }
-
 /\* Darker background on mouse-over *\/
 .btn:hover {
   background-color: black;
@@ -276,17 +367,14 @@ section#page div.transcription p {
     bottom: 0px; 
  color: white;   
 }
-
 div.footer a, div.footer p {
   color: white;  background-color:black;
 }
-
 div.footer a:visited{
     /\*color: blueviolet;*\/
     color:yellow;
 }
 div.footer p img{display:inline;}
-
 */
 /* **********CALENDAR GRID ****************************** */
 /* 2022-12-06 ebb: It's FUTURE ME! Exactly one year since I introduced this CSS Grid code to DIGIT 110, 
@@ -303,26 +391,31 @@ div.footer p img{display:inline;}
   * whose id attributes START WITH this string: e-1909  since those are the sections
   * we want to be grid containers*/
  section[id^="e-"] {
- margin-left: 260px; /* ebb: adding this to prevent overlap with sidebar menu */
+ /*margin-left: 260px;  ebb: adding this to prevent overlap with sidebar menu */
  background-color: #CCDAE6; /* Slate Light+ */
  border: thin solid navy;
  display:grid;
  grid-auto-flow:column; 
- grid-template-columns:.75fr .25fr; 
- grid-column-gap:2em;
+ grid-template-columns:.50fr .50fr; 
+
  }
- 
+ .calText{
+     padding:1em;
+ }
  .transcript {
      color: black;
+     
  }
  
  .note {
      color: black;
+     font-style:italic;
+     font-size:smaller;
  }
  
  
  span[title]{
-     color: green;
+     color: navy;
  }
  
  /*  let's try creating a grid for the div.facsblock, so all the text appears in a new column to the right of the image.  */
@@ -330,11 +423,11 @@ div.footer p img{display:inline;}
  section[id^="e-"] div.facsblock {
 
 background-color:white; 
-display:grid;
-grid-auto-flow:column;
-grid-template-columns: .50fr .50fr; 
-/*  ebb: need to look up how minmax works.  */
-grid-column-gap:0.10em;
+/*display:grid;
+grid-auto-flow:column;*/
+/*grid-template-columns: .50fr .50fr; */
+/*  ebb: need to look up how minmax works. 
+grid-column-gap:0.10em; */
 padding:.5em;
 
 }
@@ -375,7 +468,7 @@ div.facsblock > figure > img {
  * holds the facsimile image inside. */
 
  section[id^="f-"] {
- margin-left: 260px; /* ebb: adding this to prevent overlap with sidebar menu */
+ /*margin-left: 260px;  ebb: adding this to prevent overlap with sidebar menu */
  background-color: #CCDAE6; /* Slate Light+ */
  border: thin solid navy;
  display:grid;
@@ -662,6 +755,67 @@ body.ssSearching:not(.ssLoading) div#ssSearching, body.ssLoading:not(.ssSearchin
     display: block;
 }
 
+/* Footer buttons*/
+#footerButton{
+    width: 100%;
+    height: 40px;
+    position: relative;
+    margin: 10px auto;
+}
+
+#footerButton span{
+    background: #F0F0F0;
+    width: 80px;
+    position: absolute;
+    border: 1px solid #001E44;
+    border-radius: 3px;
+    padding:10px;
+    text-align: center;
+    cursor: pointer;
+}
+#footerButton span:hover{
+    background: white;
+}
+#footerButton span a{
+    text-decoration: none;
+    color: black;
+}
+#previousPage{
+    left: 0;
+}
+#nextPage{
+    right: 0;
+}
+
+
+/* XML */
+.person { color: green; }
+.object { color: #000099; }
+/* redPen is above with other calendar edits */
+.place { color: #6666CC; }
+.date { color: #660099; }
+.time { color: #660099; }
+.Period { color: #993399;}
+.transport { color: #CC6600; }
+.spelling { color: #FF6600; }
+.fade { color: #666666;}
+/*.space {  }*/
+.hand { color: #996600; }
+.animal { color: #990000; }
+/*.underlined { }*/
+/*.merge {}*/
+.lang { color: #3300CC; }
+
+.himg {
+ border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+
+}
 
 
 

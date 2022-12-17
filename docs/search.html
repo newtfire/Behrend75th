@@ -1,30 +1,92 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+   
    
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-      <link rel="stylesheet" href="75.css" id="ssCss"/>
+      
+      
+      
+      <link rel="stylesheet" href="ssTest/ssSearch.css" id="ssCss"/>
+      
+      
+      <link rel="stylesheet" href="ssTest/../75.css"/>
+      <!-- 
+             This is the style element that is inserted by the static search 
+             build process. It will be replaced every time you build the search. 
+             To override it, you can add your own style element AFTER this
+             one.
+      -->
+      
       
       <title>Search</title>
+      <script src="ssTest/ssHighlight.js"> </script>
       </head>
    
+   
    <body>
+      
+      
       <h1>75 Years of Behrend</h1>
+      
+      
+      <nav class="navbar">
+         
+         
+         <ul>
+            
+            
+            <li><a href="index.html">Home</a></li>
+            
+            
+            <li><a href="calendarPage.html">Mary Behrend's Calendar</a></li>
+            
+            
+            <li><a href="warrenLettersPage.html">Warren Behrend Letters</a></li>
+            
+            
+            <li><a href="sipleLettersPage.html">Siple Letter</a></li>
+            
+            
+            <li><a href="travelLettersPage.html">Behrend Travel Letters</a></li>
+            
+            
+            <li><a href="search.html">Search</a></li>
+            </ul>
+         </nav>
+      
+      
       <div id="staticSearch"><script src="ssTest/ssSearch.js"></script>
          <!--
               Note that if you want to debug a problem with the JavaScript, you can
               change "ssSearch.js" to "ssSearch-debug.js" to link the uncompressed, 
               unminified code instead.
-            --><script src="ssTest/ssInitialize.js"></script><noscript>This page requires JavaScript.</noscript><form accept-charset="UTF-8" id="ssForm" data-allowphrasal="yes" data-allowwildcards="yes" data-minwordlength="2" data-maxkwicstoshow="5" data-resultsperpage="5" onsubmit="return false;" data-versionstring="" data-ssfolder="ssTest" data-kwictruncatestring="..." data-resultslimit="2000"><span class="ssQueryAndButton"><input type="text" id="ssQuery" aria-label="Search"/><button id="ssDoSearch">Search</button></span><span class="clearButton"><button id="ssClear">Clear</button></span><div class="ssSearchInFilters">
-               <fieldset class="ssFieldset" title="Search only in">
-                  <legend>Search only in</legend>
-                  <ul class="ssSearchInCheckboxList">
-                     <li><input type="checkbox" title="Citations" value="Citations" id="ssCtx3" class="staticSearch_searchIn"/><label for="ssCtx3">Citations</label></li>
-                     <li><input type="checkbox" title="Notes" value="Notes" id="ssCtx2" class="staticSearch_searchIn"/><label for="ssCtx2">Notes</label></li>
-                     <li><input type="checkbox" title="Quotations" value="Quotations" id="ssCtx1" class="staticSearch_searchIn"/><label for="ssCtx1">Quotations</label></li>
+            --><script src="ssTest/ssInitialize.js"></script><noscript>This page requires JavaScript.</noscript><form accept-charset="UTF-8" id="ssForm" data-allowphrasal="yes" data-allowwildcards="yes" data-minwordlength="2" data-maxkwicstoshow="5" data-resultsperpage="5" onsubmit="return false;" data-versionstring="" data-ssfolder="ssTest" data-kwictruncatestring="..." data-resultslimit="2000"><span class="ssQueryAndButton"><input type="text" id="ssQuery" aria-label="Search"/><button id="ssDoSearch">Search</button></span><span class="clearButton"><button id="ssClear">Clear</button></span><div class="ssDescFilters">
+               <fieldset class="ssFieldset" title="Search in" id="ssDesc1">
+                  <legend>Search in</legend>
+                  <ul class="ssDescCheckboxList">
+                     <li><input type="checkbox" title="Search in" value="Behrend Travel Letters" id="ssDesc1_1" class="staticSearch.desc staticSearch_desc"/><label for="ssDesc1_1">Behrend Travel Letters</label></li>
+                     <li><input type="checkbox" title="Search in" value="Mary Behrend’s Calendar" id="ssDesc1_2" class="staticSearch.desc staticSearch_desc"/><label for="ssDesc1_2">Mary Behrend’s Calendar</label></li>
+                     <li><input type="checkbox" title="Search in" value="Siple Letter" id="ssDesc1_3" class="staticSearch.desc staticSearch_desc"/><label for="ssDesc1_3">Siple Letter</label></li>
+                     <li><input type="checkbox" title="Search in" value="Warren Behrend Letters" id="ssDesc1_4" class="staticSearch.desc staticSearch_desc"/><label for="ssDesc1_4">Warren Behrend Letters</label></li>
                   </ul>
                </fieldset>
-            </div><span class="postFilterSearchBtn"><button id="ssDoSearch2">Search</button></span></form>
+            </div>
+            <div class="ssFeatFilters">
+               <fieldset class="ssFieldset" title="Animals involved" id="ssFeat2">
+                  <legend>Animals involved</legend><input type="text" title="Animals involved" placeholder="Start typing..." class="staticSearch.feat staticSearch_feat"/></fieldset>
+               <fieldset class="ssFieldset" title="People involved" id="ssFeat1">
+                  <legend>People involved</legend><input type="text" title="People involved" placeholder="Start typing..." class="staticSearch.feat staticSearch_feat"/></fieldset>
+               <fieldset class="ssFieldset" title="Places involved" id="ssFeat3">
+                  <legend>Places involved</legend><input type="text" title="Places involved" placeholder="Start typing..." class="staticSearch.feat staticSearch_feat"/></fieldset>
+               <fieldset class="ssFieldset" title="Transportation involved" id="ssFeat4">
+                  <legend>Transportation involved</legend><input type="text" title="Transportation involved" placeholder="Start typing..." class="staticSearch.feat staticSearch_feat"/></fieldset>
+            </div>
+            <div class="ssDateFilters">
+               <fieldset class="ssFieldset" title="Date range" id="ssDate1">
+                  <legend>Date range</legend><span><label for="ssDate1_from">From: </label><input type="text" maxlength="10" pattern="^\d\d\d\d(-((((01)|(03)|(05)|(07)|(08)|(10)|(12))-((0[1-9])|([12][0-9])|(3[01])))|(((04)|(06)|(09)|(11))-((0[1-9])|([12][0-9])|(30)))|(02-((0[1-9])|([12][0-9]))))|(-((0[123456789])|(1[012]))))?$" title="Date range" id="ssDate1_from" class="staticSearch.date staticSearch_date" placeholder="1909-01-30" onchange="this.reportValidity()"/></span><span><label for="ssDate1_to">To: </label><input type="text" maxlength="10" pattern="^\d\d\d\d(-((((01)|(03)|(05)|(07)|(08)|(10)|(12))-((0[1-9])|([12][0-9])|(3[01])))|(((04)|(06)|(09)|(11))-((0[1-9])|([12][0-9])|(30)))|(02-((0[1-9])|([12][0-9]))))|(-((0[123456789])|(1[012]))))?$" title="Date range" id="ssDate1_to" class="staticSearch.date staticSearch_date" placeholder="1955-07-29" onchange="this.reportValidity()"/></span></fieldset>
+            </div><span class="postFilterSearchBtn"><button id="ssDoSearch2">Search</button></span><span class="clearButton"><button id="ssClear2" onclick="Sch.clearSearchForm(); return false;">Clear</button></span></form>
          <div id="ssSearching">Searching...</div>
+         <div id="ssSplashMessage">Loading...</div>
          <div id="ssResults"></div>
          <div id="ssPoweredBy">
             <p>Powered by</p><a href="https://github.com/projectEndings/staticSearch" aria-label="Powered by staticSearch"><svg xmlns="http://www.w3.org/2000/svg" id="svg8" version="1.1" viewBox="0 0 266.77068 209.61487" height="30" width="39">

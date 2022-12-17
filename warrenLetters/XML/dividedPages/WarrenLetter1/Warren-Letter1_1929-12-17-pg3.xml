@@ -2,7 +2,7 @@
 <?xml-model href="../../letters_schema.rnc" type="application/relax-ng-compact-syntax"?>
 <xml>
     <meta>
-        <title titleId= "WtoP-1929-12-17-Letter1-pg3">Letter from Warren Behrend to Mary and Ernst Behrend, <date>1929-12-17</date></title>
+        <title titleId= "WtoP-1929-12-17-Letter1-pg3">Letter from Warren Behrend to Mary and Ernst Behrend, <date when="1929-12-17">1929-12-17</date> pg3</title>
         <sourceDesc location="John M. Lilley Library, Penn State Behrend Archives"/>
         <paperOrigin>Deerfield Academy Deerfield, Massachutsetts</paperOrigin>
         <transDesc>
@@ -12,7 +12,7 @@
         </transDesc>
     </meta>
     <figure>
-        <graphic src="../Letter_Images/Warren-Letter1_1929-12-17/1929-12-17_Warrenp3.jpeg" alt="p3"/>
+        <graphic src="../Letter_Images/Warren-Letter1_1929-12-17/1929-12-17_Warrenp3.jpeg" alt="front, p3"/>
         
     </figure>
 <body>    
@@ -33,7 +33,7 @@
         <ln  n="2"/>in <place placeId="CHAR">Charleston</place> soon and it will
         <ln  n="3"/>be mighty <emotion>nice</emotion> to have the whole family
         <ln  n="4"/>together again. I'm telephoning <person personId="BB">Betty</person>
-        <ln  n="5"/><person personIdRef="BB">Bratton</person>tonight find out whether
+        <ln  n="5"/><person personIdRef="BB">Bratton</person> tonight find out whether
         <ln  n="6"/>she can come and if so when. If she
     </p>
 </body>

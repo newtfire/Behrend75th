@@ -263,7 +263,7 @@
         <!-- list of MM-DD -->
         <g class="timeline">
           <xsl:for-each select="$siple">
-            <a href="siple/{current()/descendant::date[1]/@when}.html" target="_blank">
+            <a href="sipleLettersPage.html" target="_blank">
               <text x="{20+$lineX}" y="{$yInterval*position()}"  fill="{$colorArray[$index]}">
                 <xsl:value-of select="current()/descendant::date[1]/@when ! substring(., 6, 10)"/>
               </text>
@@ -332,11 +332,16 @@
           <script type="text/javascript" src="interact.js"/>
         </head>
         <body>
+          <div id="button">
+            <button id="showInfo" onclick="showInfo()">Show Information</button>
+            <button id="showTimeline" onclick="showTimeline()">Show Dates</button>
+          </div>
           <div id="svgTimeline">
             <svg xmlns="http://www.w3.org/2000/svg" height="1400px" width="930px">
               <xsl:sequence select="yxj:timeline()"/>
             </svg>
           </div>
+          
         </body>
       </html>
     </xsl:result-document>

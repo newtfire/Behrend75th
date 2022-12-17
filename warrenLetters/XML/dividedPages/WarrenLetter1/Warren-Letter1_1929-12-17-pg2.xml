@@ -2,7 +2,7 @@
 <?xml-model href="../../letters_schema.rnc" type="application/relax-ng-compact-syntax"?>
 <xml>
     <meta>
-        <title titleId= "WtoP-1929-12-17-Letter1-pg2">Letter from Warren Behrend to Mary and Ernst Behrend, <date>1929-12-17</date></title>
+        <title titleId= "WtoP-1929-12-17-Letter1-pg2">Letter from Warren Behrend to Mary and Ernst Behrend, <date when="1929-12-17">1929-12-17</date> pg2</title>
         <sourceDesc location="John M. Lilley Library, Penn State Behrend Archives"/>
         <paperOrigin>Deerfield Academy Deerfield, Massachutsetts</paperOrigin>
         <transDesc>
@@ -12,12 +12,12 @@
         </transDesc>
     </meta>
     <figure>
-        <graphic src="../Letter_Images/Warren-Letter1_1929-12-17/1929-12-17_Warrenp2.jpeg" alt="p2"/>
+        <graphic src="../Letter_Images/Warren-Letter1_1929-12-17/1929-12-17_Warrenp2.jpeg" alt="back, p2"/>
     </figure>
 <body><pb n="2"/>
 <p n="3"> 
     <ln n="1"/>I am going to drop in and see
-    <ln n="2"/><person personId="HAR">Harriet</person>tomorrow night.<person personId="MBS">Miss Black</person>- <!-- seb: should I make two person elements for Miss Black, and one for -stone? or do a self closing line element? -->
+    <ln n="2"/><person personId="HAR">Harriet</person> tomorrow night. <person personId="MBS">Miss Black</person>- <!-- seb: should I make two person elements for Miss Black, and one for -stone? or do a self closing line element? -->
     <ln n="3"/><person personIdRef="MBS">stone</person> said that brothers might get
     <ln n="4"/>through the portals to see their sisters.
 </p>

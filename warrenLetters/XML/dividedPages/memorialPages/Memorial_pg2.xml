@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../letters_schema.rnc" type="application/relax-ng-compact-syntax"?>
+<xml>
+    
+    <meta>
+        <title titleId="1929-12-30-memService-pg2">Speech prepared by P. J. Long for a memorial service for Warren Behrend<date when="1929-12-30">.</date> pg2</title>
+        <sourceDesc location="John M. Lilley Library, Penn State Behrend Archives"/>
+        <paperOrigin>Correct copy P. J. Long COPY Hammermill Paper Company</paperOrigin>
+        <transDesc>
+            <editor>NV</editor>
+            <editor>GD</editor>
+            <editor>JG</editor>
+            <editor>EM</editor>
+        </transDesc>
+        
+    </meta>
+    <figure>
+        <graphic src="../Letter_Images/Warren-Memorial-Letter/WarrenMemorialBack.jpeg" alt="back, p2"/>
+    </figure>
+<body>
+    
+<pb n="2"/>
+<p n="5 "><!-- This paragraph is on a different page but is still the same paragraph so p=5 is repeated -->
+    <ln n="28"/>life crowded as it was with all the rich promise of a most useful and <emotion>happy</emotion>
+    <ln n="29"/>career, then suddenly ccrowned by <emotion>sacrificing</emotion> all to the safety of children,
+    <ln n="30"/>though the children themselves were unkown to him.
+</p>
+<p n="6">
+    <ln n="31"/>If inspired by the <emotion>sacrifice</emotion> of this splendid young man, you
+    <ln n="32"/>boys and girls will dedicate your lives to the great tasks of life, not
+    <ln n="33"/>sparing yourselves but giving youselves instantly and <emotion>cheerfully</emotion> when duty 
+    <ln n="34"/>calls, then the beautiful example of this splendid young man will not have 
+    <ln n="35"/>been in vein.
+</p>
+<p n="7">
+    <ln n="36"/>From what we learn of his exalted character we think that we
+    <ln n="37"/>would wish nothing better than that these children spared by his heroic
+    <ln n="38"/>decision should contribute something worth while to make the world better.
+</p>
+<closer>
+    <!-- No closer provided -->
+</closer>
+</body>
+</xml>

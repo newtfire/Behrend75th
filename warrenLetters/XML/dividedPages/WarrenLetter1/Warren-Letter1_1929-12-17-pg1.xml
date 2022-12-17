@@ -2,7 +2,7 @@
 <?xml-model href="../../letters_schema.rnc" type="application/relax-ng-compact-syntax"?>
 <xml>
     <meta>
-        <title titleId= "WtoP-1929-12-17-Letter1-pg1">Letter from Warren Behrend to Mary and Ernst Behrend, <date>1929-12-17</date></title>
+        <title titleId= "WtoP-1929-12-17-Letter1-pg1">Letter from Warren Behrend to Mary and Ernst Behrend, <date when="1929-12-17">1929-12-17</date> pg1</title>
         <sourceDesc location="John M. Lilley Library, Penn State Behrend Archives"/>
         <paperOrigin>Deerfield Academy Deerfield, Massachutsetts</paperOrigin>
         <transDesc>
@@ -12,7 +12,7 @@
         </transDesc>
     </meta>
     <figure>
-        <graphic src="../Letter_Images/Warren-Letter1_1929-12-17/1929-12-17_Warrenp1.jpeg" alt="p1"/>
+        <graphic src="../Letter_Images/Warren-Letter1_1929-12-17/1929-12-17_Warrenp1.jpeg" alt="front, p1"/>
         
     </figure>
     <body>
@@ -33,7 +33,7 @@
         <p n="2">
             <ln n="1"/><person personId="NR">Ned Richardson</person> and I have
             <ln n="2"/>both promised each other to drive care-
-            <ln n="3"/>fully. and are<unclear reason="not sure what this says">nothing</unclear> our parents
+            <ln n="3"/>fully. and are <unclear reason="not sure what this says">nothing</unclear> our parents
             <ln n="4"/>such a promise. You already have
             <ln n="5"/> mine anyway but here it is again. 
             <ln n="6"/><underline>Don't worry</underline>.

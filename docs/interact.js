@@ -27,10 +27,9 @@ function switch_status (project_id, project_index){
 function project_HS(){
     var years = Array.prototype.slice.call( document.querySelectorAll("g[id^='y19']")).reverse()
     var proj = document.querySelectorAll("g[id^='proj']")
-    var project_index = 0
     for(var i = 0; i < years.length; i++){
         if(years[i].id == this.id){
-            project_index = i
+            var project_index = i
             break
         }
     }
@@ -39,12 +38,34 @@ function project_HS(){
 
 function timeline_HS(){
     var titles = document.querySelectorAll("text[id$='Title']")
-    var project_index = 0
     for(var i = 0; i < titles.length; i++){
         if(titles[i].id == this.id){
-            project_index = i
+            var project_index = i
             break
         }
     }
     switch_status('', project_index)
+}
+
+// functions for buttons
+function showInfo(){
+    var proj = document.querySelectorAll("g[id^='proj']")
+    var info = document.getElementsByClassName('timelineInfo')
+    var timeline = document.getElementsByClassName('timeline')
+    for(var i = 0; i < proj.length; i++){
+        proj[i].style.display = 'block'
+        info[i].style.display = 'block'
+        timeline[i].style.display = 'none'
+    }
+}
+
+function showTimeline(){
+    var proj = document.querySelectorAll("g[id^='proj']")
+    var info = document.getElementsByClassName('timelineInfo')
+    var timeline = document.getElementsByClassName('timeline')
+    for(var i = 0; i < proj.length; i++){
+        proj[i].style.display = 'block'
+        info[i].style.display = 'none'
+        timeline[i].style.display = 'block'
+    }
 }
