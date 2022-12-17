@@ -24,7 +24,7 @@
                     <title>Calendars</title>
                 </head>
                 <body>
-                    <h2>Behrend Calendars</h2>
+                    <h1>Mary Behrend's Calendar</h1>
                     <nav class="navbar">
                         <ul>
                             <li>
