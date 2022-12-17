@@ -122,7 +122,7 @@
                      <lb/> "Some love the glow of outward show <lb/> Some love mere wealth and try
                      to win it <lb/> The <rs type="object">house</rs> to me may lovely be <lb/> If I but like the people in
                      it" <lb/><unclear><persName>Chaz Levain</persName> </unclear></add>
-                  <lb/> Very true indeed </ab>
+                  <lb/> <lb/>Very true indeed </ab>
                <note resp="#zmurphy">This shows that <persName>Mary</persName> loves the people that consist of her
                   household and loves her <rs type="location">house</rs> because of that.</note>
             </div2>
@@ -258,7 +258,8 @@
                   <figDesc resp="#zmurphy">Drawing of a large red house made with pencil and watercolor. </figDesc>
                </figure>
                <ab rend="print"><add rend="smallcaps" hand="#pencil" place="center">
-                  <lb/><persName>Mr. Conrad</persName> drew the plans to make the <rs type="location">house</rs> much bigger.<lb/>
+                  <lb/><persName>Mr. Conrad</persName> drew the plans 
+                  <lb/>to make the <rs type="location">house</rs> much bigger.
                   <lb/>He likes it all aside the <emph style="underline">price</emph>
                   <lb/> It was an awful "figger!"
                   </add>
